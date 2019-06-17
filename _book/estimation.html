@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Estimation | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Estimation | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Estimation | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2019-06-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="one-sample-inference.html">
+<link rel="next" href="two-sample-inference.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li><a href="statistical-basics.html#example-1.1.1-stating-definitions-for-qualitative-variable-example-1.1.2-stating-definitions-for-qualitative-variable-example-1.1.3-stating-definitions-for-quantitative-variable-example-1.1.4-stating-definitions-for-quantitative-variable-example-1.1.5-discrete-or-continuous-measurement-scales-homework-sampling-methods-example-1.2.1-choosing-a-simple-random-sample-example-1.2.2-how-not-to-choose-a-simple-random-sample-example-1.2.3-sampling-type-homework-experimental-design-guidelines-for-planning-a-statistical-study-example-1.3.1-observational-study-or-experiment-homework-how-not-to-do-statistics-example-1.4.1-bias-in-a-study"><span class="toc-section-number">1.1.1</span> Example #1.1.1: Stating Definitions for Qualitative Variable<strong>
+### Example #1.1.2: Stating Definitions for Qualitative Variable
+### Example #1.1.3: Stating Definitions for Quantitative Variable
+### Example #1.1.4: Stating Definitions for Quantitative Variable
+### Example #1.1.5: Discrete or Continuous
+### Measurement Scales:
+### Homework
+## Sampling Methods
+#### Example #1.2.1: Choosing a Simple Random Sample
+#### Example #1.2.2: How Not to Choose a Simple Random Sample
+### Example #1.2.3: Sampling type
+### Homework
+## Experimental Design
+### Guidelines for planning a statistical study
+### Example #1.3.1: Observational Study or Experiment
+### Homework
+## How Not to Do Statistics
+### Example #1.4.1: Bias in a Study</strong></a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.2-cause-and-effect"><i class="fa fa-check"></i><b>1.1.2</b> Example #1.4.2: Cause and Effect</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.3-generalizations"><i class="fa fa-check"></i><b>1.1.3</b> Example #1.4.3: Generalizations</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework"><i class="fa fa-check"></i><b>1.1.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>2.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-6"><i class="fa fa-check"></i><b>3.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#homework-10"><i class="fa fa-check"></i><b>4.4.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>5.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>6.1</b> Uniform Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#graphs-of-the-normal-distribution"><i class="fa fa-check"></i><b>6.2</b> Graphs of the Normal Distribution</a></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.3</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.4</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-16"><i class="fa fa-check"></i><b>6.4.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.5</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-17"><i class="fa fa-check"></i><b>6.5.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-19"><i class="fa fa-check"></i><b>7.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-20"><i class="fa fa-check"></i><b>7.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#homework-22"><i class="fa fa-check"></i><b>8.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#homework-23"><i class="fa fa-check"></i><b>8.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-25"><i class="fa fa-check"></i><b>9.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-26"><i class="fa fa-check"></i><b>9.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-28"><i class="fa fa-check"></i><b>10.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-29"><i class="fa fa-check"></i><b>10.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-31"><i class="fa fa-check"></i><b>11.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-32"><i class="fa fa-check"></i><b>11.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="estimation" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Estimation</h1>
+<p>In hypothesis tests, the purpose was to make a decision about a parameter, in terms of it being greater than, less than, or not equal to a value. But what if you want to actually know what the parameter is. You need to do estimation. There are two types of estimation – point estimator and confidence interval.</p>
+<div id="basics-of-confidence-intervals" class="section level2">
+<h2><span class="header-section-number">8.1</span> Basics of Confidence Intervals</h2>
+<p>A point estimator is just the statistic that you have calculated previously. As an example, when you wanted to estimate the population mean, [MISSING] , the point estimator is the sample mean, [MISSING]. To estimate the population proportion, <em>p</em>, you use the sample proportion, [MISSING]. In general, if you want to estimate any population parameter, we will call it [MISSING], you use the sample statistic, [MISSING].</p>
+<p>Point estimators are really easy to find, but they have some drawbacks. First, if you have a large sample size, then the estimate is better. But with a point estimator, you don’t know what the sample size is. Also, you don’t know how accurate the estimate is. Both of these problems are solved with a confidence interval.</p>
+<p><strong>Confidence interval:</strong> This is where you have an interval surrounding your parameter, and the interval has a chance of being a true statement. In general, a confidence interval looks like: , where is the point estimator and <em>E</em> is the margin of error term that is added and subtracted from the point estimator. Thus making an interval.</p>
+<p><strong>Interpreting a confidence interval: </strong></p>
+<p>The statistical interpretation is that the confidence interval has a probability (, where is the complement of the confidence level) of containing the population parameter. As an example, if you have a 95% confidence interval of 0.65 &lt; <em>p</em> &lt; 0.73, then you would say, “there is a 95% chance that the interval 0.65 to 0.73 contains the true population proportion.” This means that if you have 100 intervals, 95 of them will contain the true proportion, and 5% will not. The wrong interpretation is that there is a 95% chance that the true value of <em>p</em> will fall between 0.65 and 0.73. The reason that this interpretation is wrong is that the true value is fixed out there somewhere. You are trying to capture it with this interval. So this is the chance is that your interval captures it, and not that the true value falls in the interval.</p>
+<p>There is also a real world interpretation that depends on the situation. It is where you are telling people what numbers you found the parameter to lie between. So your real world is where you tell what values your parameter is between. There is no probability attached to this statement. That probability is in the statistical interpretation.</p>
+<p>The common probabilities used for confidence intervals are 90%, 95%, and 99%. These are known as the confidence level. The confidence level and the alpha level are related. For a two-tailed test, the confidence level is . This is because the is both tails and the confidence level is area between the two tails. As an example, for a two-tailed test (H<sub>A</sub> is not equal to) with equal to 0.10, the confidence level would be 0.90 or 90%. If you have a one-tailed test, then your is only one tail. Because of symmetry the other tail is also . So you have 2 with both tails. So the confidence level, which is the area between the two tails, is [MISSING].</p>
+<p><strong>Example #8.1.1: Stating the Statistical and Real World
+Interpretations for a Confidence Interval</strong></p>
+<p>a. Suppose you have a 95% confidence interval for the mean age a woman
+gets married in 2013 is . State the statistical and real world
+interpretations of this statement.</p>
+<p><strong>Solution:</strong></p>
+<blockquote>
+<p>Statistical Interpretation: There is a 95% chance that the interval
+contains the mean age a woman gets married in 2013.</p>
+<p>Real World Interpretation: The mean age that a woman married in 2013
+is between 26 and 28 years of age.</p>
+</blockquote>
+<p>b. Suppose a 99% confidence interval for the proportion of Americans who
+have tried marijuana as of 2013 is . State the statistical and real
+world interpretations of this statement.</p>
+<p><strong>Solution:</strong></p>
+<blockquote>
+<p>Statistical Interpretation: There is a 99% chance that the interval
+contains the proportion of Americans who have tried marijuana as of
+2013.</p>
+<p>Real World Interpretation: The proportion of Americans who have tried
+marijuana as of 2013 is between 0.35 and 0.41.</p>
+</blockquote>
+<p>One last thing to know about confidence is how the sample size and
+confidence level affect how wide the interval is. The following
+discussion demonstrates what happens to the width of the interval as you
+get more confident.</p>
+<p>Think about shooting an arrow into the target. Suppose you are really
+good at that and that you have a 90% chance of hitting the bull’s eye.
+Now the bull’s eye is very small. Since you hit the bull’s eye
+approximately 90% of the time, then you probably hit inside the next
+ring out 95% of the time. You have a better chance of doing this, but
+the circle is bigger. You probably have a 99% chance of hitting the
+target, but that is a much bigger circle to hit. You can see, as your
+confidence in hitting the target increases, the circle you hit gets
+bigger. The same is true for confidence intervals. This is demonstrated
+in figure #8.1.1.</p>
+<p><strong>Figure #8.1.1: Affect of Confidence Level on Width</strong></p>
+<blockquote>
+<p><img src="media/image21.png" style="width:3.5in;height:1.30556in" /></p>
+</blockquote>
+<p>The higher level of confidence makes a wider interval. There’s a trade
+off between width and confidence level. You can be really confident
+about your answer but your answer will not be very precise. Or you can
+have a precise answer (small margin of error) but not be very confident
+about your answer.</p>
+<p>Now look at how the sample size affects the size of the interval.
+Suppose figure #8.1.2 represents confidence intervals calculated on a
+95% interval. A larger sample size from a representative sample makes
+the width of the interval narrower. This makes sense. Large samples are
+closer to the true population so the point estimate is pretty close to
+the true value.</p>
+<p><strong>Figure #8.1.2: Affect of Sample Size on Width</strong></p>
+<blockquote>
+<p><img src="media/image22.png" style="width:3.29167in;height:1.30556in" /></p>
+</blockquote>
+<p>Now you know everything you need to know about confidence intervals
+except for the actual formula. The formula depends on which parameter
+you are trying to estimate. With different situations you will be given
+the confidence interval for that parameter.</p>
+<div id="homework-21" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li><p>Suppose you compute a confidence interval with a sample size of 25. What will happen to the confidence interval if the sample size increases to 50?</p></li>
+<li><p>Suppose you compute a 95% confidence interval. What will happen to the confidence interval if you increase the confidence level to 99%?</p></li>
+<li><p>Suppose you compute a 95% confidence interval. What will happen to the confidence interval if you decrease the confidence level to 90%?</p></li>
+<li><p>Suppose you compute a confidence interval with a sample size of 100. What will happen to the confidence interval if the sample size decreases to 80?</p></li>
+<li><p>A 95% confidence interval is , where is the mean diameter of the Earth. State the statistical interpretation.</p></li>
+<li><p>A 95% confidence interval is , where is the mean diameter of the Earth. State the real world interpretation.</p></li>
+<li><p>In 2013, Gallup conducted a poll and found a 95% confidence interval of, where <em>p</em> is the proportion of Americans who believe it is the government’s responsibility for health care. Give the real world interpretation.</p></li>
+<li><p>In 2013, Gallup conducted a poll and found a 95% confidence interval of, where <em>p</em> is the proportion of Americans who believe it is the government’s responsibility for health care. Give the statistical interpretation.</p></li>
+</ol>
+<p><strong> </strong></p>
+</div>
+</div>
+<div id="one-sample-interval-for-the-proportion" class="section level2">
+<h2><span class="header-section-number">8.2</span> One-Sample Interval for the Proportion</h2>
+<p>Suppose you want to estimate the population proportion, <em>p</em>. As an example you may be curious what proportion of students at your school smoke. Or you could wonder what is the proportion of accidents caused by teenage drivers who do not have a drivers’ education class.
+<strong>Confidence Interval for One Population Proportion (1-Prop Interval)</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = number of successes</p>
+<p><em>p</em> = proportion of successes</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for confidence interval</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of size <em>n</em> is taken.</p></li>
+<li><p>The condition for the binomial distribution are satisfied</p></li>
+<li><p>To determine the sampling distribution of , you need to show that
+and , where . If this requirement is true, then the sampling
+distribution of is well approximated by a normal curve. (In reality
+this is not really true, since the correct assumption deals with
+<em>p</em>. However, in a confidence interval you do not know <em>p</em>, so you
+must use . This means you just need to show that and .)</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and the confidence interval</li>
+</ol>
+<blockquote>
+<p>Sample Proportion:</p>
+<p>Confidence Interval:</p>
+<p>Where</p>
+<p><em>p</em> = population proportion</p>
+<p>= sample proportion</p>
+<p><em>n</em> = number of sample values</p>
+<p><em>E</em> = margin of error</p>
+<p>= critical value</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: In general this looks like, “there is a
+C% chance that contains the true proportion.”</p></li>
+<li><p>Real World Interpretation: This is where you state what interval
+contains the true proportion.</p></li>
+</ol>
+<p>The critical value is a value from the normal distribution. Since a
+confidence interval is found by adding and subtracting a margin of error
+amount from the sample proportion, and the interval has a probability of
+containing the true proportion, then you can think of this as the
+statement . You can use the invNorm command on the TI-83/84 calculator
+or qnorm command on R to find the critical value. The critical values
+will always be the same value, so it is easier to just look at table A.1
+in the appendix.</p>
+<p><strong>Example #8.2.1: Confidence Interval for the Population Proportion
+Using the Formula</strong></p>
+<blockquote>
+<p>A concern was raised in Australia that the percentage of deaths of
+Aboriginal prisoners was higher than the percent of deaths of
+non-Aboriginal prisoners, which is 0.27%. A sample of six years
+(1990-1995) of data was collected, and it was found that out of 14,495
+Aboriginal prisoners, 51 died (&quot;Indigenous deaths in,&quot; 1996). Find a
+95% confidence interval for the proportion of Aboriginal prisoners who
+died.</p>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = number of Aboriginal prisoners who die</p>
+<p><em>p</em> = proportion of Aboriginal prisoners who die</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for a confidence interval</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of 14,495 Aboriginal prisoners was taken.
+However, the sample was not a random sample, since it was data from
+six years. It is the numbers for all prisoners in these six years,
+but the six years were not picked at random. Unless there was
+something special about the six years that were chosen, the sample
+is probably a representative sample. This assumption is probably
+met.</p></li>
+<li><p>There are 14,495 prisoners in this case. The prisoners are all
+Aboriginals, so you are not mixing Aboriginal with non-Aboriginal
+prisoners. There are only two outcomes, either the prisoner dies or
+doesn’t. The chance that one prisoner dies over another may not be
+constant, but if you consider all prisoners the same, then it may be
+close to the same probability. Thus the assumptions for the binomial
+distribution are satisfied</p></li>
+<li><p>In this case, and and both are greater than or equal to 5. The
+sampling distribution for is a normal distribution.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and the confidence interval</li>
+</ol>
+<blockquote>
+<p>Sample Proportion:</p>
+<p>Confidence Interval:</p>
+<p>, since 95% confidence level</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: There is a 95% chance that contains the
+proportion of Aboriginal prisoners who died.</p></li>
+<li><p>Real World Interpretation: The proportion of Aboriginal prisoners
+who died is between 0.0026 and 0.0045.</p></li>
+</ol>
+<p>You can also do the calculations for the confidence interval with
+technology. The following example shows the process on the TI-83/84.</p>
+<p><strong>Example #8.2.2: Confidence Interval for the Population Proportion
+Using Technology</strong></p>
+<blockquote>
+<p>A researcher studying the effects of income levels on breastfeeding of
+infants hypothesizes that countries where the income level is lower
+have a higher rate of infant breastfeeding than higher income
+countries. It is known that in Germany, considered a high-income
+country by the World Bank, 22% of all babies are breastfeed. In
+Tajikistan, considered a low-income country by the World Bank,
+researchers found that in a random sample of 500 new mothers that 125
+were breastfeeding their infants. Find a 90% confidence interval of
+the proportion of mothers in low-income countries who breastfeed their
+infants?</p>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State you random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = number of woman who breastfeed in a low-income country</p>
+<p><em>p</em> = proportion of woman who breastfeed in a low-income country</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for a confidence interval</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of 500 breastfeeding habits of woman in a low-income country was taken as was stated in the problem.</p></li>
+<li><p>There were 500 women in the study. The women are considered identical, though they probably have some differences. There are only two outcomes, either the woman breastfeeds or she doesn’t. The probability of a woman breastfeeding is probably not the same for each woman, but it is probably not very different for each woman. The assumptions for the binomial distribution are satisfied</p></li>
+<li><p>and and both are greater than or equal to 5, so the sampling distribution of is well approximated by a normal curve.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and the confidence interval</li>
+</ol>
+<blockquote>
+<p>On the TI-83/84: Go into the STAT menu. Move over to TESTS and choose
+1-PropZInt.</p>
+<p><strong>Figure #8.2.1: Setup for 1-Proportion Interval</strong></p>
+<p><img src="media/image57.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Once you press Calculate, you will see the results as in figure
+#8.2.2.</p>
+<p><strong>Figure #8.2.2: Results for 1-Proportion Interval</strong></p>
+<p><img src="media/image58.png" style="width:2.75in;height:1.86111in" /></p>
+<p>On R: the command is prop.test(x, n, conf.level = C), where C is given
+in decimal form. So for this example, the command is</p>
+<p>prop.test(125, 500, conf.level = 0.90)</p>
+<p>1-sample proportions test with continuity correction</p>
+<p>data: 125 out of 500, null probability 0.5</p>
+<p>X-squared = 124, df = 1, p-value &lt; 2.2e-16</p>
+<p>alternative hypothesis: true p is not equal to 0.5</p>
+<p>90 percent confidence interval:</p>
+<p>0.2185980 0.2841772</p>
+<p>sample estimates:</p>
+<p>p</p>
+<p>0.25</p>
+<p>Again, R does a continuity correction, so the answer is slightly off
+from the formula and the TI-83/84 calculator.</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: There is a 90% chance that contains the proportion of women in low-income countries who breastfeed their infants.</p></li>
+<li><p>Real World Interpretation: The proportion of women in low-income countries who breastfeed their infants is between 0.219 and 0.284.</p></li>
+</ol>
+<div id="homework-22" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Homework</h3>
+<p>In each problem show all steps of the confidence interval. If some of the assumptions are not met, note that the results of the interval may not be correct and then continue the process of the confidence interval.</p>
+<ol style="list-style-type: decimal">
+<li><p>Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they make. Looking at the type of defects, they found in a three-month time period that out of 34,641 defective lenses, 5865 were due to scratches. Find a 99% confidence interval for the proportion of defects that are from scratches.</p></li>
+<li><p>In November of 1997, Australians were asked if they thought unemployment would increase. At that time 284 out of 631 said that they thought unemployment would increase (&quot;Morgan gallup poll,&quot; 2013). Estimate the proportion of Australians in November 1997 who believed unemployment would increase using a 95% confidence interval?</p></li>
+<li><p>According to the February 2008 Federal Trade Commission report on consumer fraud and identity theft, Arkansas had 1,601 complaints of identity theft out of 3,482 consumer complaints (&quot;Consumer fraud and,&quot; 2008). Calculate a 90% confidence interval for the proportion of identity theft in Arkansas.</p></li>
+<li><p>According to the February 2008 Federal Trade Commission report on consumer fraud and identity theft, Alaska had 321 complaints of identity theft out of 1,432 consumer complaints (&quot;Consumer fraud and,&quot; 2008). Calculate a 90% confidence interval for the proportion of identity theft in Alaska.</p></li>
+<li><p>In 2013, the Gallup poll asked 1,039 American adults if they believe there was a conspiracy in the assassination of President Kennedy, and found that 634 believe there was a conspiracy (&quot;Gallup news service,&quot; 2013). Estimate the proportion of American’s who believe in this conspiracy using a 98% confidence interval.</p></li>
+<li><p>In 2008, there were 507 children in Arizona out of 32,601 who were diagnosed with Autism Spectrum Disorder (ASD) (&quot;Autism and developmental,&quot; 2008). Find the proportion of ASD in Arizona with a confidence level of 99%.</p></li>
+</ol>
+</div>
+</div>
+<div id="one-sample-interval-for-the-mean" class="section level2">
+<h2><span class="header-section-number">8.3</span> One-Sample Interval for the Mean</h2>
+<p>Suppose you want to estimate the mean height of Americans, or you want to estimate the mean salary of college graduates. A confidence interval for the mean would be the way to estimate these means.</p>
+<p><strong>Confidence Interval for One Population Mean (t-Interval)</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p>x = random variable</p>
+<p>= mean of random variable</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for a hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of size <em>n</em> is taken.</p></li>
+<li><p>The population of the random variable is normally distributed, though the t-test is fairly robust to the assumption if the sample size is large. This means that if this assumption isn’t met, but your sample size is quite large (over 30), then the results of the t-test are valid.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and confidence interval</li>
+</ol>
+<blockquote>
+<p>where</p>
+<p>is the point estimator for</p>
+<p>is the critical value where degrees of freedom:</p>
+<p><em>s</em> is the sample standard deviation</p>
+<p><em>n</em> is the sample size</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: In general this looks like, “there is a C% chance that the statement contains the true mean.”</p></li>
+<li><p>Real World Interpretation: This is where you state what interval contains the true mean.
+The critical value is a value from the Student’s t-distribution. Since a
+confidence interval is found by adding and subtracting a margin of error
+amount from the sample mean, and the interval has a probability of
+containing the true mean, then you can think of this as the statement .
+The critical values are found in table A.2 in the appendix</p></li>
+</ol>
+<p><strong>How to check the assumptions of confidence interval:</strong></p>
+<p>In order for the confidence interval to be valid, the assumptions of the
+test must be true. Whenever you run a confidence interval, you must make
+sure the assumptions are true. You need to check them. Here is how you
+do this:</p>
+<ol style="list-style-type: decimal">
+<li><p>For the assumption that the sample is a random sample, describe how
+you took the sample. Make sure your sampling technique is random.</p></li>
+<li><p>For the assumption that population is normal, remember the process
+of assessing normality from chapter 6.</p></li>
+</ol>
+<p><strong>Example #8.3.1: Confidence Interval for the Population Mean Using the
+Formula</strong></p>
+<blockquote>
+<p>A random sample of 20 IQ scores of famous people was taken information
+from the website of IQ of Famous People (&quot;IQ of famous,&quot; 2013) and
+then using a random number generator to pick 20 of them. The data are
+in table #8.3.1 (this is the same data set that was used in example
+#6.4.2). Find a 98% confidence interval for the IQ of a famous
+person.</p>
+<p><strong>Table #8.3.1: IQ Scores of Famous People</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">158</th>
+<th align="left">180</th>
+<th align="left">150</th>
+<th align="left">137</th>
+<th align="left">109</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">225</td>
+<td align="left">122</td>
+<td align="left">138</td>
+<td align="left">145</td>
+<td align="left">180</td>
+</tr>
+<tr class="even">
+<td align="left">118</td>
+<td align="left">118</td>
+<td align="left">126</td>
+<td align="left">140</td>
+<td align="left">165</td>
+</tr>
+<tr class="odd">
+<td align="left">150</td>
+<td align="left">170</td>
+<td align="left">105</td>
+<td align="left">154</td>
+<td align="left">118</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = IQ score of a famous person</p>
+<p>= mean IQ score of a famous person</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for a confidence interval</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 20 IQ scores was taken. This was stated in the
+problem.</p></li>
+<li><p>The population of IQ score is normally distributed. This was shown
+in example #6.4.2.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and confidence interval</li>
+</ol>
+<blockquote>
+<p>Sample Statistic:</p>
+<p>Now you need the degrees of freedom, and the <em>C,</em> which is 98%. Now go
+to table A.2, go down the first column to 19 degrees of freedom. Then
+go over to the column headed with 98%. Thus . (See table 8.3.2.)</p>
+<p><strong>Table #8.3.2: Excerpt From Table A.2</strong></p>
+</blockquote>
+<table>
+<colgroup>
+<col width="37%" />
+<col width="10%" />
+<col width="10%" />
+<col width="12%" />
+<col width="16%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Degrees of Freedom (<em>df</em>)</th>
+<th>80%</th>
+<th>90%</th>
+<th>95%</th>
+<th>98%</th>
+<th>99%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>3.078</td>
+<td>6.314</td>
+<td>12.706</td>
+<td>31.821</td>
+<td>63.657</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1.886</td>
+<td>2.920</td>
+<td>4.303</td>
+<td>6.965</td>
+<td>9.925</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1.638</td>
+<td>2.353</td>
+<td>3.182</td>
+<td>4.541</td>
+<td>5.841</td>
+</tr>
+<tr class="even">
+<td><p>.</p>
+<p>.</p>
+<p>.</p></td>
+<td><p>.</p>
+<p>.</p>
+<p>.</p></td>
+<td><p>.</p>
+<p>.</p>
+<p>.</p></td>
+<td><p>.</p>
+<p>.</p>
+<p>.</p></td>
+<td><p>.</p>
+<p>.</p>
+<p>.</p></td>
+<td><p>.</p>
+<p>.</p>
+<p>.</p></td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>1.328</td>
+<td>1.729</td>
+<td>2.093</td>
+<td><strong>2.539</strong></td>
+<td>2.861</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: There is a 98% chance that contains the
+mean IQ score of a famous person.</p></li>
+<li><p>Real World Interpretation: The mean IQ score of a famous person is
+between 128.8 and 162.</p></li>
+</ol>
+<p><strong>Example #8.3.2: Confidence Interval for the Population Mean Using
+Technology</strong></p>
+<blockquote>
+<p>The data in table #8.3.3 are the life expectancies for men in
+European countries in 2011 (&quot;WHO life expectancy,&quot; 2013). Find the
+99% confident interval for the mean life expectancy of men in Europe</p>
+<p><strong>Table #8.3.3: Life Expectancies for Men in European Countries in
+2011</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">73</th>
+<th align="left">79</th>
+<th align="left">67</th>
+<th align="left">78</th>
+<th align="left">69</th>
+<th align="left">66</th>
+<th align="left">78</th>
+<th align="left">74</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">71</td>
+<td align="left">74</td>
+<td align="left">79</td>
+<td align="left">75</td>
+<td align="left">77</td>
+<td align="left">71</td>
+<td align="left">78</td>
+<td align="left">78</td>
+</tr>
+<tr class="even">
+<td align="left">68</td>
+<td align="left">78</td>
+<td align="left">78</td>
+<td align="left">71</td>
+<td align="left">81</td>
+<td align="left">79</td>
+<td align="left">80</td>
+<td align="left">80</td>
+</tr>
+<tr class="odd">
+<td align="left">62</td>
+<td align="left">65</td>
+<td align="left">69</td>
+<td align="left">68</td>
+<td align="left">79</td>
+<td align="left">79</td>
+<td align="left">79</td>
+<td align="left">73</td>
+</tr>
+<tr class="even">
+<td align="left">79</td>
+<td align="left">79</td>
+<td align="left">72</td>
+<td align="left">77</td>
+<td align="left">67</td>
+<td align="left">70</td>
+<td align="left">63</td>
+<td align="left">82</td>
+</tr>
+<tr class="odd">
+<td align="left">72</td>
+<td align="left">72</td>
+<td align="left">77</td>
+<td align="left">79</td>
+<td align="left">80</td>
+<td align="left">80</td>
+<td align="left">67</td>
+<td align="left">73</td>
+</tr>
+<tr class="even">
+<td align="left">73</td>
+<td align="left">60</td>
+<td align="left">65</td>
+<td align="left">79</td>
+<td align="left">66</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = life expectancy for a European man in 2011</p>
+<p>= mean life expectancy for European men in 2011</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for a confidence interval</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 53 life expectancies of European men in 2011 was
+taken. The data is actually all of the life expectancies for every
+country that is considered part of Europe by the World Health
+Organization. However, the information is still sample information
+since it is only for one year that the data was collected. It may
+not be a random sample, but that is probably not an issue in this
+case.</p></li>
+<li><p>The distribution of life expectancies of European men in 2011 is
+normally distributed. To see if this assumption has been met, look
+at the histogram, number of outliers, and the normal probability
+plot. (If you wish, you can look at the normal probability plot
+first. If it doesn’t look linear, then you may want to look at the
+histogram and number of outliers at this point.)</p>
+<p><strong>Figure #8.3.1: Histogram for Life Expectancies of European Men in
+2011</strong></p>
+<p><embed src="media/image78.emf" style="width:2.30556in;height:2.30556in" /></p>
+<p>Not normally distributed</p></li>
+</ol>
+<blockquote>
+<p><strong>Number of outliers:</strong></p>
+<p><strong>Figure #8.3.2: Modified Box Plot for Life Expectancies of European
+Men in 2011</strong></p>
+<p><embed src="media/image79.emf" style="width:2.44444in;height:2.44444in" /></p>
+<p>Outliers are numbers below 54 and above 94. There are no outliers for
+this data set.</p>
+<p><strong>Figure #8.3.3: Normal Quantile Plot for Life Expectancies of
+European Men in 2011</strong></p>
+<p><embed src="media/image81.emf" style="width:2.27778in;height:2.27778in" /></p>
+<p>Not linear</p>
+</blockquote>
+<p>This population does not appear to be normally distributed. The t-test
+is robust for sample sizes larger than 30 so you can go ahead and
+calculate the interval.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and confidence interval</li>
+</ol>
+<blockquote>
+<p>On the TI-83/84: Go into the STAT menu, and type the data into L1.
+Then go into STAT and over to TESTS. Choose TInterval.</p>
+<p><strong>Figure #8.3.4: Setup for TInterval</strong></p>
+<p><img src="media/image82.png" style="width:2.75in;height:1.86111in" /></p>
+<p><strong>Figure #8.3.5: Results for TInterval</strong></p>
+<p><img src="media/image83.png" style="width:2.75in;height:1.86111in" /></p>
+<p>On R: t.test(variable, conf.level = C), where C is given in decimal
+form. So for this example it would be t.test(expectancy, conf.level =
+0.99)</p>
+<p>One Sample t-test</p>
+<p>data: expectancy</p>
+<p>t = 93.711, df = 52, p-value &lt; 2.2e-16</p>
+<p>alternative hypothesis: true mean is not equal to 0</p>
+<p>99 percent confidence interval:</p>
+<p>71.63204 75.83966</p>
+<p>sample estimates:</p>
+<p>mean of x</p>
+<p>73.73585</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: There is a 99% chance that contains the
+mean life expectancy of European men.</p></li>
+<li><p>Real World Interpretation: The mean life expectancy of European men
+is between 71.6 and 75.8 years.</p></li>
+</ol>
+<div id="homework-23" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Homework</h3>
+<p>In each problem show all steps of the confidence interval. If some of the assumptions are not met, note that the results of the interval may not be correct and then continue the process of the confidence interval.</p>
+<ol style="list-style-type: decimal">
+<li>The Kyoto Protocol was signed in 1997, and required countries to start reducing their carbon emissions. The protocol became enforceable in February 2005. Table 8.3.4 contains a random sample of CO<sub>2</sub> emissions in 2010 (&quot;CO2 emissions,&quot; 2013). Compute a 99% confidence interval to estimate the mean CO<sub>2</sub> emission in 2010.</li>
+</ol>
+<p><strong>Table #8.3.4: CO<sub>2</sub> Emissions (metric tons per capita) in 2010</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">1.36</th>
+<th align="left">1.42</th>
+<th align="left">5.93</th>
+<th align="left">5.36</th>
+<th align="left">0.06</th>
+<th align="left">9.11</th>
+<th align="left">7.32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">7.93</td>
+<td align="left">6.72</td>
+<td align="left">0.78</td>
+<td align="left">1.80</td>
+<td align="left">0.20</td>
+<td align="left">2.27</td>
+<td align="left">0.28</td>
+</tr>
+<tr class="even">
+<td align="left">5.86</td>
+<td align="left">3.46</td>
+<td align="left">1.46</td>
+<td align="left">0.14</td>
+<td align="left">2.62</td>
+<td align="left">0.79</td>
+<td align="left">7.48</td>
+</tr>
+<tr class="odd">
+<td align="left">0.86</td>
+<td align="left">7.84</td>
+<td align="left">2.87</td>
+<td align="left">2.45</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li>Many people feel that cereal is healthier alternative for children over glazed donuts. Table #8.3.5 contains the amount of sugar in a sample of cereal that is geared towards children (&quot;Healthy breakfast story,&quot; 2013). Estimate the mean amount of sugar in children cereal using a 95% confidence level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #8.3.5: Sugar Amounts (g) in Children’s Cereal</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">10</th>
+<th align="left">14</th>
+<th align="left">12</th>
+<th align="left">9</th>
+<th align="left">13</th>
+<th align="left">13</th>
+<th align="left">13</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">12</td>
+<td align="left">15</td>
+<td align="left">9</td>
+<td align="left">10</td>
+<td align="left">11</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">12</td>
+<td align="left">15</td>
+<td align="left">12</td>
+<td align="left">12</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>In Florida, bass fish were collected in 53 different lakes to measure the amount of mercury in the fish. The data for the average amount of mercury in each lake is in table #8.3.6 (&quot;Multi-disciplinary niser activity,&quot; 2013). Compute a 90% confidence interval for the mean amount of mercury in fish in Florida lakes.</li>
+</ol>
+<blockquote>
+<p><strong>Table #8.3.6: Average Mercury Levels (mg/kg) in Fish</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">1.23</th>
+<th align="left">1.33</th>
+<th align="left">0.04</th>
+<th align="left">0.44</th>
+<th align="left">1.20</th>
+<th align="left">0.27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0.48</td>
+<td align="left">0.19</td>
+<td align="left">0.83</td>
+<td align="left">0.81</td>
+<td align="left">0.71</td>
+<td align="left">0.5</td>
+</tr>
+<tr class="even">
+<td align="left">0.49</td>
+<td align="left">1.16</td>
+<td align="left">0.05</td>
+<td align="left">0.15</td>
+<td align="left">0.19</td>
+<td align="left">0.77</td>
+</tr>
+<tr class="odd">
+<td align="left">1.08</td>
+<td align="left">0.98</td>
+<td align="left">0.63</td>
+<td align="left">0.56</td>
+<td align="left">0.41</td>
+<td align="left">0.73</td>
+</tr>
+<tr class="even">
+<td align="left">0.34</td>
+<td align="left">0.59</td>
+<td align="left">0.34</td>
+<td align="left">0.84</td>
+<td align="left">0.50</td>
+<td align="left">0.34</td>
+</tr>
+<tr class="odd">
+<td align="left">0.28</td>
+<td align="left">0.34</td>
+<td align="left">0.87</td>
+<td align="left">0.56</td>
+<td align="left">0.17</td>
+<td align="left">0.18</td>
+</tr>
+<tr class="even">
+<td align="left">0.19</td>
+<td align="left">0.04</td>
+<td align="left">0.49</td>
+<td align="left">1.10</td>
+<td align="left">0.16</td>
+<td align="left">0.10</td>
+</tr>
+<tr class="odd">
+<td align="left">0.48</td>
+<td align="left">0.21</td>
+<td align="left">0.86</td>
+<td align="left">0.52</td>
+<td align="left">0.65</td>
+<td align="left">0.27</td>
+</tr>
+<tr class="even">
+<td align="left">0.94</td>
+<td align="left">0.40</td>
+<td align="left">0.43</td>
+<td align="left">0.25</td>
+<td align="left">0.27</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li>In 1882, Albert Michelson collected measurements on the speed of light (&quot;Student t-distribution,&quot; 2013). His measurements are given in table #8.3.7. Find the speed of light value that Michelson estimated from his data using a 95% confidence interval.</li>
+</ol>
+<blockquote>
+<p><strong>Table #8.3.7: Speed of Light Measurements (km/sec)</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">299883</th>
+<th align="left">299816</th>
+<th align="left">299778</th>
+<th align="left">299796</th>
+<th align="left">299682</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">299711</td>
+<td align="left">299611</td>
+<td align="left">299599</td>
+<td align="left">300051</td>
+<td align="left">299781</td>
+</tr>
+<tr class="even">
+<td align="left">299578</td>
+<td align="left">299796</td>
+<td align="left">299774</td>
+<td align="left">299820</td>
+<td align="left">299772</td>
+</tr>
+<tr class="odd">
+<td align="left">299696</td>
+<td align="left">299573</td>
+<td align="left">299748</td>
+<td align="left">299748</td>
+<td align="left">299797</td>
+</tr>
+<tr class="even">
+<td align="left">299851</td>
+<td align="left">299809</td>
+<td align="left">299723</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li>Table #8.3.8 contains pulse rates after running for 1 minute, collected from females who drink alcohol (&quot;Pulse rates before,&quot; 2013). Find a 95% confidence interval for the mean pulse rate after exercise of women who do drink alcohol.</li>
+</ol>
+<blockquote>
+<p><strong>Table #8.3.8: Pulse Rates (beats per minute) of Woman Who Use
+Alcohol</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">176</th>
+<th align="left">150</th>
+<th align="left">150</th>
+<th align="left">115</th>
+<th align="left">129</th>
+<th align="left">160</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">120</td>
+<td align="left">125</td>
+<td align="left">89</td>
+<td align="left">132</td>
+<td align="left">120</td>
+<td align="left">120</td>
+</tr>
+<tr class="even">
+<td align="left">68</td>
+<td align="left">87</td>
+<td align="left">88</td>
+<td align="left">72</td>
+<td align="left">77</td>
+<td align="left">84</td>
+</tr>
+<tr class="odd">
+<td align="left">92</td>
+<td align="left">80</td>
+<td align="left">60</td>
+<td align="left">67</td>
+<td align="left">59</td>
+<td align="left">64</td>
+</tr>
+<tr class="even">
+<td align="left">88</td>
+<td align="left">74</td>
+<td align="left">68</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="6" style="list-style-type: decimal">
+<li>The economic dynamism, which is the index of productive growth in dollars for countries that are designated by the World Bank as middle-income are in table #8.3.9 (&quot;SOCR data 2008,&quot; 2013). Compute a 95% confidence interval for the mean economic dynamism of middle-income countries.</li>
+</ol>
+<blockquote>
+<p><strong>Table #8.3.9: Economic Dynamism ($) of Middle Income Countries</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">25.8057</th>
+<th align="left">37.4511</th>
+<th align="left">51.915</th>
+<th align="left">43.6952</th>
+<th align="left">47.8506</th>
+<th align="left">43.7178</th>
+<th align="left">58.0767</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">41.1648</td>
+<td align="left">38.0793</td>
+<td align="left">37.7251</td>
+<td align="left">39.6553</td>
+<td align="left">42.0265</td>
+<td align="left">48.6159</td>
+<td align="left">43.8555</td>
+</tr>
+<tr class="even">
+<td align="left">49.1361</td>
+<td align="left">61.9281</td>
+<td align="left">41.9543</td>
+<td align="left">44.9346</td>
+<td align="left">46.0521</td>
+<td align="left">48.3652</td>
+<td align="left">43.6252</td>
+</tr>
+<tr class="odd">
+<td align="left">50.9866</td>
+<td align="left">59.1724</td>
+<td align="left">39.6282</td>
+<td align="left">33.6074</td>
+<td align="left">21.6643</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="7" style="list-style-type: decimal">
+<li>Table #8.3.10 contains the percentage of woman receiving prenatal care in 2009 for a sample of countries (&quot;Pregnant woman receiving,&quot; 2013). Estimate the average percentage of woman receiving prenatal care in 2009 using a 90% confidence interval.</li>
+</ol>
+<blockquote>
+<p><strong>Table #8.3.10: Percentage of Woman Receiving Prenatal Care</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">70.08</th>
+<th align="left">72.73</th>
+<th align="left">74.52</th>
+<th align="left">75.79</th>
+<th align="left">76.28</th>
+<th align="left">76.28</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">76.65</td>
+<td align="left">80.34</td>
+<td align="left">80.60</td>
+<td align="left">81.90</td>
+<td align="left">86.30</td>
+<td align="left">87.70</td>
+</tr>
+<tr class="even">
+<td align="left">87.76</td>
+<td align="left">88.40</td>
+<td align="left">90.70</td>
+<td align="left">91.50</td>
+<td align="left">91.80</td>
+<td align="left">92.10</td>
+</tr>
+<tr class="odd">
+<td align="left">92.20</td>
+<td align="left">92.41</td>
+<td align="left">92.47</td>
+<td align="left">93.00</td>
+<td align="left">93.20</td>
+<td align="left">93.40</td>
+</tr>
+<tr class="even">
+<td align="left">93.63</td>
+<td align="left">93.68</td>
+<td align="left">93.80</td>
+<td align="left">94.30</td>
+<td align="left">94.51</td>
+<td align="left">95.00</td>
+</tr>
+<tr class="odd">
+<td align="left">95.80</td>
+<td align="left">95.80</td>
+<td align="left">96.23</td>
+<td align="left">96.24</td>
+<td align="left">97.30</td>
+<td align="left">97.90</td>
+</tr>
+<tr class="even">
+<td align="left">97.95</td>
+<td align="left">98.20</td>
+<td align="left">99.00</td>
+<td align="left">99.00</td>
+<td align="left">99.10</td>
+<td align="left">99.10</td>
+</tr>
+<tr class="odd">
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="8" style="list-style-type: decimal">
+<li>Maintaining your balance may get harder as you grow older. A study was conducted to see how steady the elderly is on their feet. They had the subjects stand on a force platform and have them react to a noise. The force platform then measured how much they swayed forward and backward, and the data is in table #8.3.11 (&quot;Maintaining balance while,&quot; 2013). Find a 99% confidence interval for the mean sway of elderly people.</li>
+</ol>
+<blockquote>
+<p><strong>Table #8.3.11: Forward/backward Sway (mm) of Elderly Subjects</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">30</td>
+<td align="left">20</td>
+<td align="left">19</td>
+<td align="left">29</td>
+<td align="left">25</td>
+<td align="left">21</td>
+<td align="left">24</td>
+<td align="left">50</td>
+</tr>
+</tbody>
+</table>
+<p>Data Sources:</p>
+<p>Australian Human Rights Commission, (1996). <em>Indigenous deaths in
+custody 1989 - 1996</em>. Retrieved from website:
+<a href="http://www.humanrights.gov.au/publications/indigenous-deaths-custody" class="uri">http://www.humanrights.gov.au/publications/indigenous-deaths-custody</a></p>
+<p><em>CDC features - new data on autism spectrum disorders</em>. (2013, November
+26). Retrieved from <a href="http://www.cdc.gov/features/countingautism/" class="uri">http://www.cdc.gov/features/countingautism/</a></p>
+<p><em>CDC features - new data on autism spectrum disorders</em>. (2013, November
+26). Retrieved from <a href="http://www.cdc.gov/features/countingautism/" class="uri">http://www.cdc.gov/features/countingautism/</a></p>
+<p>Center for Disease Control and Prevention, Prevalence of Autism Spectrum
+Disorders - Autism and Developmental Disabilities Monitoring Network.
+(2008). <em>Autism and developmental disabilities monitoring network-2012</em>.
+Retrieved from website:
+<a href="http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf" class="uri">http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf</a></p>
+<p>Center for Disease Control and Prevention, Prevalence of Autism Spectrum
+Disorders - Autism and Developmental Disabilities Monitoring Network.
+(2008). <em>Autism and developmental disabilities monitoring network-2012</em>.
+Retrieved from website:
+<a href="http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf" class="uri">http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf</a></p>
+<p><em>CO2 emissions</em>. (2013, November 19). Retrieved from
+<a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.PC" class="uri">http://data.worldbank.org/indicator/EN.ATM.CO2E.PC</a></p>
+<p>Federal Trade Commission, (2008). <em>Consumer fraud and identity theft
+complaint data: January-december 2007</em>. Retrieved from website:
+<a href="http://www.ftc.gov/opa/2008/02/fraud.pdf" class="uri">http://www.ftc.gov/opa/2008/02/fraud.pdf</a></p>
+<p>Federal Trade Commission, (2008). <em>Consumer fraud and identity theft
+complaint data: January-december 2007</em>. Retrieved from website:
+<a href="http://www.ftc.gov/opa/2008/02/fraud.pdf" class="uri">http://www.ftc.gov/opa/2008/02/fraud.pdf</a></p>
+<p><em>Gallup news service</em>. (2013, November 7-10). Retrieved from
+<a href="http://www.gallup.com/file/poll/165896/JFK_Conspiracy_131115.pdf" class="uri">http://www.gallup.com/file/poll/165896/JFK_Conspiracy_131115.pdf</a></p>
+<p><em>Gallup news service</em>. (2013, November 7-10). Retrieved from
+<a href="http://www.gallup.com/file/poll/165896/JFK_Conspiracy_131115.pdf" class="uri">http://www.gallup.com/file/poll/165896/JFK_Conspiracy_131115.pdf</a></p>
+<p><em>Healthy breakfast story</em>. (2013, November 16). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Stories/HealthyBreakfast.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/HealthyBreakfast.html</a></p>
+<p><em>IQ of famous people</em>. (2013, November 13). Retrieved from
+<a href="http://www.kidsiqtestcenter.com/IQ-famous-people.html" class="uri">http://www.kidsiqtestcenter.com/IQ-famous-people.html</a></p>
+<p><em>Maintaining balance while concentrating</em>. (2013, September 25).
+Retrieved from <a href="http://www.statsci.org/data/general/balaconc.html" class="uri">http://www.statsci.org/data/general/balaconc.html</a></p>
+<p><em>Morgan Gallup poll on unemployment</em>. (2013, September 26). Retrieved
+from <a href="http://www.statsci.org/data/oz/gallup.html" class="uri">http://www.statsci.org/data/oz/gallup.html</a></p>
+<p><em>Morgan Gallup poll on unemployment</em>. (2013, September 26). Retrieved
+from <a href="http://www.statsci.org/data/oz/gallup.html" class="uri">http://www.statsci.org/data/oz/gallup.html</a></p>
+<p><em>Multi-disciplinary niser activity - mercury in bass</em>. (2013, November
+16). Retrieved from
+<a href="http://gozips.uakron.edu/~nmimoto/pages/datasets/MercuryInBass%20-%20description.txt">http://gozips.uakron.edu/~nmimoto/pages/datasets/MercuryInBass -
+description.txt</a></p>
+<p><em>Pregnant woman receiving prenatal care</em>. (2013, October 14). Retrieved
+from <a href="http://data.worldbank.org/indicator/SH.STA.ANVC.ZS" class="uri">http://data.worldbank.org/indicator/SH.STA.ANVC.ZS</a></p>
+<p><em>Pulse rates before and after exercise</em>. (2013, September 25). Retrieved
+from <a href="http://www.statsci.org/data/oz/ms212.html" class="uri">http://www.statsci.org/data/oz/ms212.html</a></p>
+<p><em>SOCR data 2008 world countries rankings</em>. (2013, November 16).
+Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_2008_World_CountriesRankings" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_2008_World_CountriesRankings</a></p>
+<p><em>Student t-distribution</em>. (2013, November 25). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Stories/student.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/student.html</a></p>
+<p><em>WHO life expectancy</em>. (2013, September 19). Retrieved from
+<a href="http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends/en/index.html" class="uri">http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends/en/index.html</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="one-sample-inference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="two-sample-inference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

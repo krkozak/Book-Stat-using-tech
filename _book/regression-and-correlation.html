@@ -1,0 +1,2969 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Regression and Correlation | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Regression and Correlation | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Regression and Correlation | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2019-06-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="two-sample-inference.html">
+<link rel="next" href="chi-square-and-anova-tests.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li><a href="statistical-basics.html#example-1.1.1-stating-definitions-for-qualitative-variable-example-1.1.2-stating-definitions-for-qualitative-variable-example-1.1.3-stating-definitions-for-quantitative-variable-example-1.1.4-stating-definitions-for-quantitative-variable-example-1.1.5-discrete-or-continuous-measurement-scales-homework-sampling-methods-example-1.2.1-choosing-a-simple-random-sample-example-1.2.2-how-not-to-choose-a-simple-random-sample-example-1.2.3-sampling-type-homework-experimental-design-guidelines-for-planning-a-statistical-study-example-1.3.1-observational-study-or-experiment-homework-how-not-to-do-statistics-example-1.4.1-bias-in-a-study"><span class="toc-section-number">1.1.1</span> Example #1.1.1: Stating Definitions for Qualitative Variable<strong>
+### Example #1.1.2: Stating Definitions for Qualitative Variable
+### Example #1.1.3: Stating Definitions for Quantitative Variable
+### Example #1.1.4: Stating Definitions for Quantitative Variable
+### Example #1.1.5: Discrete or Continuous
+### Measurement Scales:
+### Homework
+## Sampling Methods
+#### Example #1.2.1: Choosing a Simple Random Sample
+#### Example #1.2.2: How Not to Choose a Simple Random Sample
+### Example #1.2.3: Sampling type
+### Homework
+## Experimental Design
+### Guidelines for planning a statistical study
+### Example #1.3.1: Observational Study or Experiment
+### Homework
+## How Not to Do Statistics
+### Example #1.4.1: Bias in a Study</strong></a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.2-cause-and-effect"><i class="fa fa-check"></i><b>1.1.2</b> Example #1.4.2: Cause and Effect</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.3-generalizations"><i class="fa fa-check"></i><b>1.1.3</b> Example #1.4.3: Generalizations</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework"><i class="fa fa-check"></i><b>1.1.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>2.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-6"><i class="fa fa-check"></i><b>3.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#homework-10"><i class="fa fa-check"></i><b>4.4.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>5.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>6.1</b> Uniform Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#graphs-of-the-normal-distribution"><i class="fa fa-check"></i><b>6.2</b> Graphs of the Normal Distribution</a></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.3</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.4</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-16"><i class="fa fa-check"></i><b>6.4.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.5</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-17"><i class="fa fa-check"></i><b>6.5.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-19"><i class="fa fa-check"></i><b>7.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-20"><i class="fa fa-check"></i><b>7.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#homework-22"><i class="fa fa-check"></i><b>8.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#homework-23"><i class="fa fa-check"></i><b>8.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-25"><i class="fa fa-check"></i><b>9.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-26"><i class="fa fa-check"></i><b>9.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-28"><i class="fa fa-check"></i><b>10.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-29"><i class="fa fa-check"></i><b>10.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-31"><i class="fa fa-check"></i><b>11.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-32"><i class="fa fa-check"></i><b>11.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regression-and-correlation" class="section level1">
+<h1><span class="header-section-number">Chapter 10</span> Regression and Correlation</h1>
+<p>The previous chapter looked at comparing populations to see if there is a difference between the two. That involved two random variables that are similar measures. This chapter will look at two random variables that are not similar measures, and see if there is a relationship between the two variables. To do this, you look at regression, which finds the linear relationship, and correlation, which measures the strength of a linear relationship.</p>
+<p>Please note: there are many other types of relationships besides linear that can be found for the data. This book will only explore linear, but realize that there are other relationships that can be used to describe data.</p>
+<div id="regression" class="section level2">
+<h2><span class="header-section-number">10.1</span> Regression</h2>
+<p>When comparing two different variables, two questions come to mind: “Is there a relationship between two variables?” and “How strong is that relationship?” These questions can be answered using <strong>regression</strong> and <strong>correlation</strong>. Regression answers whether there is a relationship (again this book will explore linear only) and correlation answers how strong the linear relationship is. To introduce both of these concepts, it is easier to look at a set of data.</p>
+<p><strong>Example #10.1.1: Determining If There Is a Relationship</strong></p>
+<blockquote>
+<p>Is there a relationship between the alcohol content and the number of calories in 12-ounce beer? To determine if there is one a random sample was taken of beer’s alcohol content and calories (&quot;Calories in beer,,&quot; 2011), and the data is in table #10.1.1.</p>
+<p><strong>Table #10.1.1: Alcohol and Calorie Content in Beer</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Brand</th>
+<th align="left">Brewery</th>
+<th align="left">Alcohol Content</th>
+<th align="left">Calories in 12 oz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Big Sky Scape Goat Pale Ale</td>
+<td align="left">Big Sky Brewing</td>
+<td align="left">4.70%</td>
+<td align="left">163</td>
+</tr>
+<tr class="even">
+<td align="left">Sierra Nevada Harvest Ale</td>
+<td align="left">Sierra Nevada</td>
+<td align="left">6.70%</td>
+<td align="left">215</td>
+</tr>
+<tr class="odd">
+<td align="left">Steel Reserve</td>
+<td align="left">MillerCoors</td>
+<td align="left">8.10%</td>
+<td align="left">222</td>
+</tr>
+<tr class="even">
+<td align="left">O'Doul's</td>
+<td align="left">Anheuser Busch</td>
+<td align="left">0.40%</td>
+<td align="left">70</td>
+</tr>
+<tr class="odd">
+<td align="left">Coors Light</td>
+<td align="left">MillerCoors</td>
+<td align="left">4.15%</td>
+<td align="left">104</td>
+</tr>
+<tr class="even">
+<td align="left">Genesee Cream Ale</td>
+<td align="left">High Falls Brewing</td>
+<td align="left">5.10%</td>
+<td align="left">162</td>
+</tr>
+<tr class="odd">
+<td align="left">Sierra Nevada Summerfest Beer</td>
+<td align="left">Sierra Nevada</td>
+<td align="left">5.00%</td>
+<td align="left">158</td>
+</tr>
+<tr class="even">
+<td align="left">Michelob Beer</td>
+<td align="left">Anheuser Busch</td>
+<td align="left">5.00%</td>
+<td align="left">155</td>
+</tr>
+<tr class="odd">
+<td align="left">Flying Dog Doggie Style</td>
+<td align="left">Flying Dog Brewery</td>
+<td align="left">4.70%</td>
+<td align="left">158</td>
+</tr>
+<tr class="even">
+<td align="left">Big Sky I.P.A.</td>
+<td align="left">Big Sky Brewing</td>
+<td align="left">6.20%</td>
+<td align="left">195</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>To aid in figuring out if there is a relationship, it helps to draw a scatter plot of the data. It is helpful to state the random variables, and since in an algebra class the variables are represented as <em>x</em> and <em>y</em>, those labels will be used here. It helps to state which variable is <em>x</em> and which is <em>y</em>.</p>
+<p>State random variables</p>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+<p><strong>Figure #10.1.1: Scatter Plot of Beer Data</strong></p>
+<p><embed src="media/image1.emf" style="width:4.13889in;height:4.13889in" /></p>
+<p>This scatter plot looks fairly linear. However, notice that there is one beer in the list that is actually considered a non-alcoholic beer. That value is probably an outlier since it is a non-alcoholic beer. The rest of the analysis will not include O’Doul’s. You cannot just remove data points, but in this case it makes more sense to, since all the other beers have a fairly large alcohol content.</p>
+</blockquote>
+<p>To find the equation for the linear relationship, the process of regression is used to find the line that best fits the data (sometimes called the best fitting line). The process is to draw the line through the data and then find the distances from a point to the line, which are called the residuals. The regression line is the line that makes the square of the residuals as small as possible, so the regression line is also sometimes called the least squares line. The regression line and the residuals are displayed in figure #10.1.2.</p>
+<p><strong><br />
+</strong></p>
+<p><strong>Figure #10.1.2: Scatter Plot of Beer Data with Regression Line and
+Residuals</strong></p>
+<p><img src="_media/image-10-2.jpg" style="width:5.08333in;height:5.08333in" /></p>
+<p><strong>The find the regression equation (also known as best fitting line or
+least squares line)</strong></p>
+<p>Given a collection of paired sample data, the regression equation is</p>
+<p>where the slope = and <em>y</em>-intercept =</p>
+<p>The <strong>residuals</strong> are the difference between the actual values and the
+estimated values.</p>
+<p>SS stands for sum of squares. So you are summing up squares. With the
+subscript <em>xy</em>, you aren’t really summing squares, but you can think of
+it that way in a weird sense.</p>
+<p>Note: the easiest way to find the regression equation is to use the technology.</p>
+<p>The <strong>independent variable</strong>, also called the <strong>explanatory variable</strong> or <strong>predictor variable</strong>, is the <em>x</em>-value in the equation. The independent variable is the one that you use to predict what the other variable is. The <strong>dependent variable</strong> depends on what independent value you pick. It also responds to the explanatory variable and is sometimes called the <strong>response variable</strong>. In the alcohol content and calorie example, it makes slightly more sense to say that you would use the alcohol content on a beer to predict the number of calories in the beer.</p>
+<p>The <strong>population equation</strong> looks like:</p>
+<p>is used to predict <em>y</em>.</p>
+<p>Assumptions of the regression line:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The set of ordered pairs is a random sample from the population of all such possible pairs.</p></li>
+<li><p>For each fixed value of <em>x</em>, the <em>y</em>-values have a normal distribution. All of the <em>y</em> distributions have the same variance, and for a given <em>x</em>-value, the distribution of <em>y</em>-values has a mean that lies on the least squares line. You also assume that for a fixed <em>y</em>, each <em>x</em> has its own normal distribution. This is difficult to figure out, so you can use the following to determine if you have a normal distribution.</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-roman">
+<li><p>Look to see if the scatter plot has a linear pattern.</p></li>
+<li><p>Examine the residuals to see if there is randomness in the residuals. If there is a pattern to the residuals, then there is an issue in the data.</p></li>
+</ol>
+<p><strong>Example #10.1.2: Find the Equation of the Regression Line</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Is there a positive relationship between the alcohol content and the number of calories in 12-ounce beer? To determine if there is a positive linear relationship, a random sample was taken of beer’s alcohol content and calories for several different beers (&quot;Calories in beer,,&quot; 2011), and the data are in table #10.1.2.</li>
+</ol>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Table #10.1.2: Alcohol and Calorie Content in Beer without
+Outlier</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Brand</th>
+<th align="left">Brewery</th>
+<th align="left">Alcohol Content</th>
+<th align="left">Calories in 12 oz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Big Sky Scape Goat Pale Ale</td>
+<td align="left">Big Sky Brewing</td>
+<td align="left">4.70%</td>
+<td align="left">163</td>
+</tr>
+<tr class="even">
+<td align="left">Sierra Nevada Harvest Ale</td>
+<td align="left">Sierra Nevada</td>
+<td align="left">6.70%</td>
+<td align="left">215</td>
+</tr>
+<tr class="odd">
+<td align="left">Steel Reserve</td>
+<td align="left">MillerCoors</td>
+<td align="left">8.10%</td>
+<td align="left">222</td>
+</tr>
+<tr class="even">
+<td align="left">Coors Light</td>
+<td align="left">MillerCoors</td>
+<td align="left">4.15%</td>
+<td align="left">104</td>
+</tr>
+<tr class="odd">
+<td align="left">Genesee Cream Ale</td>
+<td align="left">High Falls Brewing</td>
+<td align="left">5.10%</td>
+<td align="left">162</td>
+</tr>
+<tr class="even">
+<td align="left">Sierra Nevada Summerfest Beer</td>
+<td align="left">Sierra Nevada</td>
+<td align="left">5.00%</td>
+<td align="left">158</td>
+</tr>
+<tr class="odd">
+<td align="left">Michelob Beer</td>
+<td align="left">Anheuser Busch</td>
+<td align="left">5.00%</td>
+<td align="left">155</td>
+</tr>
+<tr class="even">
+<td align="left">Flying Dog Doggie Style</td>
+<td align="left">Flying Dog Brewery</td>
+<td align="left">4.70%</td>
+<td align="left">158</td>
+</tr>
+<tr class="odd">
+<td align="left">Big Sky I.P.A.</td>
+<td align="left">Big Sky Brewing</td>
+<td align="left">6.20%</td>
+<td align="left">195</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>State random variables</p>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+<p>Assumptions check:</p>
+</blockquote>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample was taken as stated in the problem.</p></li>
+<li><p>The distribution for each calorie value is normally distributed for every value of alcohol content in the beer.</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-roman">
+<li><p>From Example #10.2.1, the scatter plot looks fairly linear.</p></li>
+<li><p>The residual versus the <em>x-</em>values plot looks fairly random. (See figure #10.1.5.)</p></li>
+</ol>
+<blockquote>
+<p>It appears that the distribution for calories is a normal distribution.</p>
+<p>To find the regression equation on the TI-83/84 calculator, put the <em>x</em>’s in L1 and the <em>y</em>’s in L2. Then go to STAT, over to TESTS, and choose LinRegTTest. The setup is in figure #10.1.3. The reason that &gt;0 was chosen is because the question was asked if there was a positive relationship. If you are asked if there is a negative relationship, then pick &lt;0. If you are just asked if there is a relationship, then pick . Right now the choice will not make a different, but it will be important later.</p>
+<p><strong>Figure #10.1.3: Setup for Linear Regression Test on TI-83/84</strong></p>
+<p><img src="media/image15.png" style="width:2.75in;height:1.86111in" /></p>
+<p><strong>Figure #10.1.4: Results for Linear Regression Test on TI-83/84</strong></p>
+<p><img src="media/image16.png" style="width:2.75in;height:1.86111in" /><img src="media/image17.png" style="width:2.75in;height:1.86111in" /></p>
+<p>From this you can see that</p>
+<p>To find the regression equation using R, the command is lm(dependent variable ~ independent variable), where ~ is the tilde symbol located on the upper left of most keyboards. So for this example, the command would be lm(calories ~ alcohol), and the output would be</p>
+<p>Call:</p>
+<p>lm(formula = calories ~ alcohol)</p>
+<p>Coefficients:</p>
+<p>(Intercept) alcohol</p>
+<p>25.03 26.32</p>
+<p>From this you can see that the y-intercept is 25.03 and the slope is 26.32. So the regression equation is .</p>
+<p>Remember, this is an estimate for the true regression. A different random sample would produce a different estimate.</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Use the regression equation to find the number of calories when the alcohol content is 6.50%.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>If you are drinking a beer that is 6.50% alcohol content, then it is probably close to 196 calories. Notice, the mean number of calories is 170 calories. This value of 196 seems like a better estimate than the mean when looking at the original data. The regression equation is a better estimate than just the mean.</p>
+</blockquote>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Use the regression equation to find the number of calories when the alcohol content is 2.00%.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>If you are drinking a beer that is 2.00% alcohol content, then it has probably close to 78 calories. This doesn’t seem like a very good estimate. This estimate is what is called extrapolation. It is not a good idea to predict values that are far outside the range of the original data. This is because you can never be sure that the regression equation is valid for data outside the original data.</p>
+</blockquote>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the residuals and then plot the residuals versus the <em>x</em>-values.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<p>To find the residuals, find for each <em>x</em>-value. Then subtract each from the given <em>y</em> value to find the residuals. Realize that these are sample residuals since they are calculated from sample values. It is best to do this in a spreadsheet.</p>
+<p><strong>Table #10.1.3: Residuals for Beer Calories</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><em>x</em></th>
+<th align="left"><em>y</em></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">4.70</td>
+<td align="left">163</td>
+<td>148.61</td>
+<td>14.390</td>
+</tr>
+<tr class="even">
+<td align="left">6.70</td>
+<td align="left">215</td>
+<td>201.21</td>
+<td>13.790</td>
+</tr>
+<tr class="odd">
+<td align="left">8.10</td>
+<td align="left">222</td>
+<td>238.03</td>
+<td>-16.030</td>
+</tr>
+<tr class="even">
+<td align="left">4.15</td>
+<td align="left">104</td>
+<td>134.145</td>
+<td>-30.145</td>
+</tr>
+<tr class="odd">
+<td align="left">5.10</td>
+<td align="left">162</td>
+<td>159.13</td>
+<td>2.870</td>
+</tr>
+<tr class="even">
+<td align="left">5.00</td>
+<td align="left">158</td>
+<td>156.5</td>
+<td>1.500</td>
+</tr>
+<tr class="odd">
+<td align="left">5.00</td>
+<td align="left">155</td>
+<td>156.5</td>
+<td>-1.500</td>
+</tr>
+<tr class="even">
+<td align="left">4.70</td>
+<td align="left">158</td>
+<td>148.61</td>
+<td>9.390</td>
+</tr>
+<tr class="odd">
+<td align="left">6.20</td>
+<td align="left">195</td>
+<td>188.06</td>
+<td>6.940</td>
+</tr>
+</tbody>
+</table>
+<p>Notice the residuals add up to close to 0. They don’t add up to exactly
+0 in this example because of rounding error. Normally the residuals add
+up to 0.</p>
+<p>You can use R to get the residuals. The command is</p>
+<p>lm.out = lm(dependent variable ~ independent variable) – this defines
+the linear model with a name so you can use it later. Then</p>
+<p>residual(lm.out) – produces the residuals.</p>
+<p>For this example, the command would be</p>
+<p>lm(calories~alcohol)</p>
+<p>Call:</p>
+<p>lm(formula = calories ~ alcohol)</p>
+<p>Coefficients:</p>
+<p>(Intercept) alcohol</p>
+<p>25.03 26.32</p>
+<p>&gt; residuals(lm.out)</p>
+<p>1 2 3 4 5 6</p>
+<p>14.271307 13.634092 -16.211959 -30.253458 2.743864 1.375725 -</p>
+<p>7 8 9</p>
+<p>1.624275 9.271307 6.793396</p>
+<p>So the first residual is 14.271307 and it belongs to the first x value.
+The residual 13.634092 belongs to the second x value, and so forth.</p>
+<p>You can then graph the residuals versus the independent variable using
+the plot command. For this example, the command would be plot(alcohol,
+residuals(lm.out), main=&quot;Residuals for Beer Calories versus Alcohol
+Content&quot;, xlab=&quot;Alcohol Content&quot;, ylab=&quot;Residuals&quot;). Sometimes it
+is useful to see the x-axis on the graph, so after creating the plot,
+type the command abline(0,0).</p>
+<p>The graph of the residuals versus the <em>x</em>-values is in figure #10.1.5.
+They appear to be somewhat random.</p>
+<p><strong>Figure #10.1.5: Residuals of Beer Calories versus Content</strong></p>
+<blockquote>
+<p><embed src="media/image26.emf" style="width:3.59722in;height:3.59722in" /></p>
+</blockquote>
+<p>Notice, that the 6.50% value falls into the range of the original <em>x</em>-values. The processes of predicting values using an <em>x</em> within the range of original <em>x</em>-values is called <strong>interpolating</strong>. The 2.00% value is outside the range of original <em>x</em>-values. Using an <em>x</em>-value that is outside the range of the original <em>x</em>-values is called <strong>extrapolating</strong>. When predicting values using interpolation, you can usually feel pretty confident that that value will be close to the true value. When you extrapolate, you are not really sure that the predicted value is close to the true value. This is because when you interpolate, you know the equation that predicts, but when you extrapolate, you are not really sure that your relationship is still valid. The relationship could in fact change for different <em>x</em>-values.</p>
+<p>An example of this is when you use regression to come up with an equation to predict the growth of a city, like Flagstaff, AZ. Based on analysis it was determined that the population of Flagstaff would be well over 50,000 by 1995. However, when a census was undertaken in 1995, the population was less than 50,000. This is because they extrapolated and the growth factor they were using had obviously changed from the early 1990’s. Growth factors can change for many reasons, such as employment growth, employment stagnation, disease, articles saying great place to live, etc. Realize that when you extrapolate, your predicted value may not be anywhere close to the actual value that you observe.</p>
+<p>What does the slope mean in the context of this problem?</p>
+<p>The calories increase 26.3 calories for every 1% increase in alcohol
+content.</p>
+<p>The <em>y</em>-intercept in many cases is meaningless. In this case, it means that if a drink has 0 alcohol content, then it would have 25.0 calories. This may be reasonable, but remember this value is an extrapolation so it may be wrong.</p>
+<p>Consider the residuals again. According to the data, a beer with 6.7% alcohol has 215 calories. The predicted value is 201 calories.</p>
+<p>This deviation means that the actual value was 14 above the predicted value. That isn’t that far off. Some of the actual values differ by a large amount from the predicted value. This is due to variability in the dependent variable. The larger the residuals the less the model explains the variability in the dependent variable. There needs to be a way to calculate how well the model explains the variability in the dependent variable. This will be explored in the next section.</p>
+<p>The following example demonstrates the process to go through when using the formulas for finding the regression equation, though it is better to use technology. This is because if the linear model doesn’t fit the data well, then you could try some of the other models that are available through technology.</p>
+<p><strong>Example #10.1.3: Calculating the Regression Equation with the
+Formula</strong></p>
+<blockquote>
+<p>Is there a relationship between the alcohol content and the number of calories in 12-ounce beer? To determine if there is one a random sample was taken of beer’s alcohol content and calories (&quot;Calories in beer,,&quot; 2011), and the data are in table #10.1.2. Find the regression equation from the formula.</p>
+<p><strong>Solution:</strong></p>
+<p>State random variables</p>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<p><strong>Table #10.1.4: Calculations for Regression Equation</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Alcohol Content</th>
+<th align="left">Calories</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">4.70</td>
+<td align="left">163</td>
+<td>-0.8167</td>
+<td>-7.2222</td>
+<td>0.6669</td>
+<td>52.1605</td>
+<td>5.8981</td>
+</tr>
+<tr class="even">
+<td align="left">6.70</td>
+<td align="left">215</td>
+<td>1.1833</td>
+<td>44.7778</td>
+<td>1.4003</td>
+<td>2005.0494</td>
+<td>52.9870</td>
+</tr>
+<tr class="odd">
+<td align="left">8.10</td>
+<td align="left">222</td>
+<td>2.5833</td>
+<td>51.7778</td>
+<td>6.6736</td>
+<td>2680.9383</td>
+<td>133.7593</td>
+</tr>
+<tr class="even">
+<td align="left">4.15</td>
+<td align="left">104</td>
+<td>-1.3667</td>
+<td>-66.2222</td>
+<td>1.8678</td>
+<td>4385.3827</td>
+<td>90.5037</td>
+</tr>
+<tr class="odd">
+<td align="left">5.10</td>
+<td align="left">162</td>
+<td>-0.4167</td>
+<td>-8.2222</td>
+<td>0.1736</td>
+<td>67.6049</td>
+<td>3.4259</td>
+</tr>
+<tr class="even">
+<td align="left">5.00</td>
+<td align="left">158</td>
+<td>-0.5167</td>
+<td>-12.2222</td>
+<td>0.2669</td>
+<td>149.3827</td>
+<td>6.3148</td>
+</tr>
+<tr class="odd">
+<td align="left">5.00</td>
+<td align="left">155</td>
+<td>-0.5167</td>
+<td>-15.2222</td>
+<td>0.2669</td>
+<td>231.7160</td>
+<td>7.8648</td>
+</tr>
+<tr class="even">
+<td align="left">4.70</td>
+<td align="left">158</td>
+<td>-0.8167</td>
+<td>-12.2222</td>
+<td>0.6669</td>
+<td>149.3827</td>
+<td>9.9815</td>
+</tr>
+<tr class="odd">
+<td align="left">6.20</td>
+<td align="left">195</td>
+<td>0.6833</td>
+<td>24.7778</td>
+<td>0.4669</td>
+<td>613.9383</td>
+<td>16.9315</td>
+</tr>
+<tr class="even">
+<td align="left">5.516667</td>
+<td align="left">170.2222</td>
+<td></td>
+<td></td>
+<td>12.45</td>
+<td>10335.5556</td>
+<td>327.6667</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>slope:</p>
+<p><em>y</em>-intercept:</p>
+<p>Regression equation:</p>
+</blockquote>
+<div id="homework-27" class="section level3">
+<h3><span class="header-section-number">10.1.1</span> Homework</h3>
+<p>For each problem, state the random variables. Also, look to see if there
+are any outliers that need to be removed. Do the regression analysis
+with and without the suspected outlier points to determine if their
+removal affects the regression. The data sets in this section are used
+in the homework for sections 10.2 and 10.3 also.</p>
+<ol style="list-style-type: decimal">
+<li>When an anthropologist finds skeletal remains, they need to figure
+out the height of the person. The height of a person (in cm) and the
+length of their metacarpal bone 1 (in cm) were collected and are in
+table #10.1.5 (&quot;Prediction of height,&quot; 2013). Create a scatter
+plot and find a regression equation between the height of a person
+and the length of their metacarpal. Then use the regression equation
+to find the height of a person for a metacarpal length of 44 cm and
+for a metacarpal length of 55 cm. Which height that you calculated
+do you think is closer to the true height of the person? Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.5: Data of Metacarpal versus Height</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Length of Metacarpal (cm)</th>
+<th align="left">Height of Person (cm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">45</td>
+<td align="left">171</td>
+</tr>
+<tr class="even">
+<td align="left">51</td>
+<td align="left">178</td>
+</tr>
+<tr class="odd">
+<td align="left">39</td>
+<td align="left">157</td>
+</tr>
+<tr class="even">
+<td align="left">41</td>
+<td align="left">163</td>
+</tr>
+<tr class="odd">
+<td align="left">48</td>
+<td align="left">172</td>
+</tr>
+<tr class="even">
+<td align="left">49</td>
+<td align="left">183</td>
+</tr>
+<tr class="odd">
+<td align="left">46</td>
+<td align="left">173</td>
+</tr>
+<tr class="even">
+<td align="left">43</td>
+<td align="left">175</td>
+</tr>
+<tr class="odd">
+<td align="left">47</td>
+<td align="left">173</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li>Table #10.1.6 contains the value of the house and the amount of
+rental income in a year that the house brings in (&quot;Capital and
+rental,&quot; 2013). Create a scatter plot and find a regression
+equation between house value and rental income. Then use the
+regression equation to find the rental income a house worth
+$230,000 and for a house worth $400,000. Which rental income that
+you calculated do you think is closer to the true rental income?
+Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.6: Data of House Value versus Rental</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Value</th>
+<th align="left">Rental</th>
+<th align="left">Value</th>
+<th align="left">Rental</th>
+<th align="left">Value</th>
+<th align="left">Rental</th>
+<th align="left">Value</th>
+<th align="left">Rental</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">81000</td>
+<td align="left">6656</td>
+<td align="left">77000</td>
+<td align="left">4576</td>
+<td align="left">75000</td>
+<td align="left">7280</td>
+<td align="left">67500</td>
+<td align="left">6864</td>
+</tr>
+<tr class="even">
+<td align="left">95000</td>
+<td align="left">7904</td>
+<td align="left">94000</td>
+<td align="left">8736</td>
+<td align="left">90000</td>
+<td align="left">6240</td>
+<td align="left">85000</td>
+<td align="left">7072</td>
+</tr>
+<tr class="odd">
+<td align="left">121000</td>
+<td align="left">12064</td>
+<td align="left">115000</td>
+<td align="left">7904</td>
+<td align="left">110000</td>
+<td align="left">7072</td>
+<td align="left">104000</td>
+<td align="left">7904</td>
+</tr>
+<tr class="even">
+<td align="left">135000</td>
+<td align="left">8320</td>
+<td align="left">130000</td>
+<td align="left">9776</td>
+<td align="left">126000</td>
+<td align="left">6240</td>
+<td align="left">125000</td>
+<td align="left">7904</td>
+</tr>
+<tr class="odd">
+<td align="left">145000</td>
+<td align="left">8320</td>
+<td align="left">140000</td>
+<td align="left">9568</td>
+<td align="left">140000</td>
+<td align="left">9152</td>
+<td align="left">135000</td>
+<td align="left">7488</td>
+</tr>
+<tr class="even">
+<td align="left">165000</td>
+<td align="left">13312</td>
+<td align="left">165000</td>
+<td align="left">8528</td>
+<td align="left">155000</td>
+<td align="left">7488</td>
+<td align="left">148000</td>
+<td align="left">8320</td>
+</tr>
+<tr class="odd">
+<td align="left">178000</td>
+<td align="left">11856</td>
+<td align="left">174000</td>
+<td align="left">10400</td>
+<td align="left">170000</td>
+<td align="left">9568</td>
+<td align="left">170000</td>
+<td align="left">12688</td>
+</tr>
+<tr class="even">
+<td align="left">200000</td>
+<td align="left">12272</td>
+<td align="left">200000</td>
+<td align="left">10608</td>
+<td align="left">194000</td>
+<td align="left">11232</td>
+<td align="left">190000</td>
+<td align="left">8320</td>
+</tr>
+<tr class="odd">
+<td align="left">214000</td>
+<td align="left">8528</td>
+<td align="left">208000</td>
+<td align="left">10400</td>
+<td align="left">200000</td>
+<td align="left">10400</td>
+<td align="left">200000</td>
+<td align="left">8320</td>
+</tr>
+<tr class="even">
+<td align="left">240000</td>
+<td align="left">10192</td>
+<td align="left">240000</td>
+<td align="left">12064</td>
+<td align="left">240000</td>
+<td align="left">11648</td>
+<td align="left">225000</td>
+<td align="left">12480</td>
+</tr>
+<tr class="odd">
+<td align="left">289000</td>
+<td align="left">11648</td>
+<td align="left">270000</td>
+<td align="left">12896</td>
+<td align="left">262000</td>
+<td align="left">10192</td>
+<td align="left">244500</td>
+<td align="left">11232</td>
+</tr>
+<tr class="even">
+<td align="left">325000</td>
+<td align="left">12480</td>
+<td align="left">310000</td>
+<td align="left">12480</td>
+<td align="left">303000</td>
+<td align="left">12272</td>
+<td align="left">300000</td>
+<td align="left">12480</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>The World Bank collects information on the life expectancy of a
+person in each country (&quot;Life expectancy at,&quot; 2013) and the
+fertility rate per woman in the country (&quot;Fertility rate,&quot; 2013).
+The data for 24 randomly selected countries for the year 2011 are in
+table #10.1.7. Create a scatter plot of the data and find a linear
+regression equation between fertility rate and life expectancy. Then
+use the regression equation to find the life expectancy for a
+country that has a fertility rate of 2.7 and for a country with
+fertility rate of 8.1. Which life expectancy that you calculated do
+you think is closer to the true life expectancy? Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.7: Data of Fertility Rates versus Life Expectancy</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Fertility Rate</th>
+<th align="left">Life Expectancy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1.7</td>
+<td align="left">77.2</td>
+</tr>
+<tr class="even">
+<td align="left">5.8</td>
+<td align="left">55.4</td>
+</tr>
+<tr class="odd">
+<td align="left">2.2</td>
+<td align="left">69.9</td>
+</tr>
+<tr class="even">
+<td align="left">2.1</td>
+<td align="left">76.4</td>
+</tr>
+<tr class="odd">
+<td align="left">1.8</td>
+<td align="left">75.0</td>
+</tr>
+<tr class="even">
+<td align="left">2.0</td>
+<td align="left">78.2</td>
+</tr>
+<tr class="odd">
+<td align="left">2.6</td>
+<td align="left">73.0</td>
+</tr>
+<tr class="even">
+<td align="left">2.8</td>
+<td align="left">70.8</td>
+</tr>
+<tr class="odd">
+<td align="left">1.4</td>
+<td align="left">82.6</td>
+</tr>
+<tr class="even">
+<td align="left">2.6</td>
+<td align="left">68.9</td>
+</tr>
+<tr class="odd">
+<td align="left">1.5</td>
+<td align="left">81.0</td>
+</tr>
+<tr class="even">
+<td align="left">6.9</td>
+<td align="left">54.2</td>
+</tr>
+<tr class="odd">
+<td align="left">2.4</td>
+<td align="left">67.1</td>
+</tr>
+<tr class="even">
+<td align="left">1.5</td>
+<td align="left">73.3</td>
+</tr>
+<tr class="odd">
+<td align="left">2.5</td>
+<td align="left">74.2</td>
+</tr>
+<tr class="even">
+<td align="left">1.4</td>
+<td align="left">80.7</td>
+</tr>
+<tr class="odd">
+<td align="left">2.9</td>
+<td align="left">72.1</td>
+</tr>
+<tr class="even">
+<td align="left">2.1</td>
+<td align="left">78.3</td>
+</tr>
+<tr class="odd">
+<td align="left">4.7</td>
+<td align="left">62.9</td>
+</tr>
+<tr class="even">
+<td align="left">6.8</td>
+<td align="left">54.4</td>
+</tr>
+<tr class="odd">
+<td align="left">5.2</td>
+<td align="left">55.9</td>
+</tr>
+<tr class="even">
+<td align="left">4.2</td>
+<td align="left">66.0</td>
+</tr>
+<tr class="odd">
+<td align="left">1.5</td>
+<td align="left">76.0</td>
+</tr>
+<tr class="even">
+<td align="left">3.9</td>
+<td align="left">72.3</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li>The World Bank collected data on the percentage of GDP that a
+country spends on health expenditures (&quot;Health expenditure,&quot; 2013)
+and also the percentage of women receiving prenatal care (&quot;Pregnant
+woman receiving,&quot; 2013). The data for the countries where this
+information are available for the year 2011 is in table #10.1.8.
+Create a scatter plot of the data and find a regression equation
+between percentage spent on health expenditure and the percentage of
+women receiving prenatal care. Then use the regression equation to
+find the percent of women receiving prenatal care for a country that
+spends 5.0% of GDP on health expenditure and for a country that
+spends 12.0% of GDP. Which prenatal care percentage that you
+calculated do you think is closer to the true percentage? Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.8: Data of Health Expenditure versus Prenatal Care</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Health Expenditure (% of GDP)</th>
+<th align="left">Prenatal Care (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">9.6</td>
+<td align="left">47.9</td>
+</tr>
+<tr class="even">
+<td align="left">3.7</td>
+<td align="left">54.6</td>
+</tr>
+<tr class="odd">
+<td align="left">5.2</td>
+<td align="left">93.7</td>
+</tr>
+<tr class="even">
+<td align="left">5.2</td>
+<td align="left">84.7</td>
+</tr>
+<tr class="odd">
+<td align="left">10.0</td>
+<td align="left">100.0</td>
+</tr>
+<tr class="even">
+<td align="left">4.7</td>
+<td align="left">42.5</td>
+</tr>
+<tr class="odd">
+<td align="left">4.8</td>
+<td align="left">96.4</td>
+</tr>
+<tr class="even">
+<td align="left">6.0</td>
+<td align="left">77.1</td>
+</tr>
+<tr class="odd">
+<td align="left">5.4</td>
+<td align="left">58.3</td>
+</tr>
+<tr class="even">
+<td align="left">4.8</td>
+<td align="left">95.4</td>
+</tr>
+<tr class="odd">
+<td align="left">4.1</td>
+<td align="left">78.0</td>
+</tr>
+<tr class="even">
+<td align="left">6.0</td>
+<td align="left">93.3</td>
+</tr>
+<tr class="odd">
+<td align="left">9.5</td>
+<td align="left">93.3</td>
+</tr>
+<tr class="even">
+<td align="left">6.8</td>
+<td align="left">93.7</td>
+</tr>
+<tr class="odd">
+<td align="left">6.1</td>
+<td align="left">89.8</td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li><p>The height and weight of baseball players are in table #10.1.9
+(&quot;MLB heightsweights,&quot; 2013). Create a scatter plot and find a
+regression equation between height and weight of baseball players.
+Then use the regression equation to find the weight of a baseball
+player that is 75 inches tall and for a baseball player that is 68
+inches tall. Which weight that you calculated do you think is closer
+to the true weight? Why?</p>
+<p><strong>Table #10.1.9: Heights and Weights of Baseball Players</strong></p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Height (inches)</th>
+<th align="left">Weight (pounds)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">76</td>
+<td align="left">212</td>
+</tr>
+<tr class="even">
+<td align="left">76</td>
+<td align="left">224</td>
+</tr>
+<tr class="odd">
+<td align="left">72</td>
+<td align="left">180</td>
+</tr>
+<tr class="even">
+<td align="left">74</td>
+<td align="left">210</td>
+</tr>
+<tr class="odd">
+<td align="left">75</td>
+<td align="left">215</td>
+</tr>
+<tr class="even">
+<td align="left">71</td>
+<td align="left">200</td>
+</tr>
+<tr class="odd">
+<td align="left">77</td>
+<td align="left">235</td>
+</tr>
+<tr class="even">
+<td align="left">78</td>
+<td align="left">235</td>
+</tr>
+<tr class="odd">
+<td align="left">77</td>
+<td align="left">194</td>
+</tr>
+<tr class="even">
+<td align="left">76</td>
+<td align="left">185</td>
+</tr>
+<tr class="odd">
+<td align="left">72</td>
+<td align="left">180</td>
+</tr>
+<tr class="even">
+<td align="left">72</td>
+<td align="left">170</td>
+</tr>
+<tr class="odd">
+<td align="left">75</td>
+<td align="left">220</td>
+</tr>
+<tr class="even">
+<td align="left">74</td>
+<td align="left">228</td>
+</tr>
+<tr class="odd">
+<td align="left">73</td>
+<td align="left">210</td>
+</tr>
+<tr class="even">
+<td align="left">72</td>
+<td align="left">180</td>
+</tr>
+<tr class="odd">
+<td align="left">70</td>
+<td align="left">185</td>
+</tr>
+<tr class="even">
+<td align="left">73</td>
+<td align="left">190</td>
+</tr>
+<tr class="odd">
+<td align="left">71</td>
+<td align="left">186</td>
+</tr>
+<tr class="even">
+<td align="left">74</td>
+<td align="left">200</td>
+</tr>
+<tr class="odd">
+<td align="left">74</td>
+<td align="left">200</td>
+</tr>
+<tr class="even">
+<td align="left">75</td>
+<td align="left">210</td>
+</tr>
+<tr class="odd">
+<td align="left">78</td>
+<td align="left">240</td>
+</tr>
+<tr class="even">
+<td align="left">72</td>
+<td align="left">208</td>
+</tr>
+<tr class="odd">
+<td align="left">75</td>
+<td align="left">180</td>
+</tr>
+</tbody>
+</table>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Different species have different body weights and brain weights are
+in table #10.1.10. (&quot;Brain2bodyweight,&quot; 2013). Create a scatter
+plot and find a regression equation between body weights and brain
+weights. Then use the regression equation to find the brain weight
+for a species that has a body weight of 62 kg and for a species that
+has a body weight of 180,000 kg. Which brain weight that you
+calculated do you think is closer to the true brain weight? Why?</p>
+<p><strong>Table #10.1.10: Body Weights and Brain Weights of Species</strong></p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Species</th>
+<th align="left">Body Weight (kg)</th>
+<th align="left">Brain Weight (kg)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Newborn Human</td>
+<td align="left">3.20</td>
+<td align="left">0.37</td>
+</tr>
+<tr class="even">
+<td align="left">Adult Human</td>
+<td align="left">73.00</td>
+<td align="left">1.35</td>
+</tr>
+<tr class="odd">
+<td align="left">Pithecanthropus Man</td>
+<td align="left">70.00</td>
+<td align="left">0.93</td>
+</tr>
+<tr class="even">
+<td align="left">Squirrel</td>
+<td align="left">0.80</td>
+<td align="left">0.01</td>
+</tr>
+<tr class="odd">
+<td align="left">Hamster</td>
+<td align="left">0.15</td>
+<td align="left">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Chimpanzee</td>
+<td align="left">50.00</td>
+<td align="left">0.42</td>
+</tr>
+<tr class="odd">
+<td align="left">Rabbit</td>
+<td align="left">1.40</td>
+<td align="left">0.01</td>
+</tr>
+<tr class="even">
+<td align="left">Dog_(Beagle)</td>
+<td align="left">10.00</td>
+<td align="left">0.07</td>
+</tr>
+<tr class="odd">
+<td align="left">Cat</td>
+<td align="left">4.50</td>
+<td align="left">0.03</td>
+</tr>
+<tr class="even">
+<td align="left">Rat</td>
+<td align="left">0.40</td>
+<td align="left">0.00</td>
+</tr>
+<tr class="odd">
+<td align="left">Bottle-Nosed Dolphin</td>
+<td align="left">400.00</td>
+<td align="left">1.50</td>
+</tr>
+<tr class="even">
+<td align="left">Beaver</td>
+<td align="left">24.00</td>
+<td align="left">0.04</td>
+</tr>
+<tr class="odd">
+<td align="left">Gorilla</td>
+<td align="left">320.00</td>
+<td align="left">0.50</td>
+</tr>
+<tr class="even">
+<td align="left">Tiger</td>
+<td align="left">170.00</td>
+<td align="left">0.26</td>
+</tr>
+<tr class="odd">
+<td align="left">Owl</td>
+<td align="left">1.50</td>
+<td align="left">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Camel</td>
+<td align="left">550.00</td>
+<td align="left">0.76</td>
+</tr>
+<tr class="odd">
+<td align="left">Elephant</td>
+<td align="left">4600.00</td>
+<td align="left">6.00</td>
+</tr>
+<tr class="even">
+<td align="left">Lion</td>
+<td align="left">187.00</td>
+<td align="left">0.24</td>
+</tr>
+<tr class="odd">
+<td align="left">Sheep</td>
+<td align="left">120.00</td>
+<td align="left">0.14</td>
+</tr>
+<tr class="even">
+<td align="left">Walrus</td>
+<td align="left">800.00</td>
+<td align="left">0.93</td>
+</tr>
+<tr class="odd">
+<td align="left">Horse</td>
+<td align="left">450.00</td>
+<td align="left">0.50</td>
+</tr>
+<tr class="even">
+<td align="left">Cow</td>
+<td align="left">700.00</td>
+<td align="left">0.44</td>
+</tr>
+<tr class="odd">
+<td align="left">Giraffe</td>
+<td align="left">950.00</td>
+<td align="left">0.53</td>
+</tr>
+<tr class="even">
+<td align="left">Green Lizard</td>
+<td align="left">0.20</td>
+<td align="left">0.00</td>
+</tr>
+<tr class="odd">
+<td align="left">Sperm Whale</td>
+<td align="left">35000.00</td>
+<td align="left">7.80</td>
+</tr>
+<tr class="even">
+<td align="left">Turtle</td>
+<td align="left">3.00</td>
+<td align="left">0.00</td>
+</tr>
+<tr class="odd">
+<td align="left">Alligator</td>
+<td align="left">270.00</td>
+<td align="left">0.01</td>
+</tr>
+</tbody>
+</table>
+<ol start="7" style="list-style-type: decimal">
+<li>A random sample of beef hotdogs was taken and the amount of sodium
+(in mg) and calories were measured. (&quot;Data hotdogs,&quot; 2013) The
+data are in table #10.1.11. Create a scatter plot and find a
+regression equation between amount of calories and amount of sodium.
+Then use the regression equation to find the amount of sodium a beef
+hotdog has if it is 170 calories and if it is 120 calories. Which
+sodium level that you calculated do you think is closer to the true
+sodium level? Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.11: Calories and Sodium Levels in Beef Hotdogs</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Calories</th>
+<th align="left">Sodium</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">186</td>
+<td align="left">495</td>
+</tr>
+<tr class="even">
+<td align="left">181</td>
+<td align="left">477</td>
+</tr>
+<tr class="odd">
+<td align="left">176</td>
+<td align="left">425</td>
+</tr>
+<tr class="even">
+<td align="left">149</td>
+<td align="left">322</td>
+</tr>
+<tr class="odd">
+<td align="left">184</td>
+<td align="left">482</td>
+</tr>
+<tr class="even">
+<td align="left">190</td>
+<td align="left">587</td>
+</tr>
+<tr class="odd">
+<td align="left">158</td>
+<td align="left">370</td>
+</tr>
+<tr class="even">
+<td align="left">139</td>
+<td align="left">322</td>
+</tr>
+<tr class="odd">
+<td align="left">175</td>
+<td align="left">479</td>
+</tr>
+<tr class="even">
+<td align="left">148</td>
+<td align="left">375</td>
+</tr>
+<tr class="odd">
+<td align="left">152</td>
+<td align="left">330</td>
+</tr>
+<tr class="even">
+<td align="left">111</td>
+<td align="left">300</td>
+</tr>
+<tr class="odd">
+<td align="left">141</td>
+<td align="left">386</td>
+</tr>
+<tr class="even">
+<td align="left">153</td>
+<td align="left">401</td>
+</tr>
+<tr class="odd">
+<td align="left">190</td>
+<td align="left">645</td>
+</tr>
+<tr class="even">
+<td align="left">157</td>
+<td align="left">440</td>
+</tr>
+<tr class="odd">
+<td align="left">131</td>
+<td align="left">317</td>
+</tr>
+<tr class="even">
+<td align="left">149</td>
+<td align="left">319</td>
+</tr>
+<tr class="odd">
+<td align="left">135</td>
+<td align="left">298</td>
+</tr>
+<tr class="even">
+<td align="left">132</td>
+<td align="left">253</td>
+</tr>
+</tbody>
+</table>
+<ol start="8" style="list-style-type: decimal">
+<li>Per capita income in 1960 dollars for European countries and the
+percent of the labor force that works in agriculture in 1960 are in
+table #10.1.12 (&quot;OECD economic development,&quot; 2013). Create a
+scatter plot and find a regression equation between percent of labor
+force in agriculture and per capita income. Then use the regression
+equation to find the per capita income in a country that has 21
+percent of labor in agriculture and in a country that has 2 percent
+of labor in agriculture. Which per capita income that you calculated
+do you think is closer to the true income? Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.12: Percent of Labor in Agriculture and Per Capita
+Income for European Countries</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Country</th>
+<th align="left">Percent in Agriculture</th>
+<th align="left">Per capita income</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Sweden</td>
+<td align="left">14</td>
+<td align="left">1644</td>
+</tr>
+<tr class="even">
+<td align="left">Switzerland</td>
+<td align="left">11</td>
+<td align="left">1361</td>
+</tr>
+<tr class="odd">
+<td align="left">Luxembourg</td>
+<td align="left">15</td>
+<td align="left">1242</td>
+</tr>
+<tr class="even">
+<td align="left">U. Kingdom</td>
+<td align="left">4</td>
+<td align="left">1105</td>
+</tr>
+<tr class="odd">
+<td align="left">Denmark</td>
+<td align="left">18</td>
+<td align="left">1049</td>
+</tr>
+<tr class="even">
+<td align="left">W. Germany</td>
+<td align="left">15</td>
+<td align="left">1035</td>
+</tr>
+<tr class="odd">
+<td align="left">France</td>
+<td align="left">20</td>
+<td align="left">1013</td>
+</tr>
+<tr class="even">
+<td align="left">Belgium</td>
+<td align="left">6</td>
+<td align="left">1005</td>
+</tr>
+<tr class="odd">
+<td align="left">Norway</td>
+<td align="left">20</td>
+<td align="left">977</td>
+</tr>
+<tr class="even">
+<td align="left">Iceland</td>
+<td align="left">25</td>
+<td align="left">839</td>
+</tr>
+<tr class="odd">
+<td align="left">Netherlands</td>
+<td align="left">11</td>
+<td align="left">810</td>
+</tr>
+<tr class="even">
+<td align="left">Austria</td>
+<td align="left">23</td>
+<td align="left">681</td>
+</tr>
+<tr class="odd">
+<td align="left">Ireland</td>
+<td align="left">36</td>
+<td align="left">529</td>
+</tr>
+<tr class="even">
+<td align="left">Italy</td>
+<td align="left">27</td>
+<td align="left">504</td>
+</tr>
+<tr class="odd">
+<td align="left">Greece</td>
+<td align="left">56</td>
+<td align="left">324</td>
+</tr>
+<tr class="even">
+<td align="left">Spain</td>
+<td align="left">42</td>
+<td align="left">290</td>
+</tr>
+<tr class="odd">
+<td align="left">Portugal</td>
+<td align="left">44</td>
+<td align="left">238</td>
+</tr>
+<tr class="even">
+<td align="left">Turkey</td>
+<td align="left">79</td>
+<td align="left">177</td>
+</tr>
+</tbody>
+</table>
+<ol start="9" style="list-style-type: decimal">
+<li>Cigarette smoking and cancer have been linked. The number of deaths
+per one hundred thousand from bladder cancer and the number of
+cigarettes sold per capita in 1960 are in table #10.1.13 (&quot;Smoking
+and cancer,&quot; 2013). Create a scatter plot and find a regression
+equation between cigarette smoking and deaths of bladder cancer.
+Then use the regression equation to find the number of deaths from
+bladder cancer when the cigarette sales were 20 per capita and when
+the cigarette sales were 6 per capita. Which number of deaths that
+you calculated do you think is closer to the true number? Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.13: Number of Cigarettes and Number of Bladder Cancer
+Deaths in 1960</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Cigarette Sales (per Capita)</th>
+<th align="left">Bladder Cancer Deaths (per 100 Thousand)</th>
+<th align="left">Cigarette Sales (per Capita)</th>
+<th align="left">Bladder Cancer Deaths (per 100 Thousand)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">18.20</td>
+<td align="left">2.90</td>
+<td align="left">42.40</td>
+<td align="left">6.54</td>
+</tr>
+<tr class="even">
+<td align="left">25.82</td>
+<td align="left">3.52</td>
+<td align="left">28.64</td>
+<td align="left">5.98</td>
+</tr>
+<tr class="odd">
+<td align="left">18.24</td>
+<td align="left">2.99</td>
+<td align="left">21.16</td>
+<td align="left">2.90</td>
+</tr>
+<tr class="even">
+<td align="left">28.60</td>
+<td align="left">4.46</td>
+<td align="left">29.14</td>
+<td align="left">5.30</td>
+</tr>
+<tr class="odd">
+<td align="left">31.10</td>
+<td align="left">5.11</td>
+<td align="left">19.96</td>
+<td align="left">2.89</td>
+</tr>
+<tr class="even">
+<td align="left">33.60</td>
+<td align="left">4.78</td>
+<td align="left">26.38</td>
+<td align="left">4.47</td>
+</tr>
+<tr class="odd">
+<td align="left">40.46</td>
+<td align="left">5.60</td>
+<td align="left">23.44</td>
+<td align="left">2.93</td>
+</tr>
+<tr class="even">
+<td align="left">28.27</td>
+<td align="left">4.46</td>
+<td align="left">23.78</td>
+<td align="left">4.89</td>
+</tr>
+<tr class="odd">
+<td align="left">20.10</td>
+<td align="left">3.08</td>
+<td align="left">29.18</td>
+<td align="left">4.99</td>
+</tr>
+<tr class="even">
+<td align="left">27.91</td>
+<td align="left">4.75</td>
+<td align="left">18.06</td>
+<td align="left">3.25</td>
+</tr>
+<tr class="odd">
+<td align="left">26.18</td>
+<td align="left">4.09</td>
+<td align="left">20.94</td>
+<td align="left">3.64</td>
+</tr>
+<tr class="even">
+<td align="left">22.12</td>
+<td align="left">4.23</td>
+<td align="left">20.08</td>
+<td align="left">2.94</td>
+</tr>
+<tr class="odd">
+<td align="left">21.84</td>
+<td align="left">2.91</td>
+<td align="left">22.57</td>
+<td align="left">3.21</td>
+</tr>
+<tr class="even">
+<td align="left">23.44</td>
+<td align="left">2.86</td>
+<td align="left">14.00</td>
+<td align="left">3.31</td>
+</tr>
+<tr class="odd">
+<td align="left">21.58</td>
+<td align="left">4.65</td>
+<td align="left">25.89</td>
+<td align="left">4.63</td>
+</tr>
+<tr class="even">
+<td align="left">28.92</td>
+<td align="left">4.79</td>
+<td align="left">21.17</td>
+<td align="left">4.04</td>
+</tr>
+<tr class="odd">
+<td align="left">25.91</td>
+<td align="left">5.21</td>
+<td align="left">21.25</td>
+<td align="left">5.14</td>
+</tr>
+<tr class="even">
+<td align="left">26.92</td>
+<td align="left">4.69</td>
+<td align="left">22.86</td>
+<td align="left">4.78</td>
+</tr>
+<tr class="odd">
+<td align="left">24.96</td>
+<td align="left">5.27</td>
+<td align="left">28.04</td>
+<td align="left">3.20</td>
+</tr>
+<tr class="even">
+<td align="left">22.06</td>
+<td align="left">3.72</td>
+<td align="left">30.34</td>
+<td align="left">3.46</td>
+</tr>
+<tr class="odd">
+<td align="left">16.08</td>
+<td align="left">3.06</td>
+<td align="left">23.75</td>
+<td align="left">3.95</td>
+</tr>
+<tr class="even">
+<td align="left">27.56</td>
+<td align="left">4.04</td>
+<td align="left">23.32</td>
+<td align="left">3.72</td>
+</tr>
+</tbody>
+</table>
+<ol start="10" style="list-style-type: decimal">
+<li>The weight of a car can influence the mileage that the car can
+obtain. A random sample of cars’ weights and mileage was collected
+and are in table #10.1.14 (&quot;Passenger car mileage,&quot; 2013). Create
+a scatter plot and find a regression equation between weight of cars
+and mileage. Then use the regression equation to find the mileage on
+a car that weighs 3800 pounds and on a car that weighs 2000 pounds.
+Which mileage that you calculated do you think is closer to the true
+mileage? Why?</li>
+</ol>
+<blockquote>
+<p><strong>Table #10.1.14: Weights and Mileages of Cars</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Weight (100 pounds)</th>
+<th align="left">Mileage (mpg)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">22.5</td>
+<td align="left">53.3</td>
+</tr>
+<tr class="even">
+<td align="left">22.5</td>
+<td align="left">41.1</td>
+</tr>
+<tr class="odd">
+<td align="left">22.5</td>
+<td align="left">38.9</td>
+</tr>
+<tr class="even">
+<td align="left">25.0</td>
+<td align="left">40.9</td>
+</tr>
+<tr class="odd">
+<td align="left">27.5</td>
+<td align="left">46.9</td>
+</tr>
+<tr class="even">
+<td align="left">27.5</td>
+<td align="left">36.3</td>
+</tr>
+<tr class="odd">
+<td align="left">30.0</td>
+<td align="left">32.2</td>
+</tr>
+<tr class="even">
+<td align="left">30.0</td>
+<td align="left">32.2</td>
+</tr>
+<tr class="odd">
+<td align="left">30.0</td>
+<td align="left">31.5</td>
+</tr>
+<tr class="even">
+<td align="left">30.0</td>
+<td align="left">31.4</td>
+</tr>
+<tr class="odd">
+<td align="left">30.0</td>
+<td align="left">31.4</td>
+</tr>
+<tr class="even">
+<td align="left">35.0</td>
+<td align="left">32.6</td>
+</tr>
+<tr class="odd">
+<td align="left">35.0</td>
+<td align="left">31.3</td>
+</tr>
+<tr class="even">
+<td align="left">35.0</td>
+<td align="left">31.3</td>
+</tr>
+<tr class="odd">
+<td align="left">35.0</td>
+<td align="left">28.0</td>
+</tr>
+<tr class="even">
+<td align="left">35.0</td>
+<td align="left">28.0</td>
+</tr>
+<tr class="odd">
+<td align="left">35.0</td>
+<td align="left">28.0</td>
+</tr>
+<tr class="even">
+<td align="left">40.0</td>
+<td align="left">23.6</td>
+</tr>
+<tr class="odd">
+<td align="left">40.0</td>
+<td align="left">23.6</td>
+</tr>
+<tr class="even">
+<td align="left">40.0</td>
+<td align="left">23.4</td>
+</tr>
+<tr class="odd">
+<td align="left">40.0</td>
+<td align="left">23.1</td>
+</tr>
+<tr class="even">
+<td align="left">45.0</td>
+<td align="left">19.5</td>
+</tr>
+<tr class="odd">
+<td align="left">45.0</td>
+<td align="left">17.2</td>
+</tr>
+<tr class="even">
+<td align="left">45.0</td>
+<td align="left">17.0</td>
+</tr>
+<tr class="odd">
+<td align="left">55.0</td>
+<td align="left">13.2</td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="correlation" class="section level2">
+<h2><span class="header-section-number">10.2</span> Correlation</h2>
+<p>A <strong>correlation</strong> exists between two variables when the values of one variable are somehow associated with the values of the other variable.</p>
+<p>When you see a pattern in the data you say there is a correlation in the data. Though this book is only dealing with linear patterns, patterns can be exponential, logarithmic, or periodic. To see this pattern, you can draw a scatter plot of the data.</p>
+<p>Remember to read graphs from left to right, the same as you read words. If the graph goes up the correlation is positive and if the graph goes down the correlation is negative.</p>
+<p>The words &quot; weak“,”moderate“, and”strong&quot; are used to describe the strength of the relationship between the two variables.</p>
+<p><strong>Figure 10.2.1: Correlation Graphs</strong></p>
+<p><img src="media/image42.png" style="width:6in;height:3.76243in" /></p>
+<p>The <strong>linear</strong> <strong>correlation coefficient</strong> is a number that describes the strength of the linear relationship between the two variables. It is also called the Pearson correlation coefficient after Karl Pearson who developed it. The symbol for the sample linear correlation coefficient is <em>r</em>. The symbol for the population correlation coefficient is <span class="math inline">\(\rho\)</span> (Greek letter rho).</p>
+<p>The formula for <em>r</em> is</p>
+<blockquote>
+<p>Where</p>
+</blockquote>
+<p>Assumptions of linear correlation are the same as the assumptions for the regression line:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The set of ordered pairs is a random sample from the population of all such possible pairs.</p></li>
+<li><p>For each fixed value of <em>x</em>, the <em>y</em>-values have a normal distribution. All of the <em>y</em> distributions have the same variance, and for a given <em>x</em>-value, the distribution of <em>y</em>-values has a mean that lies on the least squares line. You also assume that for a fixed <em>y</em>, each <em>x</em> has its own normal distribution. This is difficult to figure out, so you can use the following to determine if you have a normal distribution.</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-roman">
+<li><p>Look to see if the scatter plot has a linear pattern.</p></li>
+<li><p>Examine the residuals to see if there is randomness in the residuals. If there is a pattern to the residuals, then there is an issue in the data.</p></li>
+</ol>
+<p><strong>Interpretation of the correlation coefficient</strong></p>
+<p><em>r</em> is always between and 1. <em>r</em> = means there is a perfect negative linear correlation and <em>r</em> = 1 means there is a perfect positive correlation. The closer <em>r</em> is to 1 or , the stronger the correlation. The closer <em>r</em> is to 0, the weaker the correlation. CAREFUL: <em>r</em> = 0 does not mean there is no correlation. It just means there is <strong>no linear correlation.</strong> There might be a very strong curved pattern.</p>
+<p><strong>Example #10.2.1: Calculating the Linear Correlation Coefficient, <em>r</em></strong></p>
+<blockquote>
+<p>How strong is the positive relationship between the alcohol content and the number of calories in 12-ounce beer? To determine if there is a positive linear correlation, a random sample was taken of beer’s alcohol content and calories for several different beers (&quot;Calories in beer,,&quot; 2011), and the data are in table #10.2.1. Find the correlation coefficient and interpret that value.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Table #10.2.1: Alcohol and Calorie Content in Beer without Outlier</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Brand</th>
+<th align="left">Brewery</th>
+<th align="left">Alcohol Content</th>
+<th align="left">Calories in 12 oz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Big Sky Scape Goat Pale Ale</td>
+<td align="left">Big Sky Brewing</td>
+<td align="left">4.70%</td>
+<td align="left">163</td>
+</tr>
+<tr class="even">
+<td align="left">Sierra Nevada Harvest Ale</td>
+<td align="left">Sierra Nevada</td>
+<td align="left">6.70%</td>
+<td align="left">215</td>
+</tr>
+<tr class="odd">
+<td align="left">Steel Reserve</td>
+<td align="left">MillerCoors</td>
+<td align="left">8.10%</td>
+<td align="left">222</td>
+</tr>
+<tr class="even">
+<td align="left">Coors Light</td>
+<td align="left">MillerCoors</td>
+<td align="left">4.15%</td>
+<td align="left">104</td>
+</tr>
+<tr class="odd">
+<td align="left">Genesee Cream Ale</td>
+<td align="left">High Falls Brewing</td>
+<td align="left">5.10%</td>
+<td align="left">162</td>
+</tr>
+<tr class="even">
+<td align="left">Sierra Nevada Summerfest Beer</td>
+<td align="left">Sierra Nevada</td>
+<td align="left">5.00%</td>
+<td align="left">158</td>
+</tr>
+<tr class="odd">
+<td align="left">Michelob Beer</td>
+<td align="left">Anheuser Busch</td>
+<td align="left">5.00%</td>
+<td align="left">155</td>
+</tr>
+<tr class="even">
+<td align="left">Flying Dog Doggie Style</td>
+<td align="left">Flying Dog Brewery</td>
+<td align="left">4.70%</td>
+<td align="left">158</td>
+</tr>
+<tr class="odd">
+<td align="left">Big Sky I.P.A.</td>
+<td align="left">Big Sky Brewing</td>
+<td align="left">6.20%</td>
+<td align="left">195</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>State random variables</p>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+<p>Assumptions check:</p>
+<p>From example #10.1.2, the assumptions have been met.</p>
+<p>To compute the correlation coefficient using the TI-83/84 calculator, use the LinRegTTest in the STAT menu. The setup is in figure 10.2.2. The reason that &gt;0 was chosen is because the question was asked if there was a positive correlation. If you are asked if there is a negative correlation, then pick &lt;0. If you are just asked if there is a correlation, then pick . Right now the choice will not make a different, but it will be important later.</p>
+<p><strong>Figure #10.2.2: Setup for Linear Regression Test on TI-83/84</strong></p>
+<p><img src="media/image15.png" style="width:2.75in;height:1.86111in" /></p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Figure #10.2.3: Results for Linear Regression Test on TI-83/84</strong></p>
+<p><img src="media/image52.png" style="width:2.75in;height:1.86111in" />
+<img src="media/image53.png" style="width:2.75in;height:1.86111in" /></p>
+<p>To compute the correlation coefficient in R, the command is cor(independent variable, dependent variable). So for this example the command would be cor(alcohol, calories). The output is</p>
+<p><span class="math display">\[1\]</span> 0.9134414</p>
+<p>The correlation coefficient is . This is close to 1, so it looks like there is a strong, positive correlation.</p>
+</blockquote>
+<p><strong>Causation</strong></p>
+<p>One common mistake people make is to assume that because there is a correlation, then one variable causes the other. This is usually not the case. That would be like saying the amount of alcohol in the beer causes it to have a certain number of calories. However, fermentation of sugars is what causes the alcohol content. The more sugars you have, the more alcohol can be made, and the more sugar, the higher the calories. It is actually the amount of sugar that causes both. Do not confuse the idea of correlation with the concept of causation. Just because two variables are correlated does not mean one causes the other to happen.</p>
+<p><strong>Example #10.2.2: Correlation Versus Causation</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>A study showed a strong linear correlation between per capita beer consumption and teacher’s salaries. Does giving a teacher a raise cause people to buy more beer? Does buying more beer cause teachers to get a raise?</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>There is probably some other factor causing both of them to increase at the same time. Think about this: In a town where people have little extra money, they won’t have money for beer and they won’t give teachers raises. In another town where people have more extra money to spend it will be easier for them to buy more beer and they would be more willing to give teachers raises.</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>A study shows that there is a correlation between people who have had a root canal and those that have cancer. Does that mean having a root canal causes cancer?</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>Just because there is positive correlation doesn’t mean that one caused the other. It turns out that there is a positive correlation between eating carrots and cancer, but that doesn’t mean that eating carrots causes cancer. In other words, there are lots of relationships you can find between two variables, but that doesn’t mean that one caused the other.</p>
+</blockquote>
+<p>Remember a correlation only means a pattern exists. It does not mean that one variable causes the other variable to change.</p>
+<p><strong>Explained Variation</strong></p>
+<p>As stated before, there is some variability in the dependent variable values, such as calories. Some of the variation in calories is due to alcohol content and some is due to other factors. How much of the variation in the calories is due to alcohol content?</p>
+<p>When considering this question, you want to look at how much of the variation in calories is explained by alcohol content and how much is explained by other variables. Realize that some of the changes in calories have to do with other ingredients. You can have two beers at the same alcohol content, but beer one has higher calories because of the other ingredients. Some variability is explained by the model and some variability is not explained. Together, both of these give the total variability. This is</p>
+<p>The proportion of the variation that is explained by the model is</p>
+<p>This is known as the <strong>coefficient of determination</strong>.</p>
+<p>To find the coefficient of determination, you square the correlation coefficient. In addition, is part of the calculator results.</p>
+<p><strong>Example #10.2.3: Finding the Coefficient of Determination</strong></p>
+<blockquote>
+<p>Find the coefficient of variation in calories that is explained by the linear relationship between alcohol content and calories and interpret the value.</p>
+</blockquote>
+<p><strong>Solution:</strong></p>
+<p>From the calculator results,</p>
+<blockquote>
+<p>Using R, you can do (cor(independent variable, dependent variable))^2. So that would be (cor(alcohol, calories))^2, and the output would be</p>
+<p><span class="math display">\[1\]</span> 0.8343751</p>
+<p>Or you can just use a calculator and square the correlation value.</p>
+<p>Thus, 83.44% of the variation in calories is explained to the linear relationship between alcohol content and calories. The other 16.56% of the variation is due to other factors. A really good coefficient of determination has a very small, unexplained part.</p>
+</blockquote>
+<p><strong>Example #10.2.4: Using the Formula to Calculate <em>r</em> and </strong></p>
+<blockquote>
+<p>How strong is the relationship between the alcohol content and the number of calories in 12-ounce beer? To determine if there is a positive linear correlation, a random sample was taken of beer’s alcohol content and calories for several different beers (&quot;Calories in beer,,&quot; 2011), and the data are in table #10.2.1. Find the correlation coefficient and the coefficient of determination using the formula.</p>
+<p><strong>Solution:</strong></p>
+<p>From example #10.1.2,</p>
+<p>Correlation coefficient:</p>
+<p>Coefficient of determination:</p>
+</blockquote>
+<p>Now that you have a correlation coefficient, how can you tell if it is significant or not? This will be answered in the next section.</p>
+<div id="homework-28" class="section level3">
+<h3><span class="header-section-number">10.2.1</span> Homework</h3>
+<p>For each problem, state the random variables. Also, look to see if there are any outliers that need to be removed. Do the correlation analysis with and without the suspected outlier points to determine if their removal affects the correlation. The data sets in this section are in section 10.1 and will be used in section 10.3.</p>
+<ol style="list-style-type: decimal">
+<li><p>When an anthropologist finds skeletal remains, they need to figure out the height of the person. The height of a person (in cm) and the length of their metacarpal bone 1 (in cm) were collected and are in table #10.1.5 (&quot;Prediction of height,&quot; 2013). Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>Table #10.1.6 contains the value of the house and the amount of rental income in a year that the house brings in (&quot;Capital and rental,&quot; 2013). Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>The World Bank collects information on the life expectancy of a person in each country (&quot;Life expectancy at,&quot; 2013) and the fertility rate per woman in the country (&quot;Fertility rate,&quot; 2013). The data for 24 randomly selected countries for the year 2011 are in table #10.1.7. Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>The World Bank collected data on the percentage of GDP that a country spends on health expenditures (&quot;Health expenditure,&quot; 2013) and also the percentage of women receiving prenatal care (&quot;Pregnant woman receiving,&quot; 2013). The data for the countries where this information is available for the year 2011 are in table #10.1.8. Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>The height and weight of baseball players are in table #10.1.9 (&quot;MLB heightsweights,&quot; 2013). Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>Different species have different body weights and brain weights are in table #10.1.10. (&quot;Brain2bodyweight,&quot; 2013). Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>A random sample of beef hotdogs was taken and the amount of sodium (in mg) and calories were measured. (&quot;Data hotdogs,&quot; 2013) The data are in table #10.1.11. Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>Per capita income in 1960 dollars for European countries and the percent of the labor force that works in agriculture in 1960 are in table #10.1.12 (&quot;OECD economic development,&quot; 2013). Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>Cigarette smoking and cancer have been linked. The number of deaths per one hundred thousand from bladder cancer and the number of cigarettes sold per capita in 1960 are in table #10.1.13 (&quot;Smoking and cancer,&quot; 2013). Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>The weight of a car can influence the mileage that the car can obtain. A random sample of cars weights and mileage was collected and are in table #10.1.14 (&quot;Passenger car mileage,&quot; 2013). Find the correlation coefficient and coefficient of determination and then interpret both.</p></li>
+<li><p>There is a negative correlation between police expenditure and crime rate. Does this mean that spending more money on police causes the crime rate to decrease? Explain your answer.</p></li>
+<li><p>There is a positive correlation between tobacco sales and alcohol sales. Does that mean that using tobacco causes a person to also drink alcohol? Explain your answer.</p></li>
+<li><p>There is a positive correlation between the average temperature in a location and the morality rate from breast cancer. Does that mean that higher temperatures cause more women to die of breast cancer? Explain your answer.</p></li>
+<li><p>There is a positive correlation between the length of time a tableware company polishes a dish and the price of the dish. Does that mean that the time a plate is polished determines the price of the dish? Explain your answer.</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="inference-for-regression-and-correlation" class="section level2">
+<h2><span class="header-section-number">10.3</span> Inference for Regression and Correlation</h2>
+<p>How do you really say you have a correlation? Can you test to see if there really is a correlation? Of course, the answer is yes. The hypothesis test for correlation is as follows:</p>
+<p><strong>Hypothesis Test for Correlation:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = independent variable</p>
+<p><em>y</em> = dependent variable</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<blockquote>
+<p>Also, state your level here.</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<p>The assumptions for the hypothesis test are the same assumptions for regression and correlation.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>with degrees of freedom =</p>
+<p>p-value:</p>
+<p>Using the TI-83/84:</p>
+<p>(Note: if , then lower limit is and upper limit is your test
+statistic. If , then lower limit is your test statistic and the upper
+limit is . If , then find the p-value for , and multiply by 2.)</p>
+<p>Using R:</p>
+<p>(Note: if , then use , If , then use . If , then find the p-value for
+, and multiply by 2.)</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>This is where you write reject or fail to reject . The rule is: if the p-value &lt; , then reject . If the p-value , then fail to reject</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>This is where you interpret in real world terms the conclusion to the test. The conclusion for a hypothesis test is that you either have enough evidence to show is true, or you do not have enough evidence to show is true.</p>
+</blockquote>
+<p>Note: the TI-83/84 calculator results give you the test statistic and the p-value. In R, the command for getting the test statistic and p-value is cor.test(independent variable, dependent variable, alternative = &quot;less&quot; or &quot;greater&quot;). Use less for [MISSING], use greater for [MISSING], and leave off this command for [MISSING] .</p>
+<p><strong>Example #10.3.1: Testing the Claim of a Linear Correlation</strong></p>
+<blockquote>
+<p>Is there a positive correlation between beer’s alcohol content and calories? To determine if there is a positive linear correlation, a random sample was taken of beer’s alcohol content and calories for several different beers (&quot;Calories in beer,,&quot; 2011), and the data is in table #10.2.1. Test at the 5% level.</p>
+</blockquote>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<blockquote>
+<p>Since you are asked if there is a positive correlation, .</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<p>The assumptions for the hypothesis test were already checked in example #10.1.2.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>The results from the TI-83/84 calculator are in figure #10.3.1.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Figure #10.3.1: Results for Linear Regression Test on TI-83/84</strong></p>
+<p><img src="media/image52.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Test statistic: and p-value:</p>
+<p>The results from R are</p>
+<p>cor.test(alcohol, calories, alternative = &quot;greater&quot;)</p>
+<p>Pearson's product-moment correlation</p>
+<p>data: alcohol and calories</p>
+<p>t = 5.9384, df = 7, p-value = 0.0002884</p>
+<p>alternative hypothesis: true correlation is greater than 0</p>
+<p>95 percent confidence interval:</p>
+<p>0.7046161 1.0000000</p>
+<p>sample estimates:</p>
+<p>cor</p>
+<p>0.9134414</p>
+<p>Test statistic: and p-value:</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Reject since the p-value is less than 0.05.</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that there is a positive correlation between alcohol content and number of calories in a 12-ounce bottle of beer.</p>
+</blockquote>
+<p><strong>Prediction Interval</strong></p>
+<p>Using the regression equation you can predict the number of calories from the alcohol content. However, you only find one value. The problem is that beers vary a bit in calories even if they have the same alcohol content. It would be nice to have a range instead of a single value. The range is called a prediction interval. To find this, you need to figure out how much error is in the estimate from the regression equation. This is known as the <strong>standard error of the estimate</strong>.</p>
+<p><strong>Standard Error of the Estimate</strong></p>
+<p>This is the sum of squares of the residuals</p>
+<p>This formula is hard to work with, so there is an easier formula. You can also find the value from technology, such as the calculator.</p>
+<p><strong>Example #10.3.2: Finding the Standard Error of the Estimate</strong></p>
+<blockquote>
+<p>Find the standard error of the estimate for the beer data. To determine if there is a positive linear correlation, a random sample was taken of beer’s alcohol content and calories for several different beers (&quot;Calories in beer,,&quot; 2011), and the data are in table #10.2.1.</p>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+<p>Using the TI-83/84, the results are in figure #10.3.2.</p>
+<p><strong>Figure #10.3.2: Results for Linear Regression Test on TI-83/84</strong></p>
+<p><img src="media/image102.png" style="width:2.75in;height:1.86111in" /></p>
+<p>The <em>s</em> in the results is the standard error of the estimate. So .</p>
+</blockquote>
+<p>To find the standard error of the estimate in R, the commands are</p>
+<p>lm.out = lm(dependent variable ~ independent variable) – this defines the linear model with a name so you can use it later. Then</p>
+<p>summary(lm.out) – this will produce most of the information you need for a regression and correlation analysis. In fact, the only thing R doesn’t produce with this command is the correlation coefficient. Otherwise, you can use the command to find the regression equation, coefficient of determination, test statistic, p-value for a two-tailed test, and standard error of the estimate.</p>
+<blockquote>
+<p>The results from R are</p>
+<p>lm.out=lm(calories~alcohol)</p>
+<p>summary(lm.out)</p>
+<p>Call:</p>
+<p>lm(formula = calories ~ alcohol)</p>
+<p>Residuals:</p>
+<p>Min 1Q Median 3Q Max</p>
+<p>-30.253 -1.624 2.744 9.271 14.271</p>
+<p>Coefficients:</p>
+<p>Estimate Std. Error t value Pr(&gt;|t|)</p>
+<p>(Intercept) 25.031 24.999 1.001 0.350038</p>
+<p>alcohol 26.319 4.432 5.938 0.000577 ***</p>
+<p>---</p>
+<p>Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ’ ’ 1</p>
+<p>Residual standard error: 15.64 on 7 degrees of freedom</p>
+<p>Multiple R-squared: 0.8344, Adjusted R-squared: 0.8107</p>
+<p>F-statistic: 35.26 on 1 and 7 DF, p-value: 0.0005768</p>
+<p>From this output, you can find the y-intercept is 25.031, the slope is
+26.319, the test statistic is t = 5.938, the p-value for the
+two-tailed test is 0.000577. If you want the p-value for a one-tailed
+test, divide this number by 2. The standard error of the estimate is
+the residual standard error and is 15.64. There is some information in
+this output that you do not need.</p>
+</blockquote>
+<p>If you want to know how to calculate the standard error of the estimate from the formula, refer to example# 10.3.3.</p>
+<p><strong>Example #10.3.3: Finding the Standard Error of the Estimate from the Formula</strong></p>
+<blockquote>
+<p>Find the standard error of the estimate for the beer data using the formula. To determine if there is a positive linear correlation, a random sample was taken of beer’s alcohol content and calories for several different beers (&quot;Calories in beer,,&quot; 2011), and the data are in table #10.2.1.</p>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+<p>From Example #10.1.3:</p>
+<p>The standard error of the estimate is</p>
+</blockquote>
+<p><strong>Prediction Interval for an Individual <em>y</em></strong></p>
+<p>Given the fixed value , the prediction interval for an individual <em>y</em> is</p>
+<p>where</p>
+<p>Note: to find</p>
+<p>You can get the standard deviation from technology.</p>
+<p>R will produce the prediction interval for you. The commands are (Note you probably already did the lm.out command. You do not need to do it again.)</p>
+<p>lm.out = lm(dependent variable ~ independent variable) – calculates
+the linear model</p>
+<p>predict(lm.out, newdata=list(independent variable = value),
+interval=&quot;prediction&quot;, level=C) – will compute a prediction interval
+for the independent variable set to a particular value (put that value
+in place of the word value), at a particular C level (given as a
+decimal)</p>
+<p><strong>Example #10.3.4: Find the Prediction Interval</strong></p>
+<blockquote>
+<p>Find a 95% prediction interval for the number of calories when the
+alcohol content is 6.5% using a random sample taken of beer’s alcohol
+content and calories (&quot;Calories in beer,,&quot; 2011). The data are in
+table #10.2.1.</p>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = alcohol content in the beer</p>
+<p><em>y</em> = calories in 12 ounce beer</p>
+<p>Computing the prediction interval using the TI-83/84 calculator:</p>
+<p>From Example #10.1.2</p>
+<p>From Example #10.3.2</p>
+<p><strong>Figure #10.3.3: Results of 1-Var Stats on TI-83/84</strong></p>
+<p><img src="media/image114.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Now you can find</p>
+<p>Now look in table A.2. Go down the first column to 7, then over to the
+column headed with 95%.</p>
+<p>Prediction interval is</p>
+<p>Computing the prediction interval using R:</p>
+<p>predict(lm.out, newdata=list(alcohol=6.5), interval = &quot;prediction&quot;,
+level=0.95)</p>
+<p>fit lwr upr</p>
+<p>1 196.1022 155.7847 236.4196</p>
+<p>fit = when x = 6.5%. lwr = lower limit of prediction interval. upr =
+upper limit of prediction interval. So the prediction interval is .</p>
+<p>Statistical interpretation: There is a 95% chance that the interval
+contains the true value for the calories when the alcohol content is
+6.5%.</p>
+<p>Real world interpretation: If a beer has an alcohol content of 6.50%
+then it has between 156 and 236 calories.</p>
+</blockquote>
+<p><strong>Example #10.3.5:  Doing a Correlation and Regression Analysis Using
+the TI-83/84</strong></p>
+<p>Table #10.3.1 contains randomly selected high temperatures at various
+cities on a single day and the elevation of the city.</p>
+<blockquote>
+<p><strong>Table #10.3.1: Temperatures and Elevation of Cities on a Given
+Day</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Elevation (in feet)</th>
+<th align="left">7000</th>
+<th align="left">4000</th>
+<th align="left">6000</th>
+<th align="left">3000</th>
+<th align="left">7000</th>
+<th align="left">4500</th>
+<th align="left">5000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Temperature (°F)</td>
+<td align="left">50</td>
+<td align="left">60</td>
+<td align="left">48</td>
+<td align="left">70</td>
+<td align="left">55</td>
+<td align="left">55</td>
+<td align="left">60</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li><p>State the random variables.</p>
+<p><strong>Solution:</strong></p></li>
+</ol>
+<blockquote>
+<p><em>x</em> = elevation</p>
+<p><em>y</em> = high temperature</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>Find a regression equation for elevation and high temperature on a
+given day.</p>
+<p><strong>Solution:</strong></p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample was taken as stated in the problem.</p></li>
+<li><p>The distribution for each high temperature value is normally
+distributed for every value of elevation.</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-roman">
+<li>Look at the scatter plot of high temperature versus elevation.</li>
+</ol>
+<blockquote>
+<p><strong>Figure #10.3.4: Scatter Plot of Temperature Versus Elevation</strong></p>
+<p><span class="chart"><span class="math display">\[CHART\]</span></span></p>
+<p>The scatter plot looks fairly linear.</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-roman">
+<li><p>There are no points that appear to be outliers.</p></li>
+<li><p>The residual plot for temperature versus elevation appears to be
+fairly random. (See figure #10.3.7.)</p></li>
+</ol>
+<blockquote>
+<p>It appears that the high temperature is normally distributed.</p>
+<p>All calculations computed using the TI-83/84 calculator.</p>
+<p><strong>Figure #10.3.5: Setup for Linear Regression on TI-83/84
+Calculator</strong></p>
+<p><img src="media/image124.png" style="width:2.75in;height:1.86111in" /></p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Figure #10.3.6: Results for Linear Regression on TI-83/84
+Calculator</strong></p>
+<p><img src="media/image125.png" style="width:2.75in;height:1.86111in" /></p>
+<p><img src="media/image126.png" style="width:2.75in;height:1.86111in" /></p>
+</blockquote>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the residuals and create a residual plot.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<p><strong>Table #10.3.2: Residuals for Elevation vs. Temperature Data</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><em>x</em></th>
+<th align="left"><em>y</em></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">7000</td>
+<td align="left">50</td>
+<td>50.1</td>
+<td>-0.1</td>
+</tr>
+<tr class="even">
+<td align="left">4000</td>
+<td align="left">60</td>
+<td>61.8</td>
+<td>-1.8</td>
+</tr>
+<tr class="odd">
+<td align="left">6000</td>
+<td align="left">48</td>
+<td>54.0</td>
+<td>-6.0</td>
+</tr>
+<tr class="even">
+<td align="left">3000</td>
+<td align="left">70</td>
+<td>65.7</td>
+<td>4.3</td>
+</tr>
+<tr class="odd">
+<td align="left">7000</td>
+<td align="left">55</td>
+<td>50.1</td>
+<td>4.9</td>
+</tr>
+<tr class="even">
+<td align="left">4500</td>
+<td align="left">55</td>
+<td>59.85</td>
+<td>-4.85</td>
+</tr>
+<tr class="odd">
+<td align="left">5000</td>
+<td align="left">60</td>
+<td>57.9</td>
+<td>2.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Figure #10.3.7: Residual Plot for Temperature vs. Elevation</strong></p>
+<p><span class="chart"><span class="math display">\[CHART\]</span></span></p>
+<p>The residuals appear to be fairly random.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Use the regression equation to estimate the high temperature on that
+day at an elevation of 5500 ft.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Use the regression equation to estimate the high temperature on that
+day at an elevation of 8000 ft.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Between the answers to parts d and e, which estimate is probably
+more accurate and why?</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>Part d is more accurate, since it is interpolation and part e is
+extrapolation.</p>
+</blockquote>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Find the correlation coefficient and coefficient of determination
+and interpret both.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>From figure #10.3.6, the correlation coefficient is</p>
+<p>, which is moderate to strong negative correlation.</p>
+<p>From figure #10.3.6, the coefficient of determination is</p>
+<p>, which means that 66.3% of the variability in high temperature is
+explained by the linear model. The other 33.7% is explained by other
+variables such as local weather conditions.</p>
+</blockquote>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>Is there enough evidence to show a negative correlation between
+elevation and high temperature? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the random variables in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = elevation</p>
+<p><em>y</em> = high temperature</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li><p>State the null and alternative hypotheses and the level of
+significance</p></li>
+<li><p>State and check the assumptions for the hypothesis test</p>
+<p>The assumptions for the hypothesis test were already checked part b.</p></li>
+<li><p>Find the test statistic and p-value</p></li>
+</ol>
+<blockquote>
+<p>From figure #10.3.6,</p>
+<p>Test statistic:</p>
+</blockquote>
+<p>p-value:</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Reject since the p-value is less than 0.05.</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that there is a negative correlation
+between elevation and high temperatures.</p>
+</blockquote>
+<ol style="list-style-type: lower-roman">
+<li>Find the standard error of the estimate.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>From figure #10.3.6,</p>
+</blockquote>
+<ol start="10" style="list-style-type: lower-alpha">
+<li><p>Using a 95% prediction interval, find a range for high temperature
+for an elevation of 6500 feet.</p>
+<p><strong>Solution:</strong></p></li>
+</ol>
+<blockquote>
+<p><strong>Figure #10.3.8: Results of 1-Var Stats on TI-83/84</strong></p>
+<p><img src="media/image143.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Now you can find</p>
+<p>Now look in table A.2. Go down the first column to 5, then over to the
+column headed with 95%.</p>
+<p>So</p>
+<p>Prediction interval is</p>
+<p>Statistical interpretation: There is a 95% chance that the interval
+contains the true value for the temperature at an elevation of 6500
+feet.</p>
+<p>Real world interpretation: A city of 6500 feet will have a high
+temperature between 38.6°F and 65.6°F. Though this interval is fairly
+wide, at least the interval tells you that the temperature isn’t that
+warm.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<p><strong>Example #10.3.6:  Doing a Correlation and Regression Analysis Using
+R</strong></p>
+<p>Table #10.3.1 contains randomly selected high temperatures at various
+cities on a single day and the elevation of the city.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>State the random variables.</p>
+<p><strong>Solution:</strong></p></li>
+</ol>
+<blockquote>
+<p><em>x</em> = elevation</p>
+<p><em>y</em> = high temperature</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>Find a regression equation for elevation and high temperature on a
+given day.</p>
+<p><strong>Solution:</strong></p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample was taken as stated in the problem.</p></li>
+<li><p>The distribution for each high temperature value is normally
+distributed for every value of elevation.</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-roman">
+<li>Look at the scatter plot of high temperature versus elevation.</li>
+</ol>
+<blockquote>
+<p>R command: plot(elevation, temperature, main=&quot;Scatter Plot for
+Temperature vs Elevation&quot;, xlab=&quot;Elevation (feet)&quot;,
+ylab=&quot;Temperature (degrees F)&quot;, ylim=c(0,80))</p>
+<p><strong>Figure #10.3.9: Scatter Plot of Temperature Versus Elevation</strong></p>
+<p><embed src="media/image151.emf" style="width:4.15278in;height:4.15278in" /></p>
+<p>The scatter plot looks fairly linear.</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-roman">
+<li>The residual plot for temperature versus elevation appears to be
+fairly random. (See figure #10.3.10.)</li>
+</ol>
+<blockquote>
+<p>It appears that the high temperature is normally distributed.</p>
+<p>Using R:</p>
+<p>Commands:</p>
+<p>lm.out=lm(temperature ~ elevation)</p>
+<p>summary(lm.out)</p>
+<p>Output:</p>
+<p>Call:</p>
+<p>lm(formula = temperature ~ elevation)</p>
+<p>Residuals:</p>
+<p>1 2 3 4 5 6 7</p>
+<p>0.1667 -1.6333 -5.7667 4.4333 5.1667 -4.6667 2.3000</p>
+<p>Coefficients:</p>
+<p>Estimate Std. Error t value Pr(&gt;|t|)</p>
+<p>(Intercept) 77.366667 6.769182 11.429 8.98e-05 ***</p>
+<p>elevation -0.003933 0.001253 -3.139 0.0257 *</p>
+<p>---</p>
+<p>Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ’ ’ 1</p>
+<p>Residual standard error: 4.677 on 5 degrees of freedom</p>
+<p>Multiple R-squared: 0.6633, Adjusted R-squared: 0.596</p>
+<p>F-statistic: 9.852 on 1 and 5 DF, p-value: 0.0257</p>
+<p>From the output you can see the slope = -0.0039 and the y-intercept =
+77.4. So the regression equation is:</p>
+</blockquote>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the residuals and create a residual plot.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<p>R command: (notice these are also in the summary(lm.out) output, but if
+you have too many data points, then R only gives a numerical summary of
+the residuals.)</p>
+<p>residuals(lm.out)</p>
+<p>1 2 3 4 5 6</p>
+<p>0.1666667 -1.6333333 -5.7666667 4.4333333 5.1666667 -4.6666667</p>
+<p>7</p>
+<p>2.3000000</p>
+<p>So for the first x of 7000, the residual is approximately 0.1667. This
+means if you find the for when x is 7000 and then subtract this answer
+from the y value of 50 that was measured, you would obtain 0.1667.
+Similar process is computed for the other residual values.</p>
+<p>To plot the residuals, the R command is</p>
+<p>plot(elevation, residuals(lm.out), main=&quot;Residual Plot for Temperautre
+vs Elevation&quot;, xlab=&quot;Elevation (feet)&quot;, ylab=&quot;Residuals&quot;)</p>
+<p>abline(0,0)</p>
+<p><strong>Figure #10.3.10: Residual Plot for Temperature vs. Elevation</strong></p>
+<p><embed src="media/image154.emf" style="width:2.52778in;height:2.52778in" /></p>
+<p>The residuals appear to be fairly random.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Use the regression equation to estimate the high temperature on that
+day at an elevation of 5500 ft.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Use the regression equation to estimate the high temperature on that
+day at an elevation of 8000 ft.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Between the answers to parts d and e, which estimate is probably
+more accurate and why?</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>Part d is more accurate, since it is interpolation and part e is
+extrapolation.</p>
+</blockquote>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Find the correlation coefficient and coefficient of determination
+and interpret both.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>The R command for the correlation coefficient is</p>
+<p>cor(elevation, temperature)</p>
+<p><span class="math display">\[1\]</span> -0.8144564</p>
+<p>So, , which is moderate to strong negative correlation.</p>
+<p>From summary(lm.out), the coefficient of determination is the Multiple
+R-squared.</p>
+<p>So, which means that 66.3% of the variability in high temperature is
+explained by the linear model. The other 33.7% is explained by other
+variables such as local weather conditions.</p>
+</blockquote>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>Is there enough evidence to show a negative correlation between
+elevation and high temperature? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the random variables in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = elevation</p>
+<p><em>y</em> = high temperature</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li><p>State the null and alternative hypotheses and the level of
+significance</p></li>
+<li><p>State and check the assumptions for the hypothesis test</p>
+<p>The assumptions for the hypothesis test were already checked part b.</p></li>
+<li><p>Find the test statistic and p-value</p></li>
+</ol>
+<blockquote>
+<p>The R command is cor.test(elevation, temperature, alternative =
+&quot;less&quot;)</p>
+<p>Pearson's product-moment correlation</p>
+<p>data: elevation and temperature</p>
+<p>t = -3.1387, df = 5, p-value = 0.01285</p>
+<p>alternative hypothesis: true correlation is less than 0</p>
+<p>95 percent confidence interval:</p>
+<p>-1.0000000 -0.3074247</p>
+<p>sample estimates:</p>
+<p>cor</p>
+<p>-0.8144564</p>
+<p>Test statistic: and p-value:</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Reject since the p-value is less than 0.05.</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that there is a negative correlation
+between elevation and high temperatures.</p>
+</blockquote>
+<ol style="list-style-type: lower-roman">
+<li>Find the standard error of the estimate.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>From summary(lm.out), Residual standard error: 4.677.</p>
+<p>So,</p>
+</blockquote>
+<ol start="10" style="list-style-type: lower-alpha">
+<li><p>Using a 95% prediction interval, find a range for high temperature
+for an elevation of 6500 feet.</p>
+<p><strong>Solution:</strong></p></li>
+</ol>
+<blockquote>
+<p>R command is predict(lm.out, newdata=list(elevation = 6500), interval
+= &quot;prediction&quot;, level=0.95)</p>
+<p>fit lwr upr</p>
+<p>1 51.8 38.29672 65.30328</p>
+<p>So when x = 6500 feet, and .</p>
+<p>Statistical interpretation: There is a 95% chance that the interval
+contains the true value for the temperature at an elevation of 6500
+feet.</p>
+<p>Real world interpretation: A city of 6500 feet will have a high
+temperature between 38.3°F and 65.3°F. Though this interval is fairly
+wide, at least the interval tells you that the temperature isn’t that
+warm.</p>
+</blockquote>
+<div id="homework-29" class="section level3">
+<h3><span class="header-section-number">10.3.1</span> Homework</h3>
+<p>For each problem, state the random variables. The data sets in this section are in the homework for section 10.1 and were also used in section 10.2. If you removed any data points as outliers in the other sections, remove them in this sections homework too.</p>
+<ol style="list-style-type: decimal">
+<li>When an anthropologist finds skeletal remains, they need to figure out the height of the person. The height of a person (in cm) and the length of their metacarpal bone one (in cm) were collected and are in table #10.1.5 (&quot;Prediction of height,&quot; 2013).</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 1% level for a positive correlation between length of metacarpal bone one and height of a person.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 99% prediction interval for height of a person with a metacarpal length of 44 cm.</p></li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li>Table #10.1.6 contains the value of the house and the amount of rental income in a year that the house brings in (&quot;Capital and rental,&quot; 2013).</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 5% level for a positive correlation between house value and rental amount.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 95% prediction interval for the rental income on a house worth $230,000.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>The World Bank collects information on the life expectancy of a person in each country (&quot;Life expectancy at,&quot; 2013) and the fertility rate per woman in the country (&quot;Fertility rate,&quot; 2013). The data for 24 randomly selected countries for the year 2011 are in table #10.1.7.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 1% level for a negative correlation between fertility rate and life expectancy.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 99% prediction interval for the life expectancy for a country that has a fertility rate of 2.7.</p></li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>The World Bank collected data on the percentage of GDP that a country spends on health expenditures (&quot;Health expenditure,&quot; 2013) and also the percentage of women receiving prenatal care (&quot;Pregnant woman receiving,&quot; 2013). The data for the countries where this information is available for the year 2011 are in table #10.1.8.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 5% level for a correlation between percentage spent on health expenditure and the percentage of women receiving prenatal care.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 95% prediction interval for the percentage of woman receiving prenatal care for a country that spends 5.0 % of GDP on health expenditure.</p></li>
+</ol>
+<!-- -->
+<ol start="5" style="list-style-type: decimal">
+<li>The height and weight of baseball players are in table #10.1.9 (&quot;MLB heightsweights,&quot; 2013).</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 5% level for a positive correlation between height and weight of baseball players.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 95% prediction interval for the weight of a baseball player that is 75 inches tall.</p></li>
+</ol>
+<!-- -->
+<ol start="6" style="list-style-type: decimal">
+<li>Different species have different body weights and brain weights are in table #10.1.10. (&quot;Brain2bodyweight,&quot; 2013).</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 1% level for a positive correlation between body weights and brain weights.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 99% prediction interval for the brain weight for a species that has a body weight of 62 kg.</p></li>
+</ol>
+<!-- -->
+<ol start="7" style="list-style-type: decimal">
+<li>A random sample of beef hotdogs was taken and the amount of sodium (in mg) and calories were measured. (&quot;Data hotdogs,&quot; 2013) The data are in table #10.1.11.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 5% level for a correlation between amount of calories and amount of sodium.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 95% prediction interval for the amount of sodium a beef hotdog has if it is 170 calories.</p></li>
+</ol>
+<!-- -->
+<ol start="8" style="list-style-type: decimal">
+<li>Per capita income in 1960 dollars for European countries and the percent of the labor force that works in agriculture in 1960 are in table #10.1.12 (&quot;OECD economic development,&quot; 2013).</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 5% level for a negative correlation between percent of labor force in agriculture and per capita income.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 90% prediction interval for the per capita income in a country that has 21 percent of labor in agriculture.</p></li>
+</ol>
+<!-- -->
+<ol start="9" style="list-style-type: decimal">
+<li>Cigarette smoking and cancer have been linked. The number of deaths per one hundred thousand from bladder cancer and the number of cigarettes sold per capita in 1960 are in table #10.1.13 (&quot;Smoking and cancer,&quot; 2013).</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 1% level for a positive correlation between cigarette smoking and deaths of bladder cancer.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 99% prediction interval for the number of deaths from bladder cancer when the cigarette sales were 20 per capita.</p></li>
+</ol>
+<!-- -->
+<ol start="10" style="list-style-type: decimal">
+<li>The weight of a car can influence the mileage that the car can obtain. A random sample of cars weights and mileage was collected and are in table #10.1.14 (&quot;Passenger car mileage,&quot; 2013).</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>Test at the 5% level for a negative correlation between the weight of cars and mileage.</p></li>
+<li><p>Find the standard error of the estimate.</p></li>
+<li><p>Compute a 95% prediction interval for the mileage on a car that weighs 3800 pounds.</p></li>
+</ol>
+<p>Data Source:</p>
+<p><em>Brain2bodyweight</em>. (2013, November 16). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Brain2BodyWeight" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Brain2BodyWeight</a></p>
+<p><em>Calories in beer, beer alcohol, beer carbohydrates</em>. (2011, October
+25). Retrieved from
+<a href="http://www.beer100.com/beercalories.htm">www.beer100.com/beercalories.htm</a></p>
+<p><em>Capital and rental values of Auckland properties</em>. (2013, September
+26). Retrieved from <a href="http://www.statsci.org/data/oz/rentcap.html" class="uri">http://www.statsci.org/data/oz/rentcap.html</a></p>
+<p><em>Data hotdogs</em>. (2013, November 16). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_012708_ID_Data_HotDogs" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_012708_ID_Data_HotDogs</a></p>
+<p><em>Fertility rate</em>. (2013, October 14). Retrieved from
+<a href="http://data.worldbank.org/indicator/SP.DYN.TFRT.IN" class="uri">http://data.worldbank.org/indicator/SP.DYN.TFRT.IN</a></p>
+<p><em>Health expenditure</em>. (2013, October 14). Retrieved from
+<a href="http://data.worldbank.org/indicator/SH.XPD.TOTL.ZS" class="uri">http://data.worldbank.org/indicator/SH.XPD.TOTL.ZS</a></p>
+<p><em>Life expectancy at birth</em>. (2013, October 14). Retrieved from
+<a href="http://data.worldbank.org/indicator/SP.DYN.LE00.IN" class="uri">http://data.worldbank.org/indicator/SP.DYN.LE00.IN</a></p>
+<p><em>MLB heightsweights</em>. (2013, November 16). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights</a></p>
+<p><em>OECD economic development</em>. (2013, December 04). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Datafiles/oecdat.html" class="uri">http://lib.stat.cmu.edu/DASL/Datafiles/oecdat.html</a></p>
+<p><em>Passenger car mileage</em>. (2013, December 04). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Datafiles/carmpgdat.html" class="uri">http://lib.stat.cmu.edu/DASL/Datafiles/carmpgdat.html</a></p>
+<p><em>Prediction of height from metacarpal bone length</em>. (2013, September
+26). Retrieved from <a href="http://www.statsci.org/data/general/stature.html" class="uri">http://www.statsci.org/data/general/stature.html</a></p>
+<p><em>Pregnant woman receiving prenatal care</em>. (2013, October 14). Retrieved
+from <a href="http://data.worldbank.org/indicator/SH.STA.ANVC.ZS" class="uri">http://data.worldbank.org/indicator/SH.STA.ANVC.ZS</a></p>
+<p><em>Smoking and cancer</em>. (2013, December 04). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Datafiles/cigcancerdat.html" class="uri">http://lib.stat.cmu.edu/DASL/Datafiles/cigcancerdat.html</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="two-sample-inference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chi-square-and-anova-tests.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,3094 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 Chi-Square and ANOVA Tests | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 Chi-Square and ANOVA Tests | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 Chi-Square and ANOVA Tests | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2019-06-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="regression-and-correlation.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li><a href="statistical-basics.html#example-1.1.1-stating-definitions-for-qualitative-variable-example-1.1.2-stating-definitions-for-qualitative-variable-example-1.1.3-stating-definitions-for-quantitative-variable-example-1.1.4-stating-definitions-for-quantitative-variable-example-1.1.5-discrete-or-continuous-measurement-scales-homework-sampling-methods-example-1.2.1-choosing-a-simple-random-sample-example-1.2.2-how-not-to-choose-a-simple-random-sample-example-1.2.3-sampling-type-homework-experimental-design-guidelines-for-planning-a-statistical-study-example-1.3.1-observational-study-or-experiment-homework-how-not-to-do-statistics-example-1.4.1-bias-in-a-study"><span class="toc-section-number">1.1.1</span> Example #1.1.1: Stating Definitions for Qualitative Variable<strong>
+### Example #1.1.2: Stating Definitions for Qualitative Variable
+### Example #1.1.3: Stating Definitions for Quantitative Variable
+### Example #1.1.4: Stating Definitions for Quantitative Variable
+### Example #1.1.5: Discrete or Continuous
+### Measurement Scales:
+### Homework
+## Sampling Methods
+#### Example #1.2.1: Choosing a Simple Random Sample
+#### Example #1.2.2: How Not to Choose a Simple Random Sample
+### Example #1.2.3: Sampling type
+### Homework
+## Experimental Design
+### Guidelines for planning a statistical study
+### Example #1.3.1: Observational Study or Experiment
+### Homework
+## How Not to Do Statistics
+### Example #1.4.1: Bias in a Study</strong></a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.2-cause-and-effect"><i class="fa fa-check"></i><b>1.1.2</b> Example #1.4.2: Cause and Effect</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.3-generalizations"><i class="fa fa-check"></i><b>1.1.3</b> Example #1.4.3: Generalizations</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework"><i class="fa fa-check"></i><b>1.1.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>2.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-6"><i class="fa fa-check"></i><b>3.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#homework-10"><i class="fa fa-check"></i><b>4.4.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>5.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>6.1</b> Uniform Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#graphs-of-the-normal-distribution"><i class="fa fa-check"></i><b>6.2</b> Graphs of the Normal Distribution</a></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.3</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.4</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-16"><i class="fa fa-check"></i><b>6.4.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.5</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-17"><i class="fa fa-check"></i><b>6.5.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-19"><i class="fa fa-check"></i><b>7.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-20"><i class="fa fa-check"></i><b>7.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#homework-22"><i class="fa fa-check"></i><b>8.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#homework-23"><i class="fa fa-check"></i><b>8.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-25"><i class="fa fa-check"></i><b>9.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-26"><i class="fa fa-check"></i><b>9.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-28"><i class="fa fa-check"></i><b>10.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-29"><i class="fa fa-check"></i><b>10.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-31"><i class="fa fa-check"></i><b>11.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-32"><i class="fa fa-check"></i><b>11.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chi-square-and-anova-tests" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> Chi-Square and ANOVA Tests</h1>
+<p>This chapter presents material on three more hypothesis tests. One is used to determine significant relationship between two qualitative variables, the second is used to determine if the sample data has a particular distribution, and the last is used to determine significant relationships between means of 3 or more samples.</p>
+<div id="chi-square-test-for-independence" class="section level2">
+<h2><span class="header-section-number">11.1</span> Chi-Square Test for Independence</h2>
+<p>Remember, qualitative data is where you collect data on individuals that are categories or names. Then you would count how many of the individuals had particular qualities. An example is that there is a theory that there is a relationship between breastfeeding and autism. To determine if there is a relationship, researchers could collect the time period that a mother breastfed her child and if that child was diagnosed with autism. Then you would have a table containing this information. Now you want to know if each cell is independent of each other cell. Remember, independence says that one event does not affect another event. Here it means that having autism is independent of being breastfed. What you really want is to see if they are not independent. In other words, does one affect the other? If you were to do a hypothesis test, this is your alternative hypothesis and the null hypothesis is that they are independent. There is a hypothesis test for this and it is called the <strong>Chi-Square Test for Independence</strong>. Technically it should be called the Chi-Square Test for Dependence, but for historical reasons it is known as the test for independence. Just as with previous hypothesis tests, all the steps are the same except for the assumptions and the test statistic.</p>
+<p><strong>Hypothesis Test for Chi-Square Test</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<ul>
+<li>the two variables are independent (this means that the one variable is not affected by the other)</li>
+<li>the two variables are dependent (this means that the one variable is &gt; affected by the other)</li>
+<li>Also, state your level here.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample is taken.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5 (The expected frequencies, <em>E</em>, will be calculated later, and this assumption means ).</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>Finding the test statistic involves several steps. First the data is collected and counted, and then it is organized into a table (in a table each entry is called a cell). These values are known as the observed frequencies, which the symbol for an observed frequency is <em>O</em>. Each table is made up of rows and columns. Then each row is totaled to give a row total and each column is totaled to give a column total.</p>
+<p>The null hypothesis is that the variables are independent. Using the multiplication rule for independent events you can calculate the probability of being one value of the first variable, <em>A</em>, and one value of the second variable, <em>B</em> (the probability of a particular cell ). Remember in a hypothesis test, you assume that is true, the two variables are assumed to be independent.</p>
+<p>Now you want to find out how many individuals you expect to be in a certain cell. To find the expected frequencies, you just need to multiply the probability of that cell times the total number of individuals. Do not round the expected frequencies.</p>
+<p>If the variables are independent the expected frequencies and the observed frequencies should be the same. The test statistic here will involve looking at the difference between the expected frequency and the observed frequency for each cell. Then you want to find the “total difference” of all of these differences. The larger the total, the smaller the chances that you could find that test statistic given that the assumption of independence is true. That means that the assumption of independence is not true. How do you find the test statistic? First find the differences between the observed and expected frequencies. Because some of these differences will be positive and some will be negative, you need to square these differences. These squares could be large just because the frequencies are large, you need to divide by the expected frequencies to scale them. Then finally add up all of these fractional values. This is the test statistic.</p>
+</blockquote>
+<p><strong>Test Statistic:</strong></p>
+<blockquote>
+<p>The symbol for Chi-Square is</p>
+<p>where <em>O</em> is the observed frequency and <em>E</em> is the expected frequency</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<p><strong>Distribution of Chi-Square</strong></p>
+<blockquote>
+<p>has different curves depending on the degrees of freedom. It is skewed
+to the right for small degrees of freedom and gets more symmetric as
+the degrees of freedom increases (see figure #11.1.1). Since the test
+statistic involves squaring the differences, the test statistics are
+all positive. A chi-squared test for independence is always right
+tailed.</p>
+<p><strong>Figure #11.1.1: Chi-Square Distribution</strong></p>
+<p><img src="media/image12.png" style="width:3.77778in;height:2.45833in" /></p>
+</blockquote>
+<p>p-value:</p>
+<blockquote>
+<p>Using the TI-83/84:</p>
+<p>Using R:</p>
+<p>Where the degrees of freedom is</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>This is where you write reject or fail to reject . The rule is: if the p-value &lt; , then reject . If the p-value , then fail to reject</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>This is where you interpret in real world terms the conclusion to the test. The conclusion for a hypothesis test is that you either have enough evidence to show is true, or you do not have enough evidence to show is true.</p>
+</blockquote>
+<p><strong>Example #11.1.1: Hypothesis Test with Chi-Square Test Using Formula</strong></p>
+<blockquote>
+<p>Is there a relationship between autism and breastfeeding? To determine if there is, a researcher asked mothers of autistic and non-autistic children to say what time period they breastfed their children. The data is in table #11.1.1 (Schultz, Klonoff-Cohen, Wingard, Askhoomoff, Macera, Ji &amp; Bacher, 2006). Do the data provide enough evidence to show that that breastfeeding and autism are independent? Test at the 1% level.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Table #11.1.1: Autism Versus Breastfeeding</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Autism</th>
+<th align="left">Breast Feeding Timelines</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">None</td>
+<td align="left">Less than 2 months</td>
+<td>2 to 6 months</td>
+<td>More than 6 months</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Yes</td>
+<td align="left">241</td>
+<td align="left">198</td>
+<td>164</td>
+<td>215</td>
+<td>818</td>
+</tr>
+<tr class="odd">
+<td align="left">No</td>
+<td align="left">20</td>
+<td align="left">25</td>
+<td>27</td>
+<td>44</td>
+<td>116</td>
+</tr>
+<tr class="even">
+<td align="left">Column Total</td>
+<td align="left">261</td>
+<td align="left">223</td>
+<td>191</td>
+<td>259</td>
+<td>934</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<blockquote>
+<p>Breastfeeding and autism are independent</p>
+<p>Breastfeeding and autism are dependent</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of breastfeeding time frames and autism incidence was taken.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5 (i.e. [MISSING] ). See step 3. All expected frequencies are more than 5.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<p>Test statistic:</p>
+<p>First find the expected frequencies for each cell.</p>
+<blockquote>
+<p>Others are done similarly. It is easier to do the calculations for the test statistic with a table, the others are in table #11.1.2 along with the calculation for the test statistic. (Note: the column of should add to 0 or close to 0.)</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Table #11.1.2: Calculations for Chi-Square Test Statistic</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><em>O</em></th>
+<th align="left"><em>E</em></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">241</td>
+<td align="left">228.585</td>
+<td>12.415</td>
+<td>154.132225</td>
+<td>0.674288448</td>
+</tr>
+<tr class="even">
+<td align="left">198</td>
+<td align="left">195.304</td>
+<td>2.696</td>
+<td>7.268416</td>
+<td>0.03721591</td>
+</tr>
+<tr class="odd">
+<td align="left">164</td>
+<td align="left">167.278</td>
+<td>-3.278</td>
+<td>10.745284</td>
+<td>0.064236086</td>
+</tr>
+<tr class="even">
+<td align="left">215</td>
+<td align="left">226.833</td>
+<td>-11.833</td>
+<td>140.019889</td>
+<td>0.617281828</td>
+</tr>
+<tr class="odd">
+<td align="left">20</td>
+<td align="left">32.4154</td>
+<td>-12.4154</td>
+<td>154.1421572</td>
+<td>4.755213792</td>
+</tr>
+<tr class="even">
+<td align="left">25</td>
+<td align="left">27.6959</td>
+<td>-2.6959</td>
+<td>7.26787681</td>
+<td>0.262417066</td>
+</tr>
+<tr class="odd">
+<td align="left">27</td>
+<td align="left">23.7216</td>
+<td>3.2784</td>
+<td>10.74790656</td>
+<td>0.453085229</td>
+</tr>
+<tr class="even">
+<td align="left">44</td>
+<td align="left">32.167</td>
+<td>11.833</td>
+<td>140.019889</td>
+<td>4.352904809</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left"></td>
+<td>0.0001</td>
+<td></td>
+<td>11.2166432</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The test statistic formula is , which is the total of the last column in table #11.1.2.</p>
+</blockquote>
+<p>p-value:</p>
+<blockquote>
+<p>Using TI-83/84:</p>
+<p>Using R:</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Fail to reject since the p-value is more than 0.01.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is not enough evidence to show that breastfeeding and autism are dependent. This means that you cannot say that the whether a child is breastfed or not will indicate if that the child will be diagnosed with autism.</p>
+</blockquote>
+<p><strong>Example #11.1.2: Hypothesis Test with Chi-Square Test Using
+Technology</strong></p>
+<blockquote>
+<p>Is there a relationship between autism and breastfeeding? To determine if there is, a researcher asked mothers of autistic and non-autistic children to say what time period they breastfed their children. The data is in table #11.1.1 (Schultz, Klonoff-Cohen, Wingard, Askhoomoff, Macera, Ji &amp; Bacher, 2006). Do the data provide enough evidence to show that that breastfeeding and autism are independent? Test at the 1% level.</p>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<blockquote>
+<p>Breastfeeding and autism are independent</p>
+<p>Breastfeeding and autism are dependent</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of breastfeeding time frames and autism incidence was taken.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5 (ie. ). See step 3. All expected frequencies are more than 5.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<p>Test statistic:</p>
+<blockquote>
+<p>To use the TI-83/84 calculator to compute the test statistic, you must first put the data into the calculator. However, this process is different than for other hypothesis tests. You need to put the data in as a matrix instead of in the list. Go into the MATRX menu then move over to EDIT and choose 1:<span class="math display">\[A\]</span>. This will allow you to type the table into the calculator. Figure #11.1.2 shows what you will see on your calculator when you choose 1:<span class="math display">\[A\]</span> from the EDIT menu.</p>
+<p><strong>Figure #11.1.2: Matrix Edit Menu on TI-83/84</strong></p>
+<p><img src="media/image46.png" style="width:2.75in;height:1.86111in" /></p>
+<p>The table has 2 rows and 4 columns (don’t include the row total column and the column total row in your count). You need to tell the calculator that you have a 2 by 4. The 1 X1 (you might have another size in your matrix, but it doesn’t matter because you will change it) on the calculator is the size of the matrix. So type 2 ENTER and 4 ENTER and the calculator will make a matrix of the correct size. See figure #11.1.3.</p>
+<p><strong>Figure #11.1.3: Matrix Setup for Table</strong></p>
+<p><img src="media/image47.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Now type the table in by pressing ENTER after each cell value. Figure #11.1.4 contains the complete table typed in. Once you have the data in, press QUIT.</p>
+<p><strong>Figure #11.1.4: Data Typed into Matrix</strong></p>
+<p><img src="media/image48.png" style="width:2.75in;height:1.86111in" /></p>
+<p>To run the test on the calculator, go into STAT, then move over to TEST and choose -Test from the list. The setup for the test is in figure #11.1.5.</p>
+<p><strong>Figure #11.1.5: Setup for Chi-Square Test on TI-83/84</strong></p>
+<p><img src="media/image50.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Once you press ENTER on Calculate you will see the results in figure #11.1.6.</p>
+<p><strong>Figure #11.1.6: Results for Chi-Square Test on TI-83/84</strong></p>
+<p><img src="media/image51.png" style="width:2.75in;height:1.86111in" /></p>
+<p>The test statistic is and the p-value is . Notice that the calculator calculates the expected values for you and places them in matrix B. To review the expected values, go into MATRX and choose 2:<span class="math display">\[B\]</span>. Figure #11.1.7 shows the output. Press the right arrows to see the entire matrix.</p>
+<p><strong>Figure #11.1.7: Expected Frequency for Chi-Square Test on TI-83/84</strong></p>
+<p><img src="media/image54.png" style="width:2.75in;height:1.86111in" /></p>
+<p><img src="media/image55.png" style="width:2.75in;height:1.86111in" /></p>
+<p>To compute the test statistic and p-value with R,</p>
+<p>row1 = c(data from row 1 separated by commas)</p>
+<p>row2 = c(data from row 2 separated by commas)</p>
+<p>keep going until you have all of your rows typed in.</p>
+<p>data.table = rbind(row1, row2, …) – makes the data into a table.
+You can call it what ever you want. It does not have to be data.table.</p>
+<p>data.table – use if you want to look at the table</p>
+<p>chisq.test(data.table) – calculates the chi-squared test for
+independence</p>
+<p>chisq.test(data.table)$expected – let’s you see the expected values</p>
+<p>For this example, the commands would be</p>
+<p>row1 = c(241, 198, 164, 215)</p>
+<p>row2 = c(20, 25, 27, 44)</p>
+<p>data.table = rbind(row1, row2)</p>
+<p>data.table</p>
+<p>Output:</p>
+<p><span class="math display">\[,1\]</span> <span class="math display">\[,2\]</span> <span class="math display">\[,3\]</span> <span class="math display">\[,4\]</span></p>
+<p>row1 241 198 164 215</p>
+<p>row2 20 25 27 44</p>
+<p>chisq.test(data.table)</p>
+<p>Output:</p>
+<p>Pearson's Chi-squared test</p>
+<p>data: data.table</p>
+<p>X-squared = 11.217, df = 3, p-value = 0.01061</p>
+<p>chisq.test(data.table)$expected</p>
+<p>Output:</p>
+<p><span class="math display">\[,1\]</span> <span class="math display">\[,2\]</span> <span class="math display">\[,3\]</span> <span class="math display">\[,4\]</span></p>
+<p>row1 228.58458 195.30407 167.27837 226.83298</p>
+<p>row2 32.41542 27.69593 23.72163 32.16702</p>
+<p>The test statistic is and the p-value is .</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Fail to reject since the p-value is more than 0.01.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is not enough evidence to show that breastfeeding and autism are dependent. This means that you cannot say that the whether a child is breastfed or not will indicate if that the child will be diagnosed with autism.</p>
+</blockquote>
+<p><strong>Example #11.1.3: Hypothesis Test with Chi-Square Test Using Formula</strong></p>
+<blockquote>
+<p>The World Health Organization (WHO) keeps track of how many incidents of leprosy there are in the world. Using the WHO regions and the World Banks income groups, one can ask if an income level and a WHO region are dependent on each other in terms of predicting where the disease is. Data on leprosy cases in different countries was collected for the year 2011 and a summary is presented in table #11.1.3 (&quot;Leprosy: Number of,&quot; 2013). Is there evidence to show that income level and WHO region are independent when dealing with the disease of leprosy? Test at the 5% level.</p>
+<p><strong>Table #11.1.3: Number of Leprosy Cases</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">WHO Region</th>
+<th align="left">World Bank Income Group</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">High Income</td>
+<td align="left">Upper Middle Income</td>
+<td>Lower Middle Income</td>
+<td>Low Income</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Americas</td>
+<td align="left">174</td>
+<td align="left">36028</td>
+<td>615</td>
+<td>0</td>
+<td>36817</td>
+</tr>
+<tr class="odd">
+<td align="left">Eastern Mediterranean</td>
+<td align="left">54</td>
+<td align="left">6</td>
+<td>1883</td>
+<td>604</td>
+<td>2547</td>
+</tr>
+<tr class="even">
+<td align="left">Europe</td>
+<td align="left">10</td>
+<td align="left">0</td>
+<td>0</td>
+<td>0</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td align="left">Western Pacific</td>
+<td align="left">26</td>
+<td align="left">216</td>
+<td>3689</td>
+<td>1155</td>
+<td>5086</td>
+</tr>
+<tr class="even">
+<td align="left">Africa</td>
+<td align="left">0</td>
+<td align="left">39</td>
+<td>1986</td>
+<td>15928</td>
+<td>17953</td>
+</tr>
+<tr class="odd">
+<td align="left">South-East Asia</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td>149896</td>
+<td>10236</td>
+<td>160132</td>
+</tr>
+<tr class="even">
+<td align="left">Column Total</td>
+<td align="left">264</td>
+<td align="left">36289</td>
+<td>158069</td>
+<td>27923</td>
+<td>222545</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of
+significance</li>
+</ol>
+<blockquote>
+<p>WHO region and Income Level when dealing with the disease of leprosy are independent</p>
+<p>WHO region and Income Level when dealing with the disease of leprosy are dependent</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of incidence of leprosy was taken from different countries and the income level and WHO region was taken.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5 (ie. ). See step 3. There are actually 4 expected frequencies that are less than 5, and the results of the test may not be valid. If you look at the expected frequencies you will notice that they are all in Europe. This is because Europe didn’t have many cases in 2011.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<p>Test statistic:</p>
+<p>First find the expected frequencies for each cell.</p>
+<blockquote>
+<p>Others are done similarly. It is easier to do the calculations for the test statistic with a table, and the others are in table #11.1.4 along with the calculation for the test statistic.</p>
+<p><strong>Table #11.1.4: Calculations for Chi-Square Test Statistic</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><em>O</em></th>
+<th align="left"><em>E</em></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">174</td>
+<td align="left">43.675</td>
+<td>130.325</td>
+<td>16984.564</td>
+<td>388.8838719</td>
+</tr>
+<tr class="even">
+<td align="left">54</td>
+<td align="left">3.021</td>
+<td>50.979</td>
+<td>2598.813</td>
+<td>860.1218328</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="left">0.012</td>
+<td>9.988</td>
+<td>99.763</td>
+<td>8409.746711</td>
+</tr>
+<tr class="even">
+<td align="left">26</td>
+<td align="left">6.033</td>
+<td>19.967</td>
+<td>398.665</td>
+<td>66.07628214</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">21.297</td>
+<td>-21.297</td>
+<td>453.572</td>
+<td>21.29722977</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">189.961</td>
+<td>-189.961</td>
+<td>36085.143</td>
+<td>189.9608978</td>
+</tr>
+<tr class="odd">
+<td align="left">36028</td>
+<td align="left">6003.514</td>
+<td>30024.486</td>
+<td>901469735.315</td>
+<td>150157.0038</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">415.323</td>
+<td>-409.323</td>
+<td>167545.414</td>
+<td>403.4097962</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">1.631</td>
+<td>-1.631</td>
+<td>2.659</td>
+<td>1.6306365</td>
+</tr>
+<tr class="even">
+<td align="left">216</td>
+<td align="left">829.342</td>
+<td>-613.342</td>
+<td>376188.071</td>
+<td>453.5983897</td>
+</tr>
+<tr class="odd">
+<td align="left">39</td>
+<td align="left">2927.482</td>
+<td>-2888.482</td>
+<td>8343326.585</td>
+<td>2850.001268</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">26111.708</td>
+<td>-26111.708</td>
+<td>681821316.065</td>
+<td>26111.70841</td>
+</tr>
+<tr class="odd">
+<td align="left">615</td>
+<td align="left">26150.335</td>
+<td>-25535.335</td>
+<td>652053349.724</td>
+<td>24934.7988</td>
+</tr>
+<tr class="even">
+<td align="left">1883</td>
+<td align="left">1809.080</td>
+<td>73.920</td>
+<td>5464.144</td>
+<td>3.020398811</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">7.103</td>
+<td>-7.103</td>
+<td>50.450</td>
+<td>7.1027882</td>
+</tr>
+<tr class="even">
+<td align="left">3689</td>
+<td align="left">3612.478</td>
+<td>76.522</td>
+<td>5855.604</td>
+<td>1.620938405</td>
+</tr>
+<tr class="odd">
+<td align="left">1986</td>
+<td align="left">12751.636</td>
+<td>-10765.636</td>
+<td>115898911.071</td>
+<td>9088.944681</td>
+</tr>
+<tr class="even">
+<td align="left">149896</td>
+<td align="left">113738.368</td>
+<td>36157.632</td>
+<td>1307374351.380</td>
+<td>11494.57632</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">4619.475</td>
+<td>-4619.475</td>
+<td>21339550.402</td>
+<td>4619.475122</td>
+</tr>
+<tr class="even">
+<td align="left">604</td>
+<td align="left">319.575</td>
+<td>284.425</td>
+<td>80897.421</td>
+<td>253.1404187</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">1.255</td>
+<td>-1.255</td>
+<td>1.574</td>
+<td>1.25471253</td>
+</tr>
+<tr class="even">
+<td align="left">1155</td>
+<td align="left">638.147</td>
+<td>516.853</td>
+<td>267137.238</td>
+<td>418.6140882</td>
+</tr>
+<tr class="odd">
+<td align="left">15928</td>
+<td align="left">2252.585</td>
+<td>13675.415</td>
+<td>187016964.340</td>
+<td>83023.25138</td>
+</tr>
+<tr class="even">
+<td align="left">10236</td>
+<td align="left">20091.963</td>
+<td>-9855.963</td>
+<td>97140000.472</td>
+<td>4834.769106</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left"></td>
+<td>0.000</td>
+<td></td>
+<td>328594.008</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The test statistic formula is , which is the total of the last column in table #11.1.2.</p>
+</blockquote>
+<p>p-value:</p>
+<blockquote>
+<p>Using the TI-83/84:</p>
+<p>Using R:</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Reject since the p-value is less than 0.05.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that WHO region and income level are dependent when dealing with the disease of leprosy. WHO can decide how to focus their efforts based on region and income level. Do remember though that the results may not be valid due to the expected frequencies not all be more than 5.</p>
+</blockquote>
+<p><strong>Example #11.1.4: Hypothesis Test with Chi-Square Test Using Technology</strong></p>
+<blockquote>
+<p>The World Health Organization (WHO) keeps track of how many incidents of leprosy there are in the world. Using the WHO regions and the World Banks income groups, one can ask if an income level and a WHO region are dependent on each other in terms of predicting where the disease is. Data on leprosy cases in different countries was collected for the year 2011 and a summary is presented in table #11.1.3 (&quot;Leprosy: Number of,&quot; 2013). Is there evidence to show that income level and WHO region are independent when dealing with the disease of leprosy? Test at the 5% level.</p>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of
+significance</li>
+</ol>
+<blockquote>
+<p>WHO region and Income Level when dealing with the disease of leprosy are independent</p>
+<p>WHO region and Income Level when dealing with the disease of leprosy are dependent</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of incidence of leprosy was taken from different countries and the income level and WHO region was taken.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5 (ie. ). See step 3. There are actually 4 expected frequencies that are less than 5, and the results of the test may not be valid. If you look at the expected frequencies you will notice that they are all in Europe. This is because Europe didn’t have many cases in 2011.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<p>Test statistic:</p>
+<blockquote>
+<p>Using the TI-83/84. See example #11.1.2 for the process of doing the test on the calculator. Remember, you need to put the data in as a matrix instead of in the list.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<p><strong>Figure #11.1.8: Setup for Matrix on TI-83/84</strong></p>
+<blockquote>
+<p><img src="media/image80.png" style="width:2.75in;height:1.86111in" /></p>
+<p><img src="media/image81.png" style="width:2.75in;height:1.86111in" /></p>
+</blockquote>
+<p><strong>Figure #11.1.9: Results for Chi-Square Test on TI-83/84</strong></p>
+<blockquote>
+<p><img src="media/image82.png" style="width:2.75in;height:1.86111in" /></p>
+<p><strong>Figure #11.1.10: Expected Frequency for Chi-Square Test on
+TI-83/84</strong></p>
+<p><img src="media/image84.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Press the right arrow to look at the other expected frequencies.</p>
+</blockquote>
+<p>p-value:</p>
+<blockquote>
+<p>Using R:</p>
+<p>row1=c(174, 36028, 615, 0)</p>
+<p>row2=c(54, 6, 1883, 604)</p>
+<p>row3=c(10, 0, 0, 0)</p>
+<p>row4=c(26, 216, 3689, 1155)</p>
+<p>row5=c(0, 39, 1986, 15928)</p>
+<p>row6=c(0, 0, 149896, 10236)</p>
+<p>chisq.test(data.table)</p>
+<p>Pearson's Chi-squared test</p>
+<p>data: data.table</p>
+<p>X-squared = 328590, df = 15, p-value &lt; 2.2e-16</p>
+<p>Warning message:</p>
+<p>In chisq.test(data.table) : Chi-squared approximation may be incorrect</p>
+<p>chisq.test(data.table)$expected</p>
+<p><span class="math display">\[,1\]</span> <span class="math display">\[,2\]</span> <span class="math display">\[,3\]</span> <span class="math display">\[,4\]</span></p>
+<p>row1 43.67515783 6003.514404 2.615034e+04 4619.475122</p>
+<p>row2 3.02144735 415.323117 1.809080e+03 319.575281</p>
+<p>row3 0.01186277 1.630637 7.102788e+00 1.254713</p>
+<p>row4 6.03340448 829.341724 3.612478e+03 638.146793</p>
+<p>row5 21.29722977 2927.481709 1.275164e+04 2252.585405</p>
+<p>row6 189.96089780 26111.708410 1.137384e+05 20091.962686</p>
+<p>Warning message:</p>
+<p>In chisq.test(data.table) : Chi-squared approximation may be incorrect</p>
+<p>and p-value =</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Reject since the p-value is less than 0.05.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that WHO region and income level are dependent when dealing with the disease of leprosy. WHO can decide how to focus their efforts based on region and income level. Do remember though that the results may not be valid due to the expected frequencies not all be more than 5.</p>
+</blockquote>
+<div id="homework-30" class="section level3">
+<h3><span class="header-section-number">11.1.1</span> Homework</h3>
+<p>In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.</p>
+<ol style="list-style-type: decimal">
+<li><p>The number of people who survived the Titanic based on class and sex is in table #11.1.5 (&quot;Encyclopedia Titanica,&quot; 2013). Is there enough evidence to show that the class and the sex of a person who survived the Titanic are independent? Test at the 5% level.</p>
+<p><strong>Table #11.1.5: Surviving the Titanic</strong></p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Class</th>
+<th align="left">Sex</th>
+<th align="left">Total</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Female</td>
+<td align="left">Male</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">1st</td>
+<td align="left">134</td>
+<td align="left">59</td>
+<td>193</td>
+</tr>
+<tr class="odd">
+<td align="left">2nd</td>
+<td align="left">94</td>
+<td align="left">25</td>
+<td>119</td>
+</tr>
+<tr class="even">
+<td align="left">3rd</td>
+<td align="left">80</td>
+<td align="left">58</td>
+<td>138</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">308</td>
+<td align="left">142</td>
+<td>450</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Researchers watched groups of dolphins off the coast of Ireland in 1998 to determine what activities the dolphins partake in at certain times of the day (&quot;Activities of dolphin,&quot; 2013). The numbers in table #11.1.6 represent the number of groups of dolphins that were partaking in an activity at certain times of days. Is there enough evidence to show that the activity and the time period are independent for dolphins? Test at the 1% level.</p>
+<p><strong>Table #11.1.6: Dolphin Activity</strong></p></li>
+</ol>
+<table style="width:85%;">
+<colgroup>
+<col width="20%" />
+<col width="13%" />
+<col width="11%" />
+<col width="16%" />
+<col width="13%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Activity</th>
+<th>Period</th>
+<th><p>Row</p>
+Total</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Morning</td>
+<td>Noon</td>
+<td>Afternoon</td>
+<td>Evening</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Travel</td>
+<td>6</td>
+<td>6</td>
+<td>14</td>
+<td>13</td>
+<td>39</td>
+</tr>
+<tr class="odd">
+<td>Feed</td>
+<td>28</td>
+<td>4</td>
+<td>0</td>
+<td>56</td>
+<td>88</td>
+</tr>
+<tr class="even">
+<td>Social</td>
+<td>38</td>
+<td>5</td>
+<td>9</td>
+<td>10</td>
+<td>62</td>
+</tr>
+<tr class="odd">
+<td>Column Total</td>
+<td>72</td>
+<td>15</td>
+<td>23</td>
+<td>79</td>
+<td>189</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>Is there a relationship between autism and what an infant is fed? To determine if there is, a researcher asked mothers of autistic and non-autistic children to say what they fed their infant. The data is in table #11.1.7 (Schultz, Klonoff-Cohen, Wingard, Askhoomoff, Macera, Ji &amp; Bacher, 2006). Do the data provide enough evidence to show that that what an infant is fed and autism are independent? Test at the1% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.1.7: Autism Versus Breastfeeding</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Autism</th>
+<th align="left">Feeding</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Brest-feeding</td>
+<td align="left">Formula with DHA/ARA</td>
+<td>Formula without DHA/ARA</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Yes</td>
+<td align="left">12</td>
+<td align="left">39</td>
+<td>65</td>
+<td>116</td>
+</tr>
+<tr class="odd">
+<td align="left">No</td>
+<td align="left">6</td>
+<td align="left">22</td>
+<td>10</td>
+<td>38</td>
+</tr>
+<tr class="even">
+<td align="left">Column Total</td>
+<td align="left">18</td>
+<td align="left">61</td>
+<td>75</td>
+<td>154</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li><p>A person’s educational attainment and age group was collected by the U.S. Census Bureau in 1984 to see if age group and educational attainment are related. The counts in thousands are in table #11.1.8 (&quot;Education by age,&quot; 2013). Do the data show that educational attainment and age are independent? Test at the 5% level.</p>
+<p><strong>Table #11.1.8: Educational Attainment and Age Group</strong></p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Education</th>
+<th align="left">Age Group</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">25-34</td>
+<td align="left">35-44</td>
+<td>45-54</td>
+<td>55-64</td>
+<td>&gt;64</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Did not complete HS</td>
+<td align="left">5416</td>
+<td align="left">5030</td>
+<td>5777</td>
+<td>7606</td>
+<td>13746</td>
+<td>37575</td>
+</tr>
+<tr class="odd">
+<td align="left">Competed HS</td>
+<td align="left">16431</td>
+<td align="left">1855</td>
+<td>9435</td>
+<td>8795</td>
+<td>7558</td>
+<td>44074</td>
+</tr>
+<tr class="even">
+<td align="left">College 1-3 years</td>
+<td align="left">8555</td>
+<td align="left">5576</td>
+<td>3124</td>
+<td>2524</td>
+<td>2503</td>
+<td>22282</td>
+</tr>
+<tr class="odd">
+<td align="left">College 4 or more years</td>
+<td align="left">9771</td>
+<td align="left">7596</td>
+<td>3904</td>
+<td>3109</td>
+<td>2483</td>
+<td>26863</td>
+</tr>
+<tr class="even">
+<td align="left">Column Total</td>
+<td align="left">40173</td>
+<td align="left">20057</td>
+<td>22240</td>
+<td>22034</td>
+<td>26290</td>
+<td>130794</td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li>Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important good grades were to them (1 very important and 4 least important). The data is in table #11.1.9 (&quot;Popular kids datafile,&quot; 2013). Do the data provide enough evidence to show that goal attainment and importance of grades are independent? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.1.9: Personal Goal and Importance of Grades</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Goal</th>
+<th align="left">Grades Importance Rating</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td>3</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Grades</td>
+<td align="left">70</td>
+<td align="left">66</td>
+<td>55</td>
+<td>56</td>
+<td>247</td>
+</tr>
+<tr class="odd">
+<td align="left">Popular</td>
+<td align="left">14</td>
+<td align="left">33</td>
+<td>45</td>
+<td>49</td>
+<td>141</td>
+</tr>
+<tr class="even">
+<td align="left">Sports</td>
+<td align="left">10</td>
+<td align="left">24</td>
+<td>33</td>
+<td>23</td>
+<td>90</td>
+</tr>
+<tr class="odd">
+<td align="left">Column Total</td>
+<td align="left">94</td>
+<td align="left">123</td>
+<td>133</td>
+<td>128</td>
+<td>478</td>
+</tr>
+</tbody>
+</table>
+<ol start="6" style="list-style-type: decimal">
+<li>Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important being good at sports were to them (1 very important and 4 least important). The data is in table #11.1.10 (&quot;Popular kids datafile,&quot; 2013). Do the data provide enough evidence to show that goal attainment and importance of sports are independent? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.1.10: Personal Goal and Importance of Sports</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Goal</th>
+<th align="left">Sports Importance Rating</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td>3</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Grades</td>
+<td align="left">83</td>
+<td align="left">81</td>
+<td>55</td>
+<td>28</td>
+<td>247</td>
+</tr>
+<tr class="odd">
+<td align="left">Popular</td>
+<td align="left">32</td>
+<td align="left">49</td>
+<td>43</td>
+<td>17</td>
+<td>141</td>
+</tr>
+<tr class="even">
+<td align="left">Sports</td>
+<td align="left">50</td>
+<td align="left">24</td>
+<td>14</td>
+<td>2</td>
+<td>90</td>
+</tr>
+<tr class="odd">
+<td align="left">Column Total</td>
+<td align="left">165</td>
+<td align="left">154</td>
+<td>112</td>
+<td>47</td>
+<td>478</td>
+</tr>
+</tbody>
+</table>
+<ol start="7" style="list-style-type: decimal">
+<li>Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important having good looks were to them (1 very important and 4 least important). The data is in table #11.1.11 (&quot;Popular kids datafile,&quot; 2013). Do the data provide enough evidence to show that goal attainment and importance of looks are independent? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.1.11: Personal Goal and Importance of Looks</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Goal</th>
+<th align="left">Looks Importance Rating</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td>3</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Grades</td>
+<td align="left">80</td>
+<td align="left">66</td>
+<td>66</td>
+<td>35</td>
+<td>247</td>
+</tr>
+<tr class="odd">
+<td align="left">Popular</td>
+<td align="left">81</td>
+<td align="left">30</td>
+<td>18</td>
+<td>12</td>
+<td>141</td>
+</tr>
+<tr class="even">
+<td align="left">Sports</td>
+<td align="left">24</td>
+<td align="left">30</td>
+<td>17</td>
+<td>19</td>
+<td>90</td>
+</tr>
+<tr class="odd">
+<td align="left">Column Total</td>
+<td align="left">185</td>
+<td align="left">126</td>
+<td>101</td>
+<td>66</td>
+<td>478</td>
+</tr>
+</tbody>
+</table>
+<ol start="8" style="list-style-type: decimal">
+<li>Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important having money were to them (1 very important and 4 least important). The data is in table #11.1.12 (&quot;Popular kids datafile,&quot; 2013). Do the data provide enough evidence to show that goal attainment and importance of money are independent? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.1.12: Personal Goal and Importance of Money</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Goal</th>
+<th align="left">Money Importance Rating</th>
+<th align="left">Row Total</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td>3</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Grades</td>
+<td align="left">14</td>
+<td align="left">34</td>
+<td>71</td>
+<td>128</td>
+<td>247</td>
+</tr>
+<tr class="odd">
+<td align="left">Popular</td>
+<td align="left">14</td>
+<td align="left">29</td>
+<td>35</td>
+<td>63</td>
+<td>141</td>
+</tr>
+<tr class="even">
+<td align="left">Sports</td>
+<td align="left">6</td>
+<td align="left">12</td>
+<td>26</td>
+<td>46</td>
+<td>90</td>
+</tr>
+<tr class="odd">
+<td align="left">Column Total</td>
+<td align="left">34</td>
+<td align="left">75</td>
+<td>132</td>
+<td>237</td>
+<td>478</td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="chi-square-goodness-of-fit" class="section level2">
+<h2><span class="header-section-number">11.2</span> Chi-Square Goodness of Fit</h2>
+<p>In probability, you calculated probabilities using both experimental and theoretical methods. There are times when it is important to determine how well the experimental values match the theoretical values. An example of this is if you wish to verify if a die is fair. To determine if observed values fit the expected values, you want to see if the difference between observed values and expected values is large enough to say that the test statistic is unlikely to happen if you assume that the observed values fit the expected values. The test statistic in this case is also the chi-square. The process is the same as for the chi-square test for independence.</p>
+<p><strong>Hypothesis Test for Goodness of Fit Test</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<blockquote>
+<p>The data are consistent with a specific distribution</p>
+<p>The data are not consistent with a specific distribution</p>
+<p>Also, state your level here.</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample is taken.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5 (The expected frequencies, <em>E</em>, will be calculated later, and this assumption means ).</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>Finding the test statistic involves several steps. First the data is collected and counted, and then it is organized into a table (in a table each entry is called a cell). These values are known as the observed frequencies, which the symbol for an observed frequency is <em>O</em>. The table is made up of <em>k</em> entries. The total number of observed frequencies is <em>n</em>. The expected frequencies are calculated by multiplying the probability of each entry, <em>p</em>, times <em>n</em>.</p>
+</blockquote>
+<p><strong>Test Statistic:</strong></p>
+<blockquote>
+<p>where <em>O</em> is the observed frequency and <em>E</em> is the expected frequency</p>
+<p>Again, the test statistic involves squaring the differences, so the test statistics are all positive. Thus a chi-squared test for goodness of fit is always right tailed.</p>
+</blockquote>
+<p>p-value:</p>
+<blockquote>
+<p>Using the TI-83/84:</p>
+<p>Using R:</p>
+<p>Where the degrees of freedom is</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>This is where you write reject or fail to reject . The rule is: if the p-value &lt; , then reject . If the p-value , then fail to reject</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>This is where you interpret in real world terms the conclusion to the test. The conclusion for a hypothesis test is that you either have enough evidence to show is true, or you do not have enough evidence to show is true.</p>
+</blockquote>
+<p><strong>Example #11.2.1: Goodness of Fit Test Using the Formula</strong></p>
+<blockquote>
+<p>Suppose you have a die that you are curious if it is fair or not. If it is fair then the proportion for each value should be the same. You need to find the observed frequencies and to accomplish this you roll the die 500 times and count how often each side comes up. The data is in table #11.2.1. Do the data show that the die is fair? Test at the 5% level.</p>
+<p><strong>Table #11.2.1: Observed Frequencies of Die</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Die values</th>
+<th align="left">1</th>
+<th align="left">2</th>
+<th align="left">3</th>
+<th align="left">4</th>
+<th align="left">5</th>
+<th align="left">6</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Observed Frequency</td>
+<td align="left">78</td>
+<td align="left">87</td>
+<td align="left">87</td>
+<td align="left">76</td>
+<td align="left">85</td>
+<td align="left">87</td>
+<td align="left">100</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<blockquote>
+<p>The observed frequencies are consistent with the distribution for fair die (the die is fair)</p>
+<p>The observed frequencies are not consistent with the distribution for fair die (the die is not fair)</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample is taken since each throw of a die is a random event.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5. See step 3.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>First you need to find the probability of rolling each side of the die. The sample space for rolling a die is {1, 2, 3, 4, 5, 6}. Since you are assuming that the die is fair, then [MISSING].</p>
+</blockquote>
+<blockquote>
+<p>Now you can find the expected frequency for each side of the die. Since all the probabilities are the same, then each expected frequency is the same.</p>
+</blockquote>
+<blockquote>
+<p>Test Statistic:</p>
+<p>It is easier to calculate the test statistic using a table.</p>
+<p><strong>Table #11.2.2: Calculation of the Chi-Square Test Statistic</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><em>O</em></th>
+<th align="left"><em>E</em></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">78</td>
+<td align="left">83.33</td>
+<td>-5.33</td>
+<td>28.4089</td>
+<td>0.340920437</td>
+</tr>
+<tr class="even">
+<td align="left">87</td>
+<td align="left">83.33</td>
+<td>3.67</td>
+<td>13.4689</td>
+<td>0.161633265</td>
+</tr>
+<tr class="odd">
+<td align="left">87</td>
+<td align="left">83.33</td>
+<td>3.67</td>
+<td>13.4689</td>
+<td>0.161633265</td>
+</tr>
+<tr class="even">
+<td align="left">76</td>
+<td align="left">83.33</td>
+<td>-7.33</td>
+<td>53.7289</td>
+<td>0.644772591</td>
+</tr>
+<tr class="odd">
+<td align="left">85</td>
+<td align="left">83.33</td>
+<td>1.67</td>
+<td>2.7889</td>
+<td>0.033468139</td>
+</tr>
+<tr class="even">
+<td align="left">87</td>
+<td align="left">83.33</td>
+<td>3.67</td>
+<td>13.4689</td>
+<td>0.161633265</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left"></td>
+<td>0.02</td>
+<td></td>
+<td>1.504060962</td>
+</tr>
+</tbody>
+</table>
+<p>The test statistic is 1.504060962</p>
+<p>The degrees of freedom are</p>
+<p>Using TI-83/84:</p>
+<p>Using R:</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Fail to reject since the p-value is greater than 0.05.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is not enough evidence to show that the die is not consistent with the distribution for a fair die. There is not enough evidence to show that the die is not fair.</p>
+</blockquote>
+<p><strong>Example #11.2.2: Goodness of Fit Test Using Technology</strong></p>
+<blockquote>
+<p>Suppose you have a die that you are curious if it is fair or not. If it is fair then the proportion for each value should be the same. You need to find the observed frequencies and to accomplish this you roll the die 500 times and count how often each side comes up. The data is in table #11.2.1. Do the data show that the die is fair? Test at the 5% level.</p>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<blockquote>
+<p>The observed frequencies are consistent with the distribution for fair die (the die is fair)</p>
+<p>The observed frequencies are not consistent with the distribution for fair die (the die is not fair)</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample is taken since each throw of a die is a random
+event.</p></li>
+<li><p>Expected frequencies for each cell are greater than or equal to 5.
+See step 3.</p></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>Using the TI-83/84 calculator:</p>
+<p><strong>Using the TI-83:</strong></p>
+<p>To use the TI-83 calculator to compute the test statistic, you must first put the data into the calculator. Type the observed frequencies into L1 and the expected frequencies into L2. Then you will need to go to L3, arrow up onto the name, and type in . Now you use 1-Var Stats L3 to find the total. See figure #11.2.1 for the initial setup, figure #11.2.2 for the results of that calculation, and figure #11.2.3 for the result of the 1-Var Stats L3.</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure #11.2.1: Input into TI-83</strong></p>
+<p><img src="media/image124.png" style="width:2.75in;height:1.86111in" /></p>
+<p><strong>Figure #11.2.2: Result for L3 on TI-83</strong></p>
+<p><img src="media/image125.png" style="width:2.75in;height:1.86111in" /></p>
+<p><strong>Figure #11.2.3: 1-Var Stats L3 Result on TI-83</strong></p>
+<p><img src="media/image126.png" style="width:2.75in;height:1.86111in" /></p>
+<p>The total is the chi-square value, .</p>
+<p>The p-value is found using , where the degrees of freedom is .</p>
+<p><strong>Using the TI-84:</strong></p>
+<p>To run the test on the TI-84, type the observed frequencies into L1 and the expected frequencies into L2, then go into STAT, move over to TEST and choose GOF-Test from the list. The setup for the test is in figure #11.2.4.</p>
+</blockquote>
+<p><strong>Figure #11.2.4: Setup for Chi-Square Goodness of Fit Test on TI-84</strong></p>
+<blockquote>
+<p><img src="media/image131.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Once you press ENTER on Calculate you will see the results in figure #11.2.5.</p>
+<p><strong>Figure #11.2.5: Results for Chi-Square Test on TI-83/84</strong></p>
+<p><img src="media/image132.png" style="width:2.75in;height:1.86111in" /></p>
+</blockquote>
+<p>The test statistic is 1.504060962</p>
+<p>The</p>
+<blockquote>
+<p>The CNTRB represent the for each die value. You can see the values by pressing the right arrow.</p>
+<p>Using R:</p>
+<p>Type in the observed frequencies. Call it something like observed.</p>
+<p>observed&lt;- c(type in data with commas in between)</p>
+<p>Type in the probabilities that you are comparing to the observed frequencies. Call it something like null.probs.</p>
+<p>null.probs &lt;- c(type in probabilities with commas in between)</p>
+<p>chisq.test(observed, p=null.probs) – the command for the hypothesis test</p>
+<p>For this example (Note since you are looking to see if the die is fair, then the probability of each side of a fair die coming up is 1/6.)</p>
+<p>observed&lt;-c(78, 87, 87, 76, 85, 87)</p>
+<p>null.probs&lt;-c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)</p>
+<p>chisq.test(observed, p=null.probs)</p>
+<p>Output:</p>
+<p>Chi-squared test for given probabilities</p>
+<p>data: observed</p>
+<p>X-squared = 1.504, df = 5, p-value = 0.9126</p>
+<p>The test statistic is and the p-value = 0.9126.</p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Fail to reject since the p-value is greater than 0.05.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is not enough evidence to show that the die is not consistent with the distribution for a fair die. There is not enough evidence to show that the die is not fair.</p>
+</blockquote>
+<div id="homework-31" class="section level3">
+<h3><span class="header-section-number">11.2.1</span> Homework</h3>
+<p>In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.</p>
+<ol style="list-style-type: decimal">
+<li>According to the M&amp;M candy company, the expected proportion can be found in Table #11.2.3. In addition, the table contains the number of M&amp;M’s of each color that were found in a case of candy (Madison, 2013). At the 5% level, do the observed frequencies support the claim of M&amp;M?</li>
+</ol>
+<p><strong>Table #11.2.3: M&amp;M Observed and Proportions</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">Blue</th>
+<th align="left">Brown</th>
+<th align="left">Green</th>
+<th align="left">Orange</th>
+<th align="left">Red</th>
+<th align="left">Yellow</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Observed Frequencies</td>
+<td align="left">481</td>
+<td align="left">371</td>
+<td align="left">483</td>
+<td align="left">544</td>
+<td align="left">372</td>
+<td align="left">369</td>
+<td align="left">2620</td>
+</tr>
+<tr class="even">
+<td>Expected Proportion</td>
+<td align="left">0.24</td>
+<td align="left">0.13</td>
+<td align="left">0.16</td>
+<td align="left">0.20</td>
+<td align="left">0.13</td>
+<td align="left">0.14</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li>Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made the time period of January 1 to March 31. Table #11.2.4 gives the defect and the number of defects.</li>
+</ol>
+<p><strong>Table #11.2.4: Number of Defective Lenses</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Defect type</th>
+<th align="left">Number of defects</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Scratch</td>
+<td align="left">5865</td>
+</tr>
+<tr class="even">
+<td align="left">Right shaped – small</td>
+<td align="left">4613</td>
+</tr>
+<tr class="odd">
+<td align="left">Flaked</td>
+<td align="left">1992</td>
+</tr>
+<tr class="even">
+<td align="left">Wrong axis</td>
+<td align="left">1838</td>
+</tr>
+<tr class="odd">
+<td align="left">Chamfer wrong</td>
+<td align="left">1596</td>
+</tr>
+<tr class="even">
+<td align="left">Crazing, cracks</td>
+<td align="left">1546</td>
+</tr>
+<tr class="odd">
+<td align="left">Wrong shape</td>
+<td align="left">1485</td>
+</tr>
+<tr class="even">
+<td align="left">Wrong PD</td>
+<td align="left">1398</td>
+</tr>
+<tr class="odd">
+<td align="left">Spots and bubbles</td>
+<td align="left">1371</td>
+</tr>
+<tr class="even">
+<td align="left">Wrong height</td>
+<td align="left">1130</td>
+</tr>
+<tr class="odd">
+<td align="left">Right shape – big</td>
+<td align="left">1105</td>
+</tr>
+<tr class="even">
+<td align="left">Lost in lab</td>
+<td align="left">976</td>
+</tr>
+<tr class="odd">
+<td align="left">Spots/bubble – intern</td>
+<td align="left">976</td>
+</tr>
+</tbody>
+</table>
+<p>Do the data support the notion that each defect type occurs in the same proportion? Test at the 10% level.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>On occasion, medical studies need to model the proportion of the population that has a disease and compare that to observed frequencies of the disease actually occurring. Suppose the end-stage renal failure in south-west Wales was collected for different age groups. Do the data in table 11.2.5 show that the observed frequencies are in agreement with proportion of people in each age group (Boyle, Flowerdew &amp; Williams, 1997)? Test at the 1% level.</p>
+<p><strong>Table #11.2.5: Renal Failure Frequencies</strong></p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Age Group</th>
+<th align="left">16-29</th>
+<th align="left">30-44</th>
+<th align="left">45-59</th>
+<th align="left">60-75</th>
+<th align="left">75+</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Observed Frequency</td>
+<td align="left">32</td>
+<td align="left">66</td>
+<td align="left">132</td>
+<td align="left">218</td>
+<td align="left">91</td>
+<td align="left">539</td>
+</tr>
+<tr class="even">
+<td align="left">Expected Proportion</td>
+<td align="left">0.23</td>
+<td align="left">0.25</td>
+<td align="left">0.22</td>
+<td align="left">0.21</td>
+<td align="left">0.09</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li><p>In Africa in 2011, the number of deaths of a female from cardiovascular disease for different age groups are in table #11.2.6 (&quot;Global health observatory,&quot; 2013). In addition, the proportion of deaths of females from all causes for the same age groups are also in table #11.2.6. Do the data show that the death from cardiovascular disease are in the same proportion as all deaths for the different age groups? Test at the 5% level.</p>
+<p><strong>Table #11.2.6: Deaths of Females for Different Age Groups</strong></p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Age</th>
+<th align="left">5-14</th>
+<th align="left">15-29</th>
+<th align="left">30-49</th>
+<th align="left">50-69</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cardiovascular Frequency</td>
+<td align="left">8</td>
+<td align="left">16</td>
+<td align="left">56</td>
+<td align="left">433</td>
+<td align="left">513</td>
+</tr>
+<tr class="even">
+<td align="left">All Cause Proportion</td>
+<td align="left">0.10</td>
+<td align="left">0.12</td>
+<td align="left">0.26</td>
+<td align="left">0.52</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li><p>In Australia in 1995, there was a question of whether indigenous people are more likely to die in prison than non-indigenous people. To figure out, the data in table 11.2.7 was collected. (&quot;Aboriginal deaths in,&quot; 2013). Do the data show that indigenous people die in the same proportion as non-indigenous people? Test at the 1% level.</p>
+<p><strong>Table #11.2.7: Death of Prisoners</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Pris</th>
+<th>oner Dies Pris</th>
+<th>oner Did Not Die Tota</th>
+<th align="left">l</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Indigenous Prisoner Frequency</td>
+<td>17</td>
+<td>2890</td>
+<td align="left">2907</td>
+</tr>
+<tr class="even">
+<td align="right">Frequency of Non-Indigenous Prisoner</td>
+<td>42</td>
+<td>14459</td>
+<td align="left">14501</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>A project conducted by the Australian Federal Office of Road Safety asked people many questions about their cars. One question was the reason that a person chooses a given car, and that data is in table #11.2.8 (&quot;Car preferences,&quot; 2013).</p></li>
+</ol>
+<blockquote>
+<p><strong>Table #11.2.8: Reason for Choosing a Car</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Safety</th>
+<th align="left">Reliability</th>
+<th align="left">Cost</th>
+<th align="left">Performance</th>
+<th align="left">Comfort</th>
+<th align="left">Looks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">84</td>
+<td align="left">62</td>
+<td align="left">46</td>
+<td align="left">34</td>
+<td align="left">47</td>
+<td align="left">27</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Do the data show that the frequencies observed substantiate the claim that the reasons for choosing a car are equally likely? Test at the 5% level.</p>
+</blockquote>
+</div>
+</div>
+<div id="analysis-of-variance-anova" class="section level2">
+<h2><span class="header-section-number">11.3</span> Analysis of Variance (ANOVA)</h2>
+<p>There are times where you want to compare three or more population means. One idea is to just test different combinations of two means. The problem with that is that your chance for a type I error increases. Instead you need a process for analyzing all of them at the same time. This process is known as <strong>analysis of variance (ANOVA)</strong>. The test statistic for the ANOVA is fairly complicated, you will want to use technology to find the test statistic and p-value. The test statistic is distributed as an F-distribution, which is skewed right and depends on degrees of freedom. Since you will use technology to find these, the distribution and the test statistic will not be presented. Remember, all hypothesis tests are the same process. Note that to obtain a statistically significant result there need only be a difference between any two of the <em>k</em> means.</p>
+<p>Before conducting the hypothesis test, it is helpful to look at the means and standard deviations for each data set. If the sample means with consideration of the sample standard deviations are different, it may mean that some of the population means are different. However, do realize that if they are different, it doesn’t provide enough evidence to show the population means are different. Calculating the sample statistics just gives you an idea that conducting the hypothesis test is a good idea.</p>
+<p><strong>Hypothesis test using ANOVA to compare <em>k</em> means</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>State the random variables and the parameters in words</p></li>
+<li><p>State the null and alternative hypotheses and the level of significance</p></li>
+</ol>
+<blockquote>
+<p>Also, state your level here.</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of size is taken from each population.</p></li>
+<li><p>All the samples are independent of each other.</p></li>
+<li><p>Each population is normally distributed. The ANOVA test is fairly robust to the assumption especially if the sample sizes are fairly close to each other. Unless the populations are really not normally distributed and the sample sizes are close to each other, then this is a loose assumption.</p></li>
+<li><p>The population variances are all equal. If the sample sizes are close to each other, then this is a loose assumption.
+<!-- --></p></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>The test statistic is , where is the mean square between the groups (or factors), and is the mean square within the groups. The degrees of freedom between the groups is and the degrees of freedom within the groups is . To find all of the values, use technology such as the TI-83/84 calculator or R.</p>
+<p>The test statistic, <em>F</em>, is distributed as an F-distribution, where both degrees of freedom are needed in this distribution. The p-value is also calculated by the calculator or R.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>This is where you write reject or fail to reject . The rule is: if the p-value &lt; , then reject . If the p-value , then fail to reject</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>This is where you interpret in real world terms the conclusion to the test. The conclusion for a hypothesis test is that you either have enough evidence to show is true, or you do not have enough evidence to show is true.</p>
+</blockquote>
+<p>If you do in fact reject , then you know that at least two of the means are different. The next question you might ask is which are different? You can look at the sample means, but realize that these only give a preliminary result. To actually determine which means are different, you need to conduct other tests. Some of these tests are the range test, multiple comparison tests, Duncan test, Student-Newman-Keuls test, Tukey test, Scheffé test, Dunnett test, least significant different test, and the Bonferroni test. There is no consensus on which test to use. These tests are available in statistical computer packages such as Minitab and SPSS.</p>
+<p><strong>Example #11.3.1: Hypothesis Test Involving Several Means</strong></p>
+<blockquote>
+<p>Cancer is a terrible disease. Surviving may depend on the type of cancer the person has. To see if the mean survival time for several types of cancer are different, data was collected on the survival time in days of patients with one of these cancer in advanced stage. The data is in table #11.3.1 (&quot;Cancer survival story,&quot; 2013). (Please realize that this data is from 1978. There have been many advances in cancer treatment, so do not use this data as an indication of survival rates from these cancers.) Do the data indicate that at least two of the mean survival time for these types of cancer are not all equal? Test at the 1% level.</p>
+<p><strong>Table #11.3.1: Survival Times in Days of Five Cancer Types</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Stomach</th>
+<th align="left">Bronchus</th>
+<th align="left">Colon</th>
+<th align="left">Ovary</th>
+<th align="left">Breast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">124</td>
+<td align="left">81</td>
+<td align="left">248</td>
+<td align="left">1234</td>
+<td align="left">1235</td>
+</tr>
+<tr class="even">
+<td align="left">42</td>
+<td align="left">461</td>
+<td align="left">377</td>
+<td align="left">89</td>
+<td align="left">24</td>
+</tr>
+<tr class="odd">
+<td align="left">25</td>
+<td align="left">20</td>
+<td align="left">189</td>
+<td align="left">201</td>
+<td align="left">1581</td>
+</tr>
+<tr class="even">
+<td align="left">45</td>
+<td align="left">450</td>
+<td align="left">1843</td>
+<td align="left">356</td>
+<td align="left">1166</td>
+</tr>
+<tr class="odd">
+<td align="left">412</td>
+<td align="left">246</td>
+<td align="left">180</td>
+<td align="left">2970</td>
+<td align="left">40</td>
+</tr>
+<tr class="even">
+<td align="left">51</td>
+<td align="left">166</td>
+<td align="left">537</td>
+<td align="left">456</td>
+<td align="left">727</td>
+</tr>
+<tr class="odd">
+<td align="left">1112</td>
+<td align="left">63</td>
+<td align="left">519</td>
+<td align="left"></td>
+<td align="left">3808</td>
+</tr>
+<tr class="even">
+<td align="left">46</td>
+<td align="left">64</td>
+<td align="left">455</td>
+<td align="left"></td>
+<td align="left">791</td>
+</tr>
+<tr class="odd">
+<td align="left">103</td>
+<td align="left">155</td>
+<td align="left">406</td>
+<td align="left"></td>
+<td align="left">1804</td>
+</tr>
+<tr class="even">
+<td align="left">876</td>
+<td align="left">859</td>
+<td align="left">365</td>
+<td align="left"></td>
+<td align="left">3460</td>
+</tr>
+<tr class="odd">
+<td align="left">146</td>
+<td align="left">151</td>
+<td align="left">942</td>
+<td align="left"></td>
+<td align="left">719</td>
+</tr>
+<tr class="even">
+<td align="left">340</td>
+<td align="left">166</td>
+<td align="left">776</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">396</td>
+<td align="left">37</td>
+<td align="left">372</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">223</td>
+<td align="left">163</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">138</td>
+<td align="left">101</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">72</td>
+<td align="left">20</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">245</td>
+<td align="left">283</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words</li>
+</ol>
+<blockquote>
+<p>Now before conducting the hypothesis test, look at the means and standard deviations.</p>
+</blockquote>
+<blockquote>
+<p>There appears to be a difference between at least two of the means, but realize that the standard deviations are very different. The difference you see may not be significant.</p>
+<p>Notice the sample sizes are not the same. The sample sizes are</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li><p>State the null and alternative hypotheses and the level of significance</p></li>
+<li><p>State and check the assumptions for the hypothesis test</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 13 survival times from stomach cancer was taken. A random sample of 17 survival times from bronchus cancer was taken. A random sample of 17 survival times from colon cancer was taken. A random sample of 6 survival times from ovarian cancer was taken. A random sample of 11 survival times from breast cancer was taken. These statements may not be true. This information was not shared as to whether the samples were random or not but it may be safe to assume that.</p></li>
+<li><p>Since the individuals have different cancers, then the samples are independent.</p></li>
+<li><p>Population of all survival times from stomach cancer is normally distributed. Population of all survival times from bronchus cancer is normally distributed. Population of all survival times from colon cancer is normally distributed. Population of all survival times from ovarian cancer is normally distributed. Population of all survival times from breast cancer is normally distributed. Looking at the histograms, box plots and normal quantile plots for each sample, it appears that none of the populations are normally distributed. The sample sizes are somewhat different for the problem. This assumption may not be true.</p></li>
+<li><p>The population variances are all equal. The sample standard deviations are approximately 346.3, 209.9, 427.2, 1098.6, and 1239.0 respectively. This assumption does not appear to be met, since the sample standard deviations are very different. The sample sizes are somewhat different for the problem. This assumption may not be true.
+<!-- --></p></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the test statistic and p-value</li>
+</ol>
+<blockquote>
+<p>To find the test statistic and p-value using the TI-83/84, type each data set into L1 through L5. Then go into STAT and over to TESTS and choose ANOVA(. Then type in L1,L2,L3,L4,L5 and press enter. You will get the results of the ANOVA test.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Figure #11.3.1: Setup for ANOVA on TI-83/84</strong></p>
+<p><img src="media/image172.png" style="width:2.75in;height:1.86111in" /></p>
+<p><img src="media/image173.png" style="width:2.75in;height:1.86111in" /></p>
+<p><strong>Figure #11.3.2: Results of ANOVA on TI-83/84</strong></p>
+<p><img src="media/image174.png" style="width:2.75in;height:1.86111in" /></p>
+<p><img src="media/image175.png" style="width:2.75in;height:1.86111in" /></p>
+<p>The test statistic is and .</p>
+<p>Just so you know, the Factor information is between the groups and the Error is within the groups. So and .</p>
+<p>To find the test statistic and p-value on R:</p>
+<p>The commands would be:</p>
+<p>variable=c(type in all data values with commas in between) – this is the response variable</p>
+<p>factor=c(rep(&quot;factor 1&quot;, number of data values for factor 1), rep(&quot;factor 2&quot;, number of data values for factor 2), etc) – this separates the data into the different factors that the measurements were based on.</p>
+<p>data_name = data.frame(variable, factor) – this puts the data into one variable. data_name is the name you give this variable</p>
+<p>aov(variable ~ factor, data = data name) – runs the ANOVA analysis</p>
+<p>For this example, the commands would be:</p>
+<p>time=c(124, 42, 25, 45, 412, 51, 1112, 46, 103, 876, 146, 340, 396,
+81, 461, 20, 450, 246, 166, 63, 64, 155, 859, 151, 166, 37, 223, 138,
+72, 245, 248, 377, 189, 1843, 180, 537, 519, 455, 406, 365, 942, 776,
+372, 163, 101, 20, 283, 1234, 89, 201, 356, 2970, 456, 1235, 24, 1581,
+1166, 40, 727, 3808, 791, 1804, 3460, 719)</p>
+<p>factor=c(rep(&quot;Stomach&quot;, 13), rep(&quot;Bronchus&quot;, 17), rep(&quot;Colon&quot;,
+17), rep(&quot;Ovary&quot;, 6), rep(&quot;Breast&quot;, 11))</p>
+<p>survival=data.frame(time, factor)</p>
+<p>results=aov(time~factor, data=survival)</p>
+<p>summary(results)</p>
+<p>Df Sum Sq Mean Sq F value Pr(&gt;F)</p>
+<p>factor 4 11535761 2883940 6.433 0.000229 ***</p>
+<p>Residuals 59 26448144 448274</p>
+<p>---</p>
+<p>Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ’ ’ 1</p>
+<p>The test statistic is F = 6.433 and the p-value = 0.000229.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Reject since the p-value is less than 0.01.</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is evidence to show that at least two of the mean survival times from different cancers are not equal.</p>
+<p>By examination of the means, it appears that the mean survival time for breast cancer is different from the mean survival times for both stomach and bronchus cancers. It may also be different for the mean survival time for colon cancer. The others may not be different enough to actually say for sure.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<div id="homework-32" class="section level3">
+<h3><span class="header-section-number">11.3.1</span> Homework</h3>
+<p>In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.</p>
+<ol style="list-style-type: decimal">
+<li>Cuckoo birds are in the habit of laying their eggs in other birds’ nest. The other birds adopt and hatch the eggs. The lengths (in cm) of cuckoo birds’ eggs in the other species nests were measured and are in table #11.3.2 (&quot;Cuckoo eggs in,&quot; 2013). Do the data show that the mean length of cuckoo bird’s eggs is not all the same when put into different nests? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.3.2: Lengths of Cuckoo Bird Eggs in Different Species
+Nests</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Meadow Pipit</th>
+<th align="left">Tree Pipit</th>
+<th align="left">Hedge Sparrow</th>
+<th align="left">Robin</th>
+<th align="left">Pied Wagtail</th>
+<th align="left">Wren</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">19.65</td>
+<td align="left">22.25</td>
+<td align="left">21.05</td>
+<td align="left">20.85</td>
+<td align="left">21.05</td>
+<td align="left">21.05</td>
+<td>19.85</td>
+</tr>
+<tr class="even">
+<td align="left">20.05</td>
+<td align="left">22.45</td>
+<td align="left">21.85</td>
+<td align="left">21.65</td>
+<td align="left">21.85</td>
+<td align="left">21.85</td>
+<td>20.05</td>
+</tr>
+<tr class="odd">
+<td align="left">20.65</td>
+<td align="left">22.45</td>
+<td align="left">22.05</td>
+<td align="left">22.05</td>
+<td align="left">22.05</td>
+<td align="left">21.85</td>
+<td>20.25</td>
+</tr>
+<tr class="even">
+<td align="left">20.85</td>
+<td align="left">22.45</td>
+<td align="left">22.45</td>
+<td align="left">22.85</td>
+<td align="left">22.05</td>
+<td align="left">21.85</td>
+<td>20.85</td>
+</tr>
+<tr class="odd">
+<td align="left">21.65</td>
+<td align="left">22.65</td>
+<td align="left">22.65</td>
+<td align="left">23.05</td>
+<td align="left">22.05</td>
+<td align="left">22.05</td>
+<td>20.85</td>
+</tr>
+<tr class="even">
+<td align="left">21.65</td>
+<td align="left">22.65</td>
+<td align="left">23.25</td>
+<td align="left">23.05</td>
+<td align="left">22.25</td>
+<td align="left">22.45</td>
+<td>20.85</td>
+</tr>
+<tr class="odd">
+<td align="left">21.65</td>
+<td align="left">22.85</td>
+<td align="left">23.25</td>
+<td align="left">23.05</td>
+<td align="left">22.45</td>
+<td align="left">22.65</td>
+<td>21.05</td>
+</tr>
+<tr class="even">
+<td align="left">21.85</td>
+<td align="left">22.85</td>
+<td align="left">23.25</td>
+<td align="left">23.05</td>
+<td align="left">22.45</td>
+<td align="left">23.05</td>
+<td>21.05</td>
+</tr>
+<tr class="odd">
+<td align="left">21.85</td>
+<td align="left">22.85</td>
+<td align="left">23.45</td>
+<td align="left">23.45</td>
+<td align="left">22.65</td>
+<td align="left">23.05</td>
+<td>21.05</td>
+</tr>
+<tr class="even">
+<td align="left">21.85</td>
+<td align="left">22.85</td>
+<td align="left">23.45</td>
+<td align="left">23.85</td>
+<td align="left">23.05</td>
+<td align="left">23.25</td>
+<td>21.25</td>
+</tr>
+<tr class="odd">
+<td align="left">22.05</td>
+<td align="left">23.05</td>
+<td align="left">23.65</td>
+<td align="left">23.85</td>
+<td align="left">23.05</td>
+<td align="left">23.45</td>
+<td>21.45</td>
+</tr>
+<tr class="even">
+<td align="left">22.05</td>
+<td align="left">23.25</td>
+<td align="left">23.85</td>
+<td align="left">23.85</td>
+<td align="left">23.05</td>
+<td align="left">24.05</td>
+<td>22.05</td>
+</tr>
+<tr class="odd">
+<td align="left">22.05</td>
+<td align="left">23.25</td>
+<td align="left">24.05</td>
+<td align="left">24.05</td>
+<td align="left">23.05</td>
+<td align="left">24.05</td>
+<td>22.05</td>
+</tr>
+<tr class="even">
+<td align="left">22.05</td>
+<td align="left">23.45</td>
+<td align="left">24.05</td>
+<td align="left">25.05</td>
+<td align="left">23.05</td>
+<td align="left">24.05</td>
+<td>22.05</td>
+</tr>
+<tr class="odd">
+<td align="left">22.05</td>
+<td align="left">23.65</td>
+<td align="left">24.05</td>
+<td align="left"></td>
+<td align="left">23.25</td>
+<td align="left">24.85</td>
+<td>22.25</td>
+</tr>
+<tr class="even">
+<td align="left">22.05</td>
+<td align="left">23.85</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">23.85</td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="left">22.05</td>
+<td align="left">24.25</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">22.05</td>
+<td align="left">24.45</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="left">22.05</td>
+<td align="left">22.25</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">22.05</td>
+<td align="left">22.25</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="left">22.25</td>
+<td align="left">22.25</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">22.25</td>
+<td align="left">22.25</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="left">22.25</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li>Levi-Strauss Co manufactures clothing. The quality control department measures weekly values of different suppliers for the percentage difference of waste between the layout on the computer and the actual waste when the clothing is made (called run-up). The data is in table #11.3.3, and there are some negative values because sometimes the supplier is able to layout the pattern better than the computer (&quot;Waste run up,&quot; 2013). Do the data show that there is a difference between some of the suppliers? Test at the 1% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.3.3: Run-ups for Different Plants Making Levi Strauss
+Clothing</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Plant 1</th>
+<th align="left">Plant 2</th>
+<th align="left">Plant 3</th>
+<th align="left">Plant 4</th>
+<th align="left">Plant 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1.2</td>
+<td align="left">16.4</td>
+<td align="left">12.1</td>
+<td align="left">11.5</td>
+<td align="left">24</td>
+</tr>
+<tr class="even">
+<td align="left">10.1</td>
+<td align="left">-6</td>
+<td align="left">9.7</td>
+<td align="left">10.2</td>
+<td align="left">-3.7</td>
+</tr>
+<tr class="odd">
+<td align="left">-2</td>
+<td align="left">-11.6</td>
+<td align="left">7.4</td>
+<td align="left">3.8</td>
+<td align="left">8.2</td>
+</tr>
+<tr class="even">
+<td align="left">1.5</td>
+<td align="left">-1.3</td>
+<td align="left">-2.1</td>
+<td align="left">8.3</td>
+<td align="left">9.2</td>
+</tr>
+<tr class="odd">
+<td align="left">-3</td>
+<td align="left">4</td>
+<td align="left">10.1</td>
+<td align="left">6.6</td>
+<td align="left">-9.3</td>
+</tr>
+<tr class="even">
+<td align="left">-0.7</td>
+<td align="left">17</td>
+<td align="left">4.7</td>
+<td align="left">10.2</td>
+<td align="left">8</td>
+</tr>
+<tr class="odd">
+<td align="left">3.2</td>
+<td align="left">3.8</td>
+<td align="left">4.6</td>
+<td align="left">8.8</td>
+<td align="left">15.8</td>
+</tr>
+<tr class="even">
+<td align="left">2.7</td>
+<td align="left">4.3</td>
+<td align="left">3.9</td>
+<td align="left">2.7</td>
+<td align="left">22.3</td>
+</tr>
+<tr class="odd">
+<td align="left">-3.2</td>
+<td align="left">10.4</td>
+<td align="left">3.6</td>
+<td align="left">5.1</td>
+<td align="left">3.1</td>
+</tr>
+<tr class="even">
+<td align="left">-1.7</td>
+<td align="left">4.2</td>
+<td align="left">9.6</td>
+<td align="left">11.2</td>
+<td align="left">16.8</td>
+</tr>
+<tr class="odd">
+<td align="left">2.4</td>
+<td align="left">8.5</td>
+<td align="left">9.8</td>
+<td align="left">5.9</td>
+<td align="left">11.3</td>
+</tr>
+<tr class="even">
+<td align="left">0.3</td>
+<td align="left">6.3</td>
+<td align="left">6.5</td>
+<td align="left">13</td>
+<td align="left">12.3</td>
+</tr>
+<tr class="odd">
+<td align="left">3.5</td>
+<td align="left">9</td>
+<td align="left">5.7</td>
+<td align="left">6.8</td>
+<td align="left">16.9</td>
+</tr>
+<tr class="even">
+<td align="left">-0.8</td>
+<td align="left">7.1</td>
+<td align="left">5.1</td>
+<td align="left">14.5</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">19.4</td>
+<td align="left">4.3</td>
+<td align="left">3.4</td>
+<td align="left">5.2</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2.8</td>
+<td align="left">19.7</td>
+<td align="left">-0.8</td>
+<td align="left">7.3</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">3</td>
+<td align="left">-3.9</td>
+<td align="left">7.1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">42.7</td>
+<td align="left">7.6</td>
+<td align="left">0.9</td>
+<td align="left">3.4</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">1.4</td>
+<td align="left">70.2</td>
+<td align="left">1.5</td>
+<td align="left">0.7</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="left">8.5</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">2.4</td>
+<td align="left">6</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">1.3</td>
+<td align="left">2.9</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>Several magazines were grouped into three categories based on what level of education of their readers the magazines are geared towards: high, medium, or low level. Then random samples of the magazines were selected to determine the number of three-plus-syllable words were in the advertising copy, and the data is in table #11.3.4 (&quot;Magazine ads readability,&quot; 2013). Is there enough evidence to show that the mean number of three-plus-syllable words in advertising copy is different for at least two of the education levels? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.3.4: Number of Three Plus Syllable Words in Advertising
+Copy</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">High Education</th>
+<th align="left">Medium Education</th>
+<th align="left">Low Education</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">34</td>
+<td align="left">13</td>
+<td align="left">7</td>
+</tr>
+<tr class="even">
+<td align="left">21</td>
+<td align="left">22</td>
+<td align="left">7</td>
+</tr>
+<tr class="odd">
+<td align="left">37</td>
+<td align="left">25</td>
+<td align="left">7</td>
+</tr>
+<tr class="even">
+<td align="left">31</td>
+<td align="left">3</td>
+<td align="left">7</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="left">5</td>
+<td align="left">7</td>
+</tr>
+<tr class="even">
+<td align="left">24</td>
+<td align="left">2</td>
+<td align="left">7</td>
+</tr>
+<tr class="odd">
+<td align="left">39</td>
+<td align="left">9</td>
+<td align="left">8</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">3</td>
+<td align="left">8</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="left">0</td>
+<td align="left">8</td>
+</tr>
+<tr class="even">
+<td align="left">18</td>
+<td align="left">4</td>
+<td align="left">8</td>
+</tr>
+<tr class="odd">
+<td align="left">32</td>
+<td align="left">29</td>
+<td align="left">8</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="left">26</td>
+<td align="left">8</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">5</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">5</td>
+<td align="left">9</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">24</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left">15</td>
+<td align="left">9</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">3</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">8</td>
+<td align="left">9</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li>A study was undertaken to see how accurate food labeling for calories on food that is considered reduced calorie. The group measured the amount of calories for each item of food and then found the percent difference between measured and labeled food, . The group also looked at food that was nationally advertised, regionally distributed, or locally prepared. The data is in table #11.3.5 (&quot;Calories datafile,&quot; 2013). Do the data indicate that at least two of the mean percent differences between the three groups are different? Test at the 10% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.3.5: Percent Differences Between Measured and Labeled
+Food</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">National Advertised</th>
+<th align="left">Regionally Distributed</th>
+<th align="left">Locally Prepared</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2</td>
+<td align="left">41</td>
+<td align="left">15</td>
+</tr>
+<tr class="even">
+<td align="left">-28</td>
+<td align="left">46</td>
+<td align="left">60</td>
+</tr>
+<tr class="odd">
+<td align="left">-6</td>
+<td align="left">2</td>
+<td align="left">250</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">25</td>
+<td align="left">145</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">39</td>
+<td align="left">6</td>
+</tr>
+<tr class="even">
+<td align="left">-1</td>
+<td align="left">16.5</td>
+<td align="left">80</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="left">17</td>
+<td align="left">95</td>
+</tr>
+<tr class="even">
+<td align="left">13</td>
+<td align="left">28</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">-3</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">-4</td>
+<td align="left">14</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">-4</td>
+<td align="left">34</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">-18</td>
+<td align="left">42</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">-7</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">-0.5</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">-10</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li>The amount of sodium (in mg) in different types of hotdogs is in table #11.3.6 (&quot;Hot dogs story,&quot; 2013). Is there sufficient evidence to show that the mean amount of sodium in the types of hotdogs are not all equal? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #11.3.6: Amount of Sodium (in mg) in Beef, Meat, and Poultry &gt; Hotdogs</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Beef</th>
+<th align="left">Meat</th>
+<th align="left">Poultry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">495</td>
+<td align="left">458</td>
+<td align="left">430</td>
+</tr>
+<tr class="even">
+<td align="left">477</td>
+<td align="left">506</td>
+<td align="left">375</td>
+</tr>
+<tr class="odd">
+<td align="left">425</td>
+<td align="left">473</td>
+<td align="left">396</td>
+</tr>
+<tr class="even">
+<td align="left">322</td>
+<td align="left">545</td>
+<td align="left">383</td>
+</tr>
+<tr class="odd">
+<td align="left">482</td>
+<td align="left">496</td>
+<td align="left">387</td>
+</tr>
+<tr class="even">
+<td align="left">587</td>
+<td align="left">360</td>
+<td align="left">542</td>
+</tr>
+<tr class="odd">
+<td align="left">370</td>
+<td align="left">387</td>
+<td align="left">359</td>
+</tr>
+<tr class="even">
+<td align="left">322</td>
+<td align="left">386</td>
+<td align="left">357</td>
+</tr>
+<tr class="odd">
+<td align="left">479</td>
+<td align="left">507</td>
+<td align="left">528</td>
+</tr>
+<tr class="even">
+<td align="left">375</td>
+<td align="left">393</td>
+<td align="left">513</td>
+</tr>
+<tr class="odd">
+<td align="left">330</td>
+<td align="left">405</td>
+<td align="left">426</td>
+</tr>
+<tr class="even">
+<td align="left">300</td>
+<td align="left">372</td>
+<td align="left">513</td>
+</tr>
+<tr class="odd">
+<td align="left">386</td>
+<td align="left">144</td>
+<td align="left">358</td>
+</tr>
+<tr class="even">
+<td align="left">401</td>
+<td align="left">511</td>
+<td align="left">581</td>
+</tr>
+<tr class="odd">
+<td align="left">645</td>
+<td align="left">405</td>
+<td align="left">588</td>
+</tr>
+<tr class="even">
+<td align="left">440</td>
+<td align="left">428</td>
+<td align="left">522</td>
+</tr>
+<tr class="odd">
+<td align="left">317</td>
+<td align="left">339</td>
+<td align="left">545</td>
+</tr>
+<tr class="even">
+<td align="left">319</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">298</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">253</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Data Source:</p>
+<p><em>Aboriginal deaths in custody</em>. (2013, September 26). Retrieved from
+<a href="http://www.statsci.org/data/oz/custody.html" class="uri">http://www.statsci.org/data/oz/custody.html</a></p>
+<p><em>Activities of dolphin groups</em>. (2013, September 26). Retrieved from
+<a href="http://www.statsci.org/data/general/dolpacti.html" class="uri">http://www.statsci.org/data/general/dolpacti.html</a></p>
+<p>Boyle, P., Flowerdew, R., &amp; Williams, A. (1997). Evaluating the goodness
+of fit in models of sparse medical data: A simulation approach.
+<em>International Journal of Epidemiology</em>, <em>26</em>(3), 651-656. Retrieved
+from <a href="http://ije.oxfordjournals.org/content/26/3/651.full.pdf" class="uri">http://ije.oxfordjournals.org/content/26/3/651.full.pdf</a> html</p>
+<p><em>Calories datafile</em>. (2013, December 07). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Datafiles/Calories.html" class="uri">http://lib.stat.cmu.edu/DASL/Datafiles/Calories.html</a></p>
+<p><em>Cancer survival story</em>. (2013, December 04). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Stories/CancerSurvival.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/CancerSurvival.html</a></p>
+<p><em>Car preferences</em>. (2013, September 26). Retrieved from
+<a href="http://www.statsci.org/data/oz/carprefs.html" class="uri">http://www.statsci.org/data/oz/carprefs.html</a></p>
+<p><em>Cuckoo eggs in nest of other birds</em>. (2013, December 04). Retrieved
+from <a href="http://lib.stat.cmu.edu/DASL/Stories/cuckoo.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/cuckoo.html</a></p>
+<p><em>Education by age datafile</em>. (2013, December 05). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Datafiles/Educationbyage.html" class="uri">http://lib.stat.cmu.edu/DASL/Datafiles/Educationbyage.html</a></p>
+<p><em>Encyclopedia Titanica</em>. (2013, November 09). Retrieved from
+<a href="http://www.encyclopedia-titanica.org/" class="uri">http://www.encyclopedia-titanica.org/</a></p>
+<p><em>Global health observatory data respository</em>. (2013, October 09).
+Retrieved from
+<a href="http://apps.who.int/gho/athena/data/download.xsl?format=xml&amp;target=GHO/MORT\_400&amp;profile=excel&amp;filter=AGEGROUP:YEARS05-14;AGEGROUP:YEARS15-29;AGEGROUP:YEARS30-49;AGEGROUP:YEARS50-69;AGEGROUP:YEARS70" class="uri">http://apps.who.int/gho/athena/data/download.xsl?format=xml&amp;target=GHO/MORT\_400&amp;profile=excel&amp;filter=AGEGROUP:YEARS05-14;AGEGROUP:YEARS15-29;AGEGROUP:YEARS30-49;AGEGROUP:YEARS50-69;AGEGROUP:YEARS70</a>
+;MGHEREG:REG6_AFR;GHECAUSES:*;SEX:*</p>
+<p><em>Hot dogs story</em>. (2013, November 16). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Stories/Hotdogs.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/Hotdogs.html</a></p>
+<p><em>Leprosy: Number of reported cases by country</em>. (2013, September 04).
+Retrieved from <a href="http://apps.who.int/gho/data/node.main.A1639" class="uri">http://apps.who.int/gho/data/node.main.A1639</a></p>
+<p>Madison, J. (2013, October 15). <em>M&amp;M's color distribution analysis</em>.
+Retrieved from
+<a href="http://joshmadison.com/2007/12/02/mms-color-distribution-analysis/" class="uri">http://joshmadison.com/2007/12/02/mms-color-distribution-analysis/</a></p>
+<p><em>Magazine ads readability</em>. (2013, December 04). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Datafiles/magadsdat.html" class="uri">http://lib.stat.cmu.edu/DASL/Datafiles/magadsdat.html</a></p>
+<p><em>Popular kids datafile</em>. (2013, December 05). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Datafiles/PopularKids.html" class="uri">http://lib.stat.cmu.edu/DASL/Datafiles/PopularKids.html</a></p>
+<p>Schultz, S. T., Klonoff-Cohen, H. S., Wingard, D. L., Askhoomoff, N. A.,
+Macera, C. A., Ji, M., &amp; Bacher, C. (2006). Breastfeeding, infant
+formula supplementation, and autistic disorder: the results of a parent
+survey. <em>International Breastfeeding Journal</em>, <em>1</em>(16), doi:
+10.1186/1746-4358-1-16</p>
+<p><em>Waste run up</em>. (2013, December 04). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Stories/wasterunup.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/wasterunup.html</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regression-and-correlation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

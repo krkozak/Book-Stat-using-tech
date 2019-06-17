@@ -1,0 +1,5 @@
+book_filename: "Statistics_using_technology"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "

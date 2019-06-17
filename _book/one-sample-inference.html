@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 One-Sample Inference | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 One-Sample Inference | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 One-Sample Inference | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2019-06-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="continuous-probability-distributions.html">
+<link rel="next" href="estimation.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li><a href="statistical-basics.html#example-1.1.1-stating-definitions-for-qualitative-variable-example-1.1.2-stating-definitions-for-qualitative-variable-example-1.1.3-stating-definitions-for-quantitative-variable-example-1.1.4-stating-definitions-for-quantitative-variable-example-1.1.5-discrete-or-continuous-measurement-scales-homework-sampling-methods-example-1.2.1-choosing-a-simple-random-sample-example-1.2.2-how-not-to-choose-a-simple-random-sample-example-1.2.3-sampling-type-homework-experimental-design-guidelines-for-planning-a-statistical-study-example-1.3.1-observational-study-or-experiment-homework-how-not-to-do-statistics-example-1.4.1-bias-in-a-study"><span class="toc-section-number">1.1.1</span> Example #1.1.1: Stating Definitions for Qualitative Variable<strong>
+### Example #1.1.2: Stating Definitions for Qualitative Variable
+### Example #1.1.3: Stating Definitions for Quantitative Variable
+### Example #1.1.4: Stating Definitions for Quantitative Variable
+### Example #1.1.5: Discrete or Continuous
+### Measurement Scales:
+### Homework
+## Sampling Methods
+#### Example #1.2.1: Choosing a Simple Random Sample
+#### Example #1.2.2: How Not to Choose a Simple Random Sample
+### Example #1.2.3: Sampling type
+### Homework
+## Experimental Design
+### Guidelines for planning a statistical study
+### Example #1.3.1: Observational Study or Experiment
+### Homework
+## How Not to Do Statistics
+### Example #1.4.1: Bias in a Study</strong></a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.2-cause-and-effect"><i class="fa fa-check"></i><b>1.1.2</b> Example #1.4.2: Cause and Effect</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-1.4.3-generalizations"><i class="fa fa-check"></i><b>1.1.3</b> Example #1.4.3: Generalizations</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework"><i class="fa fa-check"></i><b>1.1.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>2.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-6"><i class="fa fa-check"></i><b>3.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#homework-10"><i class="fa fa-check"></i><b>4.4.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>5.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>6.1</b> Uniform Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#graphs-of-the-normal-distribution"><i class="fa fa-check"></i><b>6.2</b> Graphs of the Normal Distribution</a></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.3</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.4</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-16"><i class="fa fa-check"></i><b>6.4.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.5</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-17"><i class="fa fa-check"></i><b>6.5.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-19"><i class="fa fa-check"></i><b>7.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-20"><i class="fa fa-check"></i><b>7.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#homework-22"><i class="fa fa-check"></i><b>8.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#homework-23"><i class="fa fa-check"></i><b>8.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-25"><i class="fa fa-check"></i><b>9.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-26"><i class="fa fa-check"></i><b>9.3.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-28"><i class="fa fa-check"></i><b>10.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-29"><i class="fa fa-check"></i><b>10.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.1.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-31"><i class="fa fa-check"></i><b>11.2.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-32"><i class="fa fa-check"></i><b>11.3.1</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="one-sample-inference" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> One-Sample Inference</h1>
+<p>Now that you have all this information about descriptive statistics and probabilities, it is time to start inferential statistics. There are two branches of inferential statistics: hypothesis testing and confidence intervals.</p>
+<p><strong>Hypothesis Testing:</strong> making a decision about a parameter(s) based on a statistic(s).</p>
+<p><strong>Confidence Interval:</strong> estimating a parameter(s) based on a statistic(s).</p>
+<div id="basics-of-hypothesis-testing" class="section level2">
+<h2><span class="header-section-number">7.1</span> Basics of Hypothesis Testing</h2>
+<p>To understand the process of a hypothesis tests, you need to first have an understanding of what a hypothesis is, which is an educated guess about a parameter. Once you have the hypothesis, you collect data and use the data to make a determination to see if there is enough evidence to show that the hypothesis is true. However, in hypothesis testing you actually assume something else is true, and then you look at your data to see how likely it is to get an event that your data demonstrates with that assumption. If the event is very unusual, then you might think that your assumption is actually false. If you are able to say this assumption is false, then your hypothesis must be true. This is known as a proof by contradiction. You assume the opposite of your hypothesis is true and show that it can’t be true. If this happens, then your hypothesis must be true. All hypothesis tests go through the same process. Once you have the process down, then the concept is much easier. It is easier to see the process by looking at an example. Concepts that are needed will be detailed in this example.</p>
+<p><strong>Example #7.1.1: Basics of Hypothesis Testing</strong></p>
+<blockquote>
+<p>Suppose a manufacturer of the XJ35 battery claims the mean life of the battery is 500 days with a standard deviation of 25 days. You are the buyer of this battery and you think this claim is inflated. You would like to test your belief because without a good reason you can’t get out of your contract.</p>
+<p>What do you do?</p>
+<p>Well first, you should know what you are trying to measure. Define the random variable.</p>
+<p>Let <em>x</em> = life of a XJ35 battery</p>
+<p>Now you are not just trying to find different <em>x</em> values. You are trying to find what the true mean is. Since you are trying to find it, it must be unknown. You don’t think it is 500 days. If you did, you wouldn’t be doing any testing. The true mean, , is unknown. That means you should define that too.</p>
+<p>Let = mean life of a XJ35 battery</p>
+<p>Now what?</p>
+<p>You may want to collect a sample. What kind of sample?</p>
+<p>You could ask the manufacturers to give you batteries, but there is a chance that there could be some bias in the batteries they pick. To reduce the chance of bias, it is best to take a random sample.</p>
+<p>How big should the sample be?</p>
+<p>A sample of size 30 or more means that you can use the central limit theorem. Pick a sample of size 30.</p>
+<p>Table #7.1.1 contains the data for the sample you collected:</p>
+<p><strong>Table #7.1.1: Data on Battery Life</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">491</th>
+<th align="left">485</th>
+<th align="left">503</th>
+<th align="left">492</th>
+<th align="left">482</th>
+<th align="left">490</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">489</td>
+<td align="left">495</td>
+<td align="left">497</td>
+<td align="left">487</td>
+<td align="left">493</td>
+<td align="left">480</td>
+</tr>
+<tr class="even">
+<td align="left">482</td>
+<td align="left">504</td>
+<td align="left">501</td>
+<td align="left">486</td>
+<td align="left">478</td>
+<td align="left">492</td>
+</tr>
+<tr class="odd">
+<td align="left">482</td>
+<td align="left">502</td>
+<td align="left">485</td>
+<td align="left">503</td>
+<td align="left">497</td>
+<td align="left">500</td>
+</tr>
+<tr class="even">
+<td align="left">488</td>
+<td align="left">475</td>
+<td align="left">478</td>
+<td align="left">490</td>
+<td align="left">487</td>
+<td align="left">486</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Now what should you do? Looking at the data set, you see some of the times are above 500 and some are below. But looking at all of the numbers is too difficult. It might be helpful to calculate the mean for this sample.</p>
+<p>The sample mean is . Looking at the sample mean, one might think that you are right. However, the standard deviation and the sample size also plays a role, so maybe you are wrong.</p>
+</blockquote>
+<blockquote>
+<p>Before going any farther, it is time to formalize a few definitions.</p>
+<p>You have a guess that the mean life of a battery is less than 500 days. This is opposed to what the manufacturer claims. There really are two hypotheses, which are just guesses here – the one that the manufacturer claims and the one that you believe. It is helpful to have names for them.</p>
+</blockquote>
+<p><strong>Null Hypothesis</strong>: historical value, claim, or product specification. The symbol used is [MISSING] .</p>
+<p><strong>Alternate Hypothesis:</strong> what you want to prove. This is what you want to accept as true when you reject the null hypothesis. There are two symbols that are commonly used for the alternative hypothesis: or [MISSING]. The symbol will be used in this book.</p>
+<p>In general, the hypotheses look something like this:</p>
+<p>[MISSING EQ]</p>
+<p>where just represents the value that the claim says the population mean is actually equal to.</p>
+<p>Also, can be less than, greater than, or not equal to.</p>
+<p>For this problem:</p>
+<blockquote>
+<p>, since the manufacturer says the mean life of a battery is 500 days.</p>
+<p>, since you believe that the mean life of the battery is less than 500 days.</p>
+</blockquote>
+<p>Now back to the mean. You have a sample mean of 490 days. Is this small enough to believe that you are right and the manufacturer is wrong? How small does it have to be?</p>
+<p>If you calculated a sample mean of 235, you would definitely believe the population mean is less than 500. But even if you had a sample mean of 435 you would probably believe that the true mean was less than 500. What about 475? Or 483? There is some point where you would stop being so sure that the population mean is less than 500. That point separates the values of where you are sure or pretty sure that the mean is less than 500 from the area where you are not so sure. How do you find that point?</p>
+<p>Well it depends on how much error you want to make. Of course you don’t want to make any errors, but unfortunately that is unavoidable in statistics. You need to figure out how much error you made with your sample. Take the sample mean, and find the probability of getting another sample mean less than it, assuming for the moment that the manufacturer is right. The idea behind this is that you want to know what is the chance that you could have come up with your sample mean even if the population mean really is 500 days.</p>
+<blockquote>
+<p>You want to find</p>
+</blockquote>
+<p>To compute this probability, you need to know how the sample mean is distributed. Since the sample size is at least 30, then you know the sample mean is approximately normally distributed. Remember and</p>
+<p>A picture is always useful.</p>
+<blockquote>
+<p><span class="chart"><span class="math display">\[CHART\]</span></span></p>
+</blockquote>
+<p>Before calculating the probability, it is useful to see how many standard deviations away from the mean the sample mean is. Using the formula for the <em>z</em>-score from chapter 6, you find</p>
+<p>This sample mean is more than two standard deviations away from the mean. That seems pretty far, but you should look at the probability too.</p>
+<blockquote>
+<p>On TI-83/84:</p>
+<p>On R:</p>
+</blockquote>
+<p>There is a 1.42% chance that you could find a sample mean less than 490 when the population mean is 500 days. This is really small, so the chances are that the assumption that the population mean is 500 days is wrong, and you can reject the manufacturer’s claim. But how do you quantify really small? Is 5% or 10% or 15% really small? How do you decide?</p>
+<p>Before you answer that question, a couple more definitions are needed.</p>
+<p><strong>Test statistic:</strong> since it is calculated as part of the testing of the hypothesis</p>
+<p><strong>p – value:</strong> probability that the test statistic will take on more extreme values than the observed test statistic, given that the null hypothesis is true. It is the probability that was calculated above.</p>
+<p>Now, how small is small enough? To answer that, you really want to know the types of errors you can make.</p>
+<p>There are actually only two errors that can be made. The first error is if you say that is false, when in fact it is true. This means you reject when was true. The second error is if you say that is true, when in fact it is false. This means you fail to reject when is false. The following table organizes this for you:</p>
+<p>Type of errors:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">true</th>
+<th align="left">false</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reject</td>
+<td align="left">Type I error</td>
+<td align="left">No error</td>
+</tr>
+<tr class="even">
+<td>Fail to reject</td>
+<td align="left">No error</td>
+<td align="left">Type II error</td>
+</tr>
+</tbody>
+</table>
+<p>Thus</p>
+<p><strong>Type I Error</strong> is rejecting when is true, and</p>
+<p><strong>Type II Error</strong> is failing to reject when is false.</p>
+<p>Since these are the errors, then one can define the probabilities
+attached to each error.</p>
+<p>= P(type I error) = P(rejecting / is true)</p>
+<p>= P(type II error) = P(failing to reject / is false)</p>
+<p>is also called the <strong>level of significance</strong>.</p>
+<p>Another common concept that is used is Power = [MISSING].</p>
+<p>Now there is a relationship between and . They are not complements of each other. How are they related?</p>
+<p>If increases that means the chances of making a type I error will increase. It is more likely that a type I error will occur. It makes sense that you are less likely to make type II errors, only because you will be rejecting more often. You will be failing to reject less, and therefore, the chance of making a type II error will decrease. Thus, as increases, will decrease, and vice versa. That makes them seem like complements, but they aren’t complements. What gives? Consider one more factor – sample size.</p>
+<p>Consider if you have a larger sample that is representative of the population, then it makes sense that you have more accuracy then with a smaller sample. Think of it this way, which would you trust more, a sample mean of 490 if you had a sample size of 35 or sample size of 350 (assuming a representative sample)? Of course the 350 because there are more data points and so more accuracy. If you are more accurate, then there is less chance that you will make any error. By increasing the sample size of a representative sample, you decrease both and .</p>
+<p>Summary of all of this:</p>
+<ol style="list-style-type: decimal">
+<li><p>For a certain sample size, <em>n</em>, if increases, decreases.</p></li>
+<li><p>For a certain level of significance, , if <em>n</em> increases, decreases.</p></li>
+</ol>
+<p>Now how do you find and ? Well is actually chosen. There are only three values that are usually picked for : 0.01, 0.05, and 0.10. is very difficult to find, so usually it isn’t found. If you want to make sure it is small you take as large of a sample as you can afford provided it is a representative sample. This is one use of the Power. You want to be small and the Power of the test is large. The Power word sounds good.</p>
+<p>Which pick of do you pick? Well that depends on what you are working on. Remember in this example you are the buyer who is trying to get out of a contract to buy these batteries. If you create a type I error, you said that the batteries are bad when they aren’t, most likely the manufacturer will sue you. You want to avoid this. You might pick to be 0.01. This way you have a small chance of making a type I error. Of course this means you have more of a chance of making a type II error. No big deal right? What if the batteries are used in pacemakers and you tell the person that their pacemaker’s batteries are good for 500 days when they actually last less, that might be bad. If you make a type II error, you say that the batteries do last 500 days when they last less, then you have the possibility of killing someone. You certainly do not want to do this. In this case you might want to pick as 0.10. If both errors are equally bad, then pick as 0.05.</p>
+<p>The above discussion is why the choice of depends on what you are researching. As the researcher, you are the one that needs to decide what level to use based on your analysis of the consequences of making each error is.</p>
+<p>If a type I error is really bad, then pick = 0.01.</p>
+<p>If a type II error is really bad, then pick = 0.10</p>
+<p>If neither error is bad, or both are equally bad, then pick = 0.05</p>
+<p>The main thing is to always pick the before you collect the data and start the test.</p>
+<p>The above discussion was long, but it is really important information. If you don’t know what the errors of the test are about, then there really is no point in making conclusions with the tests. Make sure you understand what the two errors are and what the probabilities are for them.</p>
+<p>Now it is time to go back to the example and put this all together. This is the basic structure of testing a hypothesis, usually called a hypothesis test. Since this one has a test statistic involving <em>z</em>, it is also called a <em>z</em>-test. And since there is only one sample, it is usually called a one-sample <em>z</em>-test.</p>
+<p><strong>Example #7.1.2: Battery Example Revisited. </strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words</li>
+</ol>
+<blockquote>
+<p><em>x</em> = life of battery</p>
+<p>= mean life of a XJ35 battery</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypothesis and the level of
+significance</li>
+</ol>
+<blockquote>
+<p>= 0.10 (from above discussion about consequences)</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li><p>State and check the assumptions for a hypothesis test</p>
+<p>Every hypothesis has some assumptions that be met to make sure that
+the results of the hypothesis are valid. The assumptions are
+different for each test. This test has the following assumptions.</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of size <em>n</em> is taken.</p>
+<p>This occurred in this example, since it was stated that a random
+sample of 30 battery lives were taken.</p></li>
+<li><p>The population standard deviation is known.</p>
+<p>This is true, since it was given in the problem.</p></li>
+<li><p>The sample size is at least 30 or the population of the random
+variable is normally distributed.</p>
+<p>The sample size was 30, so this condition is met.</p></li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<blockquote>
+<p>The test statistic depends on how many samples there are, what
+parameter you are testing, and assumptions that need to be checked. In
+this case, there is one sample and you are testing the mean. The
+assumptions were checked above.</p>
+<p>Sample statistic:</p>
+<p>Test statistic:</p>
+<p>p-value:</p>
+<p><span class="chart"><span class="math display">\[CHART\]</span></span></p>
+<p>Using TI-83/84:</p>
+<p>Using R:</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion:</li>
+</ol>
+<blockquote>
+<p>Now what? Well, this p-value is 0.0142. This is a lot smaller than the
+amount of error you would accept in the problem - = 0.10. That means
+that finding a sample mean less than 490 days is unusual to happen if
+is true. This should make you think that is not true. You should
+reject .</p>
+</blockquote>
+<p>In fact, in general:</p>
+<p>Reject if the p-value &lt; and</p>
+<p>Fail to reject if the p-value .</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation:</li>
+</ol>
+<blockquote>
+<p>Since you rejected , what does this mean in the real world? That is
+what goes in the interpretation. Since you rejected the claim by the
+manufacturer that the mean life of the batteries is 500 days, then you
+now can believe that your hypothesis was correct. In other words,
+there is enough evidence to show that the mean life of the battery is
+less than 500 days.</p>
+<p>Now that you know that the batteries last less than 500 days, should
+you cancel the contract? Statistically, there is evidence that the
+batteries do not last as long as the manufacturer says they should.
+However, based on this sample there are only ten days less on average
+that the batteries last. There may not be practical significance in
+this case. Ten days do not seem like a large difference. In reality,
+if the batteries are used in pacemakers, then you would probably tell
+the patient to have the batteries replaced every year. You have a
+large buffer whether the batteries last 490 days or 500 days. It seems
+that it might not be worth it to break the contract over ten days.
+What if the 10 days was practically significant? Are there any other
+things you should consider? You might look at the business
+relationship with the manufacturer. You might also look at how much it
+would cost to find a new manufacturer. These are also questions to
+consider before making any changes. What this discussion should show
+you is that just because a hypothesis has statistical significance
+does not mean it has practical significance. The hypothesis test is
+just one part of a research process. There are other pieces that you
+need to consider.</p>
+</blockquote>
+<p>That’s it. That is what a hypothesis test looks like. All hypothesis
+tests are done with the same six steps. Those general six steps are
+outlined below.</p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words. This is where
+you are defining what the unknowns are in this problem.</li>
+</ol>
+<blockquote>
+<p>x = random variable</p>
+<p>= mean of random variable, if the parameter of interest is the mean.
+There are other parameters you can test, and you would use the
+appropriate symbol for that parameter.</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of
+significance</li>
+</ol>
+<blockquote>
+<p>, where is the known mean</p>
+<p>, use the appropriate one for your problem</p>
+<p>Also, state your level here.</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li><p>State and check the assumptions for a hypothesis test</p>
+<p>Each hypothesis test has its own assumptions. They will be stated
+when the different hypothesis tests are discussed.</p></li>
+<li><p>Find the sample statistic, test statistic, and p-value</p></li>
+</ol>
+<blockquote>
+<p>This depends on what parameter you are working with, how many samples,
+and the assumptions of the test. The p-value depends on your . If you
+are doing the with the less than, then it is a left-tailed test, and
+you find the probability of being in that left tail. If you are doing
+the with the greater than, then it is a right-tailed test, and you
+find the probability of being in the right tail. If you are doing the
+with the not equal to, then you are doing a two-tail test, and you
+find the probability of being in both tails. Because of symmetry, you
+could find the probability in one tail and double this value to find
+the probability in both tails.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>This is where you write reject or fail to reject . The rule is: if the
+p-value &lt; , then reject . If the p-value , then fail to reject</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>This is where you interpret in real world terms the conclusion to the
+test. The conclusion for a hypothesis test is that you either have
+enough evidence to show is true, or you do not have enough evidence to
+show is true.</p>
+</blockquote>
+<p>Sorry, one more concept about the conclusion and interpretation. First,
+the conclusion is that you reject or you fail to reject . Why was it
+said like this? It is because you never <strong>accept</strong> the null hypothesis.
+If you wanted to accept the null hypothesis, then why do the test in the
+first place? In the interpretation, you either have enough evidence to
+show is true, or you do not have enough evidence to show is true. You
+wouldn’t want to go to all this work and then find out you wanted to
+accept the claim. Why go through the trouble? You always want to show
+that the alternative hypothesis is true. Sometimes you can do that and
+sometimes you can’t. It doesn’t mean you proved the null hypothesis; it
+just means you can’t prove the alternative hypothesis. Here is an
+example to demonstrate this.</p>
+<p><strong>Example #7.1.3: Conclusions in Hypothesis Tests</strong></p>
+<blockquote>
+<p>In the U.S. court system a jury trial could be set up as a hypothesis
+test. To really help you see how this works, let’s use OJ Simpson as
+an example. In the court system, a person is presumed innocent until
+he/she is proven guilty, and this is your null hypothesis. OJ Simpson
+was a football player in the 1970s. In 1994 his ex-wife and her friend
+were killed. OJ Simpson was accused of the crime, and in 1995 the case
+was tried. The prosecutors wanted to prove OJ was guilty of killing
+his wife and her friend, and that is the alternative hypothesis</p>
+<p>In this case, a verdict of not guilty was given. That does not mean
+that he is innocent of this crime. It means there was not enough
+evidence to prove he was guilty. Many people believe that OJ was
+guilty of this crime, but the jury did not feel that the evidence
+presented was enough to show there was guilt. The verdict in a jury
+trial is always guilty or not guilty!</p>
+</blockquote>
+<p>The same is true in a hypothesis test. There is either enough or not
+enough evidence to show that alternative hypothesis. It is not that you
+proved the null hypothesis true.</p>
+<p>When identifying hypothesis, it is important to state your random
+variable and the appropriate parameter you want to make a decision
+about. If count something, then the random variable is the number of
+whatever you counted. The parameter is the proportion of what you
+counted. If the random variable is something you measured, then the
+parameter is the mean of what you measured. (Note: there are other
+parameters you can calculate, and some analysis of those will be
+presented in later chapters.)</p>
+<p><strong>Example #7.1.4: Stating Hypotheses</strong></p>
+<blockquote>
+<p>Identify the hypotheses necessary to test the following statements:</p>
+</blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>The average salary of a teacher is more than $30,000.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = salary of teacher</p>
+<p>mean salary of teacher</p>
+<p>The guess is that and that is the alternative hypothesis.</p>
+<p>The null hypothesis has the same parameter and number with an equal
+sign.</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>The proportion of students who like math is less than 10%.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = number of students who like math</p>
+<p><em>p</em> = proportion of students who like math</p>
+<p>The guess is that <em>p</em> &lt; 0.10 and that is the alternative hypothesis.</p>
+</blockquote>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>The average age of students in this class differs from 21.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = age of students in this class</p>
+<p>mean age of students in this class</p>
+<p>The guess is that and that is the alternative hypothesis.</p>
+</blockquote>
+<p><strong>Example #7.1.5: Stating Type I and II Errors and Picking Level of
+Significance</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The plant-breeding department at a major university developed a new
+hybrid raspberry plant called YumYum Berry. Based on research data,
+the claim is made that from the time shoots are planted 90 days on
+average are required to obtain the first berry with a standard
+deviation of 9.2 days. A corporation that is interested in marketing
+the product tests 60 shoots by planting them and recording the
+number of days before each plant produces its first berry. The
+sample mean is 92.3 days. The corporation wants to know if the mean
+number of days is more than the 90 days claimed. State the type I
+and type II errors in terms of this problem, consequences of each
+error, and state which level of significance to use.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = time to first berry for YumYum Berry plant</p>
+<p>= mean time to first berry for YumYum Berry plant</p>
+<p>Type I Error: If the corporation does a type I error, then they will
+say that the plants take longer to produce than 90 days when they
+don’t. They probably will not want to market the plants if they think
+they will take longer. They will not market them even though in
+reality the plants do produce in 90 days. They may have loss of future
+earnings, but that is all.</p>
+<p>Type II error: The corporation do not say that the plants take longer
+then 90 days to produce when they do take longer. Most likely they
+will market the plants. The plants will take longer, and so customers
+might get upset and then the company would get a bad reputation. This
+would be really bad for the company.</p>
+<p>Level of significance: It appears that the corporation would not want
+to make a type II error. Pick a 10% level of significance, .</p>
+</blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>A concern was raised in Australia that the percentage of deaths of
+Aboriginal prisoners was higher than the percent of deaths of
+non-indigenous prisoners, which is 0.27%. State the type I and type
+II errors in terms of this problem, consequences of each error, and
+state which level of significance to use.</li>
+</ol>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>x = number of Aboriginal prisoners who have died</p>
+<p><em>p</em> = proportion of Aboriginal prisoners who have died</p>
+<p>Type I error: Rejecting that the proportion of Aboriginal prisoners
+who died was 0.27%, when in fact it was 0.27%. This would mean you
+would say there is a problem when there isn’t one. You could anger the
+Aboriginal community, and spend time and energy researching something
+that isn’t a problem.</p>
+<p>Type II error: Failing to reject that the proportion of Aboriginal
+prisoners who died was 0.27%, when in fact it is higher than 0.27%.
+This would mean that you wouldn’t think there was a problem with
+Aboriginal prisoners dying when there really is a problem. You risk
+causing deaths when there could be a way to avoid them.</p>
+<p>Level of significance: It appears that both errors may be issues in
+this case. You wouldn’t want to anger the Aboriginal community when
+there isn’t an issue, and you wouldn’t want people to die when there
+may be a way to stop it. It may be best to pick a 5% level of
+significance, .</p>
+</blockquote>
+<p>Hint – hypothesis testing is really easy if you follow the same recipe
+every time. The only differences in the various problems are the
+assumptions of the test and the test statistic you calculate so you can
+find the p-value. Do the same steps, in the same order, with the same
+words, every time and these problems become very easy.</p>
+<div id="homework-18" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Homework</h3>
+<p><strong>For the problems in this section, a question is being asked. This is
+to help you understand what the hypotheses are. You are not to run any
+hypothesis tests and come up with any conclusions in this section.</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made in a given time period and found that 11% of all lenses had defects of some type. Looking at the type of defects, they found in a three-month time period that out of 34,641 defective lenses, 5865 were due to scratches. Are there more defects from scratches than from all other causes? State the random variable, population parameter, and hypotheses.</p></li>
+<li><p>According to the February 2008 Federal Trade Commission report on consumer fraud and identity theft, 23% of all complaints in 2007 were for identity theft. In that year, Alaska had 321 complaints of identity theft out of 1,432 consumer complaints (&quot;Consumer fraud and,&quot; 2008). Does this data provide enough evidence to show that Alaska had a lower proportion of identity theft than 23%? State the random variable, population parameter, and hypothese [MISSING]</p></li>
+<li><p>The Kyoto Protocol was signed in 1997, and required countries to start reducing their carbon emissions. The protocol became enforceable in February 2005. In 2004, the mean CO<sub>2</sub> emission was 4.87 metric tons per capita. Is there enough evidence to show that the mean CO<sub>2</sub> emission is lower in 2010 than in 2004? State the random variable, population parameter, and hypotheses.</p></li>
+<li><p>The FDA regulates that fish that is consumed is allowed to contain 1.0 mg/kg of mercury. In Florida, bass fish were collected in 53 different lakes to measure the amount of mercury in the fish. The data for the average amount of mercury in each lake is in table #7.3.5 (&quot;Multi-disciplinary niser activity,&quot; 2013). Do the data provide enough evidence to show that the fish in Florida lakes has more mercury than the allowable amount? State the random variable, population parameter, and hypotheses.</p></li>
+<li><p>Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made in a given time period and found that 11% of all lenses had defects of some type. Looking at the type of defects, they found in a three-month time period that out of 34,641 defective lenses, 5865 were due to scratches. Are there more defects from scratches than from all other causes? State the type I and type II errors in this case, consequences of each error type for this situation from the perspective of the manufacturer, and the appropriate alpha level to use. State why you picked this alpha level.</p></li>
+<li><p>According to the February 2008 Federal Trade Commission report on consumer fraud and identity theft, 23% of all complaints in 2007 were for identity theft. In that year, Alaska had 321 complaints of identity theft out of 1,432 consumer complaints (&quot;Consumer fraud and,&quot; 2008). Does this data provide enough evidence to show that Alaska had a lower proportion of identity theft than 23%? State the type I and type II errors in this case, consequences of each error type for this situation from the perspective of the state of Arizona, and the appropriate alpha level to use. State why you picked this alpha level.</p></li>
+<li><p>The Kyoto Protocol was signed in 1997, and required countries to start reducing their carbon emissions. The protocol became enforceable in February 2005. In 2004, the mean CO<sub>2</sub> emission was 4.87 metric tons per capita. Is there enough evidence to show that the mean CO<sub>2</sub> emission is lower in 2010 than in 2004? State the type I and type II errors in this case, consequences of each error type for this situation from the perspective of the agency overseeing the protocol, and the appropriate alpha level to use. State why you picked this alpha level.</p></li>
+<li><p>The FDA regulates that fish that is consumed is allowed to contain 1.0 mg/kg of mercury. In Florida, bass fish were collected in 53 different lakes to measure the amount of mercury in the fish. The data for the average amount of mercury in each lake is in table #7.3.5 (&quot;Multi-disciplinary niser activity,&quot; 2013). Do the data provide enough evidence to show that the fish in Florida lakes has more mercury than the allowable amount? State the type I and type II errors in this case, consequences of each error type for this situation from the perspective of the FDA, and the appropriate alpha level to use. State why you picked this alpha level.</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="one-sample-proportion-test" class="section level2">
+<h2><span class="header-section-number">7.2</span> One-Sample Proportion Test</h2>
+<p>There are many different parameters that you can test. There is a test for the mean, such as was introduced with the z-test. There is also a test for the population proportion, <em>p</em>. This is where you might be curious if the proportion of students who smoke at your school is lower than the proportion in your area. Or you could question if the proportion of accidents caused by teenage drivers who do not have a drivers’ education class is more than the national proportion.</p>
+<p>To test a population proportion, there are a few things that need to be defined first. Usually, Greek letters are used for parameters and Latin letters for statistics. When talking about proportions, it makes sense to use <em>p</em> for proportion. The Greek letter for <em>p</em> is , but that is too confusing to use. Instead, it is best to use <em>p</em> for the population proportion. That means that a different symbol is needed for the sample proportion. The convention is to use, , known as p-hat. This way you know that <em>p</em> is the population proportion, and that is the sample proportion related to it.</p>
+<p>Now proportion tests are about looking for the percentage of individuals who have a particular attribute. You are really looking for the number of successes that happen. Thus, a proportion test involves a binomial distribution.</p>
+<p><strong>Hypothesis Test for One Population Proportion (1-Prop Test)</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p>x = number of successes</p>
+<p><em>p</em> = proportion of successes</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of
+significance</li>
+</ol>
+<blockquote>
+<p>, where is the known proportion</p>
+<p>, use the appropriate one for your problem</p>
+<p>Also, state your level here.</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for a hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of size <em>n</em> is taken.</p></li>
+<li><p>The conditions for the binomial distribution are satisfied</p></li>
+<li><p>To determine the sampling distribution of , you need to show that
+and , where . If this requirement is true, then the sampling
+distribution of is well approximated by a normal curve.</p></li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<blockquote>
+<p>Sample Proportion:</p>
+<p>Test Statistic:</p>
+<p>p-value:</p>
+<p>TI-83/84: Use normalcdf(lower limit, upper limit, 0, 1)</p>
+<p>(Note: if , then lower limit is and upper limit is your test
+statistic. If , then lower limit is your test statistic and the upper
+limit is . If , then find the p-value for , and multiply by 2.)</p>
+<p>R: Use pnorm(z, 0, 1)</p>
+<p>(Note: if , then you can use pnorm. If , then you have to find pnorm
+and then subtract from 1. If , then find the p-value for , and
+multiply by 2.)</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>This is where you write reject or fail to reject . The rule is: if the
+p-value &lt; , then reject . If the p-value , then fail to reject</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>This is where you interpret in real world terms the conclusion to the
+test. The conclusion for a hypothesis test is that you either have
+enough evidence to show is true, or you do not have enough evidence to
+show is true.</p>
+</blockquote>
+<p><strong>Example #7.2.1: Hypothesis Test for One Proportion Using Formula</strong></p>
+<blockquote>
+<p>A concern was raised in Australia that the percentage of deaths of
+Aboriginal prisoners was higher than the percent of deaths of
+non-Aboriginal prisoners, which is 0.27%. A sample of six years
+(1990-1995) of data was collected, and it was found that out of 14,495
+Aboriginal prisoners, 51 died (&quot;Indigenous deaths in,&quot; 1996). Do the
+data provide enough evidence to show that the proportion of deaths of
+Aboriginal prisoners is more than 0.27%?</p>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = number of Aboriginal prisoners who die</p>
+<p><em>p</em> = proportion of Aboriginal prisoners who die</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of
+significance</li>
+</ol>
+<blockquote>
+<p>Example #7.1.5b argued that the .</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for a hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of 14,495 Aboriginal prisoners was taken.
+However, the sample was not a random sample, since it was data from
+six years. It is the numbers for all prisoners in these six years,
+but the six years were not picked at random. Unless there was
+something special about the six years that were chosen, the sample
+is probably a representative sample. This assumption is probably
+met.</p></li>
+<li><p>There are 14,495 prisoners in this case. The prisoners are all
+Aboriginals, so you are not mixing Aboriginal with non-Aboriginal
+prisoners. There are only two outcomes, either the prisoner dies or
+doesn’t. The chance that one prisoner dies over another may not be
+constant, but if you consider all prisoners the same, then it may be
+close to the same probability. Thus the conditions for the binomial
+distribution are satisfied</p></li>
+<li><p>In this case <em>p</em> = 0.0027 and <em>n</em> = 14,495. and . So, the sampling
+distribution for is a normal distribution.</p></li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<blockquote>
+<p>Sample Proportion:</p>
+<p>Test Statistic:</p>
+<p>p-value:</p>
+<p>TI-83/84: p-value =</p>
+<p>R: p-value =</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Since the p-value &lt; 0.05, then reject .</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that the proportion of deaths of
+Aboriginal prisoners is more than for non-Aboriginal prisoners.</p>
+</blockquote>
+<p><strong>Example #7.2.2: Hypothesis Test for One Proportion Using Technology</strong></p>
+<blockquote>
+<p>A researcher who is studying the effects of income levels on
+breastfeeding of infants hypothesizes that countries where the income
+level is lower have a higher rate of infant breastfeeding than higher
+income countries. It is known that in Germany, considered a
+high-income country by the World Bank, 22% of all babies are
+breastfeed. In Tajikistan, considered a low-income country by the
+World Bank, researchers found that in a random sample of 500 new
+mothers that 125 were breastfeeding their infant. At the 5% level of
+significance, does this show that low-income countries have a higher
+incident of breastfeeding?</p>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State you random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = number of woman who breastfeed in a low-income country</p>
+<p><em>p</em> = proportion of woman who breastfeed in a low-income country</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li><p>State the null and alternative hypotheses and the level of
+significance</p></li>
+<li><p>State and check the assumptions for a hypothesis test</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of 500 breastfeeding habits of woman in a
+low-income country was taken as was stated in the problem.</p></li>
+<li><p>There were 500 women in the study. The women are considered
+identical, though they probably have some differences. There are
+only two outcomes, either the woman breastfeeds or she doesn’t. The
+probability of a woman breastfeeding is probably not the same for
+each woman, but it is probably not very different for each woman.
+The conditions for the binomial distribution are satisfied</p></li>
+<li><p>In this case, <em>n</em> = 500 and <em>p</em> = 0.22. and , so the sampling
+distribution of is well approximated by a normal curve.</p></li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<blockquote>
+<p>This time, all calculations will be done with technology.</p>
+<p>On the TI-83/84 calculator. Go into the STAT menu, then arrow over to
+TESTS. This test is a 1-propZTest. Then type in the information just
+as shown in figure #7.2.1.</p>
+<p><strong>Figure #7.2.1: Setup for 1-Proportion Test</strong></p>
+<p><img src="media/image174.png" style="width:2.75in;height:1.86111in" /></p>
+</blockquote>
+<p>Once you press Calculate, you will see the results as in figure #7.2.2.</p>
+<p><strong>Figure #7.2.2: Results for 1-Proportion Test</strong></p>
+<blockquote>
+<p><img src="media/image175.png" style="width:2.75in;height:1.86111in" /></p>
+<p>The <em>z</em> in the results is the test statistic. The <em>p</em> = 0.052683219 is
+the p-value, and the is the sample proportion.</p>
+<p>The p-value is approximately 0.053</p>
+<p>On R, the command is prop.test(x, n, po, alternative = &quot;less&quot; or
+&quot;greater&quot;), where po is what H<sub>o</sub> says p equals, and you use less if
+your H<sub>A</sub> is less and greater if your H<sub>A</sub> is greater. If your H<sub>A</sub> is
+not equal to, then leave off the alternative statement. So for this
+example, the command would be prop.test(125, 500, .22, alternative =
+&quot;greater&quot;)</p>
+<p>1-sample proportions test with continuity correction</p>
+<p>data: 125 out of 500, null probability 0.22</p>
+<p>X-squared = 2.4505, df = 1, p-value = 0.05874</p>
+<p>alternative hypothesis: true p is greater than 0.22</p>
+<p>95 percent confidence interval:</p>
+<p>0.218598 1.000000</p>
+<p>sample estimates:</p>
+<p>p</p>
+<p>0.25</p>
+<p>Note: R does a continuity correction that the formula and the TI-83/84
+calculator do not do. You can put in a command that says not to use
+the continuity correction, but it is correct to use it. Also, R
+doesn’t give the z test statistic, so you don’t need to worry about
+this. It does give a p-value that is slightly off from the formula and
+the calculator due to the continuity correction.</p>
+<p>p-value = 0.05874</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Since the p-value is more than 0.05, you fail to reject .</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is not enough evidence to show that the proportion of women who
+breastfeed in low-income countries is more than in high-income
+countries.</p>
+</blockquote>
+<p>Notice, the conclusion is that there wasn't enough evidence to show
+what said. The conclusion was not that you proved true. There are many
+reasons why you can’t say that is true. It could be that the countries
+you chose were not very representative of what truly happens. If you
+instead looked at all high-income countries and compared them to
+low-income countries, you might have different results. It could also be
+that the sample you collected in the low-income country was not
+representative. It could also be that income level is not an indication
+of breastfeeding habits. There could be other factors involved. This is
+why you can’t say that you have proven is true. There are too many other
+factors that could be the reason that you failed to reject .</p>
+<div id="homework-19" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Homework</h3>
+<p><strong>In each problem show all steps of the hypothesis test. If some of the
+assumptions are not met, note that the results of the test may not be
+correct and then continue the process of the hypothesis test.</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Eyeglassomatic manufactures eyeglasses for different retailers. They
+test to see how many defective lenses they made in a given time
+period and found that 11% of all lenses had defects of some type.
+Looking at the type of defects, they found in a three-month time
+period that out of 34,641 defective lenses, 5865 were due to
+scratches. Are there more defects from scratches than from all other
+causes? Use a 1% level of significance.</p></li>
+<li><p>In July of 1997, Australians were asked if they thought unemployment
+would increase, and 47% thought that it would increase. In November
+of 1997, they were asked again. At that time 284 out of 631 said
+that they thought unemployment would increase (&quot;Morgan gallup
+poll,&quot; 2013). At the 5% level, is there enough evidence to show
+that the proportion of Australians in November 1997 who believe
+unemployment would increase is less than the proportion who felt it
+would increase in July 1997?</p></li>
+<li><p>According to the February 2008 Federal Trade Commission report on
+consumer fraud and identity theft, 23% of all complaints in 2007
+were for identity theft. In that year, Arkansas had 1,601 complaints
+of identity theft out of 3,482 consumer complaints (&quot;Consumer fraud
+and,&quot; 2008). Does this data provide enough evidence to show that
+Arkansas had a higher proportion of identity theft than 23%? Test at
+the 5% level.</p></li>
+<li><p>According to the February 2008 Federal Trade Commission report on
+consumer fraud and identity theft, 23% of all complaints in 2007
+were for identity theft. In that year, Alaska had 321 complaints of
+identity theft out of 1,432 consumer complaints (&quot;Consumer fraud
+and,&quot; 2008). Does this data provide enough evidence to show that
+Alaska had a lower proportion of identity theft than 23%? Test at
+the 5% level.</p></li>
+<li><p>In 2001, the Gallup poll found that 81% of American adults believed
+that there was a conspiracy in the death of President Kennedy. In
+2013, the Gallup poll asked 1,039 American adults if they believe
+there was a conspiracy in the assassination, and found that 634
+believe there was a conspiracy (&quot;Gallup news service,&quot; 2013). Do
+the data show that the proportion of Americans who believe in this
+conspiracy has decreased? Test at the 1% level.</p></li>
+<li><p>In 2008, there were 507 children in Arizona out of 32,601 who were
+diagnosed with Autism Spectrum Disorder (ASD) (&quot;Autism and
+developmental,&quot; 2008). Nationally 1 in 88 children are diagnosed
+with ASD (&quot;CDC features -,&quot; 2013). Is there sufficient data to
+show that the incident of ASD is more in Arizona than nationally?
+Test at the 1% level.</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="one-sample-test-for-the-mean" class="section level2">
+<h2><span class="header-section-number">7.3</span> One-Sample Test for the Mean</h2>
+<p>It is time to go back to look at the test for the mean that was
+introduced in section 7.1 called the z-test. In the example, you knew
+what the population standard deviation, , was. What if you don’t know ?</p>
+<p>You could just use the sample standard deviation, <em>s</em>, as an
+approximation of. That means the test statistic is now . Great, now you
+can go and find the p-value using the normal curve. Or can you? Is this
+new test statistic normally distributed? Actually, it is not. How is it
+distributed? A man named W. S. Gossett figured out what this
+distribution is and called it the Student’s t-distribution. There are
+some assumptions that must be made for this formula to be a Student’s
+t-distribution. These are outlined in the following theorem. Note: the
+t-distribution is called the Student’s t-distribution because that is
+the name he published under because he couldn’t publish under his own
+name due to employer not wanting him to publish under his own name. His
+employer by the way was Guinness and they didn't want competitors
+knowing they had a chemist working for them. It is not called the
+Student’s t-distribution because it is only used by students.</p>
+<p>Theorem: If the following assumptions are met</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of size <em>n</em> is taken.</p></li>
+<li><p>The distribution of the random variable is normal or the sample size
+is 30 or more.</p></li>
+</ol>
+<blockquote>
+<p>Then the distribution of is a Student’s t-distribution with degrees of
+freedom.</p>
+</blockquote>
+<p><strong>Explanation of degrees of freedom:</strong> Recall the formula for sample
+standard deviation is . Notice the denominator is . This is the same as
+the degrees of freedom. This is no accident. The reason the denominator
+and the degrees of freedom are both comes from how the standard
+deviation is calculated. Remember, first you take each data value and
+subtract . If you add up all of these new values, you will get 0. This
+must happen. Since it must happen, the first data values you have
+“freedom of choice”, but the nth data value, you have no freedom to
+choose. Hence, you have degrees of freedom. Another way to think about
+it is that if you five people and five chairs, the first four people
+have a choice of where they are sitting, but the last person does not.
+They have no freedom of where to sit. Only people have freedom of
+choice.</p>
+<p>The Student’s t-distribution is a bell-shape that is more spread out
+than the normal distribution. There are many t-distributions, one for
+each different degree of freedom.</p>
+<p>Here is a graph of the normal distribution and the Student’s
+t-distribution for df = 1 and df = 2.</p>
+<p><strong>Figure #7.3.1: Typical Student t-Distributions</strong></p>
+<blockquote>
+<p><img src="media/image196.png" style="width:3.76389in;height:2.20833in" /></p>
+</blockquote>
+<p>As the degrees of freedom increases, the student’s t-distribution looks
+more like the normal distribution.</p>
+<p>To find probabilities for the t-distribution, again technology can do
+this for you. There are many technologies out there that you can use.</p>
+<p>On the TI-83/84, the command is in the DISTR menu and is tcdf(. The
+syntax for this command is</p>
+<p>On R: the command to find the area to the left of a t value is pt(t
+value, df)</p>
+<p><strong>Hypothesis Test for One Population Mean (t-Test)</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = random variable</p>
+<p>= mean of random variable</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of
+significance</li>
+</ol>
+<blockquote>
+<p>, where is the known mean</p>
+<p>, use the appropriate one for your problem</p>
+<p>Also, state your level here.</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for a hypothesis test</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of size <em>n</em> is taken.</p></li>
+<li><p>The population of the random variable is normally distributed,
+though the t-test is fairly robust to the condition if the sample
+size is large. This means that if this condition isn’t met, but your
+sample size is quite large (over 30), then the results of the t-test
+are valid.</p></li>
+<li><p>The population standard deviation, , is unknown.</p></li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<blockquote>
+<p>Test Statistic:</p>
+<p>with degrees of freedom =</p>
+<p>p-value:</p>
+<p>Using TI-83/84:</p>
+<p>(Note: if , then lower limit is and upper limit is your test
+statistic. If , then lower limit is your test statistic and the upper
+limit is . If , then find the p-value for , and multiply by 2.)</p>
+<p>Using R: pt(t value, df)</p>
+<p>(Note: if , then the command is pt(t value, df). If , then the command
+is . If , then find the p-value for , and multiply by 2.)</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>This is where you write reject or fail to reject . The rule is: if the
+p-value &lt; , then reject . If the p-value , then fail to reject</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>This is where you interpret in real world terms the conclusion to the
+test. The conclusion for a hypothesis test is that you either have
+enough evidence to show is true, or you do not have enough evidence to
+show is true.</p>
+</blockquote>
+<p><strong>How to check the assumptions of t-test:</strong></p>
+<p>In order for the t-test to be valid, the assumptions of the test must be
+true. Whenever you run a t-test, you must make sure the assumptions are
+true. You need to check them. Here is how you do this:</p>
+<ol style="list-style-type: decimal">
+<li><p>For the condition that the sample is a random sample, describe how
+you took the sample. Make sure your sampling technique is random.</p></li>
+<li><p>For the condition that population of the random variable is normal,
+remember the process of assessing normality from chapter 6.</p></li>
+</ol>
+<p>Note: if the assumptions behind this test are not valid, then the
+conclusions you make from the test are not valid. If you do not have a
+random sample, that is your fault. Make sure the sample you take is as
+random as you can make it following sampling techniques from chapter 1.
+If the population of the random variable is not normal, then take a
+sample larger than 30. If you cannot afford to do that, or if it is not
+logistically possible, then you do different tests called non-parametric
+tests. There is an entire course on non-parametric tests, and they will
+not be discussed in this book.</p>
+<p><strong><br />
+</strong></p>
+<p><strong>Example #7.3.1: Test of the Mean Using the Formula</strong></p>
+<blockquote>
+<p>A random sample of 20 IQ scores of famous people was taken from the
+website of IQ of Famous People (&quot;IQ of famous,&quot; 2013) and a random
+number generator was used to pick 20 of them. The data are in table
+#7.3.1. Do the data provide evidence at the 5% level that the IQ of a
+famous person is higher than the average IQ of 100?</p>
+<p><strong>Table #7.3.1: IQ Scores of Famous People</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">158</th>
+<th align="left">180</th>
+<th align="left">150</th>
+<th align="left">137</th>
+<th align="left">109</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">225</td>
+<td align="left">122</td>
+<td align="left">138</td>
+<td align="left">145</td>
+<td align="left">180</td>
+</tr>
+<tr class="even">
+<td align="left">118</td>
+<td align="left">118</td>
+<td align="left">126</td>
+<td align="left">140</td>
+<td align="left">165</td>
+</tr>
+<tr class="odd">
+<td align="left">150</td>
+<td align="left">170</td>
+<td align="left">105</td>
+<td align="left">154</td>
+<td align="left">118</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Solution:</strong></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = IQ score of a famous person</p>
+<p>= mean IQ score of a famous person</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li><p>State the null and alternative hypotheses and the level of
+significance</p></li>
+<li><p>State and check the assumptions for a hypothesis test</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 20 IQ scores was taken. This was said in the
+problem.</p></li>
+<li><p>The population of IQ score is normally distributed. This was shown
+in example #6.4.2.</p></li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<blockquote>
+<p>Sample Statistic:</p>
+<p>Test Statistic:</p>
+<p>p-value:</p>
+<p>TI-83/84: p-value =</p>
+<p>R: p-value =</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Since the p-value is less than 5%, then reject .</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that famous people have a higher IQ
+than the average IQ of 100.</p>
+</blockquote>
+<p><strong>Example #7.3.2:</strong> <strong>Test of the Mean Using Technology</strong></p>
+<blockquote>
+<p>In 2011, the average life expectancy for a woman in Europe was 79.8
+years. The data in table #7.3.2 are the life expectancies for men in
+European countries in 2011 (&quot;WHO life expectancy,&quot; 2013). Do the
+data indicate that men’s life expectancy is less than women’s? Test at
+the 1% level.</p>
+<p><strong>Table #7.3.2: Life Expectancies for Men in European Countries in
+2011</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">73</th>
+<th align="left">79</th>
+<th align="left">67</th>
+<th align="left">78</th>
+<th align="left">69</th>
+<th align="left">66</th>
+<th align="left">78</th>
+<th align="left">74</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">71</td>
+<td align="left">74</td>
+<td align="left">79</td>
+<td align="left">75</td>
+<td align="left">77</td>
+<td align="left">71</td>
+<td align="left">78</td>
+<td align="left">78</td>
+</tr>
+<tr class="even">
+<td align="left">68</td>
+<td align="left">78</td>
+<td align="left">78</td>
+<td align="left">71</td>
+<td align="left">81</td>
+<td align="left">79</td>
+<td align="left">80</td>
+<td align="left">80</td>
+</tr>
+<tr class="odd">
+<td align="left">62</td>
+<td align="left">65</td>
+<td align="left">69</td>
+<td align="left">68</td>
+<td align="left">79</td>
+<td align="left">79</td>
+<td align="left">79</td>
+<td align="left">73</td>
+</tr>
+<tr class="even">
+<td align="left">79</td>
+<td align="left">79</td>
+<td align="left">72</td>
+<td align="left">77</td>
+<td align="left">67</td>
+<td align="left">70</td>
+<td align="left">63</td>
+<td align="left">82</td>
+</tr>
+<tr class="odd">
+<td align="left">72</td>
+<td align="left">72</td>
+<td align="left">77</td>
+<td align="left">79</td>
+<td align="left">80</td>
+<td align="left">80</td>
+<td align="left">67</td>
+<td align="left">73</td>
+</tr>
+<tr class="even">
+<td align="left">73</td>
+<td align="left">60</td>
+<td align="left">65</td>
+<td align="left">79</td>
+<td align="left">66</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variable and the parameter in words.</li>
+</ol>
+<blockquote>
+<p><em>x</em> = life expectancy for a European man in 2011</p>
+<p>= mean life expectancy for European men in 2011</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li><p>State the null and alternative hypotheses and the level of
+significance</p></li>
+<li><p>State and check the assumptions for a hypothesis test</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 53 life expectancies of European men in 2011 was
+taken. The data is actually all of the life expectancies for every
+country that is considered part of Europe by the World Health
+Organization. However, the information is still sample information
+since it is only for one year that the data was collected. It may
+not be a random sample, but that is probably not an issue in this
+case.</p></li>
+<li><p>The distribution of life expectancies of European men in 2011 is
+normally distributed. To see if this condition has been met, look at
+the histogram, number of outliers, and the normal probability plot.
+(If you wish, you can look at the normal probability plot first. If
+it doesn’t look linear, then you may want to look at the histogram
+and number of outliers at this point.)</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+<p><strong>Figure #7.3.2: Histogram for Life Expectancies of European Men in
+2011</strong></p>
+<p><embed src="media/image240.emf" style="width:2.11111in;height:2.11111in" /></p>
+<p>Not bell shaped</p>
+<blockquote>
+<p><strong>Number of outliers:</strong></p>
+<p><strong>Figure #7.3.3: Modified Box Plot for Life Expectancies of European
+Men in 2011</strong></p>
+<p><embed src="media/image241.emf" style="width:2.80556in;height:2.80556in" /></p>
+<p>or:</p>
+<p>Outliers are numbers below 54 and above 94. There are no outliers for
+this data set.</p>
+<p><strong>Figure #7.3.4: Normal Quantile Plot for Life Expectancies of
+European Men in 2011</strong></p>
+<p><embed src="media/image243.emf" style="width:3.48611in;height:3.48611in" /></p>
+<p>Not linear</p>
+</blockquote>
+<p>This population does not appear to be normally distributed. This sample
+is larger than 30, so it is good that the t-test is robust.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<blockquote>
+<p>The calculations will be conducted using technology.</p>
+<p>On the TI-83/84 calculator. Go into STAT and type the data into L1.
+Then go into STAT and move over to TESTS. Choose T-Test. The setup for
+the calculator is in figure #7.3.4.</p>
+<p><strong>Figure #7.3.5: Setup for T-Test on TI-83/84 Calculator</strong></p>
+<p><img src="media/image244.png" style="width:2.75in;height:1.86111in" /></p>
+<p>Once you press ENTER on Calculate you will see the result shown in
+figure #7.3.6.</p>
+<p><strong>Figure #7.3.6: Result of T-Test on TI-83/84 Calculator</strong></p>
+<p><img src="media/image245.png" style="width:2.75in;height:1.86111in" /></p>
+<p>On R, the command is t.test(variable, mu = number in H<sub>o</sub>, alternative
+= &quot;less&quot; or &quot;greater&quot;), where mu = what Ho says the mean equals,
+and you use less if your H<sub>A</sub> is less and greater if your H<sub>A</sub> is
+greater. If your H<sub>A</sub> is not equal to, then leave off the alternative
+statement. For this example, the command would be t.test(expectancy,
+mu=79.8, alternative = &quot;less&quot;)</p>
+<p>One Sample t-test</p>
+<p>data: expectancy</p>
+<p>t = -7.7069, df = 52, p-value = 1.853e-10</p>
+<p>alternative hypothesis: true mean is less than 79.8</p>
+<p>95 percent confidence interval:</p>
+<p>-Inf 75.05357</p>
+<p>sample estimates:</p>
+<p>mean of x</p>
+<p>73.73585</p>
+<p>Most of the output you don’t need. You need the test statistic and the
+p-value.</p>
+<p>The is the test statistic. The p-value is .</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<blockquote>
+<p>Since the p-value is less than 1%, then reject .</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<blockquote>
+<p>There is enough evidence to show that the mean life expectancy for
+European men in 2011 was less than the mean life expectancy for
+European women in 2011 of 79.8 years.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<div id="homework-20" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Homework</h3>
+<p><strong>In each problem show all steps of the hypothesis test. If some of the
+assumptions are not met, note that the results of the test may not be
+correct and then continue the process of the hypothesis test.</strong></p>
+<ol style="list-style-type: decimal">
+<li>The Kyoto Protocol was signed in 1997, and required countries to
+start reducing their carbon emissions. The protocol became
+enforceable in February 2005. In 2004, the mean CO<sub>2</sub> emission was
+4.87 metric tons per capita. Table 7.3.3 contains a random sample of
+CO<sub>2</sub> emissions in 2010 (&quot;CO2 emissions,&quot; 2013). Is there enough
+evidence to show that the mean CO<sub>2</sub> emission is lower in 2010 than
+in 2004? Test at the 1% level.</li>
+</ol>
+<p><strong>Table #7.3.3: CO<sub>2</sub> Emissions (in metric tons per capita) in 2010</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">1.36</th>
+<th align="left">1.42</th>
+<th align="left">5.93</th>
+<th align="left">5.36</th>
+<th align="left">0.06</th>
+<th align="left">9.11</th>
+<th align="left">7.32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">7.93</td>
+<td align="left">6.72</td>
+<td align="left">0.78</td>
+<td align="left">1.80</td>
+<td align="left">0.20</td>
+<td align="left">2.27</td>
+<td align="left">0.28</td>
+</tr>
+<tr class="even">
+<td align="left">5.86</td>
+<td align="left">3.46</td>
+<td align="left">1.46</td>
+<td align="left">0.14</td>
+<td align="left">2.62</td>
+<td align="left">0.79</td>
+<td align="left">7.48</td>
+</tr>
+<tr class="odd">
+<td align="left">0.86</td>
+<td align="left">7.84</td>
+<td align="left">2.87</td>
+<td align="left">2.45</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li>The amount of sugar in a Krispy Kream glazed donut is 10 g. Many
+people feel that cereal is a healthier alternative for children over
+glazed donuts. Table #7.3.4 contains the amount of sugar in a
+sample of cereal that is geared towards children (&quot;Healthy
+breakfast story,&quot; 2013). Is there enough evidence to show that the
+mean amount of sugar in children’s cereal is more than in a glazed
+donut? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #7.3.4: Sugar Amounts in Children’s Cereal</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">10</th>
+<th align="left">14</th>
+<th align="left">12</th>
+<th align="left">9</th>
+<th align="left">13</th>
+<th align="left">13</th>
+<th align="left">13</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">12</td>
+<td align="left">15</td>
+<td align="left">9</td>
+<td align="left">10</td>
+<td align="left">11</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">12</td>
+<td align="left">15</td>
+<td align="left">12</td>
+<td align="left">12</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>The FDA regulates that fish that is consumed is allowed to contain
+1.0 mg/kg of mercury. In Florida, bass fish were collected in 53
+different lakes to measure the amount of mercury in the fish. The
+data for the average amount of mercury in each lake is in table
+#7.3.5 (&quot;Multi-disciplinary niser activity,&quot; 2013). Do the data
+provide enough evidence to show that the fish in Florida lakes has
+more mercury than the allowable amount? Test at the 10% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #7.3.5: Average Mercury Levels (mg/kg) in Fish</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">1.23</th>
+<th align="left">1.33</th>
+<th align="left">0.04</th>
+<th align="left">0.44</th>
+<th align="left">1.20</th>
+<th align="left">0.27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0.48</td>
+<td align="left">0.19</td>
+<td align="left">0.83</td>
+<td align="left">0.81</td>
+<td align="left">0.71</td>
+<td align="left">0.5</td>
+</tr>
+<tr class="even">
+<td align="left">0.49</td>
+<td align="left">1.16</td>
+<td align="left">0.05</td>
+<td align="left">0.15</td>
+<td align="left">0.19</td>
+<td align="left">0.77</td>
+</tr>
+<tr class="odd">
+<td align="left">1.08</td>
+<td align="left">0.98</td>
+<td align="left">0.63</td>
+<td align="left">0.56</td>
+<td align="left">0.41</td>
+<td align="left">0.73</td>
+</tr>
+<tr class="even">
+<td align="left">0.34</td>
+<td align="left">0.59</td>
+<td align="left">0.34</td>
+<td align="left">0.84</td>
+<td align="left">0.50</td>
+<td align="left">0.34</td>
+</tr>
+<tr class="odd">
+<td align="left">0.28</td>
+<td align="left">0.34</td>
+<td align="left">0.87</td>
+<td align="left">0.56</td>
+<td align="left">0.17</td>
+<td align="left">0.18</td>
+</tr>
+<tr class="even">
+<td align="left">0.19</td>
+<td align="left">0.04</td>
+<td align="left">0.49</td>
+<td align="left">1.10</td>
+<td align="left">0.16</td>
+<td align="left">0.10</td>
+</tr>
+<tr class="odd">
+<td align="left">0.48</td>
+<td align="left">0.21</td>
+<td align="left">0.86</td>
+<td align="left">0.52</td>
+<td align="left">0.65</td>
+<td align="left">0.27</td>
+</tr>
+<tr class="even">
+<td align="left">0.94</td>
+<td align="left">0.40</td>
+<td align="left">0.43</td>
+<td align="left">0.25</td>
+<td align="left">0.27</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li>Stephen Stigler determined in 1977 that the speed of light is
+299,710.5 km/sec. In 1882, Albert Michelson had collected
+measurements on the speed of light (&quot;Student t-distribution,&quot;
+2013). His measurements are given in table #7.3.6. Is there
+evidence to show that Michelson’s data is different from Stigler’s
+value of the speed of light? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #7.3.6: Speed of Light Measurements in (km/sec)</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">299883</th>
+<th align="left">299816</th>
+<th align="left">299778</th>
+<th align="left">299796</th>
+<th align="left">299682</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">299711</td>
+<td align="left">299611</td>
+<td align="left">299599</td>
+<td align="left">300051</td>
+<td align="left">299781</td>
+</tr>
+<tr class="even">
+<td align="left">299578</td>
+<td align="left">299796</td>
+<td align="left">299774</td>
+<td align="left">299820</td>
+<td align="left">299772</td>
+</tr>
+<tr class="odd">
+<td align="left">299696</td>
+<td align="left">299573</td>
+<td align="left">299748</td>
+<td align="left">299748</td>
+<td align="left">299797</td>
+</tr>
+<tr class="even">
+<td align="left">299851</td>
+<td align="left">299809</td>
+<td align="left">299723</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li>Table #7.3.7 contains pulse rates after running for 1 minute,
+collected from females who drink alcohol (&quot;Pulse rates before,&quot;
+2013). The mean pulse rate after running for 1 minute of females who
+do not drink is 97 beats per minute. Do the data show that the mean
+pulse rate of females who do drink alcohol is higher than the mean
+pulse rate of females who do not drink? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #7.3.7: Pulse Rates of Woman Who Use Alcohol</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">176</th>
+<th align="left">150</th>
+<th align="left">150</th>
+<th align="left">115</th>
+<th align="left">129</th>
+<th align="left">160</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">120</td>
+<td align="left">125</td>
+<td align="left">89</td>
+<td align="left">132</td>
+<td align="left">120</td>
+<td align="left">120</td>
+</tr>
+<tr class="even">
+<td align="left">68</td>
+<td align="left">87</td>
+<td align="left">88</td>
+<td align="left">72</td>
+<td align="left">77</td>
+<td align="left">84</td>
+</tr>
+<tr class="odd">
+<td align="left">92</td>
+<td align="left">80</td>
+<td align="left">60</td>
+<td align="left">67</td>
+<td align="left">59</td>
+<td align="left">64</td>
+</tr>
+<tr class="even">
+<td align="left">88</td>
+<td align="left">74</td>
+<td align="left">68</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="6" style="list-style-type: decimal">
+<li>The economic dynamism, which is the index of productive growth in
+dollars for countries that are designated by the World Bank as
+middle-income are in table #7.3.8 (&quot;SOCR data 2008,&quot; 2013).
+Countries that are considered high-income have a mean economic
+dynamism of 60.29. Do the data show that the mean economic dynamism
+of middle-income countries is less than the mean for high-income
+countries? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #7.3.8: Economic Dynamism of Middle Income Countries</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">25.8057</th>
+<th align="left">37.4511</th>
+<th align="left">51.915</th>
+<th align="left">43.6952</th>
+<th align="left">47.8506</th>
+<th align="left">43.7178</th>
+<th align="left">58.0767</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">41.1648</td>
+<td align="left">38.0793</td>
+<td align="left">37.7251</td>
+<td align="left">39.6553</td>
+<td align="left">42.0265</td>
+<td align="left">48.6159</td>
+<td align="left">43.8555</td>
+</tr>
+<tr class="even">
+<td align="left">49.1361</td>
+<td align="left">61.9281</td>
+<td align="left">41.9543</td>
+<td align="left">44.9346</td>
+<td align="left">46.0521</td>
+<td align="left">48.3652</td>
+<td align="left">43.6252</td>
+</tr>
+<tr class="odd">
+<td align="left">50.9866</td>
+<td align="left">59.1724</td>
+<td align="left">39.6282</td>
+<td align="left">33.6074</td>
+<td align="left">21.6643</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="7" style="list-style-type: decimal">
+<li>In 1999, the average percentage of women who received prenatal care
+per country is 80.1%. Table #7.3.9 contains the percentage of woman
+receiving prenatal care in 2009 for a sample of countries
+(&quot;Pregnant woman receiving,&quot; 2013). Do the data show that the
+average percentage of women receiving prenatal care in 2009 is
+higher than in 1999? Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #7.3.9: Percentage of Woman Receiving Prenatal Care</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th align="left">70.08</th>
+<th align="left">72.73</th>
+<th align="left">74.52</th>
+<th align="left">75.79</th>
+<th align="left">76.28</th>
+<th align="left">76.28</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">76.65</td>
+<td align="left">80.34</td>
+<td align="left">80.60</td>
+<td align="left">81.90</td>
+<td align="left">86.30</td>
+<td align="left">87.70</td>
+</tr>
+<tr class="even">
+<td align="left">87.76</td>
+<td align="left">88.40</td>
+<td align="left">90.70</td>
+<td align="left">91.50</td>
+<td align="left">91.80</td>
+<td align="left">92.10</td>
+</tr>
+<tr class="odd">
+<td align="left">92.20</td>
+<td align="left">92.41</td>
+<td align="left">92.47</td>
+<td align="left">93.00</td>
+<td align="left">93.20</td>
+<td align="left">93.40</td>
+</tr>
+<tr class="even">
+<td align="left">93.63</td>
+<td align="left">93.68</td>
+<td align="left">93.80</td>
+<td align="left">94.30</td>
+<td align="left">94.51</td>
+<td align="left">95.00</td>
+</tr>
+<tr class="odd">
+<td align="left">95.80</td>
+<td align="left">95.80</td>
+<td align="left">96.23</td>
+<td align="left">96.24</td>
+<td align="left">97.30</td>
+<td align="left">97.90</td>
+</tr>
+<tr class="even">
+<td align="left">97.95</td>
+<td align="left">98.20</td>
+<td align="left">99.00</td>
+<td align="left">99.00</td>
+<td align="left">99.10</td>
+<td align="left">99.10</td>
+</tr>
+<tr class="odd">
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="8" style="list-style-type: decimal">
+<li>Maintaining your balance may get harder as you grow older. A study
+was conducted to see how steady the elderly is on their feet. They
+had the subjects stand on a force platform and have them react to a
+noise. The force platform then measured how much they swayed forward
+and backward, and the data is in table #7.3.10 (&quot;Maintaining
+balance while,&quot; 2013). Do the data show that the elderly sway more
+than the mean forward sway of younger people, which is 18.125 mm?
+Test at the 5% level.</li>
+</ol>
+<blockquote>
+<p><strong>Table #7.3.10: Forward/backward Sway (in mm) of Elderly Subjects</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">30</td>
+<td align="left">20</td>
+<td align="left">19</td>
+<td align="left">29</td>
+<td align="left">25</td>
+<td align="left">21</td>
+<td align="left">24</td>
+<td align="left">50</td>
+</tr>
+</tbody>
+</table>
+<p>Data Sources:</p>
+<p>Australian Human Rights Commission, (1996). <em>Indigenous deaths in
+custody 1989 - 1996</em>. Retrieved from website:
+<a href="http://www.humanrights.gov.au/publications/indigenous-deaths-custody" class="uri">http://www.humanrights.gov.au/publications/indigenous-deaths-custody</a></p>
+<p><em>CDC features - new data on autism spectrum disorders</em>. (2013, November
+26). Retrieved from <a href="http://www.cdc.gov/features/countingautism/" class="uri">http://www.cdc.gov/features/countingautism/</a></p>
+<p>Center for Disease Control and Prevention, Prevalence of Autism Spectrum
+Disorders - Autism and Developmental Disabilities Monitoring Network.
+(2008). <em>Autism and developmental disabilities monitoring network-2012</em>.
+Retrieved from website:
+<a href="http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf" class="uri">http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf</a></p>
+<p><em>CO2 emissions</em>. (2013, November 19). Retrieved from
+<a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.PC" class="uri">http://data.worldbank.org/indicator/EN.ATM.CO2E.PC</a></p>
+<p>Federal Trade Commission, (2008). <em>Consumer fraud and identity theft
+complaint data: January-December 2007</em>. Retrieved from website:
+<a href="http://www.ftc.gov/opa/2008/02/fraud.pdf" class="uri">http://www.ftc.gov/opa/2008/02/fraud.pdf</a></p>
+<p><em>Gallup news service</em>. (2013, November 7-10). Retrieved from
+<a href="http://www.gallup.com/file/poll/165896/JFK_Conspiracy_131115.pdf" class="uri">http://www.gallup.com/file/poll/165896/JFK_Conspiracy_131115.pdf</a></p>
+<p><em>Healthy breakfast story</em>. (2013, November 16). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Stories/HealthyBreakfast.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/HealthyBreakfast.html</a></p>
+<p><em>IQ of famous people</em>. (2013, November 13). Retrieved from
+<a href="http://www.kidsiqtestcenter.com/IQ-famous-people.html" class="uri">http://www.kidsiqtestcenter.com/IQ-famous-people.html</a></p>
+<p><em>Maintaining balance while concentrating</em>. (2013, September 25).
+Retrieved from <a href="http://www.statsci.org/data/general/balaconc.html" class="uri">http://www.statsci.org/data/general/balaconc.html</a></p>
+<p><em>Morgan Gallup poll on unemployment</em>. (2013, September 26). Retrieved
+from <a href="http://www.statsci.org/data/oz/gallup.html" class="uri">http://www.statsci.org/data/oz/gallup.html</a></p>
+<p><em>Multi-disciplinary niser activity - mercury in bass</em>. (2013, November
+16). Retrieved from
+<a href="http://gozips.uakron.edu/~nmimoto/pages/datasets/MercuryInBass%20-%20description.txt">http://gozips.uakron.edu/~nmimoto/pages/datasets/MercuryInBass -
+description.txt</a></p>
+<p><em>Pregnant woman receiving prenatal care</em>. (2013, October 14). Retrieved
+from <a href="http://data.worldbank.org/indicator/SH.STA.ANVC.ZS" class="uri">http://data.worldbank.org/indicator/SH.STA.ANVC.ZS</a></p>
+<p><em>Pulse rates before and after exercise</em>. (2013, September 25). Retrieved
+from <a href="http://www.statsci.org/data/oz/ms212.html" class="uri">http://www.statsci.org/data/oz/ms212.html</a></p>
+<p><em>SOCR data 2008 world countries rankings</em>. (2013, November 16).
+Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_2008_World_CountriesRankings" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_2008_World_CountriesRankings</a></p>
+<p><em>Student t-distribution</em>. (2013, November 25). Retrieved from
+<a href="http://lib.stat.cmu.edu/DASL/Stories/student.html" class="uri">http://lib.stat.cmu.edu/DASL/Stories/student.html</a></p>
+<p><em>WHO life expectancy</em>. (2013, September 19). Retrieved from
+<a href="http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends/en/index.html" class="uri">http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends/en/index.html</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="continuous-probability-distributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estimation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

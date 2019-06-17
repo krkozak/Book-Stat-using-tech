@@ -1,0 +1,56 @@
+--- 
+title: "Statistics Using Technology"
+subtitle: "Third Edition"
+author: "Kathryn Kozak"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+description: "An introductory statistics textbook."
+---
+
+# Preface {-}
+
+I hope you find this book useful in teaching statistics.  When writing this book, I tried to follow the GAISE Standards (GAISE recommendations. (2014, January 05). Retrieved from http://www.amstat.org/education/gaise/GAISECollege_Recommendations.pdf
+): 
+
+* Emphasis statistical literacy and develop statistical understanding.
+* Use real data.
+* Stress conceptual understanding, rather than mere knowledge of procedure.
+* Foster active learning in the classroom.
+* Use technology for developing concepts and analyzing data.
+
+[NOTE IN DRAFT: This is **not** the most recent GAISE report.]
+
+To this end, I ask students to interpret the results of their calculations.  I incorporated the use of technology for most calculations.  Because of that you will not find me using any of the computational formulas for standard deviations or correlation and regression since I prefer students understand the concept of these quantities.  Also, because I utilize technology you will not find the standard normal table, Student’s t-table, binomial table, chi-square distribution table, and F-distribution table in the book.  The only tables I provided were for critical values for confidence intervals since they are more difficult to find using technology.  Another difference between this book and other statistics books is the order of hypothesis testing and confidence intervals.  Most books present confidence intervals first and then hypothesis tests.  I find that presenting hypothesis testing first and then confidence intervals is more understandable for students.  Lastly, I have de-emphasized the use of the z-test.  In fact, I only use it to introduce hypothesis testing, and never utilize it again. You may also notice that when I introduced hypothesis testing and confidence intervals, proportions were introduced before means.  However, when two sample tests and confidence intervals are introduced I switched this order.  This is because usually many instructors do not discuss the proportions for two samples.  However, you might try assigning problems for proportions without discussing it in class.  After doing two samples for means, the proportions are similar.  Lastly, to aid student understanding and interest, most of the homework and examples utilize real data.  Again, I hope you find this book useful for your introductory statistics class.
+
+I want to make a comment about the mathematical knowledge that I assumed the students possess.  The course for which I wrote this book has a higher prerequisite than most introductory statistics books.  However, I do feel that students can read and understand this book as long as they have had basic algebra and can substitute numbers into formulas.  I do not show how to create most of the graphs, but most students should have been exposed to them in high school.  So I hope the mathematical level is appropriate for your course.
+
+The technology that I utilized for creating the graphs was Microsoft Excel, and I utilized the TI-83/84 graphing calculator for most calculations, including hypothesis testing, confidence intervals, and probability distributions.  This is because these tools are readily available to my students.  Please feel free to use any other technology that is more appropriate for your students.  Do make sure that you use some technology.
+Acknowledgments:
+
+I would like to thank the following people for taking their valuable time to review the book.  Their comments and insights improved this book immensely.
+
+- Jane Tanner, Onondaga Community College
+- Rob Farinelli, College of Southern Maryland
+- Carrie Kinnison, retired engineer
+- Sean Simpson, Westchester Community College
+- Kim Sonier, Coconino Community College
+- Jim Ham, Delta College 
+- David Straayer, Tacoma Community College
+- Kendra Feinstein, Tacoma Community College
+- Students of Coconino Community College
+- Students Tacoma Community College
+
+I also want to thank Coconino Community College for granting me a sabbatical so that I would have the time to write the book.  Lastly, I want to thank my husband Rich and my son Dylan for supporting me in this project.  Without their love and support, I would not have been able to complete the book.
+
+**New to the Second Edition:**
+
+The additions to this edition mostly involve adding the commands to create graphs, compute descriptive statistics, finding probabilities, and computing inferential analysis using the open source software R. Another change involve adding an example at the end of chapter 3 that shows analyzing a data set using graphical and numerical descriptions. Another major change was adding a section 9.4 that gives some insight into which inferential analysis should be completed based on a series of questions that should be asked. Lastly, minor explanations were made and corrections were made where necessary.
+
+On a personal note, I wanted to thank my brother, John Matic, his wife Jenelle, and their children Hannah and Eli for their hospitality when writing the first edition. In addition to allowing my family access to their home, John provided numerous examples and data sets for business applications in this book. I inadvertently left this thank you out of the first edition of the book, and for that I apologize. His help and his family’s hospitality were invaluable to me.
+
+
+
