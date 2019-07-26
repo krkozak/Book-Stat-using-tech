@@ -46,7 +46,7 @@ You will see more on what the different commands are that you would use. A word 
 > **Bar graphs or charts** consist of the frequencies on one axis and the categories on the other axis. Drawing the bar graph using R is performed using the following command. gf_bar(~explanatory variable, data=Dataframe)
 
 
-### Example: Drawing a Bar Chart**
+### Example: Drawing a Bar Chart
 
 Data was collected for two semesters in a statistics class. The data frame in is the \table #2.1.1. The command head(data frame) shows the variables and the first few lines of the data set.
 
@@ -140,6 +140,7 @@ There are many other types of graphs that can be used on qualitative
 data. There are spreadsheet software packages that will create most of
 them, and it is better to look at them to see how to create then. It
 depends on your data as to which may be useful, but the bar, dot, and jitter plots are really the most useful. 
+
 
 ### Homework Section 2.1
 
@@ -978,3 +979,4 @@ Reserve Bank of Australia. (2019, May 13). Statistical Tables. Retrieved July 10
 Tuition and Fees, 1998-99 Through 2018-19. (2018, December 31). Retrieved from https://www.chronicle.com/interactives/tuition-and-fees
 
 U.S. Census Bureau, Current Population Survey, Annual Social and Economic Supplements.  
+

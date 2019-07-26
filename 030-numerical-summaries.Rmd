@@ -423,7 +423,7 @@ to the mean. It can be thought of as how much a typical data point
 differs from the mean.
 >
 > The **sample variance** formula:
-$s^2=\frac{\sum\left(x-\bar{x}\right)^2}{n-1}$, where $\bar{x}$ is the sample mean, *n* is the sample size, and \sum{}$ means to find the sum of the data.
+$s^2=\frac{\sum\left(x-\bar{x}\right)^2}{n-1}$, where $\bar{x}$ is the sample mean, *n* is the sample size, and $\sum{}$ means to find the sum of the data.
 >
 > The **sample standard deviation** formula:
 $s=\sqrt{ \frac{\sum\left(x-\bar{x}\right)^2}{n-1}}$, the $n-1$ on the bottom has to do with a concept called degrees of freedom. Basically, it makes the sample standard deviation a better approximation of the population standard deviation.
