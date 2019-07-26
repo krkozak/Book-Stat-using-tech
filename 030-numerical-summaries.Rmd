@@ -1,402 +1,237 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r, include=FALSE}
+library("mosaic")
+library("MASS")
+```
+
 # Numerical Descriptions of Data
 
-Chapter 1 discussed what a population, sample, parameter, and statistic are, and how to take different types of samples. Chapter 2 discussed ways to graphically display data. There was also a discussion of important characteristics: center, variations, distribution, outliers, and changing characteristics of the data over time. Distributions and outliers can be answered using graphical means. Finding the center and variation can be done using numerical methods that will be discussed in this chapter. Both graphical and numerical methods are part of a branch of statistics known as **descriptive statistics**. Later descriptive statistics will be used to make decisions and/or estimate population parameters using methods that are part of the branch called **inferential statistics**.
+> Chapter 1 discussed what a population, sample, parameter, and statistic are, and how to take different types of samples. Chapter 2 discussed ways to graphically display data. There was also a discussion of important characteristics: center, variations, distribution, outliers, and changing characteristics of the data over time. Distributions and outliers can be answered using graphical means. Finding the center and variation can be done using numerical methods that will be discussed in this chapter. Both graphical and numerical methods are part of a branch of statistics known as **descriptive statistics**. Later descriptive statistics will be used to make decisions and/or estimate population parameters using methods that are part of the branch called **inferential statistics**.
 
 ## Measures of Center
 
-This section focuses on measures of central tendency. Many times you are asking what to expect on average. Such as when you pick a major, you would probably ask how much you expect to earn in that field. If you are thinking of relocating to a new town, you might ask how much you can expect to pay for housing. If you are planting vegetables in the spring, you might want to know how long it will be until you can harvest. These questions, and many more, can be answered by knowing the center of the data set. There are three measures of the "center" of the data. They are the mode, median, and mean. Any of the values can be referred to as the "average."
+> This section focuses on measures of central tendency. Many times you are asking what to expect on average. Such as when you pick a major, you would probably ask how much you expect to earn in that field. If you are thinking of relocating to a new town, you might ask how much you can expect to pay for housing. If you are planting vegetables in the spring, you might want to know how long it will be until you can harvest. These questions, and many more, can be answered by knowing the center of the data set. There are three measures of the "center" of the data. They are the mode, median, and mean. Any of the values can be referred to as the "average."
 
-The **mode** is the data value that occurs the most frequently in the data. To find it, you count how often each data value occurs, and then determine which data value occurs most often.
+> The **mode** is the data value that occurs the most frequently in the data. To find it, you count how often each data value occurs, and then determine which data value occurs most often. The mode is not the most useful measure of center. This is because, a data set can have more than one mode. If there is a tie between two values for the most number of times then both values are the mode and the data is called bimodal (two modes). If every data point occurs the same number of times, there is no mode. If there are more than two numbers that appear the most times, then usually there is no mode.
 
-The **median** is the data value in the middle of a sorted list of data. To find it, you put the data in order, and then determine which data value is in the middle of the data set.
+> The **median** is the data value in the middle of a sorted list of data. To find it, you put the data in order, and then determine which data value is in the middle of the data set.
 
-The **mean** is the arithmetic average of the numbers. This is the center that most people call the average, though all three -- mean, median, and mode -- really are averages.
+> The **mean** is the arithmetic average of the numbers. This is the center that most people call the average, though all three -- mean, median, and mode -- really are averages.
 
-There are no symbols for the mode and the median, but the mean is used a great deal, and statisticians gave it a symbol. There are actually two symbols, one for the population parameter and one for the sample statistic. In most cases you cannot find the population parameter, so you use the sample statistic to estimate the population parameter.
+> There are no symbols for the mode and the median, but the mean is used a great deal, and statisticians gave it a symbol. There are actually two symbols, one for the population parameter and one for the sample statistic. In most cases you cannot find the population parameter, so you use the sample statistic to estimate the population parameter.
 
 **Population Mean:**
 
-, pronounced mu
+> $\mu$, pronounced mu
 
-*N* is the size of the population.
+> *N* is the size of the population.
 
-*x* represents a data value.
+> *x* represents a data value.
 
-means to add up all of the data values.
+> means to add up all of the data values.
 
 **Sample Mean**:
 
-, pronounced x bar.
+> $\bar{x}$, pronounced x bar.
 
-*n* is the size of the sample.
+> *n* is the size of the sample.
 
-*x* represents a data value.
+> *x* represents a data value.
 
-means to add up all of the data values.
+> $\frac{\sum{x} }{n}$ means to add up all of the data values.
 
-The value for is used to estimate since can't be calculated in most
+> The value for $\bar{x}$ is used to estimate $\mu$ since $\mu$ can't be calculated in most
 situations.
 
-**Example \#3.1.1: Finding the Mean, Median, and Mode**
+### Example: Finding the Mean and Median using R**
 
-> Suppose a vet wants to find the average weight of cats. The weights
-> (in pounds) of five cats are in table \#3.1.1.
->
-> **Table \#3.1.1: Weights of cats in pounds**
+Suppose a vet wants to find the average weight of cats. The weights (in kg) of cats are in table \#3.1.1.
 
-  ----- ----- ----- ----- -----
-  6.8   8.2   7.5   9.4   8.2
-  ----- ----- ----- ----- -----
+**Table \#3.1.1: Cats' Weights**
 
-> Find the mean, median, and mode of the weight of a cat.
->
+```{r}
+head(cats) #This command shows the variable names and the first few unit of observation rows
+```
+
+Find the mean and median of the weight of a cat.
+
 > **Solution:**
 >
-> Before starting any mathematics problem, it is always a good idea to
-> define the unknown in the problem. In this case, you want to define
-> the variable. The symbol for the variable is *x*.
+> Before starting any mathematics problem, it is always a good idea to define the unknown in the problem. In statistics, you want to define the variable. The symbol for the variable is *x*.
 >
 > The variable is *x* = weight of a cat
 >
 > Mean:
+> To find with R Studio, perform the command:
+
+```{r}
+df_stats(~Bwt, cats, mean)
+```
+
+> The mean weight is 2.72 kg
 >
 > Median:
+>To find with R Studio, perform the command:
+
+```{r}
+df_stats(~Bwt, cats, median)
+```
+
+> The median weight is 2.7 kg also. It appears the average weight is 2.7 kg of all cats.
+
+### Example: Finding Mean and Median with filtering**
+
+Looking at the data frame for cats weights table(#3.1.1), you see that there are several variables You may want to know what the other variables are. A * Code Book * describes the data set, explains what the variables are including the units, and the source of the data frame. 
+To review the code book for a data frame, complete the following command.
+
+```{r}
+??cats
+```
+
+Then click on MASS::cats. 
+The output looks like:
+
+**Figure \#3.1.1: Code book for cats data frame**
+![Code book for cats data](code_book_cats.jpeg)
+
+Suppose you want to know if male cats weight more than female cats. Looking at the variables, you notice that there is a variable for the sex of the cat. You can look at the weights of males and females separately. This looks like:  
+
+>**Solution:**
+>To find the mean and median, separated by sex, use this command in R Studio:
+
+```{r}
+df_stats(Bwt~Sex, data=cats, mean, median)
+```
+> Notice that the female cats' mean weigh 2.4 kg and the male cats' mean weigh 2.9 kg The median weight of female cats is 2.3 kg and for males is is 2.9 kg So it does appear that males cats weight a bit more than the female cats. 
+
+There are many different summary statistics that can be found. An example is the minimum and maximum value. In this example, you will see how to find the min and max values and then filter them out of a data set to see what effect they have on the mean and median.
+
+### Example: Affect of Extreme Values on Mean and Median**
+
+Find the minimum and maximum values of cats weights. 
+
+>**Solution**
+The command in R Studio for finding the minimum and maximum is very simliar to how to find the mean and median, In fact all summary statistics start with df_stats(~variable, data=Data Frame, desired statistics). Here is the command in R Studio for the minimum and maximum of cat's body weight.
+
+```{r}
+df_stats(~Bwt, data=cats, min, max)
+```
 >
-> You need to sort the list for both the median and mode. The sorted
-> list is in table \#3.1.2.
+> The minimum weigth of a cat in this data frame is 2 kg and the maximum weight of a cat is 3.9 kg.
 >
-> **Table \#3.1.2: Sorted List of Cats' Weights**
+>Now create two new datasets. One data set will exclude the maximum value. You can call it anything you want, but it would make sense to call it something like nomax. The command to create the new data set is:
 
-  ----- ----- ----- ----- -----
-  6.8   7.5   8.2   8.2   9.4
-  ----- ----- ----- ----- -----
+```{r,warning=FALSE}
+nomax<-filter(cats, Bwt<3.9)
+```
 
-> There are 5 data points so the middle of the list would be the 3^rd^
-> number. (Just put a finger at each end of the list and move them
-> toward the center one number at a time. Where your fingers meet is the
-> median.)
+> Then create a data set that excludes the minimmum value; call it nomin:
+
+```{r}
+nomin<-filter(cats, Bwt>2)
+```
+
+> The <- is the way to indicate to R what the data set nomin is equivalent to what follows the symbol. Notice that it doesn't look like anything hapened, but new datsets were created in the background. Now you can find the mean and median of each new data set:
+
+```{r}
+df_stats(~Bwt, data=nomax, mean, median)
+```
 >
-> **Table \#3.1.3: Sorted List of Cats' Weights with Median Marked**
+> The mean without the maximum value is 2.70 kg, and the median is 2.7 kg.
 
-  ----- ----- ----- ----- -----
-  6.8   7.5   8.2   8.2   9.4
-  ----- ----- ----- ----- -----
+```{r}
+df_stats(~Bwt, data=nomin, mean, median)
+```
 
-> The median is therefore 8.2 pounds.
->
-> Mode:
->
-> This is easiest to do from the sorted list that is in table \#3.1.2.
-> Which value appears the most number of times? The number 8.2 appears
-> twice, while all other numbers appear once.
->
-> Mode = 8.2 pounds.
+> The mean without the minimum value is 2.75 kg, and the median is 2.7 kg.
 
-A data set can have more than one mode. If there is a tie between two
-values for the most number of times then both values are the mode and
-the data is called bimodal (two modes). If every data point occurs the
-same number of times, there is no mode. If there are more than two
-numbers that appear the most times, then usually there is no mode.
+From Example 3.1.1, the mean of the data set with all the values is 2.72 kg where the median is 2.7 kg. Notice that when the maximum value was excluded from the data set, the mean decreased a little but the median didn't change, and when the minimum value was excluded from the data set, the mean increased a little but the median didn't change. The mean is much higher than the median. Why is this? This is because the mean is affected by extreme values, while the median is not. We say the median is a much more resistant measure of center because it isn't affected by extreme values as much.
 
-In example \#3.1.1, there were an odd number of data points. In that
-case, the median was just the middle number. What happens if there is an
-even number of data points? What would you do?
+An outlier is a data value that is very different from the rest of the data. It can be really high or really low. Extreme values may be an outlier if the extreme value is far enough from the center. If there are extreme values in the data, the median is a better measure of the center than the mean. If there are no extreme values, the mean and the median will be similar so most people use the mean. The mean is not a resistant measure because it is affected by extreme values. The median is a resistant measure because it not affected by extreme values.
 
-**Example \#3.1.2: Finding the Median with an Even Number of Data
-Points**
-
-> Suppose a vet wants to find the median weight of cats. The weights (in
-> pounds) of six cats are in table \#3.1.4. Find the median
->
-> **Table \#3.1.4: Weights of Six Cats**
-
-  ----- ----- ----- ----- ----- -----
-  6.8   8.2   7.5   9.4   8.2   6.3
-  ----- ----- ----- ----- ----- -----
-
-> **Solution:**
->
-> Variable: *x* = weight of a cat
->
-> First sort the list if it is not already sorted.
->
-> There are 6 numbers in the list so the number in the middle is between
-> the 3^rd^ and 4^th^ number. Use your fingers starting at each end of
-> the list in table \#3.1.5 and move toward the center until they meet.
-> There are two numbers there.
->
-> **Table \#3.1.5: Sorted List of Weights of Six Cats**
-
-  ----- ----- ----- ----- ----- -----
-  6.3   6.8   7.5   8.2   8.2   9.4
-  ----- ----- ----- ----- ----- -----
-
-> To find the median, just average the two numbers.
->
-> The median is 7.85 pounds.
-
-**Example \#3.1.3: Finding Mean and Median using Technology**
-
-> Suppose a vet wants to find the median weight of cats. The weights (in
-> pounds) of six cats are in table \#3.1.4. Find the median
->
-> **Solution:**
->
-> Variable: *x* = weight of a cat
-
-You can do the calculations for the mean and median using the
-technology.
-
-The procedure for calculating the sample mean () and the sample median
-(Med) on the TI-83/84 is in figures 3.1.1 through 3.1.4. First you need
-to go into the STAT menu, and then Edit. This will allow you to type in
-your data (see figure \#3.1.1).
-
-> **Figure \#3.1.1: TI-83/84 Calculator Edit Setup**
->
-> ![](media/image11.png){width="2.9444444444444446in"
-> height="2.2129057305336834in"}
-
-Once you have the data into the calculator, you then go back to the STAT
-menu, move over to CALC, and then choose 1-Var Stats (see figure
-\#3.1.2). The calculator will now put 1-Var Stats on the main screen.
-Now type in L1 (2nd button and 1) and then press ENTER. (Note if you
-have the newer operating system on the TI-84, then the procedure is
-slightly different.) If you press the down arrow, you will see the rest
-of the output from the calculator. The results from the calculator are
-in figure \#3.1.3.
-
-> **Figure \#3.1.2: TI-83/84 Calculator CALC Menu**
->
-> ![](media/image12.gif){width="2.75in" height="1.8611111111111112in"}
-
-**\
-**
-
-> **Figure \#3.1.3: TI-83/84 Calculator Input for Example \#3.1.3
-> Variable**
->
-> ![](media/image13.png){width="2.611111111111111in"
-> height="1.9623873578302713in"}
->
-> **Figure \#3.1.4: TI-83/84 Calculator Results for Example \#3.1.3
-> Variable**
-
-![](media/image14.png){width="2.7916666666666665in"
-height="2.0980850831146105in"}![](media/image15.png){width="2.8333333333333335in"
-height="2.1293996062992124in"}
-
-The commands for finding the mean and median using R are as follows:
-
-> variable\<-c(type in your data with commas in between)
->
-> To find the mean, use mean(variable)
->
-> To find the median, use median(variable)
-
-So for this example, the commands would be
-
-> weights\<-c(6.8, 8.2, 7.5, 9.4, 8.2, 6.3)
->
-> mean(weights)
->
-> \[1\] 7.733333
->
-> median(weights)
->
-> \[1\] 7.85
-
-**Example \#3.1.4: Affect of Extreme Values on Mean and Median**
-
-> Suppose you have the same set of cats from example 3.1.1 but one
-> additional cat was added to the data set. Table \#3.1.6 contains the
-> six cats' weights, in pounds.
->
-> **Table \#3.1.6: Weights of Six Cats**
-
-  ----- ----- ----- ----- ----- ------
-  6.8   7.5   8.2   8.2   9.4   22.1
-  ----- ----- ----- ----- ----- ------
-
-> Find the mean and the median.
-
-**\
-**
-
-> **Solution:**
-
-Variable: *x* = weight of a cat
-
-> The data is already in order, thus the median is between 8.2 and 8.2.
->
-> The mean is much higher than the median. Why is this? Notice that when
-> the value of 22.1 was added, the mean went from 8.02 to 10.37, but the
-> median did not change at all. This is because the mean is affected by
-> extreme values, while the median is not. The very heavy cat brought
-> the mean weight up. In this case, the median is a much better measure
-> of the center.
-
-An outlier is a data value that is very different from the rest of the
-data. It can be really high or really low. Extreme values may be an
-outlier if the extreme value is far enough from the center. In example
-\#3.1.4, the data value 22.1 pounds is an extreme value and it may be an
-outlier.
-
-If there are extreme values in the data, the median is a better measure
-of the center than the mean. If there are no extreme values, the mean
-and the median will be similar so most people use the mean.
-
-The mean is not a resistant measure because it is affected by extreme
-values. The median and the mode are resistant measures because they are
-not affected by extreme values.
-
-As a consumer you need to be aware that people choose the measure of
-center that best supports their claim. When you read an article in the
-newspaper and it talks about the "average" it usually means the mean but
-sometimes it refers to the median. Some articles will use the word
-"median" instead of "average" to be more specific. If you need to make
-an important decision and the information says "average", it would be
-wise to ask if the "average" is the mean or the median before you
+As a consumer you need to be aware that people choose the measure of center that best supports their claim. When you read an article in the newspaper and it talks about the "average" it usually means the mean but sometimes it refers to the median. Some articles will use the word "median" instead of "average" to be more specific. If you need to make an important decision and the information says "average", it would be wise to ask if the "average" is the mean or the median before you
 decide.
 
-As an example, suppose that a company wants to use the mean salary as
-the average salary for the company. This is because the high salaries of
-the administration will pull the mean higher. The company can say that
-the employees are paid well because the average is high. However, the
-employees want to use the median since it discounts the extreme values
-of the administration and will give a lower value of the average. This
-will make the salaries seem lower and that a raise is in order.
+As an example, suppose that a company wants to use the mean salary as the average salary for the company. This is because the high salaries of the administrators will pull the mean higher. The company can say that the employees are paid well because the average is high. However, the employees want to use the median since it discounts the extreme values of the administration and will give a lower value of the average. This will make the salaries seem lower and that a raise is in order.
 
-Why use the mean instead of the median? The reason is because when
-multiple samples are taken from the same population, the sample means
-tend to be more consistent than other measures of the center. The sample
-mean is the more reliable measure of center.
+Why use the mean instead of the median? The reason is because when multiple samples are taken from the same population, the sample means tend to be more consistent than other measures of the center. 
 
-To understand how the different measures of center related to skewed or
-symmetric distributions, see figure \#3.1.5. As you can see sometimes
-the mean is smaller than the median and mode, sometimes the mean is
-larger than the median and mode, and sometimes they are the same values.
+To understand how the different measures of center related to skewed or symmetric distributions, see figure \#3.1.2. As you can see sometimes the mean is smaller than the median, sometimes the mean is
+larger than the median, and sometimes they are the same values.
 
-**Figure \#3.1.5: Mean, Median, Mode as Related to a Distribution**
+**Figure \#3.1.2: Mean, Median, Mode as Related to a Distribution**
+![Graphs of symmetric, skewed right and skewed left](centers_distribution.png)
 
-![](media/image18.jpg){width="5.986666666666666in"
-height="2.1533333333333333in"}
+One last type of average is a weighted average. **Weighted averages** are used quite often in different situations. Some teachers use them in calculating a student's grade in the course, or a grade on a project. Some employers use them in employee evaluations. The idea is that some activities are more
+important than others. As an example, a full time teacher at a community college may be evaluated on their service to the college, their service to the community, whether their paperwork is turned in on time, and their teaching. However, teaching is much more important than whether their paperwork is turned in on time. When the evaluation is completed, more weight needs to be given to the teaching and less to the paperwork. This is a weighted average.
 
-One last type of average is a weighted average. Weighted averages are
-used quite often in real life. Some teachers use them in calculating
-your grade in the course, or your grade on a project. Some employers use
-them in employee evaluations. The idea is that some activities are more
-important than others. As an example, a fulltime teacher at a community
-college may be evaluated on their service to the college, their service
-to the community, whether their paperwork is turned in on time, and
-their teaching. However, teaching is much more important than whether
-their paperwork is turned in on time. When the evaluation is completed,
-more weight needs to be given to the teaching and less to the paperwork.
-This is a weighted average.
-
-**Weighted Average**
-
-where *w* is the weight of the data value, *x*.
-
-**Example \#3.1.5: Weighted Average**
-
-> In your biology class, your final grade is based on several things: a
-> lab score, scores on two major tests, and your score on the final
-> exam. There are 100 points available for each score. The lab score is
-> worth 15% of the course, the two exams are worth 25% of the course
-> each, and the final exam is worth 35% of the course. Suppose you
-> earned scores of 95 on the labs, 83 and 76 on the two exams, and 84 on
-> the final exam. Compute your weighted average for the course.
+>**Weighted Average**
+>$\text{weighted average}=\frac{\sum{x*w}}{\sum{w}}$
 >
+>where *w* is the weight of the data value, *x*.
+
+### Example: Weighted Average**
+
+In your biology class, your final grade is based on several things: a lab score, scores on two major tests, and your score on the final exam. There are 100 points available for each score. The lab score is worth 15% of the course, the two exams are worth 25% of the course each, and the final exam is worth 35% of the course. Suppose you earned scores of 95 on the labs, 83 and 76 on the two exams, and 84 on the final exam. Compute your weighted average for the course.
+
 > **Solution:**
-
-Variable: *x* = score
-
-The weighted average is
-
+>
+> Variable: *x* = score
+>
 > A weighted average can be found using technology.
+> The commands for finding the weighted mean using R Studio is as follows:
 >
-> The procedure for calculating the weighted average on the TI-83/84 is
-> in figures 3.1.6 through 3.1.9. First you need to go into the STAT
-> menu, and then Edit. This will allow you to type in the scores into L1
-> and the weights into L2 (see figure \#3.1.6).
+> x<-c(type in the scores with commas in between)
 >
-> **Figure \#3.1.6: TI-83/84 Calculator Edit Setup**
->
-> ![](media/image22.png){width="3.0972222222222223in"
-> height="2.327726377952756in"}
->
-> Once you have the data into the calculator, you then go back to the
-> STAT menu, move over to CALC, and then choose 1-Var Stats (see figure
-> \#3.1.7). The calculator will now put 1-Var Stats on the main screen.
-> Now type in L1 (2nd button and 1), then a comma (button above the 7
-> button), and then L2 (2nd button and 2) and then press ENTER. (Note if
-> you have the newer operating system on the TI-84, then the procedure
-> is slightly different.) The results from the calculator are in figure
-> \#3.1.9. The is the weighted average.
->
-> **Figure \#3.1.7: TI-83/84 Calculator CALC Menu**
->
-> ![](media/image12.gif){width="2.75in" height="1.8611111111111112in"}
-
-**\
-**
-
-> **Figure \#3.1.8: TI-83/84 Calculator Input for Weighted Average**
->
-> ![](media/image24.png){width="2.7222222222222223in"
-> height="2.045893482064742in"}
->
-> **Figure \#3.1.9: TI-83/84 Calculator Results for Weighted Average**
->
-> ![](media/image25.png){width="2.6981178915135606in"
-> height="2.0277777777777777in"}
-
-The commands for finding the mean and median using R are as follows:
-
-> x\<-c(type in your data with commas in between)
->
-> w\<-c(type in your weights with commas in between
->
-> weighted.mean(x,w)
-
-So for this example, the commands would be
-
-> x\<-c(95, 83, 76, 84)
->
-> w\<-c(.15, .25, .25, .35)
+> w<-c(type in the weights with commas in between
 >
 > weighted.mean(x,w)
 >
-> \[1\] 83.4
+>The *x* and *w* represent the variables, <- means make the variables equivalent to what follows, the c( means combine all the values in the () as one combined variable.
+>
+>For this example, the commands would be
 
-**Example \#3.1.6: Weighted Average**
+```{r}
+x<-c(95, 83, 76, 84)
+w<-c(.15, .25, .25, .35)
+weighted.mean(x,w)
+```
+>Your weighted mean in the biology class is 83.4%. Using the traditional grading scale, you have a B in the class.
 
-> The faculty evaluation process at John Jingle University rates a
-> faculty member on the following activities: teaching, publishing,
-> committee service, community service, and submitting paperwork in a
-> timely manner. The process involves reviewing student evaluations,
-> peer evaluations, and supervisor evaluation for each teacher and
-> awarding him/her a score on a scale from 1 to 10 (with 10 being the
-> best). The weights for each activity are 20 for teaching, 18 for
-> publishing, 6 for committee service, 4 for community service, and 2
-> for paperwork.
+### Example: Weighted Average**
 
-a)  One faculty member had the following ratings: 8 for teaching, 9 for
-    publishing, 2 for committee work, 1 for community service, and 8 for
-    paperwork. Compute the weighted average of the evaluation.
+The faculty evaluation process at John Jingle University rates a faculty member on the following activities: teaching, publishing, committee service, community service, and submitting paperwork in a timely manner. The process involves reviewing student evaluations, peer evaluations, and supervisor evaluation for each teacher and awarding him/her a score on a scale from 1 to 10 (with 10 being the best). The weights for each activity are 20 for teaching, 18 for publishing, 6 for committee service, 4 for community service, and 2 for paperwork.
+
+a)  One faculty member had the following ratings: 8 for teaching, 9 for publishing, 2 for committee work, 1 for community service, and 8 for paperwork. Compute the weighted average of the evaluation.
 
 > **Solution:**
 >
-> Variable: *x* = rating
->
-> The weighted average is .
+> Variable: *x* = rating, *w* = weight
 
-b)  Another faculty member had ratings of 6 for teaching, 8 for
-    publishing, 9 for committee work, 10 for community service, and 10
-    for paperwork. Compute the weighted average of the evaluation.
+```{r}
+x<-c(8, 9, 2, 1, 8)
+w<-c(20, 18, 6, 4, 2)
+weighted.mean(x,w)
+```
+>
+> The weighted average is 7.08.
+
+b)  Another faculty member had ratings of 6 for teaching, 8 for publishing, 9 for committee work, 10 for community service, and 10 for paperwork. Compute the weighted average of the evaluation.
 
 > **Solution:**
+
+```{r}
+x<-c(6, 8, 9, 10, 10)
+w<-c(20, 18, 6, 4, 2)
+weighted.mean(x,w)
+```
+>
+> The weighted average for this employee is 7.56.
 
 c)  Which faculty member had the higher average evaluation?
 
@@ -404,686 +239,294 @@ c)  Which faculty member had the higher average evaluation?
 >
 > The second faculty member has a higher average evaluation.
 
-You can find a weighted average using technology. On the
-
 The last thing to mention is which average is used on which type of
 data.
 
-> Mode can be found on nominal, ordinal, interval, and ratio data, since
-> the mode is just the data value that occurs most often. You are just
-> counting the data values.
+> Mode can be found on nominal, ordinal, interval, and ratio data, since the mode is just the data value that occurs most often. You are just counting the data values.
+
+> Median can be found on ordinal, interval, and ratio data, since you need to put the data in order. As long as there is order to the data you can find the median.
+
+> Mean can be found on interval and ratio data, since you must have numbers to add together.
+
+### Homework Section 3.1
+** Use Technology on all problems. State the variable on all problems.**
+
+>1.  Cholesterol levels were collected from patients certain days after they had a heart attack  and are in table \#3.1.2. Find the mean and median for cholesterol levels 2 days after the heart attack.
 >
-> Median can be found on ordinal, interval, and ratio data, since you
-> need to put the data in order. As long as there is order to the data
-> you can find the median.
+>table \#3.1.2
+
+```{r}
+Cholesterol<-read.csv("https://krkozak.github.io/MAT160/cholesterol.csv")
+head(Cholesterol)
+```
 >
-> Mean can be found on interval and ratio data, since you must have
-> numbers to add together.
+>**Code book for Data Frame Cholesterol**
+>
+>**Description**
+> Cholesterol levels were collected from patients certain days after they had a heart attack 
+>
+> This data frame contains the following columns:
+>
+> Patient: Patient number
+>
+> day2: Cholesterol level of patient 2 days after heart attack. (mg/dL)
+>
+> day4: Cholesterol level of patient 4 days after heart attack. (mg/dL)
+>
+>day14: Cholesterol level of patient 14 days after heart attack. (mg/dL)
+>
+>**Source**
+>Ryan, B. F., Joiner, B. L., & Ryan, Jr, T. A. (1985). Cholesterol levels after heart attack.Retrieved from http://www.statsci.org/data/general/cholest.html
+>
+>**References**
+>Ryan, Joiner & Ryan, Jr, 1985
 
-### Homework
+>2.  The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table \#3.1.2 (Lee, 1994). Find the mean and median length of rivers that flow into the Pacific Ocean and the mean and median length of rivers that flow into the Tasman Sea.
+>
+> ** Table \#3.1.2: Lengths of Rivers (km) Flowing to Pacific Ocean**
 
-1.  Cholesterol levels were collected from patients two days after they     had a heart attack (Ryan, Joiner & Ryan, Jr, 1985) and are in table     \#3.1.7. Find the mean, median, and mode.
+```{r}
+Length<-read.csv("https://krkozak.github.io/MAT160/length.csv")
+head(Length)
+```
+>
+>**Code book for data frame Length**
+>
+>**Description**
+> Rivers in New Zealand, the lenths of river and what body of water the river flows into  
+>
+> This data frame contains the following columns:
+>
+> River: Name of the river
+>
+> length: how long the river is in kilometers
+>
+> flowsto: what body of water the river flows into Pacific Ocean is Pacific and the Tasman Sea is Tasman
+>
+>**Source**
+>Lee, A. (1994). Data analysis: An introduction based on r. Auckland. Retrieved from
+http://www.statsci.org/data/oz/nzrivers.html
+>
+>**References**
+>Lee, A. (1994). Data analysis: An introduction based on r. Auckland.
 
-> **Table \#3.1.7: Cholesterol Levels**
+>3.  Print-O-Matic printing company's employees have salaries that are contained in table \#3.1.3.
+>
+> **Table \#3.1.3: Salaries of Print-O-Matic Printing Company Employees**
 
-  270   236   210   142   280   272   160
-  ----- ----- ----- ----- ----- ----- -----
-  220   226   242   186   266   206   318
-  294   282   234   224   276   282   360
-  310   280   278   288   288   244   236
+```{r}
+Pay<-read.csv("https://krkozak.github.io/MAT160/pay.csv")
+head(Pay)
+```
+>
+>**Code book for data frame Pay**
+>
+>**Description**
+>   Salaries of Print-O-Matic printing company's employees
+>
+> This data frame contains the following columns:
+>
+> employee:memployees position in the company
+>
+> salary: salary of that employee
+>
+>**Source**
+>John Matic provided the data from a company he worked with. The company's name is fictitious, but the data is from an actual company.
+>
+>**References**
+>John Matic (2013)
+>
+>a.  Find the mean and median.
+>
+>b.  Find the mean and median with the CEO's salary removed.
+>
+>c.  What happened to the mean and median when the CEO's salary was removed? Why?
+>
+>d.  If you were the CEO, who is answering concerns from the union that employees are underpaid, which average of the complete data set would you prefer? Why?
+>
+>e.  If you were a platen worker, who believes that the employees need a raise, which average would you prefer? Why?
+>
 
-2.  The lengths (in kilometers) of rivers on the South Island of New
-    Zealand that flow to the Pacific Ocean are listed in table \#3.1.8
-    (Lee, 1994). Find the mean, median, and mode.
+>4.  Print-O-Matic printing company spends specific amounts on fixed costs every month. The costs of those fixed costs are in table \#3.1.4.
+> **Table \#3.1.4: Fixed Costs for Print-O-Matic Printing Company**
 
-> **Table \#3.1.8: Lengths of Rivers (km) Flowing to Pacific Ocean**
+```{r}
+Cost<-read.csv("https://krkozak.github.io/MAT160/cost.csv")
+head(Cost)
+```
+>**Code book for data frame Cost**
+>
+**Description**
+>   fixed monthly charges for Print-0-Matic printing company
+>
+> This data frame contains the following columns:
+>
+> charges: Categories of monthly fixed charges
+>
+> cost: fixed month costs
+>
+>**Source**
+>John Matic provided the data from a company he worked with. The company's name is fictitious, but the data is from an actual company.
+>
+>**References**
+>John Matic (2013)
+>
+>a.  Find the mean and median.
+>
+>b.  Find the mean and median with the bank charges removed.
+>
+>c.  What happened to the mean and median when the bank charges was removed? Why?
+>
+>d.  If it is your job to oversee the fixed costs, which average using the complete data set would you prefer to use when submitting a report to administration to show that costs are low? Why?
+>
+>e.  If it is your job to find places in the budget to reduce costs, which average using the complete data set would you prefer to use when submitting a report to administration to show that fixed costs need to be reduced? Why?
 
-  River         Length (km)   River       Length (km)
-  ------------- ------------- ----------- -------------
-  Clarence      209           Clutha      322
-  Conway        48            Taieri      288
-  Waiau         169           Shag        72
-  Hurunui       138           Kakanui     64
-  Waipara       64            Rangitata   121
-  Ashley        97            Ophi        80
-  Waimakariri   161           Pareora     56
-  Selwyn        95            Waihao      64
-  Rakaia        145           Waitaki     209
-  Ashburton     90                        
-
-3.  The lengths (in kilometers) of rivers on the South Island of New
-    Zealand that flow to the Tasman Sea are listed in table \#3.1.9
-    (Lee, 1994). Find the mean, median, and mode.
-
-> **Table \#3.1.9: Lengths of Rivers (km) Flowing to Tasman Sea**
-
-  River        Length (km)   River       Length (km)
-  ------------ ------------- ----------- -------------
-  Hollyford    76            Waimea      48
-  Cascade      64            Motueka     108
-  Arawhata     68            Takaka      72
-  Haast        64            Aorere      72
-  Karangarua   37            Heaphy      35
-  Cook         32            Karamea     80
-  Waiho        32            Mokihinui   56
-  Whataroa     51            Buller      177
-  Wanganui     56            Grey        121
-  Waitaha      40            Taramakau   80
-  Hokitika     64            Arahura     56
-
-4.  Eyeglassmatic manufactures eyeglasses for their retailers. They
-    research to see how many defective lenses they made during the time
-    period of January 1 to March 31. Table \#3.1.10 contains the defect
-    and the number of defects. Find the mean, median, and mode.
-
-> **Table \#3.1.10: Number of Defective Lenses**
-
-  Defect type              Number of defects
-  ------------------------ -------------------
-  Scratch                  5865
-  Right shaped -- small    4613
-  Flaked                   1992
-  Wrong axis               1838
-  Chamfer wrong            1596
-  Crazing, cracks          1546
-  Wrong shape              1485
-  Wrong PD                 1398
-  Spots and bubbles        1371
-  Wrong height             1130
-  Right shape -- big       1105
-  Lost in lab              976
-  Spots/bubble -- intern   976
-
-5.  Print-O-Matic printing company's employees have salaries that are
-    contained in table \#3.1.1.
-
-> **Table \#3.1.11: Salaries of Print-O-Matic Printing Company
-> Employees**
-
-  Employee                    Salary (\$)
-  --------------------------- -------------
-  CEO                         272,500
-  Driver                      58,456
-  CD74                        100,702
-  CD65                        57,380
-  Embellisher                 73,877
-  Folder                      65,270
-  GTO                         74,235
-  Handwork                    52,718
-  Horizon                     76,029
-  ITEK                        64,553
-  Mgmt                        108,448
-  Platens                     69,573
-  Polar                       75,526
-  Pre Press Manager           108,448
-  Pre Press Manager/ IT       98,837
-  Pre Press/ Graphic Artist   75,311
-  Designer                    90,090
-  Sales                       109,739
-  Administration              66,346
-
-a.  Find the mean and median.
-
-b.  Find the mean and median with the CEO's salary removed.
-
-c.  What happened to the mean and median when the CEO's salary was
-    removed? Why?
-
-d.  If you were the CEO, who is answering concerns from the union that
-    employees are underpaid, which average of the complete data set
-    would you prefer? Why?
-
-e.  If you were a platen worker, who believes that the employees need a
-    raise, which average would you prefer? Why?
-
-<!-- -->
-
-6.  Print-O-Matic printing company spends specific amounts on fixed
-    costs every month. The costs of those fixed costs are in table
-    \#3.1.12.
-
-> **Table \#3.1.12: Fixed Costs for Print-O-Matic Printing Company**
-
-  Monthly charges      Monthly cost (\$)
-  -------------------- -------------------
-  Bank charges         482
-  Cleaning             2208
-  Computer expensive   2471
-  Lease payments       2656
-  Postage              2117
-  Uniforms             2600
-
-a.  Find the mean and median.
-
-b.  Find the mean and median with the bank charges removed.
-
-c.  What happened to the mean and median when the bank charges was
-    removed? Why?
-
-d.  If it is your job to oversee the fixed costs, which average using
-    the complete data set would you prefer to use when submitting a
-    report to administration to show that costs are low? Why?
-
-e.  If it is your job to find places in the budget to reduce costs,
-    which average using the complete data set would you prefer to use
-    when submitting a report to administration to show that fixed costs
-    need to be reduced? Why?
-
-<!-- -->
-
-7.  State which type of measurement scale each represents, and then
-    which center measures can be use for the variable?
-
-<!-- -->
-
-a.  You collect data on people's likelihood (very likely, likely,
-    neutral, unlikely, very unlikely) to vote for a candidate.
-
-b.  You collect data on the diameter at breast height of trees in the
-    Coconino National Forest.
-
-c.  You collect data on the year wineries were started.
-
-d.  You collect the drink types that people in Sydney, Australia drink.
-
-<!-- -->
-
-8.  State which type of measurement scale each represents, and then
-    which center measures can be use for the variable?
-
-<!-- -->
-
-a.  You collect data on the height of plants using a new fertilizer.
-
-b.  You collect data on the cars that people drive in Campbelltown,
-    Australia.
-
-c.  You collect data on the temperature at different locations in
-    Antarctica.
-
-d.  You collect data on the first, second, and third winner in a beer
-    competition.
-
-<!-- -->
-
-9.  Looking at graph \#3.1.1, state if the graph is skewed left, skewed
-    right, or symmetric and then state which is larger, the mean or the
-    median?
-
+>5.  Looking at graph \#3.1.1, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?
+>
 > **Graph \#3.1.1: Skewed or Symmetric Graph**
->
-> ![](media/image29.png){width="5.013888888888889in"
-> height="3.013888888888889in"}
+![Graphs of symmetric, skewed right and skewed left](graph_3_1_1.png)
 
-10. Looking at graph \#3.1.2, state if the graph is skewed left, skewed
-    right, or symmetric and then state which is larger, the mean or the
-    median?
+>6. Looking at graph \#3.1.2, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?
 
 > **Graph \#3.1.2: Skewed or Symmetric Graph**
->
-> ![](media/image30.png){width="5.013888888888889in"
-> height="3.013888888888889in"}
+![Graphs of symmetric, skewed right and skewed left](graph_3_1_2.png)
 
-11. An employee at Coconino Community College (CCC) is evaluated based
-    on goal setting and accomplishments toward the goals, job
-    effectiveness, competencies, and CCC core values. Suppose for a
-    specific employee, goal 1 has a weight of 30%, goal 2 has a weight
-    of 20%, job effectiveness has a weight of 25%, competency 1 has a
-    goal of 4%, competency 2 has a goal has a weight of 3%, competency 3
-    has a weight of 3%, competency 4 has a weight of 3%, competency 5
-    has a weight of 2%, and core values has a weight of 10%. Suppose the
-    employee has scores of 3.0 for goal 1, 3.0 for goal 2, 2.0 for job
-    effectiveness, 3.0 for competency 1, 2.0 for competency 2, 2.0 for
-    competency 3, 3.0 for competency 4, 4.0 for competency 5, and 3.0
-    for core values. Find the weighted average score for this employee.
-    If an employee has a score less than 2.5, they must have a
-    Performance Enhancement Plan written. Does this employee need a
-    plan?
+>7. An employee at Coconino Community College (CCC) is evaluated based on goal setting and accomplishments toward the goals, job effectiveness, competencies, and CCC core values. Suppose for a specific employee, goal 1 has a weight of 30%, goal 2 has a weight of 20%, job effectiveness has a weight of 25%, competency 1 has a goal of 4%, competency 2 has a goal has a weight of 3%, competency 3 has a weight of 3%, competency 4 has a weight of 3%, competency 5 has a weight of 2%, and core values has a weight of 10%. Suppose the employee has scores of 3.0 for goal 1, 3.0 for goal 2, 2.0 for job effectiveness, 3.0 for competency 1, 2.0 for competency 2, 2.0 for competency 3, 3.0 for competency 4, 4.0 for competency 5, and 3.0 for core values. Find the weighted average score for this employee. If an employee has a score less than 2.5, they must have a Performance Enhancement Plan written. Does this employee need a plan?
 
-12. An employee at Coconino Community College (CCC) is evaluated based
-    on goal setting and accomplishments toward goals, job effectiveness,
-    competencies, CCC core values. Suppose for a specific employee, goal
-    1 has a weight of 20%, goal 2 has a weight of 20%, goal 3 has a
-    weight of 10%, job effectiveness has a weight of 25%, competency 1
-    has a goal of 4%, competency 2 has a goal has a weight of 3%,
-    competency 3 has a weight of 3%, competency 4 has a weight of 5%,
-    and core values has a weight of 10%. Suppose the employee has scores
-    of 2.0 for goal 1, 2.0 for goal 2, 4.0 for goal 3, 3.0 for job
-    effectiveness, 2.0 for competency 1, 3.0 for competency 2, 2.0 for
-    competency 3, 3.0 for competency 4, and 4.0 for core values. Find
-    the weighted average score for this employee. If an employee that
-    has a score less than 2.5, they must have a Performance Enhancement
-    Plan written. Does this employee need a plan?
+>8. An employee at Coconino Community College (CCC) is evaluated based on goal setting and accomplishments toward goals, job effectiveness, competencies, CCC core values. Suppose for a specific employee, goal 1 has a weight of 20%, goal 2 has a weight of 20%, goal 3 has a weight of 10%, job effectiveness has a weight of 25%, competency 1 has a goal of 4%, competency 2 has a goal has a weight of 3%, competency 3 has a weight of 3%, competency 4 has a weight of 5%, and core values has a weight of 10%. Suppose the employee has scores of 2.0 for goal 1, 2.0 for goal 2, 4.0 for goal 3, 3.0 for job effectiveness, 2.0 for competency 1, 3.0 for competency 2, 2.0 for competency 3, 3.0 for competency 4, and 4.0 for core values. Find the weighted average score for this employee. If an employee that has a score less than 2.5, they must have a Performance Enhancement Plan written. Does this employee need a plan?
 
-13. A statistics class has the following activities and weights for
-    determining a grade in the course: test 1 worth 15% of the grade,
-    test 2 worth 15% of the grade, test 3 worth 15% of the grade,
-    homework worth 10% of the grade, semester project worth 20% of the
-    grade, and the final exam worth 25% of the grade. If a student
-    receives an 85 on test 1, a 76 on test 2, an 83 on test 3, a 74 on
-    the homework, a 65 on the project, and a 79 on the final, what grade
-    did the student earn in the course?
+>9. A statistics class has the following activities and weights for determining a grade in the course: test 1 worth 15% of the grade, test 2 worth 15% of the grade, test 3 worth 15% of the grade, homework worth 10% of the grade, semester project worth 20% of the grade, and the final exam worth 25% of the grade. If a student receives an 85 on test 1, a 76 on test 2, an 83 on test 3, a 74 on the homework, a 65 on the project, and a 79 on the final, what grade did the student earn in the course?
 
-14. A statistics class has the following activities and weights for
-    determining a grade in the course: test 1 worth 15% of the grade,
-    test 2 worth 15% of the grade, test 3 worth 15% of the grade,
-    homework worth 10% of the grade, semester project worth 20% of the
-    grade, and the final exam worth 25% of the grade. If a student
-    receives a 92 on test 1, an 85 on test 2, a 95 on test 3, a 92 on
-    the homework, a 55 on the project, and an 83 on the final, what
-    grade did the student earn in the course?
-
-## Measures of Spread
-
-Variability is an important idea in statistics. If you were to measure the height of everyone in your classroom, every observation gives you a different value. That means not every student has the same height. Thus there is variability in people's heights. If you were to take a sample of the income level of people in a town, every sample gives you different information. There is variability between samples too. Variability describes how the data are spread out. If the data are very close to each other, then there is low variability. If the data are very spread out, then there is high variability. How do you measure variability? It would be good to have a number that measures it. This section will describe some of the different measures of variability, also known as variation.
-
-In example \#3.1.1, the average weight of a cat was calculated to be 8.02 pounds. How much does this tell you about the weight of all cats? Can you tell if most of the weights were close to 8.02 or were the weights really spread out? What are the highest weight and the lowest weight? All you know is that the center of the weights is 8.02 pounds.
-
-You need more information.
-
-The **range** of a set of data is the difference between the highest and the lowest data values (or maximum and minimum values).
-
-**Example \#3.2.1: Finding the Range**
-
-> Look at the following three sets of data. Find the range of each of
-> these.
-
-a)  10, 20, 30, 40, 50
-
-> **Solution:**
->
-> **Graph \#3.2.1: Dot Plot for Example \#3.2.1a**
->
-> ![](media/image32.png){width="2.5694444444444446in"
-> height="0.7083333333333334in"}
->
-> mean = 30, median = 30,
-
-b)  10, 29, 30, 31, 50
-
-> **Solution:**
->
-> **Graph \#3.2.2: Dot Plot for Example \#3.2.1b**
->
-> ![](media/image34.png){width="2.5416666666666665in"
-> height="0.5972222222222222in"}
->
-> mean = 30, median = 30,
-
-c)  28, 29, 30, 31, 32
-
-> **Solution:**
->
-> **Graph \#3.2.3: Dot Plot for Example \#3.2.1**
->
-> ![](media/image36.png){width="2.5694444444444446in"
-> height="0.6666666666666666in"}
->
-> mean = 30, median = 30,
->
-> Based on the mean, median, and range in example \#3.2.1, the first two
-> distributions are the same, but you can see from the graphs that they
-> are different. In example \#3.2.1a the data are spread out equally. In
-> example \#3.2.1b the data has a clump in the middle and a single value
-> at each end. The mean and median are the same for example \#3.2.1c but
-> the range is very different. All the data is clumped together in the
-> middle.
-
-The range doesn't really provide a very accurate picture of the
-variability. A better way to describe how the data is spread out is
-needed. Instead of looking at the distance the highest value is from the
-lowest how about looking at the distance each value is from the mean.
-This distance is called the **deviation**.
-
-**Example \#3.2.2: Finding the Deviations**
-
-> Suppose a vet wants to analyze the weights of cats. The weights (in
-> pounds) of five cats are 6.8, 8.2, 7.5, 9.4, and 8.2. Find the
-> deviation for each of the data values.
->
-> **Solution:**
-
-Variable: *x* = weight of a cat
-
-> The mean for this data set is .
->
-> **Table \#3.2.1: Deviations of Weights of Cats**
-
-  *x*   
-  ----- --------------------
-  6.8   6.8 -- 8.02 =
-  8.2   8.2 -- 8.02 = 0.18
-  7.5   7.5 -- 8.02 =
-  9.4   9.4 -- 8.02 = 1.38
-  8.2   8.2 -- 8.02 = 0.18
-
-> Now you might want to average the deviation, so you need to add the
-> deviations together.
->
-> **\
-> Table \#3.2.2: Sum of Deviations of Weights of Cats **
-
-  *x*     
-  ------- --------------------
-  6.8     6.8 -- 8.02 =
-  8.2     8.2 -- 8.02 = .018
-  7.5     7.5 -- 8.02 =
-  9.4     9.4 -- 8.02 = 1.38
-  8.2     8.2 -- 8.02 = 0.18
-  Total   0
-
-> This can't be right. The average distance from the mean cannot be 0.
-> The reason it adds to 0 is because there are some positive and
-> negative values. You need to get rid of the negative signs. How can
-> you do that? You could square each deviation.
->
-> **Table \#3.2.3: Squared Deviations of Weights of Cats**
-
-  *x*                          
-  ------- -------------------- --------
-  6.8     6.8 -- 8.02 =        1.4884
-  8.2     8.2 -- 8.02 = .018   0.0324
-  7.5     7.5 -- 8.02 =        0.2704
-  9.4     9.4 -- 8.02 = 1.38   1.9044
-  8.2     8.2 -- 8.02 = 0.18   0.0324
-  Total   0                    3.728
-
-> Now average the total of the squared deviations. The only thing is
-> that in statistics there is a strange average here. Instead of
-> dividing by the number of data values you divide by the number of data
-> values minus 1. In this case you would have
->
-> Notice that this is denoted as . This is called the variance and it is
-> a measure of the average squared distance from the mean. If you now
-> take the square root, you will get the average distance from the mean.
-> This is called the standard deviation, and is denoted with the letter
-> *s*.
-
-The standard deviation is the average (mean) distance from a data point
-to the mean. It can be thought of as how much a typical data point
-differs from the mean.
-
-The **sample variance** formula:
-
-where is the sample mean, *n* is the sample size, and means to find the
-sum
-
-The **sample standard deviation** formula:
-
-The on the bottom has to do with a concept called degrees of freedom.
-Basically, it makes the sample standard deviation a better approximation
-of the population standard deviation.
-
-The **population variance** formula:
-
-where is the Greek letter sigma and represents the population variance,
-is the population mean, and N is the size of the population.
-
-The **population standard deviation** formula:
-
-Note: the sum of the deviations should always be 0. If it isn't, then it
-is because you rounded, you used the median instead of the mean, or you
-made an error. Try not to round too much in the calculations for
-standard deviation since each rounding causes a slight error.
-
-**Example \#3.2.3: Finding the Standard Deviation**
-
-> Suppose that a manager wants to test two new training programs. He
-> randomly selects 5 people for each training type and measures the time
-> it takes to complete a task after the training. The times for both
-> trainings are in table \#3.2.4. Which training method is better?
->
-> **Table \#3.2.4: Time to Finish Task in Minutes**
-
-  Training 1   56   75   48   63   59
-  ------------ ---- ---- ---- ---- ----
-  Training 2   60   58   66   59   58
-
-> **Solution:**
->
-> It is important that you define what each variable is since there are
-> two of them.
->
-> Variable 1: = productivity from training 1
->
-> Variable 2: = productivity from training 2
->
-> To answer which training method better, first you need some
-> descriptive statistics. Start with the mean for each sample.
->
-> Since both means are the same values, you cannot answer the question
-> about which is better. Now calculate the standard deviation for each
-> sample.
->
-> **Table \#3.2.5: Squared Deviations for Training 1**
-
-  ------- ------ --------
-  56             17.64
-  75      14.8   219.04
-  48             148.84
-  63      2.8    7.84
-  59             1.44
-  Total   0      394.8
-  ------- ------ --------
-
-> **Table \#3.2.6: Squared Deviations for Training 2**
-
-  ------- ----- -------
-  60            0.04
-  58            4.84
-  66      5.8   33.64
-  59            1.44
-  58            4.84
-  Total   0     44.8
-  ------- ----- -------
-
-> The variance for each sample is:
->
-> The standard deviations are:
->
-> From the standard deviations, the second training seemed to be the
-> better training since the data is less spread out. This means it is
-> more consistent. It would be better for the managers in this case to
-> have a training program that produces more consistent results so they
-> know what to expect for the time it takes to complete the task.
-
-You can do the calculations for the descriptive statistics using the
-technology. The procedure for calculating the sample mean () and the
-sample standard deviation () for in example \#3.2.3 on the TI-83/84 is
-in figures 3.2.1 through 3.2.4 (the procedure is the same for ). Note
-the calculator gives you the population standard deviation () because it
-doesn't know whether the data you input is a population or a sample. You
-need to decide which value you need to use, based on whether you have a
-population or sample. In almost all cases you have a sample and will be
-using . Also, the calculator uses the notation of instead of just *s*.
-It is just a way for it to denote the information. First you need to go
-into the STAT menu, and then Edit. This will allow you to type in your
-data (see figure \#3.2.1).
-
-> **Figure \#3.2.1: TI-83/84 Calculator Edit Setup**
->
-> ![](media/image90.gif){width="2.75in" height="1.8611111111111112in"}
-
-Once you have the data into the calculator, you then go back to the STAT
-menu, move over to CALC, and then choose 1-Var Stats (see figure
-\#3.2.2). The calculator will now put 1-Var Stats on the main screen.
-Now type in L2 (2nd button and 2) and then press ENTER. (Note if you
-have the newer operating system on the TI-84, then the procedure is
-slightly different.) The results from the calculator are in figure
-\#3.2.4.
-
-> **Figure \#3.2.2: TI-83/84 Calculator CALC Menu**
->
-> ![](media/image12.gif){width="2.75in" height="1.8611111111111112in"}
+>10. A statistics class has the following activities and weights for determining a grade in the course: test 1 worth 15% of the grade, test 2 worth 15% of the grade, test 3 worth 15% of the grade, homework worth 10% of the grade, semester project worth 20% of the grade, and the final exam worth 25% of the grade. If a student receives a 92 on test 1, an 85 on test 2, a 95 on test 3, a 92 on the homework, a 55 on the project, and an 83 on the final, what grade did the student earn in the course?
 
 **\
 **
 
-> **Figure \#3.2.3: TI-83/84 Calculator Input for Example \#3.2.3
-> Variable **
->
-> ![](media/image92.png){width="2.75in" height="1.8611111111111112in"}
->
-> **Figure \#3.2.4: TI-83/84 Calculator Results for Example \#3.2.3
-> Variable **
->
-> ![](media/image94.gif){width="2.75in" height="1.8611111111111112in"}
+## Measures of Spread
 
-The processes for finding the mean, median, range, standard deviation,
-and variance on R are as follows:
+> Variability is an important idea in statistics. If you were to measure the height of everyone in your classroom, every observation gives you a different value. That means not every student has the same height. Thus there is variability in people's heights. If you were to take a sample of the income level of people in a town, every sample gives you different information. There is variability between samples too. Variability describes how the data are spread out. If the data are very close to each other, then there is low variability. If the data are very spread out, then there is high variability. How do you measure variability? It would be good to have a number that measures it. This section will describe some of the different measures of variability, also known as variation.
 
-> variable\<-c(type in your data)
->
-> To find the mean, use mean(variable)
->
-> To find the median, use median(variable)
->
-> To find the range, use range(variable). Then find maximum -- minimum.
->
-> To find the standard deviation, use sd(variable)
->
-> To find the variance, use var(variable)
+> In example \#3.1.1, the average weight of a cat was calculated to be 2.72 kg. How much does this tell you about the weight of all cats? Can you tell if most of the weights were close to 2.72 kg or were the weights really spread out? The highest weight and the lowest weight are known, but is there more that you can tell? All you know is that the center of the weights is 2.72 kg.
 
-For the second data set in example \#3.2.3, the commands and results
-would be
+You need more information.
 
-> productivity\_2\<-c(60, 58, 66, 59, 58)
->
-> mean(productivity\_2)
->
-> \[1\] 60.2
->
-> median(productivity\_2)
->
-> \[1\] 59
->
-> range(productivity\_2)
->
-> \[1\] 58 66
->
-> sd(productivity\_2)
->
-> \[1\] 3.34664
->
-> var(productivity\_2)
->
-> \[1\] 11.2
+> The **range** of a set of data is the difference between the highest and the lowest data values (or maximum and minimum values).
 
-In general a "small" standard deviation means the data is close together
-(more consistent) and a "large" standard deviation means the data is
+### Example: Range**
+
+From example #3.1.2, the maximum is 3.9 kg and the minimum is 2 kg. So the range is $3.9-2=1.9 kg$. But what does that tell you? You don't know if the weights are really spread out, or if they are close together. 
+
+Unfortunately, range doesn't really provide a very accurate picture of the variability. A better way to describe how the data is spread out is needed. Instead of looking at the distance the highest value is from the lowest how about looking at the distance each value is from the mean. This distance is called the **deviation**. You might want to find the average of the deviation. Though the calculation for finding the average deviation is not very straight forward, you end up with a value called the ** variance **. The symbol for the population variance is $\sigma^2$, and it is the average squared distance from the mean. Statisticians like the variance, but many other people who work with statistics use a descriptive statistics which is the square root of the variance. This gives you the average distance from the mean. This is called the standard deviation, and is denoted with the letter *s*.
+
+> The standard deviation is the average (mean) distance from a data point
+to the mean. It can be thought of as how much a typical data point
+differs from the mean.
+>
+> The **sample variance** formula:
+$s^2=\frac{\sum\left(x-\bar{x}\right)^2}{n-1}$, where $\bar{x}$ is the sample mean, *n* is the sample size, and \sum{}$ means to find the sum of the data.
+>
+> The **sample standard deviation** formula:
+$s=\sqrt{ \frac{\sum\left(x-\bar{x}\right)^2}{n-1}}$, the $n-1$ on the bottom has to do with a concept called degrees of freedom. Basically, it makes the sample standard deviation a better approximation of the population standard deviation.
+>
+> The **population variance** formula:
+$\sigma^2 = \frac{\sum\left(x-\mu \right)^2}{N}$, where $\sigma$ is the Greek letter sigma and represents the population variance,
+$\mu$ is the population mean, and N is the size of the population.
+>
+> The **population standard deviation** formula:
+$\sigma =\sqrt{ \frac{\sum\left(x-\mu \right)^2}{N}}$
+>
+> Both the sample variance and sample standard deviation can be found using technology. If using R Studio, you would use df_stats(~variable, data=data frame, var, sd).
+
+The next example will demonstrate this command.
+
+### Example: Finding the Standard Deviation**
+
+For the data frame *Cats* from example \#3.2.1, find the variance and standard derivation for weight of cats. Then find the variance and standard deviation separated by sex of the cat.
+
+> **Solution:**
+>The variance and standard deviation for all cats is found by performing the command:
+
+```{r}
+df_stats(~Bwt, data=cats, var, sd)
+```
+>The variance for all cats is 0.24 $kg^2$ and the standard deviation is -.49 kg.
+>
+>To find out the mean, variance, and standard deviation for each sex of the cats, use the command:
+
+```{r}
+df_stats(Bwt~Sex, data=cats, mean, var, sd)
+```
+> You can see that the mean weight of females cats is 2.36 kg, the variance is 0.075 $kg^2$, and the standard deviation is 0.27 kg. For males cats, the mean is 2.9 kg, the variance is 0.22 $kg^2$, and the standard deviation is 0.47 kg. This means that female cats weigh less than males and since the variance and standard deviations are much less for female cats than males cats, female cats' weights are more consistent than male cats. 
+
+In general a "small" variance and standard deviation means the data is close together
+(more consistent) and a "large" variance and standard deviation means the data is
 spread out (less consistent). Sometimes you want consistent data and
 sometimes you don't. As an example if you are making bolts, you want to
 lengths to be very consistent so you want a small standard deviation. If
 you are administering a test to see who can be a pilot, you want a large
 standard deviation so you can tell who are the good pilots and who are
-the bad ones.
+the not so good pilots.
 
 What do "small" and "large" mean? To a bicyclist whose average speed is
 20 mph, *s* = 20 mph is huge. To an airplane whose average speed is 500
 mph, *s* = 20 mph is nothing. The "size" of the variation depends on the
 size of the numbers in the problem and the mean. Another situation where
 you can determine whether a standard deviation is small or large is when
-you are comparing two different samples such as in example \#3.2.3. A
+you are comparing two different samples such as in example \#3.2.2. A
 sample with a smaller standard deviation is more consistent than a
 sample with a larger standard deviation.
 
-Many other books and authors stress that there is a computational
-formula for calculating the standard deviation. However, this formula
-doesn't give you an idea of what standard deviation is and what you are
-doing. It is only good for doing the calculations quickly. It goes back
-to the days when standard deviations were calculated by hand, and the
-person needed a quick way to calculate the standard deviation. It is an
-archaic formula that this author is trying to eradicate it. It is not
-necessary anymore, since most calculators and computers will do the
-calculations for you with as much meaning as this formula gives. It is
-suggested that you never use it. If you want to understand what the
-standard deviation is doing, then you should use the definition formula.
-If you want an answer quickly, use a computer or calculator.
+>Many other books and authors stress that there is a computational formula for calculating the standard deviation. However, this formula doesn't give you an idea of what standard deviation is and what you are doing. It is only good for doing the calculations quickly. It goes back to the days when standard deviations were calculated by hand, and the person needed a quick way to calculate the standard deviation. It is an archaic formula that this author is trying to eradicate. It is not necessary anymore, computers will do the calculations for you with as much meaning as this formula gives. It is suggested that you never use it. If you want to understand what the standard deviation is doing, then you should use the definition formula. If you want an answer quickly, use a computer.
 
 **Use of Standard Deviation**
 
-One of the uses of the standard deviation is to describe how a
-population is distributed by using Chebyshev's Theorem. This theorem
-works for any distribution, whether it is skewed, symmetric, bimodal, or
-any other shape. It gives you an idea of how much data is a certain
-distance on either side of the mean.
+One of the uses of the standard deviation is to describe how a population is distributed. This describes where much of the data is for most distributions. A general rule is that about 95% of the data is within 2 standard deviations of the mean. This is not perfect, but is works for many distributions. There are rules like the empirical rule and Chebyshev's theorem that give you more detailed percentages, but 95% in 2 standard deviations is a very good approximation.
 
-Chebyshev's Theorem
+### Example: the gneral rule**
 
-For [any]{.underline} set of data:
+The U.S. Weather Service has provided the information in table \#3.2.1 about the total monthly/annual number of reported tornadoes in Oklahoma for the years 1950 to 2018. (US Department of Commerce & Noaa, 2016)
 
-At least 75% of the data fall in the interval from.
+**Table \#3.2.1: Monthyl/Annual Number of tornadoes in Oklahoma**
 
-At least 88.9% of the data fall in the interval from.
+```{r}
+Tornado<-read.csv("https://krkozak.github.io/MAT160/Tornado_OK.csv")
+head(Tornado)
+```
+**Code book for data frame Pulse**
 
-At least 93.8% of the data fall in the interval from.
+**Description**
+The U.S. Weather Service has collected data on the monthly and annual number of tornadoes in Oklahoma.
 
-**Example \#3.2.4: Using Chebyshev's Theorem**
+This data frame contains the following columns:
 
-> The U.S. Weather Bureau has provided the information in table \#3.2.7
-> about the total annual number of reported strong to violent (F3+)
-> tornados in the United States for the years 1954 to 2012. (\"U.S.
-> tornado climatology,\" 17)
->
-> **Table \#3.2.7: Annual Number of Violent Tornados in the U.S.**
+Year: Year from 1950-2018
 
-  46   47   31   41    24   56   56   23   31   59
-  ---- ---- ---- ----- ---- ---- ---- ---- ---- ----
-  39   70   73   85    33   38   45   39   35   22
-  51   39   51   131   37   24   57   42   28   45
-  98   35   54   45    30   15   35   64   21   84
-  40   51   44   62    65   27   34   23   32   28
-  41   98   82   47    62   21   31   29   32   
+Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec: Tornado numbers in each moth of the year
 
-a.  Use Chebyshev's theorem to find an interval centered about the mean
-    annual number of strong to violent (F3+) tornados in which you would
-    expect at least 75% of the years to fall.
+Annual: Total number of tornadoes for each year
+
+**Source**
+US Department of Commerce, & Noaa. (2016, November 15). 1950 Oklahoma Tornadoes. Retrieved from https://www.weather.gov/oun/tornadodata-ok-1950
+
+**References**
+The data was supplied by The U.S. Weather Service
+
+Find the general interval that contains about 95% of the data.
 
 > **Solution:**
 >
-> Variable: *x* = number of strong or violent (F3+) tornadoes
+> Variable: *x* = number of annual tornadoes in Oklahoma
 >
-> Chebyshev's theorem says that at least 75% of the data will fall in
-> the interval from to .
->
-> You do not have the population, so you need to estimate the population
-> mean and standard deviation using the sample mean and standard
-> deviation. You can find the sample mean and standard deviation using
-> technology:
->
-> .
->
-> Since you can't have fractional number of tornados, round to the
-> nearest whole number.
->
-> At least 75% of the years have between 2 and 91 strong to violent
-> (F3+) tornados.
->
-> (Actually, all but three years' values fall in this interval, that
-> means that actually fall in the interval.)
+> Find the mean and standard deviation:
 
-b.  Use Chebyshev's theorem to find an interval centered about the mean
-    annual number of strong to violent (F3+) tornados in which you would
-    expect at least 88.9% of the years to fall.
+```{r}
+df_stats(~Annual, data=Tornado, mean, sd)
+```
+> The mean is $\mu=56$ tornadoes and the standard deviation is $\sigma=27.6$ tornadoes. The interval will be $\mu\pm2*\sigma=56\pm2*27.6=(0.8,111.2)$
+>
+> About 95% of the years have between 0.8 or 1 and 111 tornadoes in Oklahoma.
 
-> **Solution:**
->
-> Variable: *x* = number of strong or violent (F3+) tornadoes
->
-> Chebyshev's theorem says that at least 88.9% of the data will fall in
-> the interval from to .
->
-> Since you can't have negative number of tornados, the lower limit is
-> actually 0. Since you can't have fractional number of tornados, round
-> to the nearest whole number.
->
-> At least 88.9% of the years have between 0 and 113 strong to violent
-> (F3+) tornados.
->
-> (Actually, all but one year falls in this interval, that means that
-> actually fall in the interval.)
-
-Chebyshev's Theorem says that at least 75% of the data is within two
+The general rule says that about 95% of the data is within two
 standard deviations of the mean. That percentage is fairly high. There
 isn't much data outside two standard deviations. A rule that can be
 followed is that if a data value is within two standard deviations, then
@@ -1094,388 +537,210 @@ you can do to figure it out is to find the difference between the data
 point and the mean, and then divide that answer by the standard
 deviation. As a formula this would be
 
-.
+$z=\frac{x-\mu}{\sigma}$
 
-If you don't know the population mean, , and the population standard
-deviation, , then use the sample mean, , and the sample standard
-deviation, *s*, to estimate the population parameter values. However,
-realize that using the sample standard deviation may not actually be
-very accurate.
+If you don't know the population mean, $\mu$, and the population standard
+deviation, $\sigma$, then use the sample mean, $\bar{x}$, and the sample standard
+deviation, *s*, to estimate the population parameter values. Realize that using the sample standard deviation may not actually be very accurate.
 
-**Example \#3.2.5: Determining If a Value Is Unusual**
+### Example: Determining If a Value Is Unusual**
 
-a.  In 1974, there were 131 strong or violent (F3+) tornados in the
-    United States. Is this value unusual? Why or why not?
+a.  In 1974, there were 45 tornadoes in Oklahoma. Is this value unusual? Why or why not?
 
 > **Solution:**
 >
-> Variable: *x* = number of strong or violent (F3+) tornadoes
+> Variable: *x* = number of tornadoes in Oklahoma
 >
-> To answer this question, first find how many standard deviations 131
-> is from the mean. From example \#3.2.4, we know and . For *x* = 131,
+> To answer this question, first find how many standard deviations 45 is from the mean. From example \#3.2.3, we know $\mu=56$ and $\sigma=27.6$. For *x*=45, $z=\frac{45-56}{27.6}=-0.399$
 >
-> Since this value is more than 2, then it is unusual to have 131 strong
-> or violent (F3+) tornados in a year.
+> Since this value is between -2 and 2, then it is not unusual to have 45 tornadoes in a year in Oklahoma. The z vlaue is negative, so that means that 45 is less than the mean number of tornadoes.
 
-b.  In 1987, there were 15 strong or violent (F3+) tornados in the
-    United States. Is this value unusual? Why or why not?
+b.  In 1999, there were 145 tornadoes in the Oklahoma. Is this value unusual? Why or why not?
 
 > **Solution:**
 >
-> Variable: *x* = number of strong or violent (F3+) tornadoes
+> Variable: *x* = number of tornadoes in Oklahoma
 >
-> For this question the *x* = 15,
+> For this question the *x* = 145, $z=\frac{145-56}{27.6}=3.22$
 >
-> Since this value is between and 2, then it is not unusual to have only
-> 15 strong or violent (F3+) tornados in a year.
-
-### Homework
-
-1.  Cholesterol levels were collected from patients two days after they
-    had a heart attack (Ryan, Joiner & Ryan, Jr, 1985) and are in table
-    \#3.2.8.
-
-> **Table \#3.2.8: Cholesterol Levels**
-
-  270   236   210   142   280   272   160
-  ----- ----- ----- ----- ----- ----- -----
-  220   226   242   186   266   206   318
-  294   282   234   224   276   282   360
-  310   280   278   288   288   244   236
-
-> Find the mean, median, range, variance, and standard deviation using
-> technology.
-
-2.  The lengths (in kilometers) of rivers on the South Island of New
-    Zealand that flow to the Pacific Ocean are listed in table \#3.2.9
-    (Lee, 1994).
-
-> **Table \#3.2.9: Lengths of Rivers (km) Flowing to Pacific Ocean**
-
-  River         Length (km)   River       Length (km)
-  ------------- ------------- ----------- -------------
-  Clarence      209           Clutha      322
-  Conway        48            Taieri      288
-  Waiau         169           Shag        72
-  Hurunui       138           Kakanui     64
-  Waipara       64            Waitaki     209
-  Ashley        97            Waihao      64
-  Waimakariri   161           Pareora     56
-  Selwyn        95            Rangitata   121
-  Rakaia        145           Ophi        80
-  Ashburton     90                        
-
-a.  Find the mean and median.
-
-b.  Find the range.
-
-c.  Find the variance and standard deviation.
-
-<!-- -->
-
-3.  The lengths (in kilometers) of rivers on the South Island of New
-    Zealand that flow to the Tasman Sea are listed in table \#3.2.10
-    (Lee, 1994).
-
-> **Table \#3.2.10: Lengths of Rivers (km) Flowing to Tasman Sea**
-
-  River        Length (km)   River       Length (km)
-  ------------ ------------- ----------- -------------
-  Hollyford    76            Waimea      48
-  Cascade      64            Motueka     108
-  Arawhata     68            Takaka      72
-  Haast        64            Aorere      72
-  Karangarua   37            Heaphy      35
-  Cook         32            Karamea     80
-  Waiho        32            Mokihinui   56
-  Whataroa     51            Buller      177
-  Wanganui     56            Grey        121
-  Waitaha      40            Taramakau   80
-  Hokitika     64            Arahura     56
-
-a.  Find the mean and median.
-
-b.  Find the range.
-
-c.  Find the variance and standard deviation.
-
-<!-- -->
-
-4.  Eyeglassmatic manufactures eyeglasses for their retailers. They test
-    to see how many defective lenses they made the time period of
-    January 1 to March 31. Table \#3.2.11 gives the defect and the
-    number of defects.
-
-> **Table \#3.2.11: Number of Defective Lenses**
-
-  Defect type              Number of defects
-  ------------------------ -------------------
-  Scratch                  5865
-  Right shaped -- small    4613
-  Flaked                   1992
-  Wrong axis               1838
-  Chamfer wrong            1596
-  Crazing, cracks          1546
-  Wrong shape              1485
-  Wrong PD                 1398
-  Spots and bubbles        1371
-  Wrong height             1130
-  Right shape -- big       1105
-  Lost in lab              976
-  Spots/bubble -- intern   976
-
-a.  Find the mean and median.
-
-b.  Find the range.
-
-c.  Find the variance and standard deviation.
-
-<!-- -->
-
-5.  Print-O-Matic printing company's employees have salaries that are
-    contained in table \#3.2.12.
-
-> **Table \#3.2.12: Salaries of Print-O-Matic Printing Company
-> Employees**
-
-  Employee                    Salary (\$)   Employee         Salary (\$)
-  --------------------------- ------------- ---------------- -------------
-  CEO                         272,500       Administration   66,346
-  Driver                      58,456        Sales            109,739
-  CD74                        100,702       Designer         90,090
-  CD65                        57,380        Platens          69,573
-  Embellisher                 73,877        Polar            75,526
-  Folder                      65,270        ITEK             64,553
-  GTO                         74,235        Mgmt             108,448
-  Pre Press Manager           108,448       Handwork         52,718
-  Pre Press Manager/ IT       98,837        Horizon          76,029
-  Pre Press/ Graphic Artist   75,311                         
-
-> Find the mean, median, range, variance, and standard deviation using
-> technology.
-
-6.  Print-O-Matic printing company spends specific amounts on fixed
-    costs every month. The costs of those fixed costs are in table
-    \#3.2.13.
-
-> **Table \#3.2.13: Fixed Costs for Print-O-Matic Printing Company**
-
-  Monthly charges      Monthly cost (\$)
-  -------------------- -------------------
-  Bank charges         482
-  Cleaning             2208
-  Computer expensive   2471
-  Lease payments       2656
-  Postage              2117
-  Uniforms             2600
-
-a.  Find the mean and median.
-
-b.  Find the range.
-
-c.  Find the variance and standard deviation.
-
-<!-- -->
-
-7.  Compare the two data sets in problems 2 and 3 using the mean and
-    standard deviation. Discuss which mean is higher and which has a
-    larger spread of the data.
-
-8.  Table \#3.2.14 contains pulse rates collected from males, who are
-    non-smokers but do drink alcohol (\"Pulse rates before,\" 2013). The
-    before pulse rate is before they exercised, and the after pulse rate
-    was taken after the subject ran in place for one minute.
-
-> **Table \#3.2.14: Pulse Rates of Males Before and After Exercise**
-
-  Pulse before   Pulse after   Pulse before   Pulse after
-  -------------- ------------- -------------- -------------
-  76             88            59             92
-  56             110           60             104
-  64             126           65             82
-  50             90            76             150
-  49             83            145            155
-  68             136           84             140
-  68             125           78             141
-  88             150           85             131
-  80             146           78             132
-  78             168                          
-
-> Compare the two data sets using the mean and standard deviation.
-> Discuss which mean is higher and which has a larger spread of the
-> data.
-
-9.  Table \#3.2.15 contains pulse rates collected from females, who are
-    non-smokers but do drink alcohol (\"Pulse rates before,\" 2013). The
-    before pulse rate is before they exercised, and the after pulse rate
-    was taken after the subject ran in place for one minute.
-
-> **Table \#3.2.15: Pulse Rates of Females Before and After Exercise**
-
-  Pulse before   Pulse after   Pulse before   Pulse after
-  -------------- ------------- -------------- -------------
-  96             176           92             120
-  82             150           70             96
-  86             150           75             130
-  72             115           70             119
-  78             129           70             95
-  90             160           68             84
-  88             120           47             136
-  71             125           64             120
-  66             89            70             98
-  76             132           74             168
-  70             120           85             130
-
-> Compare the two data sets using the mean and standard deviation.
-> Discuss which mean is higher and which has a larger spread of the
-> data.
-
-10. To determine if Reiki is an effective method for treating pain, a
-    pilot study was carried out where a certified second-degree Reiki
-    therapist provided treatment on volunteers. Pain was measured using
-    a visual analogue scale (VAS) immediately before and after the Reiki
-    treatment (Olson & Hanson, 1997) and the data is in table \#3.2.16.
-
-> **Table \#3.2.16: Pain Measurements Before and After Reiki Treatment**
-
-  VAS before   VAS after   VAS before   VAS after
-  ------------ ----------- ------------ -----------
-  6            3           5            1
-  2            1           1            0
-  2            0           6            4
-  9            1           6            1
-  3            0           4            4
-  3            2           4            1
-  4            1           7            6
-  5            2           2            1
-  2            2           4            3
-  3            0           8            8
-
-> Compare the two data sets using the mean and standard deviation.
-> Discuss which mean is higher and which has a larger spread of the
-> data.
-
-11. Table \#3.2.17 contains data collected on the time it takes in
-    seconds of each passage of play in a game of rugby. (\"Time of
-    passages,\" 2013)
-
-> **Table \#3.2.17: Times (in seconds) of rugby plays**
-
-  39.2   2.7    9.2    14.6   1.9    17.8   15.5   53.8   17.5   27.5
-  ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
-  4.8    8.6    22.1   29.8   10.4   9.8    27.7   32.7   32     34.3
-  29.1   6.5    2.8    10.8   9.2    12.9   7.1    23.8   7.6    36.4
-  35.6   28.4   37.2   16.8   21.2   14.7   44.5   24.7   36.2   20.9
-  19.9   24.4   7.9    2.8    2.7    3.9    14.1   28.4   45.5   38
-  18.5   8.3    56.2   10.2   5.5    2.5    46.8   23.1   9.2    10.3
-  10.2   22     28.5   24     17.3   12.7   15.5   4      5.6    3.8
-  21.6   49.3   52.4   50.1   30.5   37.2   15     38.7   3.1    11
-  10     5      48.8   3.6    12.6   9.9    58.6   37.9   19.4   29.2
-  12.3   39.2   22.2   39.7   6.4    2.5    34                   
-
-a.  Using technology, find the mean and standard deviation.
-
-b.  Use Chebyshev's theorem to find an interval centered about the mean
-    times of each passage of play in the game of rugby in which you
-    would expect at least 75% of the times to fall.
-
-<!-- -->
-
-c.  Use Chebyshev's theorem to find an interval centered about the mean
-    times of each passage of play in the game of rugby in which you
-    would expect at least 88.9% of the times to fall.
-
-<!-- -->
-
-12. Yearly rainfall amounts (in millimeters) in Sydney, Australia, are
-    in table \#3.2.18 (\"Annual maximums of,\" 2013).
-
-> **Table \#3.2.18: Yearly Rainfall Amounts in Sydney, Australia**
-
-  146.8   383     90.9    178.1   267.5   95.5    156.5   180
-  ------- ------- ------- ------- ------- ------- ------- -------
-  90.9    139.7   200.2   171.7   187.2   184.9   70.1    58
-  84.1    55.6    133.1   271.8   135.9   71.9    99.4    110.6
-  47.5    97.8    122.7   58.4    154.4   173.7   118.8   88
-  84.6    171.5   254.3   185.9   137.2   138.9   96.2    85
-  45.2    74.7    264.9   113.8   133.4   68.1    156.4   
-
-a.  Using technology, find the mean and standard deviation.
-
-b.  Use Chebyshev's theorem to find an interval centered about the mean
-    yearly rainfall amounts in Sydney, Australia, in which you would
-    expect at least 75% of the amounts to fall.
-
-c.  Use Chebyshev's theorem to find an interval centered about the mean
-    yearly rainfall amounts in Sydney, Australia, in which you would
-    expect at least 88.9% of the amounts to fall.
-
-<!-- -->
-
-13. The number of deaths attributed to UV radiation in African countries
-    in the year 2002 is given in table \#3.2.19 (\"UV radiation:
-    Burden,\" 2013).
-
-> **Table \#3.2.19: Number of Deaths from UV Radiation**
-
-  50     84    31    338   6     504   40    7     58
-  ------ ----- ----- ----- ----- ----- ----- ----- ----
-  204    15    27    39    1     45    174   98    94
-  199    9     27    58    356   5     45    5     94
-  26     171   13    57    138   39    3     171   41
-  1177   102   123   433   35    40    456   125   
-
-a.  Using technology, find the mean and standard deviation.
-
-b.  Use Chebyshev's theorem to find an interval centered about the mean
-    number of deaths from UV radiation in which you would expect at
-    least 75% of the numbers to fall.
-
-c.  Use Chebyshev's theorem to find an interval centered about the mean
-    number of deaths from UV radiation in which you would expect at
-    least 88.9% of the numbers to fall.
-
-<!-- -->
-
-14. The time (in 1/50 seconds) between successive pulses along a nerve
-    fiber (\"Time between nerve,\" 2013) are given in table \#3.2.20.
-
-> **Table 3.2.20: Time (in 1/50 seconds) Between Successive Pulses**
-
-  10.5   1.5    2.5   5.5    29.5   3     9     27.5   18.5   4.5
-  ------ ------ ----- ------ ------ ----- ----- ------ ------ -----
-  7      9.5    1     7      4.5    2.5   7.5   11.5   7.5    4
-  12     8      3     5.5    7.5    4.5   1.5   10.5   1      7
-  12     14.5   8     3.5    3.5    2     1     7.5    6      13
-  7.5    16.5   3     25.5   5.5    14    18    7      27.5   14
-
-a.  Using technology, find the mean and standard deviation.
-
-b.  Use Chebyshev's theorem to find an interval centered about the mean
-    time between successive pulses along a nerve fiber in which you
-    would expect at least 75% of the times to fall.
-
-c.  Use Chebyshev's theorem to find an interval centered about the mean
-    time between successive pulses along a nerve fiber in which you
-    would expect at least 88.9% of the times to fall.
-
-<!-- -->
-
-15. Suppose a passage of play in a rugby game takes 75.1 seconds. Would
-    it be unusual for this to happen? Use the mean and standard
-    deviation that you calculated in problem 11.
-
-16. Suppose Sydney, Australia received 300 mm of rainfall in a year.
-    Would this be unusual? Use the mean and standard deviation that you
-    calculated in problem 12.
-
-17. Suppose in a given year there were 2257 deaths attributed to UV
-    radiation in an African country. Is this value unusual? Use the mean
-    and standard deviation that you calculated in problem 13.
-
-18. Suppose it only takes 2 (1/50 seconds) for successive pulses along a
-    nerve fiber. Is this value unusual? Use the mean and standard
-    deviation that you calculated in problem 14.
+> Since this value is more than 2, then it is unusual to have only 145 tornadoes in a year in Oklahoma.
+
+### Homework Section 3.2
+**Use Technology on all problems. State the variable on all problems.**
+
+>1. Cholesterol levels were collected from patients certain days after they had a heart attack and are in table \#3.2.2. Find the mean, median, range, variance, and standard deviation for cholesterol levels 2 days after the heart attack.
+>
+> **table \#3.3.2: Cholesterol Levels of Patients After Heart Attack**
+
+```{r}
+Cholesterol<-read.csv("https://krkozak.github.io/MAT160/cholesterol.csv")
+head(Cholesterol)
+```
+
+>**Code book for Data Frame Cholesterol** See problem 3.1.1 in Section 3.1 homework.
+
+>2.  The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table \#3.1.2 (Lee, 1994). Find the mean, median, range, variance, and standard deviation of the length of rivers that flow into the Pacific Ocean and the mean, median, range, variance, and standard deviation of the length of rivers that flow into the Tasman Sea. Compare and contrast the length of rivers that flow to the Pacific Ocean versus the ones that flow into the Tasman Sea using both measures of spread and measures of variability.
+>
+> **Table \#3.3.3: Lengths of Rivers (km) Flowing to Pacific Ocean**
+
+```{r}
+Length<-read.csv("https://krkozak.github.io/MAT160/length.csv")
+head(Length)
+```
+>
+>**Code book for data frame Length** See problem 3.1.2 in Section 3.1 homework.
+
+>3.  Print-O-Matic printing company's employees have salaries that are contained in table \#3.2.4. Find the mean, median, range, variance, and standard deviation for the salaries of all employees.
+>
+> **Table \#3.2.4: Salaries of Print-O-Matic Printing Company Employees**
+
+```{r}
+Pay<-read.csv("https://krkozak.github.io/MAT160/pay.csv")
+head(Pay)
+```
+>
+>**Code book for data frame Pay** See problem 3.1.3 in Section 3.1 homework.
+
+>4.  Print-O-Matic printing company spends specific amounts on fixed costs every month. The costs of those fixed costs are in table \#3.2.5. Find the mean, median, range, variance, and standard deviation for the fixed costs.
+>    
+> **Table \#3.2.5: Fixed Costs for the Print-O-Matic Printing Company**
+
+```{r}
+Cost<-read.csv("https://krkozak.github.io/MAT160/cost.csv")
+head(Cost)
+```
+>
+>**Code book for Data frame Cost** See problem 3.1.4 in Section 3.1 homework.
+
+>5.  The data frame Pulse (Table 3.2.6) contains various variables about a person including their pulse rates before the subject exercised and after after the subject ran in place for one minute.
+>
+>**Table \#3.2.6: Pulse Rates of people Before and After Exercise**
+
+```{r}
+Pulse<-read.csv("https://krkozak.github.io/MAT160/pulse.csv")
+head(Pulse)
+```
+>
+>**Code book for data frame Pulse**
+>
+>**Description**
+>   Students in an introductory statistics class (MS212 taught by Professor John Eccleston and Dr Richard Wilson at The University of Queensland) participated in a simple experiment. The students took their own pulse rate. They were then asked to flip a coin. If the coin came up heads, they were to run in place for one minute. Otherwise they sat for one minute. Then everyone took their pulse again. The pulse rates and other physiological and lifestyle data are given in the data.
+>
+> Five class groups between 1993 and 1998 participated in the experiment. The lecturer, Richard Wilson, was concerned that some students would choose the less strenuous option of sitting rather than running even if their coin came up heads, In the years 1995-1998 a different method of random assignment was used. In these years, data forms were handed out to the class before the experiment. The forms were pre-assigned to either running or non-running and there were an equal number of each. In 1995 and 1998 not all of the forms were returned so the numbers running and sitting was still not entirely controlled.
+>
+> This data frame contains the following columns:
+>
+> height: height of subject in cm
+>
+> weight: weight of subject in kg
+>
+> age: age of subject in years
+>
+> gender: sex of subject, male, female
+>
+> Smokes: whether a subject regularly smokes, yes means does smoke, no means does not smoke
+>
+> alcohol: whether a subject regularly drinks alcohol, yes means the person does, no means the person does not 
+>
+>exercise: whether a subject exercises, low, moderate, high
+>
+> ran: whether a subject ran one minute between pulse measurements (ran) or sat between pulse measurement (sat)
+>
+> pulse_before: the pulse rate before a subject either ran or sat (bpm)
+>
+> pulse_after: the pulse rate after a subject either ran or sat (bpm)
+>
+> year: what year the data was collected (93-98)
+>
+>**Source**
+>Pulse rates before and after exercise. (2013, September 25). Retrieved from
+http://www.statsci.org/data/oz/ms212.html
+>
+>**References**
+>The data was supplied by Dr Richard J. Wilson, Department of Mathematics, University of Queensland.
+>
+>Create a data frame that contains only males, who drink alcohol, but do not smoke. Then compare the pulse before and the pulse after using the mean and standard deviation. Discuss whether pulse before or pulse after has a higher mean and larger spread.  To create a new data frame with just males, who drink alcohol, but do not smoke, use the following command, where the new name is Males:
+
+```{r}
+Males<-
+Pulse%>%
+  filter(gender=="male", smokes == "no", alcohol == "yes")
+```
+
+>6.  The data frame Pulse (Table 3.2.6) contains various variables about a person including their pulse rates before the subject exercised and after after the subject ran in place for one minute. Create a data frame that contains females, who do not smoke but do drink alcohol. Compare the pulse rate before and after exercise using the mean and standard deviation. Discuss whether pulse before or pulse after has a higher mean and larger spread.
+
+>7. To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson & Hanson, 1997) and the data is in table \#3.2.7.
+>
+>**Table \#3.2.7: Pain Measurements Before and After Reiki Treatment**
+
+```{r}
+Reiki<- read.csv("https://krkozak.github.io/MAT160/reki.csv")
+head(Reiki)
+```
+
+>**Code book for data frame Reiki**
+>
+>**Description**
+>   The purpose of this study was to explore the usefulness of Reiki as an adjuvant to opioid therapy in the management of pain. Since no studies in this area could be found, a pilot study was carried out involving 20 volunteers experiencing pain at 55 sites for a variety of reasons, including cancer. All Reiki treatments were provided by a certified second-degree Reiki therapist. Pain was measured using both a visual analogue scale (VAS) and a Likert scale immediately before and after the Reiki treatment. Both instruments showed a highly significant (p < 0.0001) reduction in pain following the Reiki treatment.
+>
+> This data frame contains the following columns:
+>
+> vas.before: pain measured using a visual analogue scale (VAS) before Reiki treatment
+>
+> vas.after: pain measured using a visual analogue scale (VAS) after Reiki treatment
+>
+> likert_before: pain measured using a likert before Reiki treatment
+>
+> likert_after: pain measured using a likert after Reiki treatment
+>
+>**Source**
+>Olson, K., & Hanson, J. (1997). Using reiki to manage pain: a preliminary report. Cancer Prev Control, 1(2), 108-13. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/9765732
+>
+>**References**
+>Using Reiki to manage pain: a preliminary report. Olson K1, Hanson J., Cancer Prev Control 1997, Jun; 1(2): 108-13.
+>
+>Since the data was collected both and before and after the treatment for all of the units of observations, you want to look at the effect size of the treatment. You want to find the difference between before and after for the pain scale. First you must create a new data frame that adds a column for the difference in before and after. This data is known as paired data. To create the new column in a new data frame called Newreiki use the following commands
+
+```{r}
+Newreiki<-Reiki%>%
+  mutate(vas.diff=vas.before-vas.after)
+head(Newreiki)
+```
+>
+>Now find the mean and standard deviation of the vas.diff variable in Newreiki. Perform similar commands to create the likert.diff variable. Then find the mean and standard deviation for likert.diff, and compare and contrast the vas and likert methods for describing pain. 
+
+>8.Yearly rainfall amounts (in millimeters) in Sydney, Australia, are in table #3.2.8
+("Annual maximums of," 2013). 
+a. Calculate the mean and standard deviation.
+b. Suppose Sydney, Australia received 300 mm of rainfall in a year. Would this be unusual? 
+>    
+>** Table \#3.2.8: Yewarly rainfall amounts in Sydney, Australia**
+    
+```{r}
+Rainfall<-read.csv("https://krkozak.github.io/MAT160/rainfall.csv")
+head(Rainfall)
+```
+>
+>**Code book for data frame Rainfall**
+>
+>**Description**
+>   Daily rainfall (in millimetres) was recorded over a 47-year period in Turramurra, Sydney, Australia. For each year, the wettest day was identified (that having the greatest rainfall). The data show the rainfall recorded for the 47 annual maxima.
+>
+> This data frame contains the following columns:
+>
+> amount: daily rainfall (mm)
+>
+>**Source**
+>Annual maximums of daily rainfall in Sydney. (2013, September 25). Retrieved from
+http://www.statsci.org/data/oz/sydrain.html
+>
+>**References**
+>Rayner J.C.W. and Best D.J. (1989) Smooth tests of goodness of fit. Oxford: Oxford University Press.
+Hand D.J., Daly F., Lunn A.D., McConway K.J., Ostrowski E. (1994). A Handbook of Small Data Sets. London: Chapman & Hall. Data set 157.
+Thanks to Jim Irish of the University of Technology, Sydney, for assistance in identifying the correct units for this data.
+
+**\
+**
 
 ## Ranking
 
@@ -1488,485 +753,264 @@ percentile. Doctors also use percentiles to track a child's growth.
 The ***k*th percentile** is the data value that has k% of the data at or
 below that value.
 
-**Example \#3.3.1: Interpreting Percentile**
+### Example: Interpreting Percentile**
 
 a.  What does a score of the 90^th^ percentile mean?
 
-> **Solution:**
+>**Solution:**
 >
-> This means that 90% of the scores were at or below this score. (A
-> person did the same as or better than 90% of the test takers.)
-
+> This means that 90% of the scores were at or below this score. (A person did the same as or better than 90% of the test takers.)
+>
 b.  What does a score of the 70^th^ percentile mean?
 
-> **Solution:**
+>**Solution:**
 >
 > This means that 70% of the scores were at or below this score.
 
-**Example \#3.3.2: Percentile Versus Score**
+### Example: Percentile Versus Score**
 
-> If the test was out of 100 points and you scored at the 80^th^
-> percentile, what was your score on the test?
->
-> **Solution:**
->
-> You don't know! All you know is that you scored the same as or better
-> than 80% of the people who took the test. If all the scores were
-> really low, you could have still failed the test. On the other hand,
-> if many of the scores were high you could have gotten a 95% or so.
+If the test was out of 100 points and you scored at the 80^th^ percentile, what was your score on the test?
 
-There are special percentiles called quartiles. Quartiles are numbers
-that divide the data into fourths. One fourth (or a quarter) of the data
-falls between consecutive quartiles.
+>**Solution:**
+>
+> You don't know! All you know is that you scored the same as or better than 80% of the people who took the test. If all the scores were really low, you could have still failed the test. On the other hand, if many of the scores were high you could have gotten a 95% or more.
+
+There are special percentiles called **quartiles**. Quartiles are numbers that divide the data into fourths. One fourth (or a quarter) of the data falls between consecutive quartiles.
 
 **To find the quartiles:**
 
-1\) Sort the data in increasing order.
-
-2\) Find the median, this divides the data list into 2 halves.
-
-3\) Find the median of the data below the median. This value is *Q1*.
-
-4\) Find the median of the data above the median. This value is *Q3*.
-
-Ignore the median in both calculations for *Q1* and *Q3*
+The command in R Studio is df_stats(~variable, data=data frame, summary)
 
 If you record the quartiles together with the maximum and minimum you
 have five numbers. This is known as the five-number summary. The
 five-number summary consists of the minimum, the first quartile (*Q1*),
 the median, the third quartile (*Q3*), and the maximum (in that order).
 
-The interquartile range, *IQR*, is the difference between the first and
-third quartiles, *Q1* and *Q3*. Half of the data (50%) falls in the
-interquartile range. If the *IQR* is "large" the data is spread out and
-if the *IQR* is "small" the data is closer together.
+The interquartile range, *IQR*, is the difference between the first and third quartiles, *Q1* and *Q3*. Half of the data (50%) falls in the interquartile range. If the *IQR* is "large" the data is spread out and if the *IQR* is "small" the data is closer together.
 
 Interquartile Range (*IQR*)
 
-**Determining probable outliers from IQR: *fences***
+**Determining probable outliers from IQR: **fences**
 
-A value that is less than (this value is often referred to as a
-***low*** ***fence***) is considered an outlier.
+A value that is less than (this value is often referred to as a **low** **fence**) is considered an outlier.
 
-Similarly, a value that is more than (the ***high*** ***fence***) is
-considered an outlier.
+Similarly, a value that is more than (the **high** **fence**) is considered an outlier.
 
-A box plot (or box-and-whisker plot) is a graphical display of the
-five-number summary. It can be drawn vertically or horizontally. The
-basic format is a box from *Q1* to *Q3*, a vertical line across the box
-for the median and horizontal lines as whiskers extending out each end
-to the minimum and maximum. The minimum and maximum can be represented
-with dots. Don't forget to label the tick marks on the number line and
-give the graph a title.
+A boxplot (or box-and-whisker plot) is a graphical display of the five-number summary. It can be drawn vertically or horizontally. The basic format is a box from *Q1* to *Q3*, a vertical line across the box for the median and horizontal lines as whiskers extending out each end to the minimum and maximum. The minimum and maximum can be represented with dots. Don't forget to label the tick marks on the number line and give the graph a title.
 
-An alternate form of a Box-and-Whiskers Plot, known as a modified box
-plot, only extends the left line to the smallest value greater than the
-*low fence*, and extends the left line to the largest value less than
-the *high fence*, and displays markers (dots, circles or asterisks) for
-each outlier.
+An alternate form of a Boxplot, known as a modified box plot, only extends the left line to the smallest value greater than the *low fence*, and extends the left line to the largest value less than
+the *high fence*, and displays markers (dots, circles or asterisks) for each outlier.
 
- 
-
-If the data are *symmetrical*, then the box plot will be visibly
-symmetrical. If the data distribution has a left skew or a right skew,
-the line on that side of the box plot will be visibly long.  If the plot
-is symmetrical, and the four quartiles are all about the same length,
-then the data are likely a near *uniform* distribution. If a box plot is
-symmetrical, and both outside lines are noticeably longer than the Q1 to
-median and median to Q3 distance, the distribution is then probably
+If the data are *symmetrical*, then the box plot will be visibly symmetrical. If the data distribution has a left skew or a right skew, the line on that side of the box plot will be visibly long. If the plot is symmetrical, and the four quartiles are all about the same length, then the data are likely a near *uniform* distribution. If a box plot is symmetrical, and both outside lines are noticeably longer than the Q1 to median and median to Q3 distance, the distribution is then probably
 *bell-shaped.*
 
-**Figure \#3.3.1: Typical Box Plot**
+### Example: Five-number Summary and Boxplot
 
-> ![](media/image119.png){width="4.111111111111111in"
-> height="1.5833333333333333in"}
+Find the five-number summary, the interquartile range (*IQR*), and draw a box-and-whiskers plot for the weight of cats.
 
-**Example \#3.3.3: Five-number Summary for an Even Number of Data
-Points**
-
-> The total assets in billions of Australian dollars (AUD) of Australian
-> banks for the year 2012 are given in table \#3.3.1 (\"Reserve bank
-> of,\" 2013). Find the five-number summary and the interquartile range
-> (*IQR*), and draw a box-and-whiskers plot.
->
-> **Table \#3.3.1: Total Assets (in billions of AUD) of Australian
-> Banks**
-
-  2855   2862   2861   2884   3014   2965
-  ------ ------ ------ ------ ------ ------
-  2971   3002   3032   2950   2967   2964
+```{r}
+head(cats)
+```
 
 > **Solution:**
 >
-> Variable: *x* = total assets of Australian banks
->
-> First sort the data.
->
-> **Table \#3.3.2: Sorted Data for Total Assets**
+> Variable: *x* = weight of cats
+> To compute the five number summary on R Studio, use the command:
 
-  ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
-  2855   2861   2862   2884   2950   2964   2965   2967   2971   3002   3014   3032
-  ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
+```{r}
+df_stats(~Bwt, data=cats, summary)
+```
+>
+> Minimum: 2 kg
+> *Q1*: 2.3 kg
+> Median: 2.7 kg
+> *Q3*: 3.025 kg
+> Maximum: 3.9 kg
+>
+> To find the interquartile range, *IQR*, find $Q3-Q1$, so $IQR=3.025-2.3=0.725 kg$
+>
+> To create a boxplot use the command gf_boxplot(~variable, data=data frame). This is a modified boxplot which shows the outliers in the data.
+>
+>**Graph \#3.3.1: Box Plot of Weights of Cats**
 
-> The minimum is 2855 billion AUD and the maximum is 3032 billion AUD.
->
-> There are 12 data points so the median is the average of the 6^th^ and
-> 7^th^ numbers.
->
-> **Table \#3.3.3: Sorted Data for Total Assets with Median**
+```{r}
+gf_boxplot(~Bwt, data=cats, title="Weight of Cats")
+```
+> There are no outliers since there are no dots outside of the fences.
 
-  ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
-  2855   2861   2862   2884   2950   2964   2965   2967   2971   3002   3014   3032
-  ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
+### Example: Separating based on a factor**
 
-> To find *Q1*, find the median of the first half of the list.
->
-> **Table \#3.3.4: Finding *Q1***
+Find the five-number summary of the weights of cats separated by the sex of the cat. Then create a box plot of the weights of cats for each sex of the cat.
 
-  ------ ------ ------ ------ ------ ------
-  2855   2861   2862   2884   2950   2964
-  ------ ------ ------ ------ ------ ------
+> **Solution:**
+>
+> Variable: *x_1* = weight of female cat
+>
+> Variable: *x_2* = weight of male cat
+>
+> To find the five-number summary seperated based on genderm use the following command:
 
-> To find *Q3*, find the median of the second half of the list.
+```{r}
+df_stats(~Bwt|Sex, data=cats, summary)
+```
 >
-> **Table \#3.3.5: Finding *Q3***
+> The five-number summary for female cats is (in kg)
+>
+> Minimum: 2
+ Q1: 2.15
+ Median: 2.3
+ Q3: 2.5
+ Maximum: 3.0
+>
+> The five-number summary for male cats is (in kg)
+>
+ Minimum: 2
+ Q1: 2.50
+ Median: 2.9
+ Q3: 3.2
+ Maximum: 3.9
+>
+> **Graph \#3.3.2: Box Plot of Cats Weights Separated by Sex**
 
-  ------ ------ ------ ------ ------ ------
-  2965   2967   2971   3002   3014   3032
-  ------ ------ ------ ------ ------ ------
+```{r}
+gf_boxplot(~Bwt|Sex, data=cats, title="Weights of Cats")
+```
+>
+> Notice that the weights of female cats has a median less than male cats, and in fact it can be seen that the Q1 to Q3 of the female cats is less than the Q1 to Q3 of the male cats. 
 
-> The five-number summary is (all numbers in billion AUD)
+### Example: Putting it all together**
+
+The time (in 1/50 seconds) between successive pulses along a nerve fiber ("Time
+between nerve," 2013) are given in table #3.3.1.
+
+**Table \#3.3.1: Successive pulses along a nerve fiber**
+
+```{r}
+Nerve<-read.csv("https://krkozak.github.io/MAT160/Nerve_pulse.csv")
+head(Nerve)
+```
+
+**Code book for data frame Nerve**
+
+**Description**
+The data gives the time between 800 successive pulses along a nerve fiber. There are 799 observations rounded to the nearest half in units of 1/50 second.
+
+This data frame contains the following columns:
+
+time: time between successive Pulses along a nerve fiber, 1/50 second.
+
+**Source**
+*Time between nerve pulses*. (2019, July 3). Retrieved from
+<http://www.statsci.org/data/general/nerve.html>
+
+**References**
+Fatt, P., and Katz, B. (1952). Spontaneous subthreshold activity at motor nerve endings. Journal of Physiology 117, 109-128.
+
+Cox, D. R., and Lewis, P. A. W. (1966). The Statistical Analysis of Series of Events. Methuen, London.
+
+Jorgensen, B. (1982). The Generalized Inverse-Gaussian Distribution. Springer-Verlag.
+
+>**Solution:**
 >
-> Minimum: 2855
+> First, it might be useful to look at a visualization of the data, so create a density plot
 >
-> *Q1*: 2873
+> **Graph \#3.3.2: Density Plot of Health Expenditure**
+
+```{r}
+gf_density(~time, data=Nerve)
+```
 >
-> Median: 2964.5
+> From the graph, the data appears to be skewed right. Most of the time between successive nerve pusles appear to be around 5 or 10 1/50 second, but there are some times that are 60 1/50 second.
+
+```{r}
+df_stats(~time, data=Nerve, mean, median, sd, summary)
+```
+> Numerical descriptions might also be useful. Using technology, the mean is 11 1/50 second,the median is 7.5 1/50 second, the standard deviation is 10.5 1/50 second, and the five-number summary is minimum = 3.5, Q1 = 3.5, median = 7.5, Q3 = 15, and maximum = 69 1/50 second. To visualize the five-number summary, create a box plot.
 >
-> *Q3*: 2986.5
+> **Graph \#3.3.3: Box Plot of Health Expenditure**
+
+```{r, include=FALSE}
+gf_boxplot(~time, data=Nerve)
+```
+> Since there are many dots outside the upper fence the data has many outliers. From all of this information, one could say that nerve pusles between successive pulses is around 11 1/50 second, with a spread of 19.5 1/50 second. Most of the values are round 11 1/50 second, but they are not very consistent. The density plot and boxplot show that there is a great deal of spread of the data and it is skewed to the right. This means mostly the speed is around 11 1/50 second, but there is a great deal of variability in the values.
+
+### Homework Section 3.3
+**Use Technology on all problems. State the variable on all problems.**
+
+>1.  Suppose you take a standardized test and you are in the 10^th^ percentile. What does this percentile mean? Can you say that you failed the test? Explain.
+
+>2.  Suppose your child takes a standardized test in mathematics and scores in the 96^th^ percentile. What does this percentile mean? Can you say your child passed the test? Explain.
+
+>3.  Suppose your child is in the 83^rd^ percentile in height and 24^th^ percentile in weight. Describe what this tells you about your child's stature. 
+
+>4.  Suppose your work evaluates the employees and places them on a percentile ranking. If your evaluation is in the 65^th^ percentile, do you think you are working hard enough? Explain.
+
+>5.  Cholesterol levels were collected from patients certain days after they had a heart attack and are in table \#3.3.2.
 >
-> Maximum: 3032
+> **table \#3.3.2: Cholesterol Levels of Patients After Heart Attack**
+
+```{r}
+Cholesterol<-read.csv("https://krkozak.github.io/MAT160/cholesterol.csv")
+head(Cholesterol)
+```
 >
-> To find the interquartile range, *IQR*, find .
+>**Code book for Data Frame Cholesterol** See problem 3.1.1 in Section 3.1 homework.
 >
-> This tells you the middle 50% of assets were within 113.5 billion AUD
-> of each other.
+> Find the five-number summary and interquartile range (IQR) for the cholesterol level on day 2, and draw a boxplot
+
+>6.  The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table \#3.3.3 (Lee, 1994). 
 >
-> You can use the five-number summary to draw the box-and-whiskers plot:
+> **Table \#3.3.3: Lengths of Rivers (km) Flowing to Pacific Ocean**
+
+```{r}
+Length<-read.csv("https://krkozak.github.io/MAT160/length.csv")
+head(Length)
+```
 >
-> **Graph \#3.3.1: Box Plot of Total Assets of Australian Banks**
+>**Code book for data frame Length** See problem 3.1.2 in Section 3.1 homework.
 >
-> ![](media/image125.emf){width="5.402777777777778in" height="2.25in"}
+> Find the five-number summary and interquartile range (IQR) for the lengths of rivers that go to the Pacific Ocean and ones that go to the Tasman Sea, and draw a boxplot of both.
+
+>7.  Print-O-Matic printing company's employees have salaries that are contained in table \#3.3.4. Find the five number summary and draw a boxplot for the salaries of all employees.
 >
-> The distribution is skewed right because the right tail is longer.
+> **Table \#3.3.4: Salaries of Print-O-Matic Printing Company Employees**
+
+```{r}
+Pay<-read.csv("https://krkozak.github.io/MAT160/pay.csv")
+head(Pay)
+```
+>
+>**Code book for data frame Pay** See problem 3.1.3 in Section 3.1 homework.
+
+>8.  The data frame Pulse (Table 3.3.5) contains various variables about a person including their pulse rates before the subject exercised and after after the subject ran in place for one minute.
+>
+>**Table \#3.3.5: Pulse Rates of Males Before and After Exercise**
+
+```{r}
+Pulse<-read.csv("https://krkozak.github.io/MAT160/pulse.csv")
+head(Pulse)
+```
+
+>**Code book for data frame Pulse** See Problem 3.2.5 in Section 3.2 Homework
+>
+>Create a data frame that contains only people who drink alcohol, but do not smoke. Then find the five number summary and draw a boxplot for both males and females separately.
+
+>9. To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson & Hanson, 1997) and the data is in table \#3.3.6.
+>
+>**Table \#3.2.7: Pain Measurements Before and After Reiki Treatment**
+
+```{r}
+Reiki<- read.csv("https://krkozak.github.io/MAT160/reki.csv")
+head(Reiki)
+```
+>
+>**Code book for data frame Reiki** see problem 3.2.7 in Section 3.2 Homework
+>
+>Find the five number summary for both the before and after VAS scores and draw boxplots of before and after VAS scores. To draw two boxplots at the same time, after the command to create the first box plot type %>% before pressing enter. Then type the command for the second boxplot after the + symbol. Then press enter. You may want to graph each boxplot as a different color. To do this, the command would be gf_boxplot(~variable, data=data frame, color="red"). You can pick any color you want. Just replace the word red with the color you want to use. 
+Now compare and contrast the before and after VAS scores.
 
 **\
 **
-
-**Example \#3.3.4: Five-number Summary for an Odd Number of Data Points
-**
-
-> The life expectancy for a person living in one of 11 countries in the
-> region of South East Asia in 2012 is given below (\"Life expectancy
-> in,\" 2013). Find the five-number summary for the data and the *IQR*,
-> then draw a box-and-whiskers plot.
->
-> **Table \#3.3.6: Life Expectancy of a Person Living in South-East
-> Asia**
-
-  70   67   69   65   69   77
-  ---- ---- ---- ---- ---- ----
-  65   68   75   74   64   
-
-> **Solution:**
->
-> Variable: *x* = life expectancy of a person
->
-> Sort the data first.
->
-> **Table \#3.3.7: Sorted Life Expectancies**
-
-  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-  64   65   65   67   68   69   69   70   74   75   77
-  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-
-> The minimum is 64 years and the maximum is 77 years.
->
-> There are 11 data points so the median is the 6^th^ number in the
-> list.
->
-> **Table \#3.3.8: Finding the Median of Life Expectancies**
-
-  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-  64   65   65   67   68   69   69   70   74   75   77
-  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-
-> Median = 69 years
->
-> Finding the *Q1* and *Q3* you need to find the median of the numbers
-> below the median and above the median. The median is not included in
-> either calculation.
->
-> **Table \#3.3.9: Finding *Q1***
-
-  ---- ---- ---- ---- ----
-  64   65   65   67   68
-  ---- ---- ---- ---- ----
-
-> **Table \#3.3.10: Finding *Q3***
-
-  ---- ---- ---- ---- ----
-  69   70   74   75   77
-  ---- ---- ---- ---- ----
-
-> *Q1* = 65 years and *Q3* = 74 years.
->
-> The five-number summary is (in years)
->
-> Minimum: 64
->
-> Q1: 65
->
-> Median: 69
->
-> Q3: 74
->
-> Maximum: 77
-
-To find the interquartile range (*IQR*)
-
-The middle 50% of life expectancies are within 9 years.
-
-> **Graph \#3.3.2: Box Plot of Life Expectancy**
->
-> ![](media/image127.emf){width="5.652777777777778in"
-> height="1.9027777777777777in"}
->
-> This distribution looks somewhat skewed right, since the whisker is
-> longer on the right. However, it could be considered almost symmetric
-> too since the box looks somewhat symmetric.
-
-You can draw 2 box plots side by side (or one above the other) to
-compare 2 samples. Since you want to compare the two data sets, make
-sure the box plots are on the same axes. As an example, suppose you look
-at the box-and-whiskers plot for life expectancy for European countries
-and Southeast Asian countries.
-
-> **Graph \#3.3.3: Box Plot of Life Expectancy of Two Regions**
-
-![](media/image128.emf){width="6.0in" height="2.4803149606299213in"}
-
-Looking at the box-and-whiskers plot, you will notice that the three
-quartiles for life expectancy are all higher for the European countries,
-yet the minimum life expectancy for the European countries is less than
-that for the Southeast Asian countries. The life expectancy for the
-European countries appears to be skewed left, while the life
-expectancies for the Southeast Asian countries appear to be more
-symmetric. There are of course more qualities that can be compared
-between the two graphs.
-
-To find the five-number summary using R, the command is:
-
-> variable\<-c(type in data with commas)\
-> summary(variable)
-
-This command will give you the five number summary and the mean.
-
-For example \#3.3.4, the commands would be
-
-> expectancy\<-c(70, 67, 69, 65, 69, 77, 65, 68, 75, 74, 64)
->
-> summary(expectancy)
->
-> The output would be:
->
-> Min. 1st Qu. Median Mean 3rd Qu. Max.
->
-> 64.00 66.00 69.00 69.36 72.00 77.00
-
-To draw the box plot the command is boxplot(variable, main=\"title you
-want\", xlab=\"label you want\", horizontal = TRUE). The horizontal =
-TRUE orients the box plot to be horizontal. If you leave that part off,
-the box plot will be vertical by default. 
-
-For example \#3.3.4, the command is 
-
-boxplot(expectancy, main=\"Life Expectancy of Southeast Asian Countries
-in 2011\",horizontal=TRUE, xlab=\"Life Expectancy\")
-
-You should get the box plot in graph \#3.3.4.
-
-**Graph \#3.3.4: Box plot for Life Expectance in Southeast Asian
-Countries**
-
-![](media/image129.emf){width="3.125in" height="3.125in"}
-
-This is known as a modified box plot. Instead of plotting the maximum
-and minimum, the box plot has as a lower line , and as an upper line, .
-Any values below the lower line or above the upper line are considered
-outliers. Outliers are plotted as dots on the modified box plot. This
-data set does not have any outliers.
-
-**Example \#3.3.5: Putting it all together**
-
-A random sample was collected on the health expenditures (as a % of GDP)
-of countries around the world. The data is in Table \#3.3.11. Using
-graphical and numerical descriptive statistics, analyze the data and use
-it to predict the health expenditures of all countries in the world.
-
-**Table \#3.3.11: Health Expenditures as a Percentage of GDP**
-
-  3.35   5.94   10.64   5.24   3.79   5.65   7.66    7.38    5.87   11.15
-  ------ ------ ------- ------ ------ ------ ------- ------- ------ -------
-  5.96   4.78   7.75    2.72   9.50   7.69   10.05   11.96   8.18   6.74
-  5.89   6.20   5.98    8.83   6.78   6.66   9.45    5.41    5.16   8.55
-
-**Solution:**
-
-> First, it might be useful to look at a visualization of the data, so
-> create a histogram.
->
-> **Graph \#3.3.5: Histogram of Health Expenditure**
->
-> ![](media/image132.emf){width="5.055555555555555in"
-> height="5.055555555555555in"}
->
-> From the graph, the data appears to be somewhat skewed right. So there
-> are some countries that spend more on health based on a percentage of
-> GDP than other countries, but the majority of countries appear to
-> spend around 4 to 8% of their GDP on health.
->
-> Numerical descriptions might also be useful. Using technology, the
-> mean is 7.03%, the standard deviation is 2.27%, and the five-number
-> summary is minimum = 2.72%, Q1 = 5.71%, median = 6.70%, Q3 = 8.46%,
-> and maximum = 11.96%. To visualize the five-number summary, create a
-> box plot.
->
-> **Graph \#3.3.6: Box Plot of Health Expenditure**
->
-> ![](media/image133.emf){width="4.722222222222222in"
-> height="4.722222222222222in"}
->
-> So it appears that countries spend on average about 7% of their GPD on
-> health. The spread is somewhat low, since the standard deviation is
-> fairly small, which means that the data is fairly consistent. The
-> five-number summary confirms that the data is slightly skewed right.
-> The box plot shows that there are no outliers. So from all of this
-> information, one could say that countries spend a small percentage of
-> their GDP on health and that most countries spend around the same
-> amount. There doesn't appear to be any country that spends much more
-> than other countries or much less than other countries.
-
-### Homework
-
-1.  Suppose you take a standardized test and you are in the 10^th^     percentile. What does this percentile mean? Can you say that you     failed the test? Explain.
-
-2.  Suppose your child takes a standardized test in mathematics and     scores in the 96^th^ percentile. What does this percentile mean? Can     you say your child passed the test? Explain.
-
-3.  Suppose your child is in the 83^rd^ percentile in height and 24^th^     percentile in weight. Describe what this tells you about your     child's stature. 
-
-4.  Suppose your work evaluates the employees and places them on a     percentile ranking. If your evaluation is in the 65^th^ percentile,     do you think you are working hard enough? Explain.
-
-5.  Cholesterol levels were collected from patients two days after they     had a heart attack (Ryan, Joiner & Ryan, Jr, 1985) and are in table     \#3.3.12.
-
-> **Table \#3.3.12: Cholesterol Levels**
-
-  270   236   210   142   280   272   160
-  ----- ----- ----- ----- ----- ----- -----
-  220   226   242   186   266   206   318
-  294   282   234   224   276   282   360
-  310   280   278   288   288   244   236
-
-> Find the five-number summary and interquartile range (IQR), and draw a
-> box-and-whiskers plot
-
-6.  The lengths (in kilometers) of rivers on the South Island of New     Zealand that flow to the Pacific Ocean are listed in table \#3.3.13     (Lee, 1994).
-
-> **Table \#3.3.13: Lengths of Rivers (km) Flowing to Pacific Ocean**
-
-  River         Length (km)   River       Length (km)
-  ------------- ------------- ----------- -------------
-  Clarence      209           Clutha      322
-  Conway        48            Taieri      288
-  Waiau         169           Shag        72
-  Hurunui       138           Kakanui     64
-  Waipara       64            Waitaki     209
-  Ashley        97            Waihao      64
-  Waimakariri   161           Pareora     56
-  Selwyn        95            Rangitata   121
-  Rakaia        145           Ophi        80
-  Ashburton     90                        
-
-> Find the five-number summary and interquartile range (IQR), and draw a
-> box-and-whiskers plot
-
-7.  The lengths (in kilometers) of rivers on the South Island of New
-    Zealand that flow to the Tasman Sea are listed in table \#3.3.14
-    (Lee, 1994).
-
-> **Table \#3.3.14: Lengths of Rivers (km) Flowing to Tasman Sea**
-
-  River        Length (km)   River       Length (km)
-  ------------ ------------- ----------- -------------
-  Hollyford    76            Waimea      48
-  Cascade      64            Motueka     108
-  Arawhata     68            Takaka      72
-  Haast        64            Aorere      72
-  Karangarua   37            Heaphy      35
-  Cook         32            Karamea     80
-  Waiho        32            Mokihinui   56
-  Whataroa     51            Buller      177
-  Wanganui     56            Grey        121
-  Waitaha      40            Taramakau   80
-  Hokitika     64            Arahura     56
-
-> Find the five-number summary and interquartile range (IQR), and draw a box-and-whiskers plot
-
-8.  Eyeglassmatic manufactures eyeglasses for their retailers. They test     to see how many defective lenses they made the time period of     January 1 to March 31. Table \#3.3.15 gives the defect and the     number of defects.
-
-> **Table \#3.3.15: Number of Defective Lenses**
-
-  Defect type              Number of defects
-  ------------------------ -------------------
-  Scratch                  5865
-  Right shaped -- small    4613
-  Flaked                   1992
-  Wrong axis               1838
-  Chamfer wrong            1596
-  Crazing, cracks          1546
-  Wrong shape              1485
-  Wrong PD                 1398
-  Spots and bubbles        1371
-  Wrong height             1130
-  Right shape -- big       1105
-  Lost in lab              976
-  Spots/bubble -- intern   976
-
-> Find the five-number summary and interquartile range (IQR), and draw a box-and-whiskers plot
-
-9.  A study was conducted to see the effect of exercise on pulse rate.     Male subjects were taken who do not smoke, but do drink. Their pulse     rates were measured (\"Pulse rates before,\" 2013). Then they ran in     place for one minute and then measured their pulse rate again. Graph     \#3.3.7 is of box-and-whiskers plots that were created of the before     and after pulse rates. Discuss any conclusions you can make from the     graphs.
-
-> **Graph \#3.3.7: Box-and-Whiskers Plot of Pulse Rates for Males**
->
-> ![](media/image134.emf){width="5.770725065616798in" height="2.25in"}
-
-10. A study was conducted to see the effect of exercise on pulse rate.     Female subjects were taken who do not smoke, but do drink. Their     pulse rates were measured (\"Pulse rates before,\" 2013). Then they     ran in place for one minute, and after measured their pulse rate     again. Graph \#3.3.8 is of box-and-whiskers plots that were created     of the before and after pulse rates. Discuss any conclusions you can     make from the graphs. 
-> **Graph \#3.3.8: Box-and-Whiskers Plot of Pulse Rates for Females**
->
-> ![](media/image135.emf){width="5.840674759405075in" height="2.25in"}
-
-11. To determine if Reiki is an effective method for treating pain, a     pilot study was carried out where a certified second-degree Reiki     therapist provided treatment on volunteers. Pain was measured using     a visual analogue scale (VAS) immediately before and after the Reiki     treatment (Olson & Hanson, 1997). Graph \#3.3.9 is of     box-and-whiskers plots that were created of the before and after VAS     ratings. Discuss any conclusions you can make from the graphs.
-
-> **Graph \#3.3.9: Box-and-Whiskers Plot of Pain Using Reiki**
->
-> ![](media/image136.emf){width="5.242445319335083in" height="2.125in"}
-
-12. The number of deaths attributed to UV radiation in African countries     and Middle Eastern countries in the year 2002 were collected by the     World Health Organization (\"UV radiation: Burden,\" 2013). Graph     \#3.3.10 is of box-and-whiskers plots that were created of the     deaths in African countries and deaths in Middle Eastern countries.     Discuss any conclusions you can make from the graphs. 
-
-> **Table \#3.3.10: Box-and-Whiskers Plot of UV Radiation Deaths in Different Regions**
->
-> ![](media/image137.emf){width="5.673612204724409in"
-> height="1.7916666666666667in"}
 
 Data Sources:
 
@@ -1986,21 +1030,17 @@ from <http://www.ncbi.nlm.nih.gov/pubmed/9765732>
 *Pulse rates before and after exercise*. (2013, September 25). Retrieved
 from <http://www.statsci.org/data/oz/ms212.html>
 
-*Reserve bank of Australia*. (2013, September 23). Retrieved from
-<http://data.gov.au/dataset/banks-assets>
-
 Ryan, B. F., Joiner, B. L., & Ryan, Jr, T. A. (1985). *Cholesterol
 levels after heart attack*. Retrieved from
 <http://www.statsci.org/data/general/cholest.html>
 
-*Time between nerve pulses*. (2013, September 25). Retrieved from
+*Time between nerve pulses*. (2019, July 3). Retrieved from
 <http://www.statsci.org/data/general/nerve.html>
 
 *Time of passages of play in rugby*. (2013, September 25). Retrieved
 from <http://www.statsci.org/data/oz/rugby.html>
 
-*U.S. tornado climatology*. (17, May 2013). Retrieved from
-<http://www.ncdc.noaa.gov/oa/climate/severeweather/tornadoes.html>
+US Department of Commerce, & Noaa. (2016, November 15). 1950 Oklahoma Tornadoes. Retrieved from https://www.weather.gov/oun/tornadodata-ok-1950
 
 *UV radiation: Burden of disease by country*. (2013, September 4).
 Retrieved from <http://apps.who.int/gho/data/node.main.165?lang=en>
