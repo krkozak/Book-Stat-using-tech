@@ -118,13 +118,17 @@ There are other types of graphs that can be created for quantitative variables. 
 gf_dotplot(~vehicle, data=Class, title="Cars driving by students in statistics class")
 ```
 
-Notice a dot plot is like a bar chart. Both give you the same information. You can also divide a dot plot by gender. Another type of graph that is also useful and similar to the dot plot is a point plot (scatter plot). In this plot you can graph the explanatory variable (response) versus the response variable (explanatory). The command for this in R Studio is as follows.
+EXAMPLE FOR FIGURE CAPTIONS AND CROSS-REFERENCES
 
-**Graph \#2.1.4: Point plot for Type of Car Data versus gender**
+Notice a dot plot is like a bar chart. Both give you the same information. You can also divide a dot plot by gender. Another type of graph that is also useful and similar to the dot plot is a point plot (scatter plot). In this plot (Figure \@ref(fig:car-data-gender)) you can graph the explanatory variable (response) versus the response variable (explanatory). The command for this in R Studio is as follows.
 
-```{r}
+(ref:car-data-gender-cap) Point plot for Type of Car Data versus gender
+
+```{r car-data-gender, fig.cap="(ref:car-data-gender-cap)"}
 gf_point(vehicle~gender, data=Class, title="Cars driving by students in statistics class")
 ```
+
+
 
 The problem with this graph is that if there are multiple females who drive a Ford, only one dot is shown. So it is best to spread the dots out using a plot known as a jitter plot. In a jitter plot the dots are randomly moved off the center line. The command for a jitter plot is as follows:
 
