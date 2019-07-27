@@ -29,7 +29,7 @@ I want to make a comment about the mathematical knowledge that I assumed the stu
 
 The technology that I utilized for creating the graphs and statistical analysis is R Studio. This is a statistical software that are used by statisticians and so using it gives students skills they may need in the future.  Please feel free to use any other technology that is more appropriate for your students.  Do make sure that you use some technology.
 
-##Acknowledgments:
+## Acknowledgments:
 
 I would like to thank the following people for taking their valuable time to review the book.  Their comments and insights improved this book immensely.
 
@@ -49,10 +49,10 @@ I also want to thank Coconino Community College for granting me a sabbatical so 
 Lastly, I want to thank my husband Rich and my son Dylan for supporting me in this project.  Without their love and support, I would not have been able to complete the book.
 
 
-##New to the Third Edition:
+## New to the Third Edition:
 
 The additions to this edition mostly involve adding the commands to create graphs, compute descriptive statistics, finding probabilities, and computing inferential analysis using the open source software R Studio, and the removal of all other technologies. Data Frames with multiple variables and multiple units of measurements were expanded to most of the data. This is to make the course more data-centric. Lastly, minor explanations were made and corrections were made where necessary.
 
-##Packages needed for R Studio:
+## Packages needed for R Studio:
 
 You will need the following packages installed and loaded in R Studio: arm, mosaic, MASS, Weighted.Desc.Stat.
