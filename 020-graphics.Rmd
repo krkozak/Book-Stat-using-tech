@@ -52,7 +52,7 @@ Data was collected for two semesters in a statistics class. The data frame in is
 
 **Table \#2.1.1: Statistis class survey**
 
-```{r}
+```{r class-data1-table}
 Class<-read.csv("https://krkozak.github.io/MAT160/class_survey.csv")
 head(Class)
 ```
@@ -154,7 +154,7 @@ depends on your data as to which may be useful, but the bar, dot, and jitter plo
 
  **Table \#2.1.2: Data for Eyeglassomatic**
 
-```{r}
+```{r eyeglass-table}
 Eyeglasses<-read.csv("https://krkozak.github.io/MAT160/eyglasses.csv")
 head(Eyeglasses)
 ```
@@ -190,7 +190,7 @@ John Matic (2013)
 
 **Table \#2.1.2 Data Frame of Statistics Class Survey
 
-```{r}
+```{r class-table}
 Class<-read.csv("https://krkozak.github.io/MAT160/class_survey.csv")
 head(Class)
 ```
@@ -203,7 +203,7 @@ Create a bar graph and dot plot of the variable ice cream. State any findings yo
 
 **Table \#2.1.3: Data of Number of Deaths Due to CO Poisoning**
 
-```{r}
+```{r area-table}
 Area<-read.csv("https://krkozak.github.io/MAT160/area.csv")
 head(Area)
 ```
@@ -212,7 +212,7 @@ head(Area)
 
 **Table \#2.1.4 Data Frame of Class Survey
 
-```{r}
+```{r class-data2-table}
 Class<-read.csv("https://krkozak.github.io/MAT160/class_survey.csv")
 head(Class)
 ```
@@ -223,7 +223,7 @@ head(Class)
   
 **Table \#2.1.5: Data of Defect Type**
 
-```{r}
+```{r defects-table}
 Defects<- read.csv("https://krkozak.github.io/MAT160/defects.csv") 
 head(Defects)
 ```
@@ -249,7 +249,7 @@ John Matic (2013)
 
 **Table \#2.1.6: Data Frame NHANES**
 
-```{r}
+```{r nhanes-data-table}
 head(NHANES)
 ```
 
@@ -274,7 +274,7 @@ Data was collected for two semesters in a statistics class drive.
 
 **Table \#2.2.1: Statistis class survey**
 
-```{r}
+```{r class-data3-table}
 Class<-read.csv("https://krkozak.github.io/MAT160/class_survey.csv")
 head(Class)
 ```
@@ -364,7 +364,7 @@ Data was collected from the Chronicle of Higher Education for tuition from publi
 
 table \#2.2.2: Tuition of Four Year Colleges
 
-```{r}
+```{r tuition-table}
 Tuition<-read.csv("https://krkozak.github.io/MAT160/Tuition_4_year.csv")
 head(Tuition)
 ```
@@ -430,7 +430,7 @@ explored in the next section.
 
  table \#2.2.3: Weekly median wages for certain occupations
 
-```{r}
+```{r wages-table}
 Wages<- read.csv("https://krkozak.github.io/MAT160/wages.csv")
 head(Wages)
 ```
@@ -468,7 +468,7 @@ Current Population Survey (CPS) retrieved July 8, 2019.
 
  **Table \#2.2.4: Data of Density of People per Square Kilometer**
 
-```{r}
+```{r desity-table}
 Density<- read.csv("https://krkozak.github.io/MAT160/Density.csv") 
 head(Density)
 ```
@@ -511,7 +511,7 @@ head(Africa)
 
  **Table \#2.2.5: Data of Health Insurance Premiums**
 
-```{r}
+```{r insurace-table}
 Insurance<- read.csv("https://krkozak.github.io/MAT160/insurance.csv")
 head(Insurance)
 ```
@@ -562,7 +562,7 @@ Department of Health and Human Services, ASPE. (2013). Health insurance marketpl
 
  **Table \#2.2.6: Data of Test 1 Grades**
 
-```{r}
+```{r test1-data}
 Firsttest_1<- read.csv("https://krkozak.github.io/MAT160/firsttest_1.csv")
 head(Firsttest_1)
 ```
@@ -571,7 +571,7 @@ head(Firsttest_1)
 
  **Table \#2.2.7: Data of Test 1 Grades**
 
-```{r}
+```{r test1-grades-table}
 Firsttest_2<- read.csv("https://krkozak.github.io/MAT160/firsttest_2.csv")
 head(Firsttest_2)
 ```
@@ -598,7 +598,7 @@ Is there a relationship between systolic blood pressure and weight? To answer th
 
  **Table \#2.3.1: Random sample of size 100 from the data frame NHANES**
 
-```{r}
+```{r nhanes-data-table-1}
 sample_NHANES <-
   NHANES%>%
   sample_n(size = 100)
@@ -630,7 +630,7 @@ The bank assets (in billions of Australia dollars (AUD)) of the Reserve Bank of 
 
 **Table \#2.3.2: Data of Date versus RBA Assets**
 
-```{r}
+```{r australian-table}
 Australian<- read.csv("https://krkozak.github.io/MAT160/Australian_fiancial.csv")
 head(Australian)
 ```
@@ -716,7 +716,7 @@ Be careful when making a graph. If the vertical axis doesn't start at 0, then th
 
  **Table \#2.3.3: Data of Metacarpal versus Height**
 
-```{r}
+```{r metacarpal-table}
 Metacarpal<- read.csv("https://krkozak.github.io/MAT160/metacarpal.csv") 
 head(Metacarpal)
 ```
@@ -745,7 +745,7 @@ Devore, J., and Peck, R. (1986). Statistics. The Exploration and Analysis of Dat
 
  **Table \#2.3.4: Data of House Value versus Rental**
 
-```{r}
+```{r house-table}
 House<- read.csv("https://krkozak.github.io/MAT160/house.csv")
 head(House)
 ```
@@ -774,7 +774,7 @@ Lee, A. (1994) Data Analysis: An introduction based on R. Auckland: Department o
 
  **Table \#2.3.5: Data of Life Expectancy versus Fertility Rate**
 
-```{r}
+```{r fertility-table}
 Fertility<- read.csv("https://krkozak.github.io/MAT160/fertility.csv")
 head(Fertility)
 ```
@@ -813,7 +813,7 @@ Data from World Bank, Life expectancy at birth, total (years)
 
  **Table \#2.3.6: Data of Prenatal Care versus Health Expenditure**
 
-```{r}
+```{r prenatal-table}
 Fert_prenatal<- read.csv("https://krkozak.github.io/MAT160/fertility_prenatal.csv")
 head(Fert_prenatal)
 ```
@@ -853,7 +853,7 @@ Data from World Bank, fertility rate, expenditure on health, and pregnant woman 
 
  **Table \#2.3.7: Data of Year versus Number of Deaths due to Firearms**
 
-```{r}
+```{r firearm-table}
 Firearm<- read.csv("https://krkozak.github.io/MAT160/rate.csv")
 head(Firearm)
 ```
@@ -882,7 +882,7 @@ Australian Institute of Criminology, 1999.The data was contributed by Rex Boggs,
 
  **Table \#2.3.8: Data of Date versus RBA Assets**
 
-```{r}
+```{r austrlaia-data-table}
 Australian<- read.csv("https://krkozak.github.io/MAT160/Australian_fiancial.csv")
 head(Australian)
 ```
@@ -893,7 +893,7 @@ head(Australian)
 
  **Table \#2.3.9: Data of Time versus CPI**
 
-```{r}
+```{r cpi-table}
 CPI<- read.csv("https://krkozak.github.io/MAT160/CPI_US.csv")
 head(CPI)
 ```
@@ -927,7 +927,7 @@ US Inflation Calculator website, 2019.
 
  **Table \#2.3.10: Data of US Mean and Median Income**
 
-```{r}
+```{r icome-table}
 US_income<- read.csv("https://krkozak.github.io/MAT160/US_income.csv")
 head(US_income)
 ```
