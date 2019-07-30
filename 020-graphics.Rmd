@@ -190,7 +190,7 @@ John Matic (2013)
 
 **Table \#2.1.2 Data Frame of Statistics Class Survey
 
-```{r class-table}
+```{r class-table2}
 Class<-read.csv("https://krkozak.github.io/MAT160/class_survey.csv")
 head(Class)
 ```
@@ -223,7 +223,7 @@ head(Class)
   
 **Table \#2.1.5: Data of Defect Type**
 
-```{r defects-table}
+```{r defects-table2a}
 Defects<- read.csv("https://krkozak.github.io/MAT160/defects.csv") 
 head(Defects)
 ```
@@ -384,15 +384,15 @@ TYPE: Type of four year institution, Public_4_year, Private_4_year, For_profit_4
 
 STATE:  What state the institution resides
 
-ROOM_BOARD: The cost of room and board at the institution ($)
+ROOM_BOARD: The cost of room and board at the institution (\$)
 
-INSTATE_TUTION: The cost of instate tuition ($)
+INSTATE_TUTION: The cost of instate tuition (\$)
 
-INSTATE_TOTAL: The cost of room and board and instate tuition ($ per year)
+INSTATE_TOTAL: The cost of room and board and instate tuition (\$ per year)
 
-OUTOFSTATE_TUTION: The cost of out of state tuition ($ per year)
+OUTOFSTATE_TUTION: The cost of out of state tuition (\$ per year)
 
-OUTOFSTATE_TOTAL: The cost of room and board and out of state tuition ($ per year)
+OUTOFSTATE_TOTAL: The cost of room and board and out of state tuition (\$ per year)
   
 **Source**
 * Tuition and Fees, 1998-99 Through 2018-19. (2018, December 31). Retrieved from https://www.chronicle.com/interactives/tuition-and-fees
@@ -419,7 +419,7 @@ gf_density(~INSTATE_TUITION, data=Tuition, title="Instate Tuition at all Four Ye
 gf_density(~INSTATE_TUITION|TYPE, data=Tuition, title="Instate Tuition at all Four Year instittions")
 ```
 
- The distribution is skewed right, with no gaps. Most institutions in state is less than $20,000 per year though some go as high as $60,00 per year. When separated by public versus private and for profit, most public are much less than $20,000 per year while private four year cost around $30,000 per year, and for profit are around $20,000 per year. 
+ The distribution is skewed right, with no gaps. Most institutions in state is less than \$20,000 per year though some go as high as \$60,00 per year. When separated by public versus private and for profit, most public are much less than \$20,000 per year while private four year cost around \$30,000 per year, and for profit are around \$20,000 per year. 
 
 There are other types of graphs for quantitative data. They will be
 explored in the next section.
@@ -448,15 +448,15 @@ Occupation: Occupations of workers.
 
 Numworkers: The number of workers in each occupation (in thousands of workers)
 
-median_wage: Median weekly wage ($)
+median_wage: Median weekly wage (\$)
 
 male_worker: number of male workers (in thousands of workers)
 
-male_wage: Median weekly wage of male workers ($)
+male_wage: Median weekly wage of male workers (\$)
 
 female_worker: number of female workers (in thousands of workers)
 
-female_wage: Median weekly wage of female workers ($)
+female_wage: Median weekly wage of female workers (\$)
   
 **Source**
 CPS News Releases. (n.d.). Retrieved July 8, 2019, from https://www.bls.gov/cps/
@@ -530,25 +530,25 @@ head(Insurance)
 
  average_QHP: The number of qualified health plans
 
- bronze_lowest: premium for the lowest bronze level of insurance for a single person ($)
+ bronze_lowest: premium for the lowest bronze level of insurance for a single person (\$)
 
- silver_lowest: premium for the lowest silver level of insurance for a single person ($)
+ silver_lowest: premium for the lowest silver level of insurance for a single person (\$)
 
-  gold_lowest: premium for the lowest gold level of insurance for a single person ($)
+  gold_lowest: premium for the lowest gold level of insurance for a single person (\$)
 
-  catastrophic: premium for the catastrophic level of insurance for a single person ($)
+  catastrophic: premium for the catastrophic level of insurance for a single person (\$)
   
-  second_silver_pretax: premium for the second silver level of insurance for a single person pretax ($)
+  second_silver_pretax: premium for the second silver level of insurance for a single person pretax (\$)
 
-  second_silver_posttax: premium for the second silver level of insurance for a single person posttax ($)
+  second_silver_posttax: premium for the second silver level of insurance for a single person posttax (\$)
 
-  second_bronze_posttax: premium for the lowest bronze level of insurance for a single person posttax ($)
+  second_bronze_posttax: premium for the lowest bronze level of insurance for a single person posttax (\$)
 
-  silver_family_pretax: premium for the silver level of insurance for a family pretax ($)
+  silver_family_pretax: premium for the silver level of insurance for a family pretax (\$)
 
-  silver_family_posttax: premium for the silver level of insurance for a family posttax ($)
+  silver_family_posttax: premium for the silver level of insurance for a family posttax (\$)
 
-  bronze_family_posttax: premium for the bronze level of insurance for a family posttax ($)
+  bronze_family_posttax: premium for the bronze level of insurance for a family posttax (\$)
 
 **Source**
 Health Insurance Market Place Retrieved from website:
