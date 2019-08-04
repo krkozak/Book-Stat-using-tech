@@ -107,7 +107,7 @@ p<-c(0.001, 0.999)
 w.mean(x,p)
 ```
 
-The expected value (or mean) is -0.5. That is -\$0.50. Since it is negative, that means you lose \$.50 every time you play the Pick 3. It seems you would be better off saming the \$1 every week into a savings account then playing the Pick 3 lottery.
+The expected value (or mean) is -0.5. That is -\$0.50. Since it is negative, that means you lose \$0.50 every time you play the Pick 3. It seems you would be better off saming the \$1 every week into a savings account then playing the Pick 3 lottery.
 
 *\
 *
@@ -187,7 +187,7 @@ d.  If you did come upon a family that has four people in it, what would you thi
 
  Since it is not unusual for a family to have four members, then you would not think anything is amiss.
 
-### Homework Section 5.1
+### Homework
 
  1.  Eyeglassomatic manufactures eyeglasses for different retailers. The number of days it takes to fix defects in an eyeglass and the probability that it will take that number of days are in the table.
 
@@ -237,7 +237,7 @@ Properties of a **binomial experiment** (or Bernoulli trial):
 
 3\) There are only two outcomes, which are called a success and a failure.
 
-\) The probability of a success doesn't change from trial to trial, where *p* = probability of success and *q* = $1-p$ = probability of failure, .
+\) The probability of a success doesn't change from trial to trial, where *p* = probability of success and *q* = $1-p$ = probability of failure.
 
 If you know you have a binomial experiment, then you can calculate binomial probabilities. This is important because binomial probabilities come up often in real life. Examples of binomial experiments are:
 
@@ -258,7 +258,7 @@ Be careful, a success is not always a good thing. Sometimes a success is somethi
 
 Binomial Formula for the probability of *r* successes in *n* trials is $P(X=r)=_nC_r*p^r*q^{n-r}$
 
-where $n_C_r$ is the number of combinations of *n* things taking *r* at a time. It
+where $_nC_r$ is the number of combinations of *n* things taking *r* at a time. It
 is read "*n* choose *r*". 
 
 When solving problems, make sure you define your random variable and state what *n*, *p*, and *r* are. Without doing this, the problems are a great deal harder.
@@ -412,7 +412,7 @@ g.  Suppose five children out of ten have autism. Is this unusual? What does tha
 
 Since the probability of five or more children in a group of ten having autism is much less than 5%, it is unusual to happen. If this does happen, then one may think that the proportion of children diagnosed with autism is actually more than 1/88.
 
-### Homework Section 5.2
+### Homework
 
 1.  Approximately 10% of all people are left-handed (\"11 little-known facts,\" 2013). Consider a grouping of fifteen people.
 
@@ -526,7 +526,7 @@ w.sd(x,p)
 ```
 You expect on average that out of 20 people, less than 1 person would have green eyes, with are variance of 0.198 $people^2$ and a standard deviation of 0.44 people.
 
-### Homework Section 5.3
+### Homework
 
 1.  Suppose a random variable, *x*, arises from a binomial experiment. Suppose *n* = 6, and *p* = 0.13.
 
@@ -609,7 +609,7 @@ adherence. *Circulation*, *119*(23), 3028-3035. Retrieved from
 (2013, October 19). Retrieved from
 <http://www.census.gov/compendia/statab/2012/tables/12s0062.pdf>
 
-Madison, J. (2013, October 15). *M&M\'s color distribution analysis*.
+Madison, J. (2013, October 15). *M&M's color distribution analysis*.
 Retrieved from
 <http://joshmadison.com/2007/12/02/mms-color-distribution-analysis/>
 

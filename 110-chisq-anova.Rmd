@@ -12,7 +12,7 @@ Remember, qualitative data is where you collect data on individuals that are cat
 
 $H_o:$ the two variables are independent (this means that the one variable is not affected by the other) 
 
-$H_a:$ the two variables are dependent (this means that the one variable is > affected by the other) 
+$H_a:$ the two variables are dependent (this means that the one variable is affected by the other) 
 
 Also, state your level here.
 
@@ -58,22 +58,22 @@ table
 ```
 where [,1] represents number of mothers who did not breast feed, [,2] represents number of mothers who breast feed for less than 2 months, [,3] represents number of mothers who breast feed between 2 and 6 months. and [,4] represents the number of mothers who breast feed more than 6 months. Rows represent whether children has or doesn't have autism. 
 
-> **Solution:**
->
+ **Solution:**
+
 1.  State the null and alternative hypotheses and the level of significance
->
-> Breastfeeding and autism are independent
->
-> Breastfeeding and autism are dependent
->
+
+ Breastfeeding and autism are independent
+
+ Breastfeeding and autism are dependent
+
 2.  State and check the assumptions for the hypothesis test
->
+
 a.  A random sample of breastfeeding time frames and autism incidence was taken. Check: this was stated in the problem.
->
+
 b.  Expected frequencies for each cell are greater than or equal to 5 $E\ge 5$. See step 3. All expected frequencies are more than 5.
->
+
 3.  Find the test statistic and p-value
-> On R Studio, the command is
+ On R Studio, the command is
 
 ```{r}
 yes<-c(241, 198, 164, 215) #puts data into row 1
@@ -82,24 +82,24 @@ table<-rbind(yes,no) #combines row 1 and row 2 to make a table
 chisq.test(table) #calculates the test statistics and p-value
 chisq.test(table)$expected # shows all the expected frequencies
 ```
->
->The test statistic is 11.217 and the p-value is 0.01061.
->
-4.  Conclusion
->
-> Fail to reject $H_o$ since the p-value is more than 0.01.
->
-5.  Interpretation
->
-> There is not enough evidence to support that breastfeeding and autism are dependent. This means that you cannot say whether a child is breastfed or not will indicate if that the child will be diagnosed with autism.
 
-### Homework Section 11.1
+The test statistic is 11.217 and the p-value is 0.01061.
+
+4.  Conclusion
+
+ Fail to reject $H_o$ since the p-value is more than 0.01.
+
+5.  Interpretation
+
+ There is not enough evidence to support that breastfeeding and autism are dependent. This means that you cannot say whether a child is breastfed or not will indicate if that the child will be diagnosed with autism.
+
+### Homework
 
 **In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.**
 
->1.  The number of people who survived the Titanic based on class and sex is in table \#11.1.2 (\"Encyclopedia Titanica,\" 2013). Is there enough evidence to show that the class and the sex of a person who survived the Titanic are independent? Test at the 5% level.
->
->**Table \#11.1.2: Surviving the Titanic**
+1.  The number of people who survived the Titanic based on class and sex is in table \#11.1.2 (\"Encyclopedia Titanica,\" 2013). Is there enough evidence to show that the class and the sex of a person who survived the Titanic are independent? Test at the 5% level.
+
+**Table \#11.1.2: Surviving the Titanic**
 
 ```{r, echo=FALSE}
 first<-c(134, 59)
@@ -108,12 +108,12 @@ third<-c(80, 58)
 table<-rbind(first, second, third)
 table
 ```
->Where [,1] represents female and [,2] represents male.
+Where [,1] represents female and [,2] represents male.
 
 
->2.  Researchers watched groups of dolphins off the coast of Ireland in 1998 to determine what activities the dolphins partake in at certain times of the day (\"Activities of dolphin,\" 2013). The numbers in table \#11.1.3 represent the number of groups of dolphins that were partaking in an activity at certain times of days. Is there enough evidence to show that the activity and the time period are independent for dolphins? Test at the 1% level.
->
-> **Table \#11.1.3: Dolphin Activity**
+2.  Researchers watched groups of dolphins off the coast of Ireland in 1998 to determine what activities the dolphins partake in at certain times of the day (\"Activities of dolphin,\" 2013). The numbers in table \#11.1.3 represent the number of groups of dolphins that were partaking in an activity at certain times of days. Is there enough evidence to show that the activity and the time period are independent for dolphins? Test at the 1% level.
+
+ **Table \#11.1.3: Dolphin Activity**
 
 +--------------+---------+-------+-----------+---------+-----+
 | Activity     | Period  | Row   |           |         |     |
@@ -131,9 +131,9 @@ table
 | Column Total | 72      | 15    | 23        | 79      | 189 |
 +--------------+---------+-------+-----------+---------+-----+
 
-> 3.  Is there a relationship between autism and what an infant is fed? To determine if there is, a researcher asked mothers of autistic and non-autistic children to say what they fed their infant. The data is in table \#11.1.4 (Schultz, Klonoff-Cohen, Wingard, Askhoomoff, Macera, Ji & Bacher, 2006). Do the data provide enough evidence to show that that what an infant is fed and autism are independent? Test at the 1% level.
->
-> **Table \#11.1.4: Autism Versus Breastfeeding**
+ 3.  Is there a relationship between autism and what an infant is fed? To determine if there is, a researcher asked mothers of autistic and non-autistic children to say what they fed their infant. The data is in table \#11.1.4 (Schultz, Klonoff-Cohen, Wingard, Askhoomoff, Macera, Ji & Bacher, 2006). Do the data provide enough evidence to show that that what an infant is fed and autism are independent? Test at the 1% level.
+
+ **Table \#11.1.4: Autism Versus Breastfeeding**
 
   Autism         Feeding         Row Total                                        
   -------------- --------------- ---------------------- ------------------------- -----
@@ -142,9 +142,9 @@ table
   No             6               22                     10                        38
   Column Total   18              61                     75                        154
 
->4.  A person's educational attainment and age group was collected by the U.S. Census Bureau in 1984 to see if age group and educational attainment are related. The counts in thousands are in table     \#11.1.5 (\"Education by age,\" 2013). Do the data show that educational attainment and age are independent? Test at the 5% level. 
->
->**Table \#11.1.5: Educational Attainment and Age Group**
+4.  A person's educational attainment and age group was collected by the U.S. Census Bureau in 1984 to see if age group and educational attainment are related. The counts in thousands are in table \#11.1.5 (\"Education by age,\" 2013). Do the data show that educational attainment and age are independent? Test at the 5% level. 
+
+**Table \#11.1.5: Educational Attainment and Age Group**
 
   Education                 Age Group   Row Total                           
   ------------------------- ----------- ----------- ------- ------- ------- --------
@@ -155,9 +155,9 @@ table
   College 4 or more years   9771        7596        3904    3109    2483    26863
   Column Total              40173       20057       22240   22034   26290   130794
 
->5.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important good grades were to them (1 very important and 4 least important). The data is in table \#11.1.6 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of grades are independent? Test at the 5% level.
->
-> **Table \#11.1.6: Personal Goal and Importance of Grades**
+5.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important good grades were to them (1 very important and 4 least important). The data is in table \#11.1.6 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of grades are independent? Test at the 5% level.
+
+ **Table \#11.1.6: Personal Goal and Importance of Grades**
 
   Goal           Grades Importance Rating   Row Total               
   -------------- -------------------------- ----------- ----- ----- -----
@@ -167,9 +167,9 @@ table
   Sports         10                         24          33    23    90
   Column Total   94                         123         133   128   478
 
->6.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important being good at sports were to them (1 very important and 4 least important). The data is in table \#11.1.7 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of sports are independent? Test at the 5% level.
->
-> **Table \#11.1.7: Personal Goal and Importance of Sports**
+6.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important being good at sports were to them (1 very important and 4 least important). The data is in table \#11.1.7 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of sports are independent? Test at the 5% level.
+
+ **Table \#11.1.7: Personal Goal and Importance of Sports**
 
   Goal           Sports Importance Rating   Row Total              
   -------------- -------------------------- ----------- ----- ---- -----
@@ -179,9 +179,9 @@ table
   Sports         50                         24          14    2    90
   Column Total   165                        154         112   47   478
 
->7.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important having good looks were to them (1 very important and 4 least important). The data is in table \#11.1.8 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of looks are independent? Test at the 5% level.
->
-> **Table \#11.1.8: Personal Goal and Importance of Looks**
+7.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important having good looks were to them (1 very important and 4 least important). The data is in table \#11.1.8 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of looks are independent? Test at the 5% level.
+
+ **Table \#11.1.8: Personal Goal and Importance of Looks**
 
   Goal           Looks Importance Rating   Row Total              
   -------------- ------------------------- ----------- ----- ---- -----
@@ -191,9 +191,9 @@ table
   Sports         24                        30          17    19   90
   Column Total   185                       126         101   66   478
 
->8.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important having money were to them (1 very important and 4 least important). The data is in table \#11.1.9 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of money are independent? Test at the 5% level. 
->
-> **Table \#11.1.9: Personal Goal and Importance of Money**
+8.  Students at multiple grade schools were asked what their personal goal (get good grades, be popular, be good at sports) was and how important having money were to them (1 very important and 4 least important). The data is in table \#11.1.9 (\"Popular kids datafile,\" 2013). Do the data provide enough evidence to show that goal attainment and importance of money are independent? Test at the 5% level. 
+
+ **Table \#11.1.9: Personal Goal and Importance of Money**
 
   Goal           Money Importance Rating   Row Total               
   -------------- ------------------------- ----------- ----- ----- -----
@@ -249,59 +249,59 @@ observed<-c(78, 87, 87, 76, 85, 87)
 observed
 ```
 
-> **Solution:**
->
+ **Solution:**
+
 1.  State the null and alternative hypotheses and the level of significance
->
-> $H_o:$ The observed frequencies are consistent with the distribution for fair die (the die is fair)
->
-> $H_a:$ The observed frequencies are not consistent with the distribution for fair die (the die is not fair)
->
+
+ $H_o:$ The observed frequencies are consistent with the distribution for fair die (the die is fair)
+
+ $H_a:$ The observed frequencies are not consistent with the distribution for fair die (the die is not fair)
+
 $\alpha=0.05$
->
->2.  State and check the assumptions for the hypothesis test
->
->a.  A random sample is taken since each throw of a die is a random event.
->
+
+2.  State and check the assumptions for the hypothesis test
+
+a.  A random sample is taken since each throw of a die is a random event.
+
 b.  Expected frequencies for each cell are greater than or equal to 5.See step 3.
->
->3.  Find the test statistic and p-value
->
-> On R Studio, this would be 
+
+3.  Find the test statistic and p-value
+
+ On R Studio, this would be 
 
 ```{r}
 fair_die<-c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
 observed<-c(78, 87, 87, 76, 85, 87)
 chisq.test(observed, p=fair_die)
 ```
->
-> Test Statistic:
-The test statistic is 1.504. The p-value is 0.9126.
->
->4.  Conclusion
->
-> Fail to reject $H_o$ since the p-value is greater than 0.05.
->
->5.  Interpretation
->
-> There is not enough evidence to support that the die is not consistent with the distribution for a fair die. There is not enough evidence to support that the die is not fair.
 
-### Homework Section 11.2
+ Test Statistic:
+The test statistic is 1.504. The p-value is 0.9126.
+
+4.  Conclusion
+
+ Fail to reject $H_o$ since the p-value is greater than 0.05.
+
+5.  Interpretation
+
+ There is not enough evidence to support that the die is not consistent with the distribution for a fair die. There is not enough evidence to support that the die is not fair.
+
+### Homework
 
 ** In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.**
 
->1.  According to the M&M candy company, the expected proportion can be found in Table \#11.2.2. In addition, the table contains the number of M&M's of each color that were found in a case of candy (Madison, 2013). At the 5% level, do the observed frequencies support the claim of M&M?
->
->**Table \#11.2.2: M&M Observed and Proportions**
+1.  According to the M&M candy company, the expected proportion can be found in Table \#11.2.2. In addition, the table contains the number of M&M's of each color that were found in a case of candy (Madison, 2013). At the 5% level, do the observed frequencies support the claim of M&M?
+
+**Table \#11.2.2: M&M Observed and Proportions**
 
                          Blue   Brown   Green   Orange   Red    Yellow   Total
   ---------------------- ------ ------- ------- -------- ------ -------- -------
   Observed Frequencies   481    371     483     544      372    369      2620
   Expected Proportion    0.24   0.13    0.16    0.20     0.13   0.14     
 
->2.  Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made the time period of January 1 to March 31. Table \#11.2.3 gives the defect and the number of defects. 
->
->**Table \#11.2.3: Number of Defective Lenses**
+2.  Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made the time period of January 1 to March 31. Table \#11.2.3 gives the defect and the number of defects. 
+
+**Table \#11.2.3: Number of Defective Lenses**
 
   Defect type              Number of defects
   ------------------------ -------------------
@@ -318,45 +318,45 @@ The test statistic is 1.504. The p-value is 0.9126.
   Right shape -- big       1105
   Lost in lab              976
   Spots/bubble -- intern   976
->
->Do the data support the notion that each defect type occurs in the same proportion? Test at the 10% level.
 
-> 3.  On occasion, medical studies need to model the proportion of the population that has a disease and compare that to observed frequencies of the disease actually occurring. Suppose the end-stage renal failure in south-west Wales was collected for different age groups. Do the data in table 11.2.4 show that the observed frequencies are in agreement with proportion of people in each age group (Boyle, Flowerdew & Williams, 1997)? Test at the 1% level.
->
->    **Table \#11.2.4: Renal Failure Frequencies**
+Do the data support the notion that each defect type occurs in the same proportion? Test at the 10% level.
+
+ 3.  On occasion, medical studies need to model the proportion of the population that has a disease and compare that to observed frequencies of the disease actually occurring. Suppose the end-stage renal failure in south-west Wales was collected for different age groups. Do the data in table 11.2.4 show that the observed frequencies are in agreement with proportion of people in each age group (Boyle, Flowerdew & Williams, 1997)? Test at the 1% level.
+
+    **Table \#11.2.4: Renal Failure Frequencies**
 
   Age Group             16-29   30-44   45-59   60-75   75+    Total
   --------------------- ------- ------- ------- ------- ------ -------
   Observed Frequency    32      66      132     218     91     539
   Expected Proportion   0.23    0.25    0.22    0.21    0.09   
 
->4.  In Africa in 2011, the number of deaths of a female from cardiovascular disease for different age groups are in table \#11.2.5 (\"Global health observatory,\" 2013). In addition, the proportion of deaths of females from all causes for the same age groups are also in table \#11.2.5. Do the data show that the death from cardiovascular disease are in the same proportion as all deaths for the different age groups? Test at the 5% level.
->
->    **Table \#11.2.5: Deaths of Females for Different Age Groups**
+4.  In Africa in 2011, the number of deaths of a female from cardiovascular disease for different age groups are in table \#11.2.5 (\"Global health observatory,\" 2013). In addition, the proportion of deaths of females from all causes for the same age groups are also in table \#11.2.5. Do the data show that the death from cardiovascular disease are in the same proportion as all deaths for the different age groups? Test at the 5% level.
+
+    **Table \#11.2.5: Deaths of Females for Different Age Groups**
 
   Age                        5-14   15-29   30-49   50-69   Total
   -------------------------- ------ ------- ------- ------- -------
   Cardiovascular Frequency   8      16      56      433     513
   All Cause Proportion       0.10   0.12    0.26    0.52    
 
->5.  In Australia in 1995, there was a question of whether indigenous people are more likely to die in prison than non-indigenous people. To figure out, the data in table 11.2.6 was collected. (\"Aboriginal deaths in,\" 2013). Do the data show that indigenous people die in the same proportion as non-indigenous people? Test at the 1% level.
->
->    **Table \#11.2.6: Death of Prisoners**
+5.  In Australia in 1995, there was a question of whether indigenous people are more likely to die in prison than non-indigenous people. To figure out, the data in table 11.2.6 was collected. (\"Aboriginal deaths in,\" 2013). Do the data show that indigenous people die in the same proportion as non-indigenous people? Test at the 1% level.
+
+    **Table \#11.2.6: Death of Prisoners**
 
                                          Prisoner Dies   Prisoner Did Not Die   Total
   -------------------------------------- --------------- ---------------------- -------
   Indigenous Prisoner Frequency          17              2890                   2907
   Frequency of Non-Indigenous Prisoner   42              14459                  14501
 
->6.  A project conducted by the Australian Federal Office of Road Safety asked people many questions about their cars. One question was the  reason that a person chooses a given car, and that data is in table \#11.2.7 (\"Car preferences,\" 2013).
->
-> **Table \#11.2.7: Reason for Choosing a Car**
+6.  A project conducted by the Australian Federal Office of Road Safety asked people many questions about their cars. One question was the  reason that a person chooses a given car, and that data is in table \#11.2.7 (\"Car preferences,\" 2013).
+
+ **Table \#11.2.7: Reason for Choosing a Car**
 
   Safety   Reliability   Cost   Performance   Comfort   Looks
   -------- ------------- ------ ------------- --------- -------
   84       62            46     34            47        27
 
-> Do the data show that the frequencies observed substantiate the claim that the reasons for choosing a car are equally likely? Test at the 5% level.
+ Do the data show that the frequencies observed substantiate the claim that the reasons for choosing a car are equally likely? Test at the 5% level.
 **\
 **
 
@@ -433,152 +433,152 @@ http://lib.stat.cmu.edu/DASL/Stories/CancerSurvival.html
 **References**
 http://lib.stat.cmu.edu/DASL
 
-> **Solution:**
->
+ **Solution:**
+
 1.  State the random variables and the parameters in words
->
->$x_1:$ suvival time of patient with Stomach cancer
->$x_2:$ suvival time of patient with Bronchus (lung) cancer
->$x_3:$ suvival time of patient with Colon cancer
->$x_4:$ suvival time of patient with Ovarian cancer
->$x_5:$ suvival time of patient with Breast cancer
->
->$\mu_1:$ mean suvival time of patient with Stomach cancer
->$\mu_2:$ mean suvival time of patient with Brocnchus (lung) cancer
->$\mu_3:$ mean suvival time of patient with Colon cancer
->$\mu_4:$ mean suvival time of patient with Ovarian cancer
->$\mu_5:$ mean suvival time of patient with Breat cancer
->
-> Now before conducting the hypothesis test, look at the means and standard deviations. There appears to be a difference between at least two of the means, but realize that the standard deviations are very different. The difference you see may not be significant.
->
-> Notice the sample sizes are not the same.
->
+
+$x_1:$ survival time of patient with Stomach cancer
+$x_2:$ survival time of patient with Bronchus (lung) cancer
+$x_3:$ survival time of patient with Colon cancer
+$x_4:$ survival time of patient with Ovarian cancer
+$x_5:$ survival time of patient with Breast cancer
+
+$\mu_1:$ mean survival time of patient with Stomach cancer
+$\mu_2:$ mean survival time of patient with Bronchus (lung) cancer
+$\mu_3:$ mean survival time of patient with Colon cancer
+$\mu_4:$ mean survival time of patient with Ovarian cancer
+$\mu_5:$ mean survival time of patient with Brest cancer
+
+ Now before conducting the hypothesis test, look at the means and standard deviations. There appears to be a difference between at least two of the means, but realize that the standard deviations are very different. The difference you see may not be significant.
+
+ Notice the sample sizes are not the same.
+
 2.  State the null and alternative hypotheses and the level of     significance
->
+
 $H_o:$ all the means are equal
->
+
 $H_a:$ some of the means are different
->
+
 $\alpha=0.01$
->
+
 3.  State and check the assumptions for the hypothesis test
->
+
 a.  A random sample of 13 survival times from stomach cancer was taken. A random sample of 17 survival times from bronchus cancer was taken. A random sample of 17 survival times from colon cancer was taken. A random sample of 6 survival times from ovarian cancer was taken. A random sample of 11 survival times from breast cancer was taken. These statements may not be true. This information was not shared as to whether the samples were random or not but it may be safe to assume that.
->
+
 b.  Since the individuals have different cancers, then the samples are independent.
->
+
 c.  Population of all survival times from stomach cancer is normally distributed. Population of all survival times from bronchus cancer is normally distributed. Population of all survival times from colon cancer is normally distributed. Population of all survival times from ovarian cancer is normally distributed. Population of all survival times from breast cancer is normally distributed. Looking at the histograms, box plots and normal quantile plots for each sample, it appears that none of the populations are normally distributed. The sample sizes are somewhat different for the problem. This assumption may not be true.
->
+
 d.  The population variances are all equal. The sample standard deviations are approximately 346.3, 209.9, 427.2, 1098.6, and 1239.0 respectively. This assumption does not appear to be met, since the sample standard deviations are very different. The sample sizes are somewhat different for the problem. This assumption may not be true. 
->
+
 4.  Find the test statistic and p-value
->
-> To find the test statistic and p-value on R Studio, the commands would be:
->
+
+ To find the test statistic and p-value on R Studio, the commands would be:
+
 
 ```{r}
 results=aov(survival~organ, data=Cancer)
 summary(results)
 ```
->
-> The test statistic is F = 6.433 and the p-value = 0.000229.
->
-5.  Conclusion
->
-> Reject $H_o:$ since the p-value is less than 0.01.
->
-6.  Interpretation
->
-> There is enough evidence to support that at least two of the mean survival times from different cancers are not equal.
->
-> By examination of the means, it appears that the mean survival time for breast cancer is different from the mean survival times for both stomach and bronchus cancers. It may also be different for the mean survival time for colon cancer. The others may not be different enough to actually say for sure.
 
-### Homework Section 11.3
+ The test statistic is F = 6.433 and the p-value = 0.000229.
+
+5.  Conclusion
+
+ Reject $H_o:$ since the p-value is less than 0.01.
+
+6.  Interpretation
+
+ There is enough evidence to support that at least two of the mean survival times from different cancers are not equal.
+
+ By examination of the means, it appears that the mean survival time for breast cancer is different from the mean survival times for both stomach and bronchus cancers. It may also be different for the mean survival time for colon cancer. The others may not be different enough to actually say for sure.
+
+### Homework
 
 In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.
 
->1.  Cuckoo birds are in the habit of laying their eggs in other birds' nest. The other birds adopt and hatch the eggs. The lengths (in cm) of cuckoo birds' eggs in the other species nests were measured and are in table \#11.3.2 (\"Cuckoo eggs in,\" 2013). Do the data show that the mean length of cuckoo bird's eggs is not all the same when put into different nests? Test at the 5% level.
->
-> **Table \#11.3.2: Lengths of Cuckoo Bird Eggs in Different Species Nests**
+1.  Cuckoo birds are in the habit of laying their eggs in other birds' nest. The other birds adopt and hatch the eggs. The lengths (in cm) of cuckoo birds' eggs in the other species nests were measured and are in table \#11.3.2 (\"Cuckoo eggs in,\" 2013). Do the data show that the mean length of cuckoo bird's eggs is not all the same when put into different nests? Test at the 5% level.
+
+ **Table \#11.3.2: Lengths of Cuckoo Bird Eggs in Different Species Nests**
 
 ```{r}
 Eggs <- read.csv("https://krkozak.github.io/MAT160/Birds_eggs.csv")
 head(Eggs)
 ```
->
->**Code book for data frame Eggs** 
->
->**Description**
+
+**Code book for data frame Eggs** 
+
+**Description**
 Cuckoo birds are in the habit of laying their eggs in other birds' nest. The other birds adopt and hatch the eggs. The lengths (in cm) of cuckoo birds' eggs in the other species nests were measured
->
+
 This data frame contains the following columns:
->
-length: length of cucmoo bird's eggs in other species nets (cm)
->
+
+length: length of cuckoo bird's eggs in other species nets (cm)
+
 bird: bids where eggs were found in their nests. The birds are Meadow Pipit, Tree Pipit, Hedge Sparrow, Robin, Pied Wagtail, and Wren
->
->**Source**
+
+**Source**
 Cuckoo eggs in nest of other birds. (2013, December 04). Retrieved from
 http://lib.stat.cmu.edu/DASL/Stories/cuckoo.html
->
->**References**
+
+**References**
 SOCR Home page: http://www.socr.ucla.edu                                                        
 
->2.  Levi-Strauss Co manufactures clothing. The quality control department measures weekly values of different suppliers for the percentage difference of waste between the layout on the computer and the actual waste when the clothing is made (called run-up). The data is in table \#11.3.3, (\"Waste run up,\" 2013). Do the data show that there is a difference between some of the suppliers? Test at the 1% level. 
->
-> **Table \#11.3.3: Run-ups for Different Plants Making Levi Strauss Clothing**
+2.  Levi-Strauss Co manufactures clothing. The quality control department measures weekly values of different suppliers for the percentage difference of waste between the layout on the computer and the actual waste when the clothing is made (called run-up). The data is in table \#11.3.3, (\"Waste run up,\" 2013). Do the data show that there is a difference between some of the suppliers? Test at the 1% level. 
+
+ **Table \#11.3.3: Run-ups for Different Plants Making Levi Strauss Clothing**
 
 ```{r}
 Levi <- read.csv("https://krkozak.github.io/MAT160/Levi_jeans.csv")
 head(Levi)
 ```
->
->**Code book for data frame Levi** 
->
->**Description**
-Levi-Strauss Co manufactures clothing. The quality control department measures weekly values of different suppliers for the percentage difference of waste between the layout on the computer and the actual waste when the clothing is made (called run-up).
->
-This data frame contains the following columns:
->
-run_up: percentage difference of waste between the layout on the computer and the actual wase when the clothing is made. There are some negative values because sometimes the supplier is able to layout the pattern better than the computer
->
-plant: Which suppliers
->
->**Source**
->Waste run up. (2013, December 04). Retrieved from http://lib.stat.cmu.edu/DASL/Stories/wasterunup.html
->
-**References**
->http://lib.stat.cmu.edu/DASL
 
->3.  Several magazines were grouped into three categories based on what level of education of their readers the magazines are geared towards: high, medium, or low level. Then random samples of the     magazines were selected to determine the number of three-plus-syllable words were in the advertising copy, and the data is in table \#11.3.4 (\"Magazine ads readability,\" 2013). Is there enough evidence to show that the mean number of three-plus-syllable words in advertising copy is different for at least two of the education levels? Test at the 5% level.
->
-> **Table \#11.3.4: Number of Three Plus Syllable Words in Advertising Copy**
+**Code book for data frame Levi** 
+
+**Description**
+Levi-Strauss Co manufactures clothing. The quality control department measures weekly values of different suppliers for the percentage difference of waste between the layout on the computer and the actual waste when the clothing is made (called run-up).
+
+This data frame contains the following columns:
+
+run_up: percentage difference of waste between the layout on the computer and the actual waste when the clothing is made. There are some negative values because sometimes the supplier is able to layout the pattern better than the computer
+
+plant: Which suppliers
+
+**Source**
+Waste run up. (2013, December 04). Retrieved from http://lib.stat.cmu.edu/DASL/Stories/wasterunup.html
+
+**References**
+http://lib.stat.cmu.edu/DASL
+
+3.  Several magazines were grouped into three categories based on what level of education of their readers the magazines are geared towards: high, medium, or low level. Then random samples of the     magazines were selected to determine the number of three-plus-syllable words were in the advertising copy, and the data is in table \#11.3.4 (\"Magazine ads readability,\" 2013). Is there enough evidence to show that the mean number of three-plus-syllable words in advertising copy is different for at least two of the education levels? Test at the 5% level.
+
+ **Table \#11.3.4: Number of Three Plus Syllable Words in Advertising Copy**
 
 ```{r}
 Advertising <- read.csv("https://krkozak.github.io/MAT160/three_syllable_words.csv")
 head(Advertising)
 ```
->
->**Code book for data frame Advertising** 
->
->**Description**
+
+**Code book for data frame Advertising** 
+
+**Description**
 Several magazines were grouped into three categories based on what level of education of their readers the magazines are geared towards: high, medium, or low level. Then random samples of the     magazines were selected to determine the number of three-plus-syllable words were in the advertising copy
->
+
 This data frame contains the following columns:
->
+
 number: number of three=plus-syllable words in advertising copy
->
+
 education: level of education the magazine is geared towards: high, medium, or low
->
+
 **Source**
 Magazine ads readability. (2013, December 04). Retrieved from http://lib.stat.cmu.edu/DASL/Datafiles/magadsdat.html
->
->**References**
->http://lib.stat.cmu.edu/DASL
 
->4.  A study was undertaken to see how accurate food labeling for calories on food that is considered reduced calorie. The group measured the amount of calories for each item of food and then found the percent difference between measured and labeled food. The group also looked at food that was nationally advertised, regionally distributed, or locally prepared. The data is in table \#11.3.5     (\"Calories datafile,\" 2013). Do the data indicate that at least two of the mean percent differences between the three groups are different? Test at the 10% level.
+**References**
+http://lib.stat.cmu.edu/DASL
 
-> **Table \#11.3.5: Percent Differences Between Measured and Labeled Food**
+4.  A study was undertaken to see how accurate food labeling for calories on food that is considered reduced calorie. The group measured the amount of calories for each item of food and then found the percent difference between measured and labeled food. The group also looked at food that was nationally advertised, regionally distributed, or locally prepared. The data is in table \#11.3.5     (\"Calories datafile,\" 2013). Do the data indicate that at least two of the mean percent differences between the three groups are different? Test at the 10% level.
+
+ **Table \#11.3.5: Percent Differences Between Measured and Labeled Food**
 
 ```{r}
 Food <- read.csv("https://krkozak.github.io/MAT160/Food_calories_percent_diff.csv")
@@ -589,39 +589,39 @@ head(Food)
 
 **Description**
 A study was undertaken to see how accurate food labeling for calories on food that is considered reduced calorie. The group measured the amount of calories for each item of food and then found the percent difference between measured and labeled food. The group also looked at food that was nationally advertised, regionally distributed, or locally prepared.
->
-This data frame contains the following columns:
->
-percent_diff: percent difference between the number of calories that are measured in the food and the amount that is labbled on the food.
->
-food: Where the food is created: nationally advertised, regionally distributed, or locally prepared.
->
->**Source**
-Calories datafile. (2013, December 07). Retrieved from http://lib.stat.cmu.edu/DASL/Datafiles/Calories.html
->
-**References**
->http://lib.stat.cmu.edu/DASL
 
->5.  The amount of sodium (in mg) in different types of hotdogs is in table \#11.3.6 (\"Hot dogs story,\" 2013). Is there sufficient evidence to show that the mean amount of sodium in the types of hotdogs are not all equal? Test at the 5% level.
->
-> **Table \#11.3.6: Amount of Sodium (in mg) in Beef, Meat, and Poultry > Hotdogs** 
+This data frame contains the following columns:
+
+percent_diff: percent difference between the number of calories that are measured in the food and the amount that is labeled on the food.
+
+food: Where the food is created: nationally advertised, regionally distributed, or locally prepared.
+
+**Source**
+Calories datafile. (2013, December 07). Retrieved from http://lib.stat.cmu.edu/DASL/Datafiles/Calories.html
+
+**References**
+http://lib.stat.cmu.edu/DASL
+
+5.  The amount of sodium (in mg) in different types of hot dogs is in table \#11.3.6 (\"Hot dogs story,\" 2013). Is there sufficient evidence to show that the mean amount of sodium in the types of hot dogs are not all equal? Test at the 5% level.
+
+**Table \#11.3.6: Amount of Sodium (in mg) in Beef, Meat, and Poultry Hotdogs** 
 
 ```{r}
 Hotdog_complete <- read.csv("https://krkozak.github.io/MAT160/Hot_Dog_all_Dataset.csv")
 head(Hotdog_complete)
 ```
->
->**Code book for data frame Hotdog** 
->
->**Description**
+
+**Code book for data frame Hotdog** 
+
+**Description**
 Results of a laboratory analysis of calories and sodium content of major hot dog brands. Researchers for Consumer Reports analyzed three types of hot dog: beef, poultry, and meat (mostly pork and beef, but up to 15% poultry meat). 
->
+
 This data frame contains the following columns:
->
+
 type: Type of hot dog (beef or poultry or meat (mostly pork and beef but up to 15% poultry meat))
->
+
 calories: Calories per hot dog
->
+
 sodium: Milligrams of sodium per hot dog
 
 **Source**

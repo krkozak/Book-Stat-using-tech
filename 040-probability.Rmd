@@ -65,7 +65,7 @@ Note: probability, relative frequency, percentage, and proportion are all differ
 You can take a data frame and count the number of values to find the probability. 
 
 ### Example: Statistics class survey
-Data was collected for two semesters in a statistics class. The data frame in is the \table #4.1.2.
+Data was collected for two semesters in a statistics class. The data frame in is the table \#4.1.2.
 
 **Table \#4.1.2: Statistics class survey**
 
@@ -92,7 +92,7 @@ tally(~ice_cream, data=Class, format="proportion")
 
 So the probability that a person in the class likes cookie dough ice cream is 0.22.
 
-### Homework Section 4.1
+### Homework
 
 1.  Table \#4.1.3 contains the number of M&M's of each color that were
 found in a packet (M&M's Color Distribution Analysis, 2019).
@@ -666,7 +666,7 @@ d.  If the casino pays 1:1, how much profit does the casino make on a
  actual odds, they would pay \$3.50 on every \$1 bet, and on \$10, they
  pay $3.5*10$ =\$35. Their profit is $35-10=$ \$25.
 
-### Homework Section 4.2
+### Homework
 
 1.  In problem 4.1.1, the probabilities of each color of M&Ms in a packet were found. Use that information to answer the following questions. 
 a.  Find the probability of choosing a green or red M&M.
@@ -983,7 +983,7 @@ $(\frac{11915}{12000})^{10}=0.931382$. So as you can see, there is not much diff
 So here is the rule:
 if the sample is very small compared to the size of the population, then you can assume that the probabilities are independent, even though they aren't technically. By the way, the probability of rejecting the shipment is $1-0.9314=0.0686$.
 
-### Homework Section 4.3
+### Homework
 
 1.  Are owning a refrigerator and owning a car independent events? Why
 or why not?
@@ -1041,9 +1041,9 @@ head(Car_pref)
 
 **Code book for Data Frame Car_pref** see Problem 4.1.4 in Section 4.1
 
-The contingency table for the sex of a person and the size car the person prefers is in \table \#4.3.4
+The contingency table for the sex of a person and the size car the person prefers is in table \#4.3.4
 
-**Table #4.3.4: Sex of person and reason for car**
+**Table \#4.3.4: Sex of person and reason for car**
 
 ```{r tally-car-sex-table}
 tally(~PreferCar+Sex, data=Car_pref)
@@ -1159,7 +1159,7 @@ Picking *r* objects from *n* total objects when order doesn't matter $_{n}C_{r}=
 
 Most calculators have a factorial button on them, and many have the combination and permutation functions also.
 
-### Homework Section 4.4
+### Homework
 
 1.  You are going to a benefit dinner, and need to decide before the dinner what you want for salad, main dish, and dessert. You have 2 different salads to choose from, 3 main dishes, and 5 desserts. How many different meals are available? 
 

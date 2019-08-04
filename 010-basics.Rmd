@@ -65,7 +65,7 @@ One last concept to mention is that there are two different types of variables -
 >
 **Quantitative or** **numerical variable** -- answer is a number, something that can be counted or measured from the individual.
 
-### Example: Stating Definitions for Qualitative Variable**
+### Example: Stating Definitions for Qualitative Variable
 
 In 2010, the Pew Research Center questioned 1500 adults in the U.S. to estimate the proportion of the population favoring marijuana use for medical purposes. It was found that 73% are in favor of using > marijuana for medical purposes. State the unit of observation, variable, population, and sample.
 
@@ -225,7 +225,7 @@ d.) Age groupings (baby, toddler, adolescent, teenager, adult, elderly)
 >
 > This is ordinal since it is not a number, but you could put the data in order from youngest to oldest or the other way around.
 
-### Homework Section 1.1
+### Homework
 
 >1.  Suppose you want to know how Arizona workers age 16 or older travel to work. To estimate the percentage of people who use the different modes of travel, you take a sample containing 500 Arizona workers age 16 or older. State the individual, variable, population, sample, parameter, and statistic.
 
@@ -387,7 +387,7 @@ e.  Instruct each Banner Health facilities to record any complications from 20 s
 >This is a convenience sample since they left it up to the facility how to do it. The problem with convenience samples is that the person collecting the data will probably collect data from surgeries that had no complications.
 
 
-### Homework Section 1.2
+### Homework
 
 >1.  Researchers want to collect cholesterol levels of U.S. patients who had a heart attack two days prior. The following are different sampling techniques that the researcher could use. Classify each as simple random sample, stratified sample, systematic sample, cluster sample, or convenience sample.
 >
@@ -497,7 +497,7 @@ One last consideration is the time period that you are collecting the data over.
 
 **Prospective** (or **longitudinal** or **cohort**) **study**: data collected in the future from groups sharing common factors.
 
-### Homework Section 1.3
+### Homework
 
 > 1.  You want to determine if cinnamon reduces a person's insulin sensitivity. You give patients who are insulin sensitive a certain amount of cinnamon and then measure their glucose levels. Is this an observation or an experiment? Why?
 
@@ -572,7 +572,7 @@ The ordering of the question can also cause **hidden bias**. An example of this 
 
 **Voluntary response** is where people are asked to respond via phone, email or online. The problem with these is that only people who really care about the topic are likely to call or email. These surveys are not scientific and the results from these surveys are not valid. Note: all studies involve volunteers. The difference between a voluntary response survey and a scientific study is that in a scientific study the researchers ask the individuals to be involved, while in a voluntary response survey the individuals become involved on their own choosing.
 
-### Example: Bias in a Study**
+### Example: Bias in a Study
 
 Suppose a mathematics department at a community college would like to assess whether computer-based homework improves students' test scores. They use computer-based homework in one classroom with one teacher and use traditional paper and pencil homework in a different classroom with a different teacher. The students using the computer-based homework had higher test scores. What is wrong with this experiment?
 
@@ -611,7 +611,7 @@ b.  Aspirin has been used for years to bring down fevers in humans. Originally i
 >
 > No. Just because one age group can use it doesn't mean it is safe to use for all age groups. In fact, there has been a link between giving a child under the age of 19 aspirin when they have a fever and Reye's syndrome.
 
-###  Homework Section 1.4
+###  Homework
 
 >1.  Suppose there is a study where a researcher conducts an experiment to show that deep breathing exercises helps to lower blood pressure. The researcher takes two groups of people and has one group to perform deep breathing exercises and a series of aerobic exercises every day and the other group was asked to refrain from any exercises. The researcher found that the group performing the deep breathing exercises and the aerobic exercises had lower blood pressure. Discuss any issue with this study.
 

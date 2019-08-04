@@ -48,7 +48,7 @@ library("MASS")
  The value for $\bar{x}$ is used to estimate $\mu$ since $\mu$ can't be calculated in most
 situations.
 
-### Example: Finding the Mean and Median using R**
+### Example: Finding the Mean and Median using R
 
 Suppose a vet wants to find the average weight of cats. The weights (in kg) of cats are in table \#3.1.1.
 
@@ -86,9 +86,9 @@ df_stats(~Bwt, cats, median)
 
  The median weight is 2.7 kg also. It appears the average weight is 2.7 kg of all cats.
 
-### Example: Finding Mean and Median with filtering**
+### Example: Finding Mean and Median with filtering
 
-Looking at the data frame for cats weights table(#3.1.1), you see that there are several variables You may want to know what the other variables are. A * Code Book * describes the data set, explains what the variables are including the units, and the source of the data frame. 
+Looking at the data frame for cats weights table(\#3.1.1), you see that there are several variables You may want to know what the other variables are. A * Code Book * describes the data set, explains what the variables are including the units, and the source of the data frame. 
 To review the code book for a data frame, complete the following command.
 
 ```{r cats1-data}
@@ -250,7 +250,7 @@ data.
 
  Mean can be found on interval and ratio data, since you must have numbers to add together.
 
-### Homework Section 3.1
+### Homework
 ** Use Technology on all problems. State the variable on all problems.**
 
 1.  Cholesterol levels were collected from patients certain days after they had a heart attack  and are in table \#3.1.2. Find the mean and median for cholesterol levels 2 days after the heart attack.
@@ -414,11 +414,11 @@ You need more information.
 
  The **range** of a set of data is the difference between the highest and the lowest data values (or maximum and minimum values).
 
-### Example: Range**
+### Example: Range
 
-From example #3.1.2, the maximum is 3.9 kg and the minimum is 2 kg. So the range is $3.9-2=1.9 kg$. But what does that tell you? You don't know if the weights are really spread out, or if they are close together. 
+From example \#3.1.2, the maximum is 3.9 kg and the minimum is 2 kg. So the range is $3.9-2=1.9 kg$. But what does that tell you? You don't know if the weights are really spread out, or if they are close together. 
 
-Unfortunately, range doesn't really provide a very accurate picture of the variability. A better way to describe how the data is spread out is needed. Instead of looking at the distance the highest value is from the lowest how about looking at the distance each value is from the mean. This distance is called the **deviation**. You might want to find the average of the deviation. Though the calculation for finding the average deviation is not very straight forward, you end up with a value called the ** variance **. The symbol for the population variance is $\sigma^2$, and it is the average squared distance from the mean. Statisticians like the variance, but many other people who work with statistics use a descriptive statistics which is the square root of the variance. This gives you the average distance from the mean. This is called the standard deviation, and is denoted with the letter *s*.
+Unfortunately, range doesn't really provide a very accurate picture of the variability. A better way to describe how the data is spread out is needed. Instead of looking at the distance the highest value is from the lowest how about looking at the distance each value is from the mean. This distance is called the **deviation**. You might want to find the average of the deviation. Though the calculation for finding the average deviation is not very straight forward, you end up with a value called the **variance**. The symbol for the population variance is $\sigma^2$, and it is the average squared distance from the mean. Statisticians like the variance, but many other people who work with statistics use a descriptive statistics which is the square root of the variance. This gives you the average distance from the mean. This is called the standard deviation, and is denoted with the letter *s*.
 
  The standard deviation is the average (mean) distance from a data point
 to the mean. It can be thought of as how much a typical data point
@@ -441,7 +441,7 @@ $\sigma =\sqrt{ \frac{\sum\left(x-\mu \right)^2}{N}}$
 
 The next example will demonstrate this command.
 
-### Example: Finding the Standard Deviation**
+### Example: Finding the Standard Deviation
 
 For the data frame *Cats* from example \#3.2.1, find the variance and standard derivation for weight of cats. Then find the variance and standard deviation separated by sex of the cat.
 
@@ -484,7 +484,7 @@ Many other books and authors stress that there is a computational formula for ca
 
 One of the uses of the standard deviation is to describe how a population is distributed. This describes where much of the data is for most distributions. A general rule is that about 95% of the data is within 2 standard deviations of the mean. This is not perfect, but is works for many distributions. There are rules like the empirical rule and Chebyshev's theorem that give you more detailed percentages, but 95% in 2 standard deviations is a very good approximation.
 
-### Example: the gneral rule**
+### Example: the gneral rule
 
 The U.S. Weather Service has provided the information in table \#3.2.1 about the total monthly/annual number of reported tornadoes in Oklahoma for the years 1950 to 2018. (US Department of Commerce & Noaa, 2016)
 
@@ -545,7 +545,7 @@ If you don't know the population mean, $\mu$, and the population standard
 deviation, $\sigma$, then use the sample mean, $\bar{x}$, and the sample standard
 deviation, *s*, to estimate the population parameter values. Realize that using the sample standard deviation may not actually be very accurate.
 
-### Example: Determining If a Value Is Unusual**
+### Example: Determining If a Value Is Unusual
 
 a.  In 1974, there were 45 tornadoes in Oklahoma. Is this value unusual? Why or why not?
 
@@ -567,7 +567,7 @@ b.  In 1999, there were 145 tornadoes in the Oklahoma. Is this value unusual? Wh
 
  Since this value is more than 2, then it is unusual to have only 145 tornadoes in a year in Oklahoma.
 
-### Homework Section 3.2
+### Homework
 **Use Technology on all problems. State the variable on all problems.**
 
 1. Cholesterol levels were collected from patients certain days after they had a heart attack and are in table \#3.2.2. Find the mean, median, range, variance, and standard deviation for cholesterol levels 2 days after the heart attack.
@@ -711,8 +711,8 @@ head(Newreiki)
 
 Now find the mean and standard deviation of the vas.diff variable in Newreiki. Perform similar commands to create the likert.diff variable. Then find the mean and standard deviation for likert.diff, and compare and contrast the vas and likert methods for describing pain. 
 
-8.Yearly rainfall amounts (in millimeters) in Sydney, Australia, are in table #3.2.8
-("Annual maximums of," 2013). 
+8.Yearly rainfall amounts (in millimeters) in Sydney, Australia, are in table \#3.2.8
+(Annual maximums of, 2013). 
 a. Calculate the mean and standard deviation.
 b. Suppose Sydney, Australia received 300 mm of rainfall in a year. Would this be unusual? 
     
@@ -752,10 +752,10 @@ ranking. It represents a location measurement of a data value to the
 rest of the values. Many standardized tests give the results as a
 percentile. Doctors also use percentiles to track a child's growth.
 
-The ***k*th percentile** is the data value that has k% of the data at or
+The **kth percentile** is the data value that has k% of the data at or
 below that value.
 
-### Example: Interpreting Percentile**
+### Example: Interpreting Percentile
 
 a.  What does a score of the 90^th^ percentile mean?
 
@@ -769,7 +769,7 @@ b.  What does a score of the 70^th^ percentile mean?
 
  This means that 70% of the scores were at or below this score.
 
-### Example: Percentile Versus Score**
+### Example: Percentile Versus Score
 
 If the test was out of 100 points and you scored at the 80^th^ percentile, what was your score on the test?
 
@@ -792,7 +792,7 @@ The interquartile range, *IQR*, is the difference between the first and third qu
 
 Interquartile Range (*IQR*)
 
-**Determining probable outliers from IQR: **fences**
+Determining probable outliers from IQR: **fences**
 
 A value that is less than (this value is often referred to as a **low** **fence**) is considered an outlier.
 
@@ -833,7 +833,7 @@ df_stats(~Bwt, data=cats, summary)
 
  To create a boxplot use the command gf_boxplot(~variable, data=data frame). This is a modified boxplot which shows the outliers in the data.
 
-(ref:cats1-data-box-cap) Box Plot of Weights of Cats**
+(ref:cats1-data-box-cap) Box Plot of Weights of Cats
 
 ```{r cats1-data-box, fig.cap="(ref:cats1-data-box-cap)"}
 gf_boxplot(~Bwt, data=cats, title="Weight of Cats")
@@ -842,7 +842,7 @@ gf_boxplot(~Bwt, data=cats, title="Weight of Cats")
  
 There are no outliers since there are no dots outside of the fences.
 
-### Example: Separating based on a factor**
+### Example: Separating based on a factor
 
 Find the five-number summary of the weights of cats separated by the sex of the cat. Then create a box plot of the weights of cats for each sex of the cat.
 
@@ -884,10 +884,10 @@ gf_boxplot(~Bwt|Sex, data=cats, title="Weights of Cats")
 
 Notice that the weights of female cats has a median less than male cats, and in fact it can be seen that the Q1 to Q3 of the female cats is less than the Q1 to Q3 of the male cats. 
 
-### Example: Putting it all together**
+### Example: Putting it all together
 
 The time (in 1/50 seconds) between successive pulses along a nerve fiber ("Time
-between nerve," 2013) are given in table #3.3.1.
+between nerve," 2013) are given in table \#3.3.1.
 
 **Table \#3.3.1: Successive pulses along a nerve fiber**
 
@@ -920,13 +920,13 @@ Jorgensen, B. (1982). The Generalized Inverse-Gaussian Distribution. Springer-Ve
 
  First, it might be useful to look at a visualization of the data, so create a density plot
 
-(ref:density-data-desity-cap) Density Plot of Health Expenditure**
+(ref:density-data-density-cap) Density Plot of Health Expenditure
 
-```{r density-data-desity, fig.cap="(ref:density-data-desity-cap)"}
+```{r density-data-density, fig.cap="(ref:density-data-density-cap)"}
 gf_density(~time, data=Nerve)
 ```
 
- From the graph (Figure \@ref(fig:desnity-data-desnity)), the data appears to be skewed right. Most of the time between successive nerve pulses appear to be around 5 or 10 1/50 second, but there are some times that are 60 1/50 second.
+ From the graph (Figure \@ref(fig:density-data-density)), the data appears to be skewed right. Most of the time between successive nerve pulses appear to be around 5 or 10 1/50 second, but there are some times that are 60 1/50 second.
 
 ```{r statistics-nerve}
 df_stats(~time, data=Nerve, mean, median, sd, summary)
@@ -944,7 +944,7 @@ gf_boxplot(~time, data=Nerve)
 
  Since there are many dots outside the upper fence the data has many outliers. From all of this information, one could say that nerve pulses between successive pulses is around 11 1/50 second, with a spread of 19.5 1/50 second. Most of the values are round 11 1/50 second, but they are not very consistent. The density plot and boxplot show that there is a great deal of spread of the data and it is skewed to the right. This means mostly the speed is around 11 1/50 second, but there is a great deal of variability in the values.
 
-### Homework Section 3.3
+### Homework
 **Use Technology on all problems. State the variable on all problems.**
 
 1.  Suppose you take a standardized test and you are in the 10^th^ percentile. What does this percentile mean? Can you say that you failed the test? Explain.
