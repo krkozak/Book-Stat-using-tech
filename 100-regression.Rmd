@@ -1,4 +1,4 @@
-```{r, echo=FALSE, warning=FALSE}
+```{r chapter-10-setup, echo=FALSE, warning=FALSE}
 library("mosaic")
 library("NHANES")
 ```
@@ -19,7 +19,7 @@ Is there a relationship between the alcohol content and the number of calories i
 
  **Table \#10.1.1: Alcohol and Calorie Content in Beer**
 
-```{r}
+```{r chapter-10-beer-data}
 Beer <- read.csv("https://krkozak.github.io/MAT160/beer_data.csv")
 head(Beer)
 ```
@@ -114,7 +114,7 @@ a.  Is there a relationship between the alcohol content and the number of calori
 
 b. Find the regression equation: To find the regression equation using R Studio, the command is lm(response variable ~ explanatory variable, data=Data Frame). For this example, the command would be
 
-```{r}
+```{r chapte-10-beer-lm-model}
 lm(calories~alcohol, data=Beer)
 ```
 
@@ -135,7 +135,7 @@ ii. To graph the residuals, first the residuals need to be calculated. This mean
 **Table \#10.1.2: Residuals for Alcohol and Calorie Content in Beer**
 
 
-```{r}
+```{r chapter-10-beer-residuals}
 lm.out<-lm(calories~alcohol, data=Beer) #this saves the linear model into a variable called lm.out
 residuals(lm.out) #this finds the residuals for each x value based on the linear model, lm.out and displays them.
 ```
@@ -198,7 +198,7 @@ in the homework for sections 10.2 and 10.3 also. **
 
  **Table \#10.1.3: Data Frame of Metacarpal versus Height**
 
-```{r}
+```{r chapter-10-metacarpal-data}
 Metacarpal<- read.csv("https://krkozak.github.io/MAT160/metacarpal.csv")
 head(Metacarpal)
 ```
@@ -209,7 +209,7 @@ head(Metacarpal)
 
  **Table \#10.1.4: Data Frame of House Value versus Rental**
 
-```{r}
+```{r chpater-10-house-data}
 House<- read.csv("https://krkozak.github.io/MAT160/house.csv")
 head(House)
 ```
@@ -219,7 +219,7 @@ head(House)
 
  **Table \#10.1.5: Data Frame of Life Expectancy versus Fertility Rate**
 
-```{r}
+```{r chapter-10-fertility-data}
 Fertility<- read.csv("https://krkozak.github.io/MAT160/fertility.csv")
 head(Fertility)
 ```
@@ -230,7 +230,7 @@ head(Fertility)
 
  **Table \#10.1.6: Data Frame of Prenatal Care versus Health Expenditure**
 
-```{r}
+```{r chapter-10-fert-prenatal-data}
 Fert_prenatal<- read.csv("https://krkozak.github.io/MAT160/fertility_prenatal.csv")
 head(Fert_prenatal)
 ```
@@ -241,7 +241,7 @@ head(Fert_prenatal)
 
 **Table \#10.1.7: Heights and Weights of Baseball Players**
 
-```{r}
+```{r chapter-10-baseball-data}
 Baseball <- read.csv("https://krkozak.github.io/MAT160/baseball.csv")
 head(Baseball)
 ```
@@ -273,7 +273,7 @@ SOCR Data Frame of MLB Heights Weights from UCLA.
 
     **Table \#10.1.8: Body Weights and Brain Weights of Species**
 
-```{r}
+```{r Chapter-10-Body-data}
 Body <- read.csv("https://krkozak.github.io/MAT160/body.csv")
 head(Body)
 ```
@@ -307,7 +307,7 @@ SOCR Data of species body weights and brain weights from UCLA.
 
  **Table \#10.1.9: Calories and Sodium Levels in Hotdogs**
 
-```{r, warning=FALSE}
+```{r chapter-10-hotdog-data, warning=FALSE}
 Hotdog<-read.csv("https://krkozak.github.io/MAT160/hotdog_beef_poultry.csv")
 head(Hotdog)
 ```
@@ -318,7 +318,7 @@ head(Hotdog)
 
  **Table \#10.1.10: Percent of Labor in Agriculture and Per Capita Income for European Countries**
 
-```{r}
+```{r chapter-10-agricultue-data}
 Agriculture <- read.csv("https://krkozak.github.io/MAT160/agriculture.csv")
 head(Agriculture)
 ```
@@ -354,7 +354,7 @@ Data And Story Library
 
  **Table \#10.1.11: Number of Cigarettes and Number of Bladder Cancer Deaths**
 
-```{r}
+```{r chapter-10-cancer-data}
 Cancer <- read.csv("https://krkozak.github.io/MAT160/cancer_1.csv")
 head(Cancer)
 ```
@@ -391,7 +391,7 @@ Data And Story Library
 
  **Table \#10.1.12: Weights and Mileages of Cars**
 
-```{r}
+```{r chapter-10-cars-data}
 Cars<- read.csv("https://krkozak.github.io/MAT160/cars.csv")
 head(Cars)
 ```
@@ -458,7 +458,7 @@ How well does the alcohol content of a beer explain the variability in the numbe
 
 First find and name the linear model, how about lm.out, so you can refer to it. Then use the command summary(lm.out). For this example this is
 
-```{r}
+```{r chapter-10-beer-lm}
 lm.out<-lm(calories~alcohol, data=Beer) #creates the linear model and calls it lm.out
 summary(lm.out) #creates a summary of the linear model created.
 ```
@@ -587,7 +587,7 @@ Is there a relationship between the alcohol content and the number of calories i
 
 First save the linear model with a name like lm.out. Then use summary(lm.out) to find the standard error of the estimate.
 
-```{r}
+```{r chapter-10-beer-lm-out}
 lm.out=lm(calories~alcohol, data=Beer)
 summary(lm.out)
 ```
@@ -622,7 +622,7 @@ in place of the word value), at a particular C level (given as a decimal)
 
  Computing the prediction interval using R Studio
 
-```{r}
+```{r chapter-10-beer-predict}
 predict(lm.out, newdata=list(alcohol=0.07), interval = "prediction", level=0.95)
 ```
 
@@ -689,7 +689,7 @@ The assumptions for the hypothesis test were already checked in example \#10.1.2
 
 The command on R Studio is
 
-```{r}
+```{r chapter-10-beer-test}
 lm.out<-lm(calories~alcohol, data=Beer)
 summary(lm.out)
 ```
