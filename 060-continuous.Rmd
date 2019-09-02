@@ -20,7 +20,7 @@ gf_density(~Weight, data=NHANES)
 
 
 
-(Figure \@ref(fig:headcirc6-density))looks somewhat symmetric, and maybe bell shaped.
+(Figure \@ref(fig:headcirc6-density)looks somewhat symmetric, and maybe bell shaped.
 
 Consider, the variable head circumference (HeadCirc) in the NHANES data frame. The density plot for this variable is`
 
@@ -48,7 +48,7 @@ gf_density(~BMI, data=NHANES)
 
 This density plot appears to be skewed left.
 
-Now consider the variable SmokeAge. Its density plot is
+Now consider the variable SmokeAge. Its density plot is (Figure \@ref(fig:NHANES6b-density))
 
 
 (ref:NHANES6b-density-cap) Density Plot of Age when Person Started Smoking
@@ -61,7 +61,7 @@ gf_density(~SmokeAge, data=NHANES)
 
 This distribution appears to be bimodal.
 
-lastly, consider the variable Pulse. The density plot is
+lastly, consider the variable Pulse. The density plot is (Figure \@ref(fig:NHANES6c-density))
 
 (ref:NHANES6c-density-cap) Density Plot of Pulse Rate of a person
 
@@ -170,13 +170,7 @@ b.  Find the probability of a pregnancy lasting more than 280 days.
 
  First translate the statement into a mathematical statement. $P(x>280)$
 
- Now, draw a picture.
-(ref:NHANES6d-density-cap) Density Plot of Pulse Rate of a person
-
-```{r NHANES6d-density, warning=FALSE, echo=FALSE, fig.cap="(ref:NHANES6d-density-cap)"}
-gf_density(~Pulse, data=NHANES)
-```
-
+ Now, draw a picture (Figure \@ref(fig:normal-curve61)).
 
 (ref:normal-curve61-cap) Normal Distribution for $P(x>280)$
 
@@ -202,7 +196,7 @@ c.  Find the probability of a pregnancy lasting less than 250 days.
 
  First translate the statement into a mathematical statement. $P(x<250)$
 
- Now, draw a picture. 
+ Now, draw a picture (Figure \@ref(fig:normal-curve62)). 
 
 (ref:normal-curve62-cap) Normal Distribution for $P(x<250)$
 
@@ -229,7 +223,7 @@ d.  Find the probability that a pregnancy lasts between 265 and 280
 
  First translate the statement into a mathematical statement. $P(265<x<280)$
 
- Now draw a picture.
+ Now draw a picture (Figure \@ref(fig:normal-curve63)).
 
 (ref:normal-curve63-cap) Normal Distribution for $P(265<x<280)$
 
@@ -240,7 +234,7 @@ curve(dnorm(x,272,9),xlim=c(230,320),main= "Pregnancy Length")
 polygon(cord.x,cord.y,col='skyblue')
 ```
 
-The probability of a pregnancy lasting between 265 days and 280 days is $P(265<x<280)=0.187$. To find the area between two values on the normal distribution, first, find the area to the left of the lower value, Graphically, this looks like
+The probability of a pregnancy lasting between 265 days and 280 days is $P(265<x<280)=0.187$. To find the area between two values on the normal distribution, first, find the area to the left of the lower value, Graphically, this looks like (Figure \@ref(fig:normal-curve-preg))
 
 (ref:normal-curve-preg-cap) Normal Distribution for $P(x<265)$
 
@@ -251,7 +245,7 @@ curve(dnorm(x,272,9),xlim=c(230,320),main= "Pregnancy Length")
 polygon(cord.x,cord.y,col='green')
 ```
 
-Now find the area less than 280. Graphically this looks like
+Now find the area less than 280. Graphically this looks like (Figure \@ref(fig:normal-curve-preg1))
 
 (ref:normal-curve-preg1-cap) Normal Distribution for $P(x<280)$
 
@@ -307,7 +301,7 @@ b.  Find the probability that a person has a mathematics SAT score
 
  First translate the statement into a mathematical statement. P(x>700)
 
- Now, draw a picture.
+ Now, draw a picture (Figure \@ref(fig:normal-curve-SAT)). 
 
 (ref:normal-curve-SAT-cap) Normal Distribution for SAT Mathematics Score
 
@@ -331,7 +325,7 @@ c.  Find the probability that a person has a mathematics SAT score of less than 
 
  First translate the statement into a mathematical statement. $P(x<400)$
 
- Now, draw a picture. 
+ Now, draw a picture (Figure \@ref(fig:normal-curve-SAT1)). 
 
 (ref:normal-curve-SAT1-cap) Normal Distribution for Mathematics SAT Score
 
@@ -356,7 +350,7 @@ d.  Find the probability that a person has a mathematics SAT score between a 500
 
  First translate the statement into a mathematical statement $P(500<x<650)$
 
- Now, draw a picture.
+ Now, draw a picture (Figure \@ref(fig:normal-curve-SAT2)).
 
 (ref:normal-curve-SAT2-cap) Normal Distribution for SAT Mathematics Score
 
@@ -397,14 +391,14 @@ qnorm(0.01, 514, 117, lower.tail=FALSE)
  c.) $P(0<x<2.11)$
  d.) $P(-2.78<z<1.97)$
 
-2.  Find the *z*-score corresponding to the given area. Remember, *z* is     distributed as the standard normal distribution with mean of [MISSING EQ] and     standard deviation  [MISSING EQ].
+2.  Find the *z*-score corresponding to the given area. Remember, *z* is     distributed as the standard normal distribution with mean of $\mu=0$ and standard deviation  $\sigma=1$.
 
 a.  The area to the left of *z* is 15%.
 b.  The area to the right of *z* is 65%.
 c.  The area to the left of *z* is 10%.
 d.  The area to the right of *z* is 5%.
-e.  The area between and *z* is 95%. (Hint draw a picture and figure out the area to the left of the.)
-f.  The area between and *z* is 99%.
+e.  The area between $-z$ and *z* is 95%. (Hint draw a picture and figure out the area to the left of $-z$.)
+f.  The area between $-z$ and *z* is 99%.
 
 3.  If a random variable that is normally distributed has a mean of 25 and a standard deviation of 3, convert the given value to a *z*-score.
 

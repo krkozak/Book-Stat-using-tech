@@ -285,7 +285,7 @@ Ryan, Joiner & Ryan, Jr, 1985
 
 2.  The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table \#3.1.2 (Lee, 1994). Find the mean and median length of rivers that flow into the Pacific Ocean and the mean and median length of rivers that flow into the Tasman Sea.
 
- ** Table \#3.1.2: Lengths of Rivers (km) Flowing to Pacific Ocean**
+ ** Table \#3.1.2: Lengths of Rivers (km) in New Zealand**
 
 ```{r length2-data}
 Length<-read.csv("https://krkozak.github.io/MAT160/length.csv")
@@ -330,7 +330,7 @@ head(Pay)
 
  employee:employees position in the company
 
- salary: salary of that employee
+ salary: salary of that employee (Australian dollars (AUD))
 
 **Source**
 John Matic provided the data from a company he worked with. The company's name is fictitious, but the data is from an actual company.
@@ -365,7 +365,7 @@ head(Cost)
 
  charges: Categories of monthly fixed charges
 
- cost: fixed month costs
+ cost: fixed month costs (AUD)
 
 **Source**
 John Matic provided the data from a company he worked with. The company's name is fictitious, but the data is from an actual company.

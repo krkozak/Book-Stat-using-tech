@@ -149,7 +149,7 @@ prop.test(c(231,176), c(1000, 1200), conf.level = .95)
 
 5.  Real World Interpretation: The proportion of husbands who cheat on their wives is anywhere from 5.05% to 11.82% higher than the proportion of wives who cheat on their husband.
 
-### Homework Section 9.1
+### Homework
 
 **In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.**
 
@@ -514,7 +514,7 @@ t.test(~difference, data=Helmet_new, conf.leve=0.95)
 
 Examples \#9.2.2 and \#9.2.4 use the same data set, but one is conducting a hypothesis test and the other is conducting a confidence interval. Notice that the hypothesis test's conclusion was to reject and say that there was a difference in the means, and the confidence interval does not contain the number 0. If the confidence interval did contain the number 0, then that would mean that the two means could be the same. Since the interval did not contain 0, then you could say that the means are different just as in the hypothesis test. This means that the hypothesis test and the confidence interval can produce the same interpretation. Do be careful though, you can run a hypothesis test with a particular significance level and a confidence interval with a confidence level that is not compatible with your significance level. This will mean that the conclusion from the confidence interval would not be the same as with a hypothesis test. So if you want to estimate the mean difference, then conduct a confidence interval. If you want to show that the means are different, then conduct a hypothesis test. As a reminder, the American Statistical Association (ASA) suggests not conducting hypothesis tests and just create confidence intervals. 
 
-### Homework Section 9.2
+### Homework
 
 **In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.**
 
@@ -600,7 +600,7 @@ location: Motorway junction (traffic data set), supermarket location (shopping d
 **References**
 Scanlon, T.J., Luben, R.N., Scanlon, F.L., Singleton, N. (1993), "Is Friday the 13th Bad For Your Health?," BMJ, 307, 1584-1586.
 
-6.  The British Department of Transportation studied to see if people avoid driving, shopping, or have more accidents on Friday the 13th. They collected data from different locations (Friday the 13th, 2019). The data for each location on the two different dates is in table \#9.2.11. Do the data show that on average different number of people are engaged in activities on Friday the 13th? Test at the 5% level. Estimate the mean difference in activity count between the 6th and the 13th using a 95% level.
+6.  The British Department of Transportation studied to see if people avoid driving, shopping, or have more accidents on Friday the 13th. They collected data from different locations (Friday the 13th, 2019). The data for each location on the two different dates is in table \#9.2.11. Do the data show that on average different number of people are engaged in activities on Friday the 13th? Estimate the mean difference in activity count between the 6th and the 13th using a 95% level.
 
 7.  To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson & Hanson, 1997). The data is in table \#9.2.12. Do the data show that Reiki treatment reduces pain? Test at the 5% level.
 
@@ -615,7 +615,7 @@ head(Reiki)
 
 8. To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson & Hanson, 1997). The data is in table \#9.2.12. Compute a 90% confidence level for the mean difference in VAS score from before and after Reiki treatment.
 
-9.  The female labor force participation rates (FLFPR) of women in countries from 1990 to 2018 are in in 1995 and 2018 are in table \#9.2.13 (Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate), 2019). Do the data show that the mean female labor force participation rate in 1990 is different from that in the 2018 using a 5% level of significance?
+9.  The female labor force participation rates (FLFPR) of women in countries from 1990 to 2018 are in table \#9.2.13 (Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate), 2019). Do the data show that the mean female labor force participation rate in 1990 is different from that in the 2018 using a 5% level of significance?
 
  **Table \#9.2.13: Female Labor Force Participation Rates**
 
@@ -647,7 +647,7 @@ Labor force participation rate, female (% of female population ages 15 ) (modele
 **References**
 International Labour Organization, ILOSTAT database. Data retrieved in April 2019. 
 
-10. The female labor force participation rates (FLFPR) of women in countries from 1990 to 2018 are in in 1995 and 2018 are in table \#9.2.13 (Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate), 2019).Estimate the mean difference in the female labor force participation rate in 1990 to 2018 using a 95% confidence level?
+10. The female labor force participation rates (FLFPR) of women in countries from 1990 to 2018 are in table \#9.2.13 (Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate), 2019).Estimate the mean difference in the female labor force participation rate in 1990 to 2018 using a 95% confidence level?
 
 11. Is the pulse rate after exercise different from the pulse rate before exercise for a man who drinks alcohol but doesn't smoke? Use the data frame Pulse (table \#9.2.3). Test at the 5% level.
 
@@ -959,7 +959,7 @@ t.test(sodium~type, data=Hotdog, conf.level=0.95)
 
 Do realize that the population assumptions is not valid, so this interpretation may be invalid.
 
-### Homework Section 9.3
+### Homework
 
 **In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.**
 

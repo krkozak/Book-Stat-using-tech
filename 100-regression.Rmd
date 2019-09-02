@@ -235,7 +235,7 @@ Fert_prenatal<- read.csv("https://krkozak.github.io/MAT160/fertility_prenatal.cs
 head(Fert_prenatal)
 ```
 
-**Code book for Data Frame Fert_prenatal** see problem 3.2.4 in Section 3.2 Homework
+**Code book for Data Frame Fert_prenatal** see problem 2.3.4 in Section 3.2 Homework
 
 5.  The height and weight of baseball players are in table \#10.1.7 (\"MLB heightsweights,\" 2013). Create a scatter plot and find a regression equation between height and weight of baseball players. Then use the regression equation to find the weight of a baseball player that is 75 inches tall and for a baseball player that is 68 inches tall. Which weight that you calculated do you think is closer to the true weight? Why?
 
@@ -303,7 +303,7 @@ http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Brain2BodyWeight
 **References**
 SOCR Data of species body weights and brain weights from UCLA.
 
-7.  A sample of hot dogs was taken and the amount of sodium (in mg) and calories were measured. (\"Data hotdogs,\" 2013) The Data Frame are in table \#10.1.9. Create a scatter plot and find a regression equation between amount of calories and amount of sodium. Then use the regression equation to find the amount of sodium a beef hot dog has if it is 170 calories and if it is 120 calories. Which sodium level that you calculated do you think is closer to the true sodium level? Why?
+7.  A sample of hot dogs was taken and the amount of sodium (in mg) and calories were measured. (\"Data hotdogs,\" 2013) The Data Frame are in table \#10.1.9. Create a scatter plot and find a regression equation between amount of calories and amount of sodium. Then use the regression equation to find the amount of sodium a hot dog has if it is 170 calories and if it is 120 calories. Which sodium level that you calculated do you think is closer to the true sodium level? Why?
 
  **Table \#10.1.9: Calories and Sodium Levels in Hotdogs**
 
@@ -605,7 +605,7 @@ R will produce the prediction interval for you. The commands are
 
 lm.out = lm(explanatory variable \~ response variable) -- calculates the linear model, may already been done
 
-predict(lm.out, newdata=list(prediction variable = value), interval=\"prediction\", level=C) -- will compute a prediction interval, for the prediction variable set to a particular value (put that value
+interval=\predict(lm.out, newdata=list(prediction variable = value), interval=\"prediction\", level=C)  will compute a prediction interval, for the prediction variable set to a particular value (put that value
 in place of the word value), at a particular C level (given as a decimal)
 
 **Example \#10.3.2: Find the Prediction Interval**

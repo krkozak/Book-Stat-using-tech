@@ -742,6 +742,9 @@ b.  Find the odds against winning if you pick the number 7.
 c.  The casino will pay you \$20 for every dollar you bet if your number
 comes up. How much profit is the casino making on the bet?
 
+**\
+**
+
 ## Conditional Probability
 
 Suppose you want to figure out if you should buy a new car. When you first go and look, you find two cars that you like the most. In your mind they are equal, and so each has a 50% chance that you will pick it. Then you start to look at the reviews of the cars and realize that the first car has had 40% of them needing to be repaired in the first year, while the second car only has 10% of the cars needing to be repaired in the first year. You could use this information to help you decide which car you want to actually purchase. Both cars no longer have a 50% chance of being the car you choose. You could actually calculate the probability you will buy each car, which is a conditional probability. You probably wouldn't do this, but it gives you an example of what a conditional probability is.
@@ -985,23 +988,17 @@ if the sample is very small compared to the size of the population, then you can
 
 ### Homework
 
-1.  Are owning a refrigerator and owning a car independent events? Why
-or why not?
+1.  Are owning a refrigerator and owning a car independent events? Why or why not?
 
-2.  Are owning a computer, tablet, or smart phone and paying for Internet service
-independent events? Why or why not?
+2.  Are owning a computer, tablet, or smart phone and paying for Internet service independent events? Why or why not?
 
-3.  Are passing your statistics class and passing your biology class
-independent events? Why or why not?
+3.  Are passing your statistics class and passing your biology class independent events? Why or why not?
 
-4.  Are owning a bike and owning a car independent events? Why or why
-not?
+4.  Are owning a bike and owning a car independent events? Why or why not?
 
 5.  An experiment is picking a card from a fair deck.
-a.  What is the probability of picking a Jack given that the card is a
-face card?
-b.  What is the probability of picking a heart given that the card is a
-three?
+a.  What is the probability of picking a Jack given that the card is a face card?
+b.  What is the probability of picking a heart given that the card is a three?
 c.  What is the probability of picking a red card given that the card is an ace?
 d.  Are the events Jack and face card independent events? Why or why not?
 e.  Are the events red card and ace independent events? Why or why not?
@@ -1013,24 +1010,15 @@ c.  What is the probability that the sum is 7 given that the fist die is a 2?
 d.  Are the two events sum of 6 and first die is a 5 independent events? Why or why not?
 e.  Are the two events sum of 7 and first die is a 2 independent events? Why or why not?
 
-7.  You flip a coin four times. What is the probability that all four of
-them are heads?
+7.  You flip a coin four times. What is the probability that all four of them are heads?
 
-8.  You flip a coin six times. What is the probability that all six of
-them are heads?
+8.  You flip a coin six times. What is the probability that all six of them are heads?
 
-9.  You pick three cards from a deck with replacing the card each time
-before picking the next card. What is the probability that all three
-cards are kings?
+9.  You pick three cards from a deck with replacing the card each time before picking the next card. What is the probability that all three cards are kings?
 
-10. You pick three cards from a deck without replacing a card before
-picking the next card. What is the probability that all three cards
-are kings?
+10. You pick three cards from a deck without replacing a card before picking the next card. What is the probability that all three cards are kings?
 
-11. A project conducted by the Australian Federal Office of Road Safety
-asked people many questions about their cars. One question was the
-reason that a person chooses a given car, and that data is in table
-\#4.3.3 (Car Preferences, 2019).
+11. A project conducted by the Australian Federal Office of Road Safety asked people many questions about their cars. One question was the reason that a person chooses a given car, and that data is in table \#4.3.3 (Car Preferences, 2019).
 
  **Table \#4.3.3: Reason for Choosing a Car**
 
@@ -1167,27 +1155,21 @@ Most calculators have a factorial button on them, and many have the combination 
 
 3.  You are opening a T-shirt store. You can have long sleeves or short sleeves, three different colors, five different designs, and four different sizes. How many different shirts can you make?
 
-4.  The California license plate has one number followed by three
-letters followed by three numbers. How many different license plates
-are there?
+4.  The California license plate has one number followed by three letters followed by three numbers. How many different license plates are there?
 
 5.  Find $_9P_4$
 
-6.  Find $_10P_6$
+6.  Find $_{10}P_6$
 
-7.  Find $_10C_5$
+7.  Find $_{10}C_5$
 
-8.  Find $_20P_4$
+8.  Find $_{20}P_4$
 
-9.  You have a group of twelve people. You need to pick a president,
-treasurer, and secretary from the twelve. How many different ways
-can you do this?
+9.  You have a group of twelve people. You need to pick a president, treasurer, and secretary from the twelve. How many different ways can you do this?
 
-10. A baseball team has a 25-man roster. A batting order has nine
-people. How many different batting orders are there?
+10. A baseball team has a 25-man roster. A batting order has nine people. How many different batting orders are there?
 
-11. An urn contains five red balls, seven yellow balls, and eight white
-balls. How many different ways can you pick two red balls?
+11. An urn contains five red balls, seven yellow balls, and eight white balls. How many different ways can you pick two red balls?
 
 12. How many ways can you choose seven people from a group of twenty?
 

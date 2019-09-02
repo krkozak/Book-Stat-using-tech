@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.7.25)  29 JUL 2019 21:56
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.7.25)  1 SEP 2019 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,56 +844,902 @@ tudio: arm, mosaic, MASS,
 
 [6]
 Chapter 1.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 318.
 [7
 
-]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 324.
-[8] [9] [10] [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 892--893
+] [8] [9] [10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 785--786
 
  []
 
-[14] [15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1352--1353
+[13] [14] [15] [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
 
  []
 
-[19] [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1787--1795
+[18] [19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 1440--1448
 
  []
 
-[22] [23] [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 2245--2246
+[21] [22] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1765--1766
 
  []
 
-[27] [28
+[25] [26
 
 ]
 Chapter 2.
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1845--1846
+
+ []
+
+[28]
+File: Statistics_using_technology_files/figure-latex/class-data-bar-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/class-data-bar-1.pdf>
+
+LaTeX Warning: Reference `fig:class-data-bar' on page 29 undefined on input lin
+e 1945.
+
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 2325--2326
+File: Statistics_using_technology_files/figure-latex/class-data-bar-gender-1.pd
+f Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/class-data-bar-gender-1.pdf
+>
+
+LaTeX Warning: Reference `fig:class-data-dot-gender' on page 30 undefined on in
+put line 1984.
+
+File: Statistics_using_technology_files/figure-latex/class-data-dot-gender-1.pd
+f Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/class-data-dot-gender-1.pdf
+>
+
+LaTeX Warning: Reference `fig:car-data-gender' on page 30 undefined on input li
+ne 2007.
+
+[30] [31]
+File: Statistics_using_technology_files/figure-latex/car-data-gender-1.pdf Grap
+hic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/car-data-gender-1.pdf>
+
+LaTeX Warning: Reference `fig:car-data-gender' on page 32 undefined on input li
+ne 2025.
+
+File: Statistics_using_technology_files/figure-latex/car-data-gender-gitter-1.p
+df Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/car-data-gender-gitter-1.pd
+f>
+
+LaTeX Warning: Reference `fig:car-data-gender-gitter' on page 32 undefined on i
+nput line 2047.
+
+[32] [33] [34] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 2327--2328
+
+ []
+
+[37]
+File: Statistics_using_technology_files/figure-latex/distance-campus-hist-cap-1
+.pdf Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/distance-campus-hist-cap-1.
+pdf>
+File: Statistics_using_technology_files/figure-latex/distance-campus-density-1.
+pdf Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/distance-campus-density-1.p
+df>
+[38] [39]
+File: Statistics_using_technology_files/figure-latex/distance-campus-dot-1.pdf 
+Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/distance-campus-dot-1.pdf>
+[40]
+File: symmetric.png Graphic file (type bmp)
+<symmetric.png>
+
+Overfull \hbox (180.94531pt too wide) in paragraph at lines 2498--2500
+[]\TU/lmr/bx/n/10 Graph #.2.1: Symetric Distribution [] 
+ []
+
+File: bimodal_symmetric.png Graphic file (type bmp)
+<bimodal_symmetric.png>
+
+Overfull \hbox (261.95296pt too wide) in paragraph at lines 2503--2505
+[]\TU/lmr/bx/n/10 Graph #2.2.2: Symmetric and Bimodal Distribution [] 
+ []
+
+File: skewed_right.png Graphic file (type bmp)
+<skewed_right.png>
+
+Overfull \hbox (209.61957pt too wide) in paragraph at lines 2508--2510
+[]\TU/lmr/bx/n/10 Graph #2.2.3: Skewed Right Distribution [] 
+ []
+
+[41]
+File: skewed_left.png Graphic file (type bmp)
+<skewed_left.png>
+
+Overfull \hbox (201.65457pt too wide) in paragraph at lines 2513--2515
+[]\TU/lmr/bx/n/10 Graph #2.2.4: Skewed Left Distribution [] 
+ []
+
+File: uniform.png Graphic file (type bmp)
+<uniform.png>
+
+Overfull \hbox (183.90143pt too wide) in paragraph at lines 2518--2520
+[]\TU/lmr/bx/n/10 Graph #2.2.5: Uniform Distribution [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[42] [43]
+File: Statistics_using_technology_files/figure-latex/tuition-instate-1.pdf Grap
+hic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/tuition-instate-1.pdf>
+File: Statistics_using_technology_files/figure-latex/tuition-instate-type-1.pdf
+ Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/tuition-instate-type-1.pdf>
+
+[44] [45] [46] [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[48] [49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[50] [51] [52]
+Underfull \hbox (badness 10000) in paragraph at lines 3095--3096
+
+ []
+
+[53]
+File: Statistics_using_technology_files/figure-latex/weight-bp-sys-data-1.pdf G
+raphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/weight-bp-sys-data-1.pdf>
+[54] [55]
+File: Statistics_using_technology_files/figure-latex/Assets-data-gitter-1.pdf G
+raphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/Assets-data-gitter-1.pdf>
+[56] [57]
+File: Statistics_using_technology_files/figure-latex/Assets-1.pdf Graphic file 
+(type pdf)
+<use Statistics_using_technology_files/figure-latex/Assets-1.pdf>
+[58] [59] [60] [61] [62] [63] [64] [65]
+Overfull \hbox (30.58496pt too wide) in paragraph at lines 3922--3925
+[] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][] [] [][][] [] [][][][
+][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][]$[] 
+ []
+
+[66]
+Underfull \hbox (badness 2302) in paragraph at lines 4015--4017
+[]\TU/lmr/m/n/10 Health Insurance Market Place Retrieved from website: []$[][][
+][] [] [] [] [][][][] [] [][][] [] [][][] [] [][][][][][] [] [][][][][][][] [] 
+[][][][] []
+ []
+
+[67] [68]
+Chapter 3.
+[69
+
+] [70]
+File: code_book_cats.jpeg Graphic file (type bmp)
+<code_book_cats.jpeg>
+
+Overfull \hbox (224.02412pt too wide) in paragraph at lines 4205--4207
+[]\TU/lmr/bx/n/10 Image #3.1.1: Code book for cats data frame [] 
+ []
+
+[71] [72]
+File: centers_distribution.png Graphic file (type bmp)
+<centers_distribution.png>
+
+Overfull \hbox (285.78859pt too wide) in paragraph at lines 4357--4359
+[]\TU/lmr/bx/n/10 Graph #3.1.2: Mean, Median, Mode as Related to a Distribution
+ [] 
+ []
+
+[73] [74] [75] [76] [77]
+File: graph_3_1_1.png Graphic file (type bmp)
+<graph_3_1_1.png>
+
+Overfull \hbox (112.0795pt too wide) in paragraph at lines 4754--4756
+[]\TU/lmr/bx/n/10 Graph #3.1.1: Skewed or Symmetric Graph [] 
+ []
+
+File: graph_3_1_2.png Graphic file (type bmp)
+<graph_3_1_2.png>
+
+Overfull \hbox (112.0795pt too wide) in paragraph at lines 4767--4769
+[]\TU/lmr/bx/n/10 Graph #3.1.2: Skewed or Symmetric Graph [] 
+ []
+
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 4824--4825
+
+ []
+
+[79] [80] [81] [82] [83] [84] [85] [86] [87]
+Underfull \hbox (badness 10000) in paragraph at lines 5520--5521
+
+ []
+
+[88] [89]
+File: Statistics_using_technology_files/figure-latex/cats1-data-box-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/cats1-data-box-1.pdf>
+[90]
+File: Statistics_using_technology_files/figure-latex/cats2-data-box-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/cats2-data-box-1.pdf>
+[91] [92]
+File: Statistics_using_technology_files/figure-latex/density-data-density-1.pdf
+ Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/density-data-density-1.pdf>
+
+
+LaTeX Warning: Reference `fig:density-data-density' on page 93 undefined on inp
+ut line 5813.
+
+[93] [94] [95]
+Underfull \hbox (badness 10000) in paragraph at lines 6061--6062
+
+ []
+
+[96] [97] [98
+
+]
+Chapter 4.
+[99] [100] [101] [102] [103]
+Underfull \hbox (badness 10000) in paragraph at lines 6491--6492
+
+ []
+
+[104] [105] [106] [107] [108]
+Underfull \hbox (badness 10000) in paragraph at lines 7035--7036
+
+ []
+
+[109] [110] [111]
+Underfull \hbox (badness 10000) in paragraph at lines 7277--7278
+
+ []
+
+[112] [113]
+Underfull \hbox (badness 10000) in paragraph at lines 7583--7584
+
+ []
+
+[114] [115] [116] [117] [118] [119] [120] [121] [122]
+Underfull \hbox (badness 10000) in paragraph at lines 8387--8388
+
+ []
+
+[123] [124]
+Underfull \hbox (badness 10000) in paragraph at lines 8525--8526
+
+ []
+
+[125] [126
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8587--8588
 
  []
 
 
-! LaTeX Error: Not in outer par mode.
+Underfull \hbox (badness 1112) in paragraph at lines 8597--8599
+[]\TU/lmr/m/n/10 As with probabilities, probability distributions, have the pro
+perties, $\OT1/lmr/m/n/10 0 \OMS/lmsy/m/n/10 ^^T \OML/lmm/m/it/10 P\OT1/lmr/m/n
+/10 (\OML/lmm/m/it/10 outcome\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^T \OT1/lmr/m/
+n/10 1$ \TU/lmr/m/n/10 and
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2420 \centering
-                  
+[127]
+File: Statistics_using_technology_files/figure-latex/discrete-histogram-1.pdf G
+raphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/discrete-histogram-1.pdf>
+
+LaTeX Warning: Reference `fig:discrete-histogram' on page 128 undefined on inpu
+t line 8670.
+
+[128] [129] [130]
+Underfull \hbox (badness 10000) in paragraph at lines 8787--8788
+
+ []
+
+[131] [132]
+Underfull \hbox (badness 10000) in paragraph at lines 9046--9047
+
+ []
+
+[133]
+Underfull \hbox (badness 10000) in paragraph at lines 9089--9090
+
+ []
+
+[134] [135] [136] [137]
+Underfull \hbox (badness 10000) in paragraph at lines 9595--9596
+
+ []
+
+[138] [139]
+File: Statistics_using_technology_files/figure-latex/green-eyes-histogram-1.pdf
+ Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/green-eyes-histogram-1.pdf>
+
+
+LaTeX Warning: Reference `fig:green-eyes-histogram' on page 140 undefined on in
+put line 9705.
+
+[140] [141] [142]
+Chapter 6.
+File: Statistics_using_technology_files/figure-latex/NHANES6-density-1.pdf Grap
+hic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6-density-1.pdf>
+
+LaTeX Warning: Reference `fig:headcirc6-density' on page 143 undefined on input
+ line 9999.
+
+File: Statistics_using_technology_files/figure-latex/headcirc6-density-1.pdf Gr
+aphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/headcirc6-density-1.pdf>
+
+LaTeX Warning: Reference `fig:headcirc60density' on page 143 undefined on input
+ line 10014.
+
+File: Statistics_using_technology_files/figure-latex/NHANES6a-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6a-density-1.pdf>
+
+LaTeX Warning: Reference `fig:NHANES6b-density' on page 143 undefined on input 
+line 10030.
+
+File: Statistics_using_technology_files/figure-latex/NHANES6b-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6b-density-1.pdf>
+
+LaTeX Warning: Reference `fig:NHANES6c-density' on page 143 undefined on input 
+line 10045.
+
+File: Statistics_using_technology_files/figure-latex/NHANES6c-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6c-density-1.pdf>
+
+LaTeX Warning: Reference `fig:normal-curvea' on page 143 undefined on input lin
+e 10076.
+
+
+LaTeX Warning: Reference `fig:normal-curveb' on page 143 undefined on input lin
+e 10077.
+
+
+LaTeX Warning: Reference `fig:normal-curvea' on page 143 undefined on input lin
+e 10079.
+
+
+LaTeX Warning: Reference `fig:normal-curveb' on page 143 undefined on input lin
+e 10080.
+
+[143
+
+] [144] [145] [146] [147] [148]
+File: Statistics_using_technology_files/figure-latex/normal-curvea-1.pdf Graphi
+c file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curvea-1.pdf>
+File: Statistics_using_technology_files/figure-latex/normal-curveb-1.pdf Graphi
+c file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curveb-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 10129--10130
+
+ []
+
+[149] [150]
+Underfull \hbox (badness 10000) in paragraph at lines 10147--10148
+
+ []
+
+File: Empirical_rule.png Graphic file (type bmp)
+<Empirical_rule.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 10164--10165
+
+ []
+
+[151]
+
+LaTeX Warning: Reference `fig:normal-curve61' on page 152 undefined on input li
+ne 10231.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve61-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve61-1.pdf>
+
+LaTeX Warning: Reference `fig:normal-curve62' on page 152 undefined on input li
+ne 10270.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve62-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve62-1.pdf>
+[152] [153] [154]
+
+LaTeX Warning: Reference `fig:normal-curve63' on page 155 undefined on input li
+ne 10309.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve63-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve63-1.pdf>
+
+LaTeX Warning: Reference `fig:normal-curve-preg' on page 155 undefined on input
+ line 10322.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve-preg-1.pdf Gr
+aphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve-preg-1.pdf>
+
+LaTeX Warning: Reference `fig:normal-curve-preg1' on page 155 undefined on inpu
+t line 10333.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve-preg1-1.pdf G
+raphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve-preg1-1.pdf>
+
+LaTeX Warning: Reference `fig:normal-preg1' on page 155 undefined on input line
+ 10344.
+
+
+LaTeX Warning: Reference `fig:normal-preg' on page 155 undefined on input line 
+10345.
+
+
+LaTeX Warning: Reference `fig:normal-curve63' on page 155 undefined on input li
+ne 10346.
+
+[155] [156] [157]
+
+LaTeX Warning: Reference `fig:normal-curve-SAT' on page 158 undefined on input 
+line 10440.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve-SAT-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve-SAT-1.pdf>
+
+LaTeX Warning: Reference `fig:normal-curve-SAT1' on page 158 undefined on input
+ line 10479.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve-SAT1-1.pdf Gr
+aphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve-SAT1-1.pdf>
+[158] [159] [160]
+
+LaTeX Warning: Reference `fig:normal-curve-SAT2' on page 161 undefined on input
+ line 10520.
+
+File: Statistics_using_technology_files/figure-latex/normal-curve-SAT2-1.pdf Gr
+aphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/normal-curve-SAT2-1.pdf>
+[161] [162] [163]
+Underfull \hbox (badness 10000) in paragraph at lines 10869--10870
+
+ []
+
+[164]
+
+LaTeX Warning: Reference `fig:blowhole-density' on page 165 undefined on input 
+line 10979.
+
+[165]
+File: Statistics_using_technology_files/figure-latex/blowhole-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/blowhole-density-1.pdf>
+
+LaTeX Warning: Reference `fig:blowhole-qq' on page 166 undefined on input line 
+11007.
+
+File: Statistics_using_technology_files/figure-latex/blowhole-qq-1.pdf Graphic 
+file (type pdf)
+<use Statistics_using_technology_files/figure-latex/blowhole-qq-1.pdf>
+
+LaTeX Warning: Reference `fig:blowhole-qq' on page 166 undefined on input line 
+11023.
+
+[166] [167]
+
+LaTeX Warning: Reference `fig:pulse-density' on page 168 undefined on input lin
+e 11101.
+
+File: Statistics_using_technology_files/figure-latex/pulse-density-1.pdf Graphi
+c file (type pdf)
+<use Statistics_using_technology_files/figure-latex/pulse-density-1.pdf>
+
+LaTeX Warning: Reference `fig:pulse-qq' on page 168 undefined on input line 111
+29.
+
+[168] [169]
+File: Statistics_using_technology_files/figure-latex/pulse-qq-1.pdf Graphic fil
+e (type pdf)
+<use Statistics_using_technology_files/figure-latex/pulse-qq-1.pdf>
+
+LaTeX Warning: Reference `fig:pulse-qq' on page 170 undefined on input line 111
+45.
+
+[170] [171]
+Underfull \hbox (badness 10000) in paragraph at lines 11285--11286
+
+ []
+
+
+LaTeX Warning: Reference `fig:NHANES6h-density' on page 172 undefined on input 
+line 11319.
+
+File: Statistics_using_technology_files/figure-latex/NHANES6h-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6h-density-1.pdf>
+[172] [173]
+File: Statistics_using_technology_files/figure-latex/NHANES6e-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6e-density-1.pdf>
+
+LaTeX Warning: Reference `fig:NHANES6f-density' on page 174 undefined on input 
+line 11426.
+
+File: Statistics_using_technology_files/figure-latex/NHANES6f-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6f-density-1.pdf>
+[174] [175] [176]
+
+LaTeX Warning: Reference `fig:NHANES6g-density' on page 177 undefined on input 
+line 11459.
+
+File: Statistics_using_technology_files/figure-latex/NHANES6g-density-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6g-density-1.pdf>
+[177]
+File: Statistics_using_technology_files/figure-latex/NHANES6-random-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES6-random-1.pdf>
+[178] [179] [180] [181] [182]
+Overfull \hbox (11.1025pt too wide) in paragraph at lines 12019--12021
+[]\TU/lmr/m/it/10 Staff nurse - RN salary\TU/lmr/m/n/10 . (2013, November 08). 
+Retrieved from []$[][][][] [] [] [] [][][][] [] [][][][][][] [] [][][] [] [][][
+][][][][][][][][][][][][][][][][][][][][][] []
+ []
+
+[183] [184
+
+]
+Chapter 7.
+[185] [186] [187]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 7.1 on input line 12267.
+
+[188] [189] [190] [191] [192] [193] [194]
+Underfull \hbox (badness 10000) in paragraph at lines 12886--12887
+
+ []
+
+[195] [196] [197] [198]
+Underfull \hbox (badness 10000) in paragraph at lines 13331--13332
+
+ []
+
+[199] [200] [201]
+File: Statistics_using_technology_files/figure-latex/sample-NHANES10-resample-h
+istogram-1.pdf Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/sample-NHANES10-resample-hi
+stogram-1.pdf>
+[202]
+
+LaTeX Warning: Reference `fig:tdistribution-graph' on page 203 undefined on inp
+ut line 13552.
+
+File: Statistics_using_technology_files/figure-latex/tdistribution-graph-1.pdf 
+Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/tdistribution-graph-1.pdf>
+[203] [204] [205] [206]
+File: Statistics_using_technology_files/figure-latex/sample-NHANES-50-density-1
+.pdf Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/sample-NHANES-50-density-1.
+pdf>
+File: Statistics_using_technology_files/figure-latex/sample-HNANES-50-qq-1.pdf 
+Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/sample-HNANES-50-qq-1.pdf>
+[207] [208] [209]
+Underfull \hbox (badness 10000) in paragraph at lines 13943--13945
+[]\TU/lmr/bx/n/10 Source []$[][][][] [] [] [] [][][][] [] [][][] [] [][][] [] [
+][][] [] [][][][][][] [] [][][][] [] [][][][][][][][] [] [][][] [] [][][][][][]
+ [] [][][] [] [][][][][][] [] [][][] [] [][][][][][] []
+ []
+
+File: Statistics_using_technology_files/figure-latex/expectancy-male-density-1.
+pdf Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/expectancy-male-density-1.p
+df>
+File: Statistics_using_technology_files/figure-latex/expanctancy-male-qq-1.pdf 
+Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/expanctancy-male-qq-1.pdf>
+[210] [211] [212] [213]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[214] [215]
+Underfull \hbox (badness 2237) in paragraph at lines 14298--14302
+[]\TU/lmr/bx/n/10 Source \TU/lmr/m/n/10 (n.d.). Retrieved July 18, 2019, from [
+]$[][][][][] [] [] [] [][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][][
+][][][] [] [][][][][][][][][][] []
+ []
+
+[216] [217] [218] [219]
+Underfull \hbox (badness 10000) in paragraph at lines 14608--14611
+[] [] [][][][] [] [][][][] [] [][][][] [] [][][] [] [][][][] [] [][][][][] [] [
+][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][][] [] [][][][][][][][][][]
+[][][][][][][] [] [][][][] [] [][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14608--14611
+[][] [] [][][][][][][] [] [][] [] [][][] [] [][][] [] [][][] [] [][][][][][][][
+][] [] [][][][][] [] [][] [] [][][][][][][][][] [] [][] [] [][][][][][][][] [] 
+[][] [] [][][][][][] [] [][] [] [][][] []
+ []
+
+[220] [221] [222]
+Underfull \hbox (badness 10000) in paragraph at lines 14820--14821
+
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 14832--14837
+\TU/lmr/m/n/10 Developmental Disabilities Monitoring Network. (2008). \TU/lmr/m
+/it/10 Autism and developmental disabilities
+ []
+
+
+Overfull \hbox (71.57497pt too wide) in paragraph at lines 14842--14845
+[]$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][] [] 
+[][][][] [] [][][][][][][][] [] [][][][][][][][][] [] [][][][] [] [][] [] [][] 
+[] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14846--14847
+[][]$[][][][] [] [] [] [][][][] [] [][][] [] [][][] [] [][][] [] [][][][][][] [
+] [][][][] [] [][][][][][][][] [] [][][] [] [][][][][][] [] [][][] [] [][][][][
+][] [] [][][] [] [][][][][][] [] [][][][][][] []
+ []
+
+
+Overfull \hbox (43.999pt too wide) in paragraph at lines 14851--14855
+[]\TU/lmr/m/n/10 (n.d.). Retrieved July 18, 2019, from []$[][][][][] [] [] [] [
+][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][][][] [] [][][][][][]
+[][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+]$[]
+ []
+
+[223]
+Underfull \hbox (badness 10000) in paragraph at lines 14866--14869
+[][][] [] [][][][] [] [][][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][] 
+[] [][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] [] [][][][] [] 
+[][] [] [][][][][][][] [] [][] [] [][][] []
+ []
+
+[224]
+Chapter 8.
+[225
+
+]
+File: effect_confidence_level.png Graphic file (type bmp)
+<effect_confidence_level.png>
+[226]
+File: effect_sample_size.png Graphic file (type bmp)
+<effect_sample_size.png>
+[227] [228] [229] [230]
+Underfull \hbox (badness 10000) in paragraph at lines 15388--15389
+
+ []
+
+[231] [232]
+File: Statistics_using_technology_files/figure-latex/sample-NHANES8-density-1.p
+df Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/sample-NHANES8-density-1.pd
+f>
+File: Statistics_using_technology_files/figure-latex/sample-NHANES8-qq-1.pdf Gr
+aphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/sample-NHANES8-qq-1.pdf>
+[233] [234] [235] [236]
+File: Statistics_using_technology_files/figure-latex/expectancy-male8-density-1
+.pdf Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/expectancy-male8-density-1.
+pdf>
+File: Statistics_using_technology_files/figure-latex/expectancy-male8-qq-1.pdf 
+Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/expectancy-male8-qq-1.pdf>
+[237] [238] [239]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[240] [241] [242] [243] [244]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[245]
+Underfull \hbox (badness 10000) in paragraph at lines 16310--16311
+
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 16322--16327
+\TU/lmr/m/n/10 Developmental Disabilities Monitoring Network. (2008). \TU/lmr/m
+/it/10 Autism and developmental disabilities
+ []
+
+
+Overfull \hbox (71.57497pt too wide) in paragraph at lines 16332--16335
+[]$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][] [] 
+[][][][] [] [][][][][][][][] [] [][][][][][][][][] [] [][][][] [] [][] [] [][] 
+[] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16336--16337
+[][]$[][][][] [] [] [] [][][][] [] [][][] [] [][][] [] [][][] [] [][][][][][] [
+] [][][][] [] [][][][][][][][] [] [][][] [] [][][][][][] [] [][][] [] [][][][][
+][] [] [][][] [] [][][][][][] [] [][][][][][] []
+ []
+
+
+Overfull \hbox (43.999pt too wide) in paragraph at lines 16341--16345
+[]\TU/lmr/m/n/10 (n.d.). Retrieved July 18, 2019, from []$[][][][][] [] [] [] [
+][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][][][] [] [][][][][][]
+[][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+]$[]
+ []
+
+[246]
+Underfull \hbox (badness 10000) in paragraph at lines 16356--16359
+[][][] [] [][][][] [] [][][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][] 
+[] [][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] [] [][][][] [] 
+[][] [] [][][][][][][] [] [][] [] [][][] []
+ []
+
+[247] [248
+
+]
+Chapter 9.
+[249] [250] [251] [252] [253]
+Underfull \hbox (badness 10000) in paragraph at lines 16814--16815
+
+ []
+
+[254] [255] [256] [257] [258]
+File: Statistics_using_technology_files/figure-latex/pulse9-female-density-1.pd
+f Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/pulse9-female-density-1.pdf
+>
+File: Statistics_using_technology_files/figure-latex/pulse9-female-qq-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/pulse9-female-qq-1.pdf>
+[259] [260] [261] [262] [263]
+File: Statistics_using_technology_files/figure-latex/helmet9-new-denstiy-1.pdf 
+Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/helmet9-new-denstiy-1.pdf>
+File: Statistics_using_technology_files/figure-latex/helmet9-new-qq-1.pdf Graph
+ic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/helmet9-new-qq-1.pdf>
+[264] [265] [266] [267] [268] [269] [270] [271]
+Underfull \hbox (badness 10000) in paragraph at lines 18090--18091
+
+ []
+
+[272] [273] [274]
+Underfull \hbox (badness 10000) in paragraph at lines 18370--18371
+[]\TU/lmtt/m/n/10 {r NHANES9-diabetes-density, warning=FALSE, fig.cap="(ref:NHA
+NES9-diabetes-density-cap}"
+ []
+
+File: Statistics_using_technology_files/figure-latex/NHANES9-diabetes-qq-1.pdf 
+Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/NHANES9-diabetes-qq-1.pdf>
+[275] [276] [277] [278]
+File: Statistics_using_technology_files/figure-latex/hotdog9-density-1.pdf Grap
+hic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/hotdog9-density-1.pdf>
+File: Statistics_using_technology_files/figure-latex/hotdog9-qq-1.pdf Graphic f
+ile (type pdf)
+<use Statistics_using_technology_files/figure-latex/hotdog9-qq-1.pdf>
+[279] [280] [281] [282] [283] [284]
+Underfull \hbox (badness 10000) in paragraph at lines 19012--19013
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19090--19091
+
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 19097--19102
+\TU/lmr/m/n/10 Developmental Disabilities Monitoring Network. (2008). \TU/lmr/m
+/it/10 Autism and developmental disabilities
+ []
+
+[285] [286]
+Chapter 10.
+[287
+
+]
+File: Statistics_using_technology_files/figure-latex/beer10-point-1.pdf Graphic
+ file (type pdf)
+<use Statistics_using_technology_files/figure-latex/beer10-point-1.pdf>
+
+LaTeX Warning: Reference `beer10-point-lm' on page 288 undefined on input line 
+19273.
+
+File: Statistics_using_technology_files/figure-latex/beer10-point-lm-1.pdf Grap
+hic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/beer10-point-lm-1.pdf>
+[288] [289] [290] [291] [292]
+Underfull \vbox (badness 3281) has occurred while \output is active []
+
+[293]
+File: Statistics_using_technology_files/figure-latex/Beer10-point-residuals-1.p
+df Graphic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/Beer10-point-residuals-1.pd
+f>
+[294]
+File: Statistics_using_technology_files/figure-latex/Beer10a-point-lm-1.pdf Gra
+phic file (type pdf)
+<use Statistics_using_technology_files/figure-latex/Beer10a-point-lm-1.pdf>
+[295] [296] [297] [298]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[299]
+Overfull \hbox (11.07503pt too wide) in paragraph at lines 19945--19952
+[]\TU/lmr/m/n/10 Different species have different body weights and brain weight
+s are in table #10.1.8. (”Brain2bodyweight,”
+ []
+
+[300] [301] [302] [303]
+Underfull \hbox (badness 10000) in paragraph at lines 20234--20235
+
+ []
+
+[304]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 20280.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 20280.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 20280.
+[305] [306]
+Overfull \hbox (11.07503pt too wide) in paragraph at lines 20536--20539
+[]\TU/lmr/m/n/10 Different species have different body weights and brain weight
+s are in table #10.1.8. (”Brain2bodyweight,”
+ []
+
+[307]
+Underfull \hbox (badness 10000) in paragraph at lines 20626--20627
+
+ []
+
+[308] [309]
+! Undefined control sequence.
+l.20717 interval=\predict
+                         (lm.out, newdata=list(prediction variable = value), 
 Here is how much of TeX's memory you used:
- 23569 strings out of 494894
- 442407 string characters out of 6173843
- 547806 words of memory out of 5000000
- 27304 multiletter control sequences out of 15000+600000
- 545089 words of font info for 58 fonts, out of 8000000 for 9000
+ 23940 strings out of 494894
+ 461121 string characters out of 6173843
+ 549806 words of memory out of 5000000
+ 27584 multiletter control sequences out of 15000+600000
+ 557149 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 46i,6n,68p,824b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,7n,68p,824b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Statistics_using_technology.pdf (29 pages).
+Output written on Statistics_using_technology.pdf (309 pages).

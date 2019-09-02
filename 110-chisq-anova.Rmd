@@ -50,7 +50,7 @@ Is there a relationship between autism and breastfeeding? To determine if there 
 
 **Table \#11.1.1: Autism Versus Breastfeeding**
 
-```{r, echo=FALSE}
+```{r autism-table, echo=FALSE}
 yes<-c(241, 198, 164, 215)
 no<-c(20, 25, 27, 44)
 table<-rbind(yes,no)
@@ -62,9 +62,9 @@ where [,1] represents number of mothers who did not breast feed, [,2] represents
 
 1.  State the null and alternative hypotheses and the level of significance
 
- Breastfeeding and autism are independent
+$H_o$: Breastfeeding and autism are independent
 
- Breastfeeding and autism are dependent
+$H_a$: Breastfeeding and autism are dependent
 
 2.  State and check the assumptions for the hypothesis test
 
@@ -75,7 +75,7 @@ b.  Expected frequencies for each cell are greater than or equal to 5 $E\ge 5$. 
 3.  Find the test statistic and p-value
  On R Studio, the command is
 
-```{r}
+```{r chi-square-test}
 yes<-c(241, 198, 164, 215) #puts data into row 1
 no<-c(20, 25, 27, 44) #puts data into row 2
 table<-rbind(yes,no) #combines row 1 and row 2 to make a table
@@ -101,7 +101,7 @@ The test statistic is 11.217 and the p-value is 0.01061.
 
 **Table \#11.1.2: Surviving the Titanic**
 
-```{r, echo=FALSE}
+```{r problem-11-1-table, echo=FALSE}
 first<-c(134, 59)
 second<-c(94, 25)
 third<-c(80, 58)
@@ -261,18 +261,19 @@ $\alpha=0.05$
 
 2.  State and check the assumptions for the hypothesis test
 
-a.  A random sample is taken since each throw of a die is a random event.
+a.  A random sample is taken. check: This is true since each throw of a die is a random event.
 
-b.  Expected frequencies for each cell are greater than or equal to 5.See step 3.
+b.  Expected frequencies for each cell are greater than or equal to 5. See step 3.
 
 3.  Find the test statistic and p-value
 
  On R Studio, this would be 
 
-```{r}
+```{r goodness-of-fit-example}
 fair_die<-c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
 observed<-c(78, 87, 87, 76, 85, 87)
 chisq.test(observed, p=fair_die)
+chisq.test(observed, p=fair_die)$expected
 ```
 
  Test Statistic:
@@ -319,9 +320,9 @@ The test statistic is 1.504. The p-value is 0.9126.
   Lost in lab              976
   Spots/bubble -- intern   976
 
-Do the data support the notion that each defect type occurs in the same proportion? Test at the 10% level.
+Do the data support the notion that each defect type occurs in the same proportion? Test at the 5% level.
 
- 3.  On occasion, medical studies need to model the proportion of the population that has a disease and compare that to observed frequencies of the disease actually occurring. Suppose the end-stage renal failure in south-west Wales was collected for different age groups. Do the data in table 11.2.4 show that the observed frequencies are in agreement with proportion of people in each age group (Boyle, Flowerdew & Williams, 1997)? Test at the 1% level.
+3.  On occasion, medical studies need to model the proportion of the population that has a disease and compare that to observed frequencies of the disease actually occurring. Suppose the end-stage renal failure in south-west Wales was collected for different age groups. Do the data in table 11.2.4 show that the observed frequencies are in agreement with proportion of people in each age group (Boyle, Flowerdew & Williams, 1997)? Test at the 1% level.
 
     **Table \#11.2.4: Renal Failure Frequencies**
 
@@ -410,7 +411,7 @@ Cancer is a terrible disease. Surviving may depend on the type of cancer the per
 
 **Table \#11.3.1: Survival Times in Days of Five Cancer Types**
 
-```{r}
+```{r cancer-data}
 Cancer <- read.csv("https://krkozak.github.io/MAT160/cancer.csv")
 head(Cancer)
 ```
@@ -463,20 +464,20 @@ $\alpha=0.01$
 
 3.  State and check the assumptions for the hypothesis test
 
-a.  A random sample of 13 survival times from stomach cancer was taken. A random sample of 17 survival times from bronchus cancer was taken. A random sample of 17 survival times from colon cancer was taken. A random sample of 6 survival times from ovarian cancer was taken. A random sample of 11 survival times from breast cancer was taken. These statements may not be true. This information was not shared as to whether the samples were random or not but it may be safe to assume that.
+a.  A random sample of 13 survival times from stomach cancer was taken. A random sample of 17 survival times from bronchus cancer was taken. A random sample of 17 survival times from colon cancer was taken. A random sample of 6 survival times from ovarian cancer was taken. A random sample of 11 survival times from breast cancer was taken. check: These statements may not be true. This information was not shared as to whether the samples were random or not but it may be safe to assume that.
 
-b.  Since the individuals have different cancers, then the samples are independent.
+b. The samples are all independent. check: Since the individuals have different cancers, then the samples are independent.
 
-c.  Population of all survival times from stomach cancer is normally distributed. Population of all survival times from bronchus cancer is normally distributed. Population of all survival times from colon cancer is normally distributed. Population of all survival times from ovarian cancer is normally distributed. Population of all survival times from breast cancer is normally distributed. Looking at the histograms, box plots and normal quantile plots for each sample, it appears that none of the populations are normally distributed. The sample sizes are somewhat different for the problem. This assumption may not be true.
+c.  Population of all survival times from stomach cancer is normally distributed. Population of all survival times from bronchus cancer is normally distributed. Population of all survival times from colon cancer is normally distributed. Population of all survival times from ovarian cancer is normally distributed. Population of all survival times from breast cancer is normally distributed. check: Looking at the desnity plots and normal quantile plots for each sample, it appears that none of the populations are normally distributed. The sample sizes are somewhat different for the problem. This assumption may not be true.
 
-d.  The population variances are all equal. The sample standard deviations are approximately 346.3, 209.9, 427.2, 1098.6, and 1239.0 respectively. This assumption does not appear to be met, since the sample standard deviations are very different. The sample sizes are somewhat different for the problem. This assumption may not be true. 
+d.  The population variances are all equal. check: The sample standard deviations are approximately 346.3, 209.9, 427.2, 1098.6, and 1239.0 respectively. This assumption does not appear to be met, since the sample standard deviations are very different. The sample sizes are somewhat different for the problem. This assumption may not be true. 
 
 4.  Find the test statistic and p-value
 
  To find the test statistic and p-value on R Studio, the commands would be:
 
 
-```{r}
+```{r anova-test}
 results=aov(survival~organ, data=Cancer)
 summary(results)
 ```
@@ -501,7 +502,7 @@ In each problem show all steps of the hypothesis test. If some of the assumption
 
  **Table \#11.3.2: Lengths of Cuckoo Bird Eggs in Different Species Nests**
 
-```{r}
+```{r eggs-data}
 Eggs <- read.csv("https://krkozak.github.io/MAT160/Birds_eggs.csv")
 head(Eggs)
 ```
@@ -528,7 +529,7 @@ SOCR Home page: http://www.socr.ucla.edu
 
  **Table \#11.3.3: Run-ups for Different Plants Making Levi Strauss Clothing**
 
-```{r}
+```{r levi-data}
 Levi <- read.csv("https://krkozak.github.io/MAT160/Levi_jeans.csv")
 head(Levi)
 ```
@@ -540,7 +541,7 @@ Levi-Strauss Co manufactures clothing. The quality control department measures w
 
 This data frame contains the following columns:
 
-run_up: percentage difference of waste between the layout on the computer and the actual waste when the clothing is made. There are some negative values because sometimes the supplier is able to layout the pattern better than the computer
+run_up: percentage difference of waste between the layout on the computer and the actual waste when the clothing is made. There are some negative values because sometimes the supplier is able to layout the pattern better than the computer 
 
 plant: Which suppliers
 
@@ -554,7 +555,7 @@ http://lib.stat.cmu.edu/DASL
 
  **Table \#11.3.4: Number of Three Plus Syllable Words in Advertising Copy**
 
-```{r}
+```{r advertising-data}
 Advertising <- read.csv("https://krkozak.github.io/MAT160/three_syllable_words.csv")
 head(Advertising)
 ```
@@ -562,7 +563,7 @@ head(Advertising)
 **Code book for data frame Advertising** 
 
 **Description**
-Several magazines were grouped into three categories based on what level of education of their readers the magazines are geared towards: high, medium, or low level. Then random samples of the     magazines were selected to determine the number of three-plus-syllable words were in the advertising copy
+Several magazines were grouped into three categories based on what level of education of their readers the magazines are geared towards: high, medium, or low level. Then random samples of the magazines were selected to determine the number of three-plus-syllable words were in the advertising copy
 
 This data frame contains the following columns:
 
@@ -576,11 +577,11 @@ Magazine ads readability. (2013, December 04). Retrieved from http://lib.stat.cm
 **References**
 http://lib.stat.cmu.edu/DASL
 
-4.  A study was undertaken to see how accurate food labeling for calories on food that is considered reduced calorie. The group measured the amount of calories for each item of food and then found the percent difference between measured and labeled food. The group also looked at food that was nationally advertised, regionally distributed, or locally prepared. The data is in table \#11.3.5     (\"Calories datafile,\" 2013). Do the data indicate that at least two of the mean percent differences between the three groups are different? Test at the 10% level.
+4.  A study was undertaken to see how accurate food labeling for calories on food that is considered reduced calorie. The group measured the amount of calories for each item of food and then found the percent difference between measured and labeled food. The group also looked at food that was nationally advertised, regionally distributed, or locally prepared. The data is in table \#11.3.5 (\"Calories datafile,\" 2013). Do the data indicate that at least two of the mean percent differences between the three groups are different? Test at the 5% level.
 
  **Table \#11.3.5: Percent Differences Between Measured and Labeled Food**
 
-```{r}
+```{r food-data}
 Food <- read.csv("https://krkozak.github.io/MAT160/Food_calories_percent_diff.csv")
 head(Food)
 ```
@@ -606,7 +607,7 @@ http://lib.stat.cmu.edu/DASL
 
 **Table \#11.3.6: Amount of Sodium (in mg) in Beef, Meat, and Poultry Hotdogs** 
 
-```{r}
+```{r hotdog-data}
 Hotdog_complete <- read.csv("https://krkozak.github.io/MAT160/Hot_Dog_all_Dataset.csv")
 head(Hotdog_complete)
 ```

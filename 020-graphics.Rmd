@@ -154,7 +154,7 @@ head(Eyeglasses)
 
 **Description**
 Activities that an Eyeglass company performs when making eyeglasses, Grind means ground the lenses and put them in frames, multicoat means put tinting or coatings on lenses and then put them in frames
-assemble means received frames and lenses from other sources and put them together make frames means made the frames and put lenses in from other sources receive finished means received glasses from other source unknown means do not know where the lenses came from
+assemble means received frames and lenses from other sources and put them together make frames means made the frames and put lenses in from other sources receive finished means received glasses from other source unknown means do not know where the lenses came from.
 
 **Format**
 
@@ -168,7 +168,7 @@ John Matic provided the data from a company he worked with. The company's name i
 **References**
 John Matic (2013)
 
-Make a bar chart and a dot plot of this data. State any findings you can see from the graphs.
+Make a bar chart of this data. State any findings you can see from the graph.
 
 2.  Data was collected for two semesters in a statistics class drive. The data frame in is the table \#2.1.3. 
 
@@ -183,7 +183,7 @@ head(Class)
 
 Create a bar graph and dot plot of the variable ice cream. State any findings you can see from the graphs.
 
-3.  The number of deaths in the US due to carbon monoxide (CO) poisoning from generators from the years 1999 to 2011 are in table \#2.1.4 (Hinatov, 2012). Create a bar chart and dot plot of this data. State any findings you see from the graphs.
+3.  The number of deaths in the US due to carbon monoxide (CO) poisoning from generators from the years 1999 to 2011 are in table \#2.1.4 (Hinatov, 2012). Create a bar chart of this data. State any findings you see from the graph.
 
 **Table \#2.1.4: Data of Number of Deaths Due to CO Poisoning**
 
@@ -203,7 +203,7 @@ head(Class)
 
 **Code book for Data Frame Class** see Example \#2.1.1
 
-5.  Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made during the time period of January 1 to March 31. Table \#2.1.6 gives the defect and the number of defects. Create a dot plot of the data and then describe what this tells you about what causes the most defects.
+5.  Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made during the time period of January 1 to March 31. Table \#2.1.6 gives the defect and the number of defects. Create a bar chart of the data and then describe what this tells you about what causes the most defects.
   
 **Table \#2.1.6: Data of Defect Type**
 
@@ -447,7 +447,7 @@ CPS News Releases. (n.d.). Retrieved July 8, 2019, from https://www.bls.gov/cps/
 **References**
 Current Population Survey (CPS) retrieved July 8, 2019.
 
-2.  The density of people per square kilometer for certain countries is in table \#2.2.4 (World Bank, 2019). Create density plot of density for just Sub-Saharan Africa. Describe what story the graph tells.
+2.  The density of people per square kilometer for certain countries is in table \#2.2.4 (World Bank, 2019). Create density plot of density in 2018 for just Sub-Saharan Africa. Describe what story the graph tells.
 
  **Table \#2.2.4: Data of Density of People per Square Kilometer**
 
@@ -483,7 +483,7 @@ Food and Agriculture Organization and World Bank population estimates.
 
 Since the Density data frame is for all countries, a new data frame must be created with just Su-Saharan Africa. This is created by using the following command
 
-```{r, warning=FALSE}
+```{r africa-filtering, warning=FALSE}
 Africa<-
   Density%>%
 filter(Region=="Sub-Saharan Africa")
@@ -911,7 +911,7 @@ US Inflation Calculator website, 2019.
 
 **Table \#2.3.10: Data of US Mean and Median Income**
 
-```{r icome-table}
+```{r income-table}
 US_income<- read.csv("https://krkozak.github.io/MAT160/US_income.csv")
 head(US_income)
 ```
