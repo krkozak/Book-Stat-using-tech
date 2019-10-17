@@ -603,10 +603,17 @@ Given the fixed value *x*, the prediction interval for an individual *y* is $\ha
 
 R will produce the prediction interval for you. The commands are 
 
-lm.out = lm(explanatory variable \~ response variable) -- calculates the linear model, may already been done
+To calculate the linear model. Note this may already been done.
 
-interval=\predict(lm.out, newdata=list(prediction variable = value), interval=\"prediction\", level=C)  will compute a prediction interval, for the prediction variable set to a particular value (put that value
-in place of the word value), at a particular C level (given as a decimal)
+```r
+lm.out = lm(explanatory variable~ response variable) 
+```
+
+The following will compute a prediction interval, for the prediction variable set to a particular value (put that value in place of the word value), at a particular C level (given as a decimal).
+
+```r
+predict(lm.out, newdata=list(prediction variable = value), interval="prediction", level=C) 
+```
 
 **Example \#10.3.2: Find the Prediction Interval**
 
