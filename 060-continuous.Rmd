@@ -256,7 +256,7 @@ curve(dnorm(x,272,9),xlim=c(230,320),main= "Pregnancy Length ")
 polygon(cord.x,cord.y,col='blue')
 ```
 
-Looking at the three figures, if you take the area in (Figure \@ref(fig:normal-preg1)) and subtract the area in (Figure \@ref(fig:normal-preg)), you get the area in the (Figure \@ref(fig:normal-curve63)). In R Studio, the way to find the probability the probability of a pregnancy lasting between 265 days and 280 days, $P(265<x<280)=0.595$ use the following command 
+Looking at the three figures, if you take the area in (Figure \@ref(fig:normal-curve-preg1)) and subtract the area in (Figure \@ref(fig:normal-curve-preg)), you get the area in the (Figure \@ref(fig:normal-curve63)). In R Studio, the way to find the probability the probability of a pregnancy lasting between 265 days and 280 days, $P(265<x<280)=0.595$ use the following command 
 
 ```{r pnorm6g}
 pnorm(280, 272, 9, lower.tail=TRUE)-pnorm(265, 272, 9, lower.tail=TRUE)

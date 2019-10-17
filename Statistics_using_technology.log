@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.7.25)  1 SEP 2019 17:40
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.7.25)  3 SEP 2019 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -705,8 +705,7 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip60
 \thanksmargin=\skip61
 \droptitle=\skip62
-)
-No file Statistics_using_technology.aux.
+) (./Statistics_using_technology.aux)
 \openout1 = `Statistics_using_technology.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
@@ -782,61 +781,52 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 133.
 LaTeX Info: Redefining \pageref on input line 133.
 LaTeX Info: Redefining \nameref on input line 133.
+(./Statistics_using_technology.out) (./Statistics_using_technology.out)
 \@outlinefile=\write4
 \openout4 = `Statistics_using_technology.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 [1
 
 
 ] [2
 
-]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
-\tf@toc=\write5
-\openout5 = `Statistics_using_technology.toc'.
-
-[3] [4
-
-]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 146.
-
+] (./Statistics_using_technology.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
 (/Users/kathrynkozak/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 146.
-
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
 (/Users/kathrynkozak/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 146
-.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 2.
 (/Users/kathrynkozak/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 146
-.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 2.
 (/Users/kathrynkozak/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 146.
+(Font)              <10> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 146.
+(Font)              <7> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 146.
-LaTeX Font Info:    Try loading font information for U+msa on input line 146.
+(Font)              <5> on input line 2.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 (/Users/kathrynkozak/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 146.
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 (/Users/kathrynkozak/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [5]
+) [3])
+\tf@toc=\write5
+\openout5 = `Statistics_using_technology.toc'.
+
+[4] [5
+
+]
 Underfull \hbox (badness 1762) in paragraph at lines 260--262
 \TU/lmr/m/n/10 You will need the following packages installed and loaded in R S
 tudio: arm, mosaic, MASS,
@@ -881,43 +871,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1845--1846
 File: Statistics_using_technology_files/figure-latex/class-data-bar-1.pdf Graph
 ic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/class-data-bar-1.pdf>
-
-LaTeX Warning: Reference `fig:class-data-bar' on page 29 undefined on input lin
-e 1945.
-
 [29]
 File: Statistics_using_technology_files/figure-latex/class-data-bar-gender-1.pd
 f Graphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/class-data-bar-gender-1.pdf
 >
-
-LaTeX Warning: Reference `fig:class-data-dot-gender' on page 30 undefined on in
-put line 1984.
-
 File: Statistics_using_technology_files/figure-latex/class-data-dot-gender-1.pd
 f Graphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/class-data-dot-gender-1.pdf
 >
-
-LaTeX Warning: Reference `fig:car-data-gender' on page 30 undefined on input li
-ne 2007.
-
 [30] [31]
 File: Statistics_using_technology_files/figure-latex/car-data-gender-1.pdf Grap
 hic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/car-data-gender-1.pdf>
-
-LaTeX Warning: Reference `fig:car-data-gender' on page 32 undefined on input li
-ne 2025.
-
 File: Statistics_using_technology_files/figure-latex/car-data-gender-gitter-1.p
 df Graphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/car-data-gender-gitter-1.pd
 f>
-
-LaTeX Warning: Reference `fig:car-data-gender-gitter' on page 32 undefined on i
-nput line 2047.
-
 [32] [33] [34] [35] [36]
 Underfull \hbox (badness 10000) in paragraph at lines 2327--2328
 
@@ -1081,10 +1051,6 @@ File: Statistics_using_technology_files/figure-latex/density-data-density-1.pdf
  Graphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/density-data-density-1.pdf>
 
-
-LaTeX Warning: Reference `fig:density-data-density' on page 93 undefined on inp
-ut line 5813.
-
 [93] [94] [95]
 Underfull \hbox (badness 10000) in paragraph at lines 6061--6062
 
@@ -1145,10 +1111,6 @@ n/10 1$ \TU/lmr/m/n/10 and
 File: Statistics_using_technology_files/figure-latex/discrete-histogram-1.pdf G
 raphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/discrete-histogram-1.pdf>
-
-LaTeX Warning: Reference `fig:discrete-histogram' on page 128 undefined on inpu
-t line 8670.
-
 [128] [129] [130]
 Underfull \hbox (badness 10000) in paragraph at lines 8787--8788
 
@@ -1174,19 +1136,11 @@ File: Statistics_using_technology_files/figure-latex/green-eyes-histogram-1.pdf
  Graphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/green-eyes-histogram-1.pdf>
 
-
-LaTeX Warning: Reference `fig:green-eyes-histogram' on page 140 undefined on in
-put line 9705.
-
 [140] [141] [142]
 Chapter 6.
 File: Statistics_using_technology_files/figure-latex/NHANES6-density-1.pdf Grap
 hic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/NHANES6-density-1.pdf>
-
-LaTeX Warning: Reference `fig:headcirc6-density' on page 143 undefined on input
- line 9999.
-
 File: Statistics_using_technology_files/figure-latex/headcirc6-density-1.pdf Gr
 aphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/headcirc6-density-1.pdf>
@@ -1197,36 +1151,12 @@ LaTeX Warning: Reference `fig:headcirc60density' on page 143 undefined on input
 File: Statistics_using_technology_files/figure-latex/NHANES6a-density-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/NHANES6a-density-1.pdf>
-
-LaTeX Warning: Reference `fig:NHANES6b-density' on page 143 undefined on input 
-line 10030.
-
 File: Statistics_using_technology_files/figure-latex/NHANES6b-density-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/NHANES6b-density-1.pdf>
-
-LaTeX Warning: Reference `fig:NHANES6c-density' on page 143 undefined on input 
-line 10045.
-
 File: Statistics_using_technology_files/figure-latex/NHANES6c-density-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/NHANES6c-density-1.pdf>
-
-LaTeX Warning: Reference `fig:normal-curvea' on page 143 undefined on input lin
-e 10076.
-
-
-LaTeX Warning: Reference `fig:normal-curveb' on page 143 undefined on input lin
-e 10077.
-
-
-LaTeX Warning: Reference `fig:normal-curvea' on page 143 undefined on input lin
-e 10079.
-
-
-LaTeX Warning: Reference `fig:normal-curveb' on page 143 undefined on input lin
-e 10080.
-
 [143
 
 ] [144] [145] [146] [147] [148]
@@ -1254,74 +1184,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 10164--10165
  []
 
 [151]
-
-LaTeX Warning: Reference `fig:normal-curve61' on page 152 undefined on input li
-ne 10231.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve61-1.pdf Graph
 ic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve61-1.pdf>
-
-LaTeX Warning: Reference `fig:normal-curve62' on page 152 undefined on input li
-ne 10270.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve62-1.pdf Graph
 ic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve62-1.pdf>
 [152] [153] [154]
-
-LaTeX Warning: Reference `fig:normal-curve63' on page 155 undefined on input li
-ne 10309.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve63-1.pdf Graph
 ic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve63-1.pdf>
-
-LaTeX Warning: Reference `fig:normal-curve-preg' on page 155 undefined on input
- line 10322.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve-preg-1.pdf Gr
 aphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve-preg-1.pdf>
-
-LaTeX Warning: Reference `fig:normal-curve-preg1' on page 155 undefined on inpu
-t line 10333.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve-preg1-1.pdf G
 raphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve-preg1-1.pdf>
-
-LaTeX Warning: Reference `fig:normal-preg1' on page 155 undefined on input line
- 10344.
-
-
-LaTeX Warning: Reference `fig:normal-preg' on page 155 undefined on input line 
-10345.
-
-
-LaTeX Warning: Reference `fig:normal-curve63' on page 155 undefined on input li
-ne 10346.
-
 [155] [156] [157]
-
-LaTeX Warning: Reference `fig:normal-curve-SAT' on page 158 undefined on input 
-line 10440.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve-SAT-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve-SAT-1.pdf>
-
-LaTeX Warning: Reference `fig:normal-curve-SAT1' on page 158 undefined on input
- line 10479.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve-SAT1-1.pdf Gr
 aphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve-SAT1-1.pdf>
 [158] [159] [160]
-
-LaTeX Warning: Reference `fig:normal-curve-SAT2' on page 161 undefined on input
- line 10520.
-
 File: Statistics_using_technology_files/figure-latex/normal-curve-SAT2-1.pdf Gr
 aphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/normal-curve-SAT2-1.pdf>
@@ -1330,54 +1216,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 10869--10870
 
  []
 
-[164]
-
-LaTeX Warning: Reference `fig:blowhole-density' on page 165 undefined on input 
-line 10979.
-
-[165]
+[164] [165]
 File: Statistics_using_technology_files/figure-latex/blowhole-density-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/blowhole-density-1.pdf>
-
-LaTeX Warning: Reference `fig:blowhole-qq' on page 166 undefined on input line 
-11007.
-
 File: Statistics_using_technology_files/figure-latex/blowhole-qq-1.pdf Graphic 
 file (type pdf)
 <use Statistics_using_technology_files/figure-latex/blowhole-qq-1.pdf>
-
-LaTeX Warning: Reference `fig:blowhole-qq' on page 166 undefined on input line 
-11023.
-
 [166] [167]
-
-LaTeX Warning: Reference `fig:pulse-density' on page 168 undefined on input lin
-e 11101.
-
 File: Statistics_using_technology_files/figure-latex/pulse-density-1.pdf Graphi
 c file (type pdf)
 <use Statistics_using_technology_files/figure-latex/pulse-density-1.pdf>
-
-LaTeX Warning: Reference `fig:pulse-qq' on page 168 undefined on input line 111
-29.
-
 [168] [169]
 File: Statistics_using_technology_files/figure-latex/pulse-qq-1.pdf Graphic fil
 e (type pdf)
 <use Statistics_using_technology_files/figure-latex/pulse-qq-1.pdf>
-
-LaTeX Warning: Reference `fig:pulse-qq' on page 170 undefined on input line 111
-45.
-
 [170] [171]
 Underfull \hbox (badness 10000) in paragraph at lines 11285--11286
 
  []
-
-
-LaTeX Warning: Reference `fig:NHANES6h-density' on page 172 undefined on input 
-line 11319.
 
 File: Statistics_using_technology_files/figure-latex/NHANES6h-density-1.pdf Gra
 phic file (type pdf)
@@ -1386,18 +1243,10 @@ phic file (type pdf)
 File: Statistics_using_technology_files/figure-latex/NHANES6e-density-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/NHANES6e-density-1.pdf>
-
-LaTeX Warning: Reference `fig:NHANES6f-density' on page 174 undefined on input 
-line 11426.
-
 File: Statistics_using_technology_files/figure-latex/NHANES6f-density-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/NHANES6f-density-1.pdf>
 [174] [175] [176]
-
-LaTeX Warning: Reference `fig:NHANES6g-density' on page 177 undefined on input 
-line 11459.
-
 File: Statistics_using_technology_files/figure-latex/NHANES6g-density-1.pdf Gra
 phic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/NHANES6g-density-1.pdf>
@@ -1416,12 +1265,7 @@ Retrieved from []$[][][][] [] [] [] [][][][] [] [][][][][][] [] [][][] [] [][][
 
 ]
 Chapter 7.
-[185] [186] [187]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.1 on input line 12267.
-
-[188] [189] [190] [191] [192] [193] [194]
+[185] [186] [187] [188] [189] [190] [191] [192] [193] [194]
 Underfull \hbox (badness 10000) in paragraph at lines 12886--12887
 
  []
@@ -1437,10 +1281,6 @@ istogram-1.pdf Graphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/sample-NHANES10-resample-hi
 stogram-1.pdf>
 [202]
-
-LaTeX Warning: Reference `fig:tdistribution-graph' on page 203 undefined on inp
-ut line 13552.
-
 File: Statistics_using_technology_files/figure-latex/tdistribution-graph-1.pdf 
 Graphic file (type pdf)
 <use Statistics_using_technology_files/figure-latex/tdistribution-graph-1.pdf>
@@ -1729,17 +1569,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 20626--20627
 
  []
 
-[308] [309]
-! Undefined control sequence.
-l.20717 interval=\predict
-                         (lm.out, newdata=list(prediction variable = value), 
+[308] [309] [310] [311] [312]
+Overfull \hbox (11.07503pt too wide) in paragraph at lines 21054--21056
+[]\TU/lmr/m/n/10 Different species have different body weights and brain weight
+s are in table #10.1.8. (”Brain2bodyweight,”
+ []
+
+[313]
+Underfull \hbox (badness 10000) in paragraph at lines 21132--21133
+
+ []
+
+
+Underfull \hbox (badness 2856) in paragraph at lines 21151--21154
+[]\TU/lmr/m/n/10 (n.d.). Retrieved July 21, 2019, from []$[][][][][] [] [] [] [
+][][][] [] [][] [] [][][] [] [][][][][][][][][] [] [][][][][][][][] [] [][][][]
+$[] and Sto-
+ []
+
+[314]
+Chapter 11.
+[315
+
+] [316] [317]
+Overfull \hbox (45.91516pt too wide) in alignment at lines 21456--21474
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (45.91516pt too wide) in alignment at lines 21474--21541
+ [] [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[318] [319]
+Underfull \hbox (badness 10000) in paragraph at lines 21719--21720
+
+ []
+
+[320] [321] [322] [323]
+Underfull \hbox (badness 10000) in paragraph at lines 22073--22077
+
+ []
+
+[324] [325] [326] [327] [328] [329] [330]
+Underfull \hbox (badness 10000) in paragraph at lines 22682--22686
+[][][] [] [][][] [] [][][][][][] [] [][][][] [] [][][][][][][][] [] [][][] [] [
+][][][][][] [] [][][] [] [][][][][][] [] [][][] [] [][][][] [] [][][][] [] [][]
+[][][][][] [] [][][][][] [] [][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22682--22686
+[][][][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][] [] [][][][][][][
+][][][][] [] [][][][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][] []
+ []
+
+No file Statistics_using_technology.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 22721.
+[331]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 22721.
+(./Statistics_using_technology.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 22721.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 22721
+.
+Package rerunfilecheck Info: File `Statistics_using_technology.out' has not cha
+nged.
+(rerunfilecheck)             Checksum: 26F97613A36A4787757D4B233C10E6D9.
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 23940 strings out of 494894
- 461121 string characters out of 6173843
- 549806 words of memory out of 5000000
- 27584 multiletter control sequences out of 15000+600000
+ 24191 strings out of 494894
+ 468294 string characters out of 6173843
+ 571395 words of memory out of 5000000
+ 27824 multiletter control sequences out of 15000+600000
  557149 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 46i,7n,68p,824b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,7n,68p,824b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Statistics_using_technology.pdf (309 pages).
+Output written on Statistics_using_technology.pdf (331 pages).
